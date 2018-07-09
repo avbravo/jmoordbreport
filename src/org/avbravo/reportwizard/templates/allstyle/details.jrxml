@@ -99,7 +99,7 @@
 				<reportElement x="117" y="2" width="100" height="20" uuid="ece840ed-0919-4eef-ba07-9e386f94fada"/>
 				<textFieldExpression><![CDATA[$F{fieldstring}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField pattern="###0.00">
 				<reportElement x="235" y="2" width="100" height="20" uuid="175faba2-a27e-48da-8b91-3c6e4126d23e"/>
 				<textFieldExpression><![CDATA[$F{fielddouble}]]></textFieldExpression>
 			</textField>
