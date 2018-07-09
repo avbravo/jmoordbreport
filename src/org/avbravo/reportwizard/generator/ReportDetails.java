@@ -29,7 +29,7 @@ import org.openide.NotifyDescriptor;
  *
  * @author avbravo
  */
-public class ReportAll {
+public class ReportDetails {
 
     private String titulo;
 
@@ -65,6 +65,7 @@ public class ReportAll {
             addTextJasper("	<property name=\"ireport.x\" value=\"0\"/>");
             addTextJasper("	<property name=\"ireport.y\" value=\"0\"/>");
             addTextJasper("     <parameter name=\"P_EMPRESA\" class=\"java.lang.String\"/>");
+
         } catch (Exception e) {
             MySession.error("header()" + e.getLocalizedMessage());
         }
@@ -75,10 +76,10 @@ public class ReportAll {
     private void addTextJasper(String texto) {
         try {
             // Atributos para la frase, en negrita
-            if (MySession.getTextJasperAll().equals("")) {
-                MySession.setTextJasperAll(texto);
+            if (MySession.getTextJasperDetails().equals("")) {
+                MySession.setTextJasperDetails(texto);
             } else {
-                MySession.setTextJasperAll(MySession.getTextJasperAll() + "\n" + texto);
+                MySession.setTextJasperDetails(MySession.getTextJasperDetails() + "\n" + texto);
             }
 
         } catch (Exception e) {
@@ -102,7 +103,7 @@ public class ReportAll {
     private void pageHeader() {
         try {
             addTextJasper("<pageHeader>");
-            addTextJasper("	<band height=\"79\" splitType=\"Stretch\">");
+            addTextJasper("	<band height=\"80\" splitType=\"Stretch\">");
             addTextJasper("		<textField>");
             addTextJasper("			<reportElement x=\"182\" y=\"3\" width=\"218\" height=\"31\" />");
             addTextJasper("			<textElement>");
@@ -148,6 +149,17 @@ public class ReportAll {
             addTextJasper("  </title>");
         } catch (Exception e) {
             MySession.error("title()" + e.getLocalizedMessage());
+        }
+    }
+// </editor-fold>
+    // <editor-fold defaultstate="collapsed" desc="title()">
+    private void columnHeader() {
+        try {
+            addTextJasper("  <columnHeader>");
+            addTextJasper("         <band height=\"23\" splitType=\"Stretch\"/>");
+            addTextJasper("  </columnHeader>");
+        } catch (Exception e) {
+            MySession.error("columnHeader()" + e.getLocalizedMessage());
         }
     }
 // </editor-fold>
@@ -239,48 +251,38 @@ public class ReportAll {
     }
     // </editor-fold>
 
-// <editor-fold defaultstate="collapsed" desc="columnHeader()">
-    private void columnHeader() {
-        try {
-            Integer[] x = {10, 117, 235, 347, 456};
-            addTextJasper(" <columnHeader>");
-            addTextJasper("	      <band height=\"23\" splitType=\"Stretch\">");
-            for (Entidad e : MySession.getEntidadList()) {
-                Integer count = 0;
-                for (Atributos a : e.getAtributosList()) {
-                    if (count < 5) {
-                        addTextJasper("        <staticText>");
-                        addTextJasper("	               <reportElement x=\"" + x[count] + "\" y=\"2\" width=\"100\" height=\"20\" />");
-                        addTextJasper("	               <textElement>");
-                        addTextJasper("		               <font isBold=\"true\"/>");
-                        addTextJasper("	               </textElement>");
-                        addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
-                        addTextJasper("        </staticText>");
-                        count++;
-                    }
 
-                }
-            }
-
-            addTextJasper("	         </band>");
-            addTextJasper(" </columnHeader>");
-
-        } catch (Exception e) {
-            MySession.error("columnHeader()" + e.getLocalizedMessage());
-        }
-    }
-    // </editor-fold>
 // <editor-fold defaultstate="collapsed" desc="detail()">
 
     private void detail() {
         try {
-            Integer[] x = {10, 117, 235, 347, 456};
+            Integer numberOfAtributes=0;
+              for (Entidad e : MySession.getEntidadList()) {
+                Integer count = 0;
+                numberOfAtributes =e.getAtributosList().size();              
+              }
+//            Integer[] x = {10, 117, 235, 347, 456};
+            Integer[] xLabel= {2,272,2,272,2,272,2,272,2,272,2,272,2,272,2,272,2,272,2,272,2,272,2,272,2,272};            
+            Integer[] xText= {86,370,86,370,86,370,86,370,86,370,86,370,86,370,86,370,86,370,86,370,86,370,86,370,86,370};
+            Integer[] y= {1,1,22,22,43,43,64,64,85,85,106,106,127,127,148,148,169,169,190,190,211,211,232,232,253,253};
+            Integer[] heigth= {24,24,46,46,68,68,90,90,112,112,134,134,156,156,178,178,200,200,222,222,244,244,266,266,288,288};
             addTextJasper(" <detail>");
-            addTextJasper("	    <band height=\"27\" splitType=\"Stretch\">");
+            addTextJasper("	    <band height=\""+heigth[numberOfAtributes]+"\" splitType=\"Stretch\">");
             for (Entidad e : MySession.getEntidadList()) {
                 Integer count = 0;
                 for (Atributos a : e.getAtributosList()) {
-                    if (count < 5) {
+                    
+                    if (count < 27) {
+                          addTextJasper("        <staticText>");
+                        addTextJasper("	               <reportElement y=\"" + y[count] + "\" x=\"" + xLabel[count] + "\" width=\"100\" height=\"20\" />");
+                        addTextJasper("	               <textElement>");
+                        addTextJasper("		               <font isBold=\"true\"/>");
+                        addTextJasper("	               </textElement>");
+                        addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
+                        addTextJasper("           </staticText>");
+                    }
+                    
+                    if (count < 27) {
                         switch (a.getTipo().toLowerCase().trim()) {
                             case "double":
                                 addTextJasper("     <textField pattern=\"###0.00\">");
@@ -292,9 +294,9 @@ public class ReportAll {
                                 addTextJasper("     <textField >");
                         }
 
-                        addTextJasper("             <reportElement x=\"" + x[count] + "\" y=\"2\" width=\"100\" height=\"20\" />");
-                        addTextJasper("	            <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}]]></textFieldExpression>");
-                        addTextJasper("      </textField>");
+                        addTextJasper("                   <reportElement y=\"" + y[count] + "\" x=\"" + xText[count] + "\" width=\"100\" height=\"20\" />");
+                        addTextJasper("	                  <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}]]></textFieldExpression>");
+                        addTextJasper("              </textField>");
 
                         count++;
                     }
@@ -314,8 +316,7 @@ public class ReportAll {
     // <editor-fold defaultstate="collapsed" desc="columnFooter()">
     private void columnFooter() {
         try {
-            Integer[] x = {10, 117, 235, 347, 456};
-            addTextJasper(" <columnFooter>");
+             addTextJasper(" <columnFooter>");
             addTextJasper("	       <band height=\"45\" splitType=\"Stretch\"/>");
             addTextJasper(" </columnFooter>");
 
@@ -459,7 +460,7 @@ public class ReportAll {
 //                    createJasper(ruta, pathJasper);
 //                }
 
-            } 
+            }
 //            else {
 //                if (compileJasper) {
 //                    Path pathJas = Paths.get(pathJasper);
@@ -557,7 +558,7 @@ public class ReportAll {
                 File file2 = new File(ruta);
                 //Creamos un objeto para escribir caracteres en el archivo de prueba
                 try (FileWriter fw = new FileWriter(file)) {
-                    for (String line : MySession.getTextJasperAll().split("\\n")) {
+                    for (String line : MySession.getTextJasperDetails().split("\\n")) {
                         fw.write(line + "\r\n");
                     }
                     fw.close();
@@ -574,6 +575,4 @@ public class ReportAll {
     }
 // </editor-fold>
 
-   
-    
 }

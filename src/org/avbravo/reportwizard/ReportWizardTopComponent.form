@@ -63,7 +63,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="408" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="434" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="jPanel7" max="32767" attributes="0"/>
@@ -361,14 +361,14 @@
                                           <Group type="102" attributes="0">
                                               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jTextFieldNameOfReporAll" min="-2" pref="248" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldNameOfReportAll" min="-2" pref="248" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jTextFieldTituloofReportAll" min="-2" pref="248" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldTituloOfReportAll" min="-2" pref="248" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="jButtonRefreshReportAll" min="-2" pref="39" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
@@ -379,7 +379,7 @@
                                               <Component id="jButtonBackPage1" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="0" pref="336" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="362" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -395,7 +395,7 @@
                                   <Component id="jButtonRefreshReportAll" pref="32" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldTituloofReportAll" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldTituloOfReportAll" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jButtonGenerarJrxmlAll" alignment="0" pref="0" max="32767" attributes="0"/>
                                   <Component id="jButtonCompileReport" alignment="0" pref="0" max="32767" attributes="0"/>
@@ -403,7 +403,7 @@
                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldNameOfReporAll" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldNameOfReportAll" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
@@ -432,10 +432,10 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextFieldTituloofReportAll">
+                    <Component class="javax.swing.JTextField" name="jTextFieldTituloOfReportAll">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldTituloofReportAll.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                          <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldTituloOfReportAll.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -494,10 +494,10 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextFieldNameOfReporAll">
+                    <Component class="javax.swing.JTextField" name="jTextFieldNameOfReportAll">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldNameOfReporAll.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                          <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldNameOfReportAll.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -543,11 +543,11 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jScrollPane3" pref="0" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jScrollPane1" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -562,13 +562,13 @@
                                       <Component id="jButtonCompilarJasperDetails" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jButtonBackPagina1FromDetails" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="102" max="32767" attributes="0"/>
                                       <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jComboBoxPaginaDetails" min="-2" pref="153" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
                                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jTextFieldNameOfReportDetails" min="-2" pref="301" max="-2" attributes="0"/>
@@ -604,25 +604,14 @@
                                   <Component id="jTextFieldNameOfReportDetails" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jScrollPane3" min="-2" pref="345" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" pref="331" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Container class="javax.swing.JScrollPane" name="jScrollPane3">
-                      <AuxValues>
-                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                      </AuxValues>
-
-                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                      <SubComponents>
-                        <Component class="javax.swing.JEditorPane" name="jEditorPaneDetails">
-                        </Component>
-                      </SubComponents>
-                    </Container>
                     <Component class="javax.swing.JLabel" name="jLabel8">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -668,6 +657,9 @@
                           <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonCodeDetails.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCodeDetailsActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="jButtonRefreshReportDetails">
                       <Properties>
@@ -681,6 +673,9 @@
                           <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonRefreshReportDetails.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRefreshReportDetailsActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="jButtonBackPagina1FromDetails">
                       <Properties>
@@ -734,7 +729,21 @@
                           <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonCompilarJasperDetails.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCompilarJasperDetailsActionPerformed"/>
+                      </Events>
                     </Component>
+                    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                      <AuxValues>
+                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                      </AuxValues>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JTextPane" name="jTextPaneJasperDetails">
+                        </Component>
+                      </SubComponents>
+                    </Container>
                   </SubComponents>
                 </Container>
               </SubComponents>

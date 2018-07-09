@@ -50,7 +50,7 @@
 		<band height="23" splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="24" splitType="Stretch">
+		<band height="45" splitType="Stretch">
 			<textField>
 				<reportElement x="86" y="1" width="160" height="20" uuid="62089736-5ea5-4e09-ad73-177eb40b9cc9"/>
 				<textFieldExpression><![CDATA[$F{field1}]]></textFieldExpression>
@@ -72,6 +72,13 @@
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[field2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="25" width="78" height="20" uuid="6df917f4-d121-4d4c-a7b0-674093900bdc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[field3]]></text>
 			</staticText>
 		</band>
 	</detail>

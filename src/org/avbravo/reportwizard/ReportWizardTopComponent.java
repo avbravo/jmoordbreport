@@ -5,22 +5,26 @@
  */
 package org.avbravo.reportwizard;
 
+
+import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JFileChooser;
+import javax.swing.text.AttributeSet;
 import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.Style;
 import javax.swing.text.StyleConstants;
+import javax.swing.text.StyleContext;
+import javax.swing.text.StyledDocument;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
-import org.avbravo.reportwizard.beans.Atributos;
-import org.avbravo.reportwizard.beans.Entidad;
 import org.avbravo.reportwizard.domains.EntityReader;
 import org.avbravo.reportwizard.domains.MySession;
 import org.avbravo.reportwizard.domains.Parameters;
-import org.avbravo.reportwizard.domains.Utilidades;
 import org.avbravo.reportwizard.generator.ReportAll;
+import org.avbravo.reportwizard.generator.ReportDetails;
 import org.avbravo.reportwizard.projects.ProyectoInformacion;
 import org.netbeans.api.project.Project;
 import org.netbeans.api.project.ProjectManager;
@@ -116,17 +120,15 @@ public final class ReportWizardTopComponent extends TopComponent {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPaneJasperAll = new javax.swing.JTextPane();
         jLabel2 = new javax.swing.JLabel();
-        jTextFieldTituloofReportAll = new javax.swing.JTextField();
+        jTextFieldTituloOfReportAll = new javax.swing.JTextField();
         jButtonGenerarJrxmlAll = new javax.swing.JButton();
         jButtonRefreshReportAll = new javax.swing.JButton();
         jButtonBackPage1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jTextFieldNameOfReporAll = new javax.swing.JTextField();
+        jTextFieldNameOfReportAll = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jButtonCompileReport = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jEditorPaneDetails = new javax.swing.JEditorPane();
         jLabel8 = new javax.swing.JLabel();
         jTextFieldNameOfReportDetails = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
@@ -138,6 +140,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         jTextFieldTituloOfReportDetails = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jButtonCompilarJasperDetails = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPaneJasperDetails = new javax.swing.JTextPane();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -284,7 +288,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             jPanelProyectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelProyectoLayout.createSequentialGroup()
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 408, Short.MAX_VALUE))
+                .addGap(0, 434, Short.MAX_VALUE))
             .addGroup(jPanelProyectoLayout.createSequentialGroup()
                 .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -305,7 +309,7 @@ public final class ReportWizardTopComponent extends TopComponent {
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel2.text")); // NOI18N
 
-        jTextFieldTituloofReportAll.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldTituloofReportAll.text")); // NOI18N
+        jTextFieldTituloOfReportAll.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldTituloOfReportAll.text")); // NOI18N
 
         jButtonGenerarJrxmlAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/code24x24.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(jButtonGenerarJrxmlAll, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonGenerarJrxmlAll.text")); // NOI18N
@@ -336,7 +340,7 @@ public final class ReportWizardTopComponent extends TopComponent {
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel4, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel4.text")); // NOI18N
 
-        jTextFieldNameOfReporAll.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldNameOfReporAll.text")); // NOI18N
+        jTextFieldNameOfReportAll.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldNameOfReportAll.text")); // NOI18N
 
         jLabel11.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(jLabel11, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel11.text")); // NOI18N
@@ -363,13 +367,13 @@ public final class ReportWizardTopComponent extends TopComponent {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextFieldNameOfReporAll, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldNameOfReportAll, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel11))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextFieldTituloofReportAll, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldTituloOfReportAll, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jButtonRefreshReportAll, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -378,7 +382,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                                 .addComponent(jButtonCompileReport)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButtonBackPage1)))
-                        .addGap(0, 336, Short.MAX_VALUE)))
+                        .addGap(0, 362, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -390,13 +394,13 @@ public final class ReportWizardTopComponent extends TopComponent {
                     .addComponent(jButtonRefreshReportAll, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel2)
-                        .addComponent(jTextFieldTituloofReportAll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextFieldTituloOfReportAll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jButtonGenerarJrxmlAll, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jButtonCompileReport, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(10, 10, 10)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextFieldNameOfReporAll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldNameOfReportAll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
                 .addGap(17, 17, 17)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -404,8 +408,6 @@ public final class ReportWizardTopComponent extends TopComponent {
         );
 
         jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel3.TabConstraints.tabTitle"), jPanel3); // NOI18N
-
-        jScrollPane3.setViewportView(jEditorPaneDetails);
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel8, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel8.text")); // NOI18N
 
@@ -418,10 +420,20 @@ public final class ReportWizardTopComponent extends TopComponent {
         jButtonCodeDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/code24x24.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(jButtonCodeDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonCodeDetails.text")); // NOI18N
         jButtonCodeDetails.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonCodeDetails.toolTipText")); // NOI18N
+        jButtonCodeDetails.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCodeDetailsActionPerformed(evt);
+            }
+        });
 
         jButtonRefreshReportDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/refresh.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(jButtonRefreshReportDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonRefreshReportDetails.text")); // NOI18N
         jButtonRefreshReportDetails.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonRefreshReportDetails.toolTipText")); // NOI18N
+        jButtonRefreshReportDetails.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRefreshReportDetailsActionPerformed(evt);
+            }
+        });
 
         jButtonBackPagina1FromDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/back24x24.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(jButtonBackPagina1FromDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonBackPagina1FromDetails.text")); // NOI18N
@@ -442,6 +454,13 @@ public final class ReportWizardTopComponent extends TopComponent {
         jButtonCompilarJasperDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/compile24x24.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(jButtonCompilarJasperDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonCompilarJasperDetails.text")); // NOI18N
         jButtonCompilarJasperDetails.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonCompilarJasperDetails.toolTipText")); // NOI18N
+        jButtonCompilarJasperDetails.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCompilarJasperDetailsActionPerformed(evt);
+            }
+        });
+
+        jScrollPane1.setViewportView(jTextPaneJasperDetails);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -451,7 +470,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1)
                         .addContainerGap())
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel8)
@@ -465,7 +484,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                         .addComponent(jButtonCompilarJasperDetails)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonBackPagina1FromDetails)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jComboBoxPaginaDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -498,8 +517,8 @@ public final class ReportWizardTopComponent extends TopComponent {
                     .addComponent(jLabel6)
                     .addComponent(jTextFieldNameOfReportDetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -603,17 +622,18 @@ public final class ReportWizardTopComponent extends TopComponent {
         jTextFieldNameOfPackage.setText("");
         jLabelEntity.setText("");
         jTextAreaEntity.setText("");
-        jTextFieldTituloofReportAll.setText("");
+        jTextFieldTituloOfReportAll.setText("");
         jTextPaneJasperAll.setText("");
         jTextFieldNameOfReportDetails.setText("");
-        jEditorPaneDetails.setText("");
-        jTextFieldNameOfReporAll.setText("");
+       jTextPaneJasperDetails.setText("");
+        jTextFieldNameOfReportAll.setText("");
         jTextFieldNameOfReportDetails.setText("");
+        jLabelEntity.setText("");
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButtonRefreshReportAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRefreshReportAllActionPerformed
-        // TODO add your handling code here:
+
        drawEmptyJasperAll();
     }//GEN-LAST:event_jButtonRefreshReportAllActionPerformed
 
@@ -627,9 +647,10 @@ public final class ReportWizardTopComponent extends TopComponent {
 
     private void jButtonGenerarJrxmlAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenerarJrxmlAllActionPerformed
         try {
+            MySession.setTextJasperAll(jTextPaneJasperAll.getText());
             ReportAll reportAll = new ReportAll();
-if(reportAll.generarJRXML(jTextFieldNameOfReporAll.getText(),false)){
-    MySession.informacion("Se creo  el reporte: "+jTextFieldNameOfReporAll.getText() +".jrxml");
+if(reportAll.generarJRXML(jTextFieldNameOfReportAll.getText(),false)){
+    MySession.informacion("Se creo  el reporte: "+jTextFieldNameOfReportAll.getText() +".jrxml");
 }
 
         } catch (Exception e) {
@@ -641,14 +662,44 @@ if(reportAll.generarJRXML(jTextFieldNameOfReporAll.getText(),false)){
     private void jButtonCompileReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCompileReportActionPerformed
   try {
             ReportAll reportAll = new ReportAll();
-if(reportAll.compileJRXML(jTextFieldNameOfReporAll.getText(),false)){
-    MySession.informacion("Se compilo el reporte "+jTextFieldNameOfReporAll.getText() +".jasper");
+if(reportAll.compileJRXML(jTextFieldNameOfReportAll.getText(),false)){
+    MySession.informacion("Se compilo el reporte "+jTextFieldNameOfReportAll.getText() +".jasper");
 }
 
         } catch (Exception e) {
             MySession.error("jButtonCompileReport() "+e.getLocalizedMessage());
         }
     }//GEN-LAST:event_jButtonCompileReportActionPerformed
+
+    private void jButtonRefreshReportDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRefreshReportDetailsActionPerformed
+  drawEmptyJasperDetails();
+    }//GEN-LAST:event_jButtonRefreshReportDetailsActionPerformed
+
+    private void jButtonCodeDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCodeDetailsActionPerformed
+ try {
+            MySession.setTextJasperDetails(jTextPaneJasperDetails.getText());
+            ReportDetails reportDetails = new ReportDetails();
+if(reportDetails.generarJRXML(jTextFieldNameOfReportDetails.getText(),false)){
+    MySession.informacion("Se creo  el reporte: "+jTextFieldNameOfReportDetails.getText() +".jrxml");
+}
+
+        } catch (Exception e) {
+            MySession.error("jButtonGenerarJrxmlAll() "+e.getLocalizedMessage());
+        }
+        
+    }//GEN-LAST:event_jButtonCodeDetailsActionPerformed
+
+    private void jButtonCompilarJasperDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCompilarJasperDetailsActionPerformed
+try {
+            ReportDetails reportDetails = new ReportDetails();
+if(reportDetails.compileJRXML(jTextFieldNameOfReportDetails.getText(),false)){
+    MySession.informacion("Se compilo el reporte "+jTextFieldNameOfReportDetails.getText() +".jasper");
+}
+
+        } catch (Exception e) {
+            MySession.error("jButtonCompileReportDetails() "+e.getLocalizedMessage());
+        }
+    }//GEN-LAST:event_jButtonCompilarJasperDetailsActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -663,7 +714,6 @@ if(reportAll.compileJRXML(jTextFieldNameOfReporAll.getText(),false)){
     private javax.swing.JButton jButtonRefreshReportAll;
     private javax.swing.JButton jButtonRefreshReportDetails;
     private javax.swing.JComboBox<String> jComboBoxPaginaDetails;
-    private javax.swing.JEditorPane jEditorPaneDetails;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
@@ -682,19 +732,20 @@ if(reportAll.compileJRXML(jTextFieldNameOfReporAll.getText(),false)){
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanelProyecto;
     private javax.swing.JPanel jPanelReporte;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPaneReporte;
     private javax.swing.JTextArea jTextAreaEntity;
     private javax.swing.JTextField jTextFieldNameOfPackage;
     private javax.swing.JTextField jTextFieldNameOfProject;
-    private javax.swing.JTextField jTextFieldNameOfReporAll;
+    private javax.swing.JTextField jTextFieldNameOfReportAll;
     private javax.swing.JTextField jTextFieldNameOfReportDetails;
+    private javax.swing.JTextField jTextFieldTituloOfReportAll;
     private javax.swing.JTextField jTextFieldTituloOfReportDetails;
-    private javax.swing.JTextField jTextFieldTituloofReportAll;
     private javax.swing.JTextPane jTextPaneJasperAll;
+    private javax.swing.JTextPane jTextPaneJasperDetails;
     // End of variables declaration//GEN-END:variables
     @Override
     public void componentOpened() {
@@ -795,6 +846,10 @@ if(reportAll.compileJRXML(jTextFieldNameOfReporAll.getText(),false)){
     // <editor-fold defaultstate="collapsed" desc="goPage2()">                          
     private void goPage2() {
         try {
+            if(jLabelEntity.getText().equals("")){
+               MySession.error("Debe codificar el Entity primero.");
+                return; 
+            }
             entityValid = true;
             MySession.getEntidadList().removeAll(MySession.getEntidadList());
 
@@ -830,15 +885,17 @@ if(reportAll.compileJRXML(jTextFieldNameOfReporAll.getText(),false)){
                 return;
             }
             
-            jTextFieldTituloofReportAll.setText(jLabelEntity.getText());     
+            jTextFieldTituloOfReportAll.setText(jLabelEntity.getText());     
              jTextFieldTituloOfReportDetails.setText(jLabelEntity.getText());
               
-            jTextFieldNameOfReporAll.setText("all");
+            jTextFieldNameOfReportAll.setText("all");
                               
             jTextFieldNameOfReportDetails.setText("details");
-            
+             //Cramos una variable tipo StyledDocument que manejara los estilos.
+    
             drawEmptyJasperAll();
-           
+            drawEmptyJasperDetails();
+         
             jTabbedPane1.add(jPanelReporte, "Reporte");
             jTabbedPane1.remove(jPanelProyecto);
 
@@ -867,7 +924,7 @@ if(reportAll.compileJRXML(jTextFieldNameOfReporAll.getText(),false)){
             MySession.setTextJasperAll("");
 
             ReportAll reportAll = new ReportAll();
-            reportAll.generarTexto(jTextFieldTituloofReportAll.getText());
+            reportAll.generarTexto(jTextFieldTituloOfReportAll.getText());
             jTextPaneJasperAll.setText(MySession.getTextJasperAll());
 
         } catch (Exception e) {
@@ -875,6 +932,27 @@ if(reportAll.compileJRXML(jTextFieldNameOfReporAll.getText(),false)){
         }
     }
 // </editor-fold> 
+    
+    // <editor-fold defaultstate="collapsed" desc="drawEmptyJasperDetails(">                          
+    private void drawEmptyJasperDetails() {
+        try {
+
+            jTextPaneJasperDetails.setText("");
+            MySession.setTextJasperDetails("");
+
+            ReportDetails reportDetails = new ReportDetails();
+            reportDetails.generarTexto(jTextFieldTituloOfReportDetails.getText());
+            jTextPaneJasperDetails.setText(MySession.getTextJasperDetails());
+
+        } catch (Exception e) {
+            MySession.error("drawEmptyJasperDetails()" + e.getLocalizedMessage());
+        }
+    }
+// </editor-fold> 
+    
+    
+   
+    
       }
 
    
