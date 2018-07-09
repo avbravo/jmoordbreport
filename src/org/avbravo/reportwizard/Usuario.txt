@@ -1,0 +1,8 @@
+public class Usuario {
+    @Id
+    private String username;
+    private String nombre;
+    private Double salario;
+    private Integer edad;
+    private Date fecha;
+}
