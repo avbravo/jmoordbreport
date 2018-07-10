@@ -69,6 +69,229 @@ public class MySession {
     static String patternDateTime = "HH:mm dd/MM/yyyy";
     static Entidad entidad;
 
+    
+    
+    /*
+    Group All
+    */
+    static String variableGroupAll="";
+    static String groupnameAll="";
+    static String groupExpressionAll="";
+    
+    static String staticTextGroupHeaderAll="";
+    static String textFieldExpressionHeaderAll="";
+ 
+    
+     static String staticTextGroupFooterAll="";
+     static String textFieldExpressionFooterAll="";
+     static String operationAll="";
+     
+          
+    
+    static Boolean textoyLineaAll=false;
+    
+    
+    /**
+     * Details
+     * 
+     * @return 
+     */
+     static String groupnameDetails="";
+    static String groupExpressionDetails="";
+    
+    static String staticTextGroupHeaderDetails="";
+    static String textFieldExpressionHeaderDetails="";
+ 
+    
+     static String staticTextGroupFooterDetails="";
+     static String textFieldExpressionFooterDetails="";
+     static String variableGroupDetails="";
+     static String operationDetails="";
+          
+    
+    static Boolean textoyLineaDetails=false;
+
+    public static String getOperationAll() {
+        return operationAll;
+    }
+
+    public static void setOperationAll(String operationAll) {
+        MySession.operationAll = operationAll;
+    }
+
+    public static String getOperationDetails() {
+        return operationDetails;
+    }
+
+    public static void setOperationDetails(String operationDetails) {
+        MySession.operationDetails = operationDetails;
+    }
+    
+    
+    
+    
+    
+    
+    
+
+    public static String getGroupnameDetails() {
+        return groupnameDetails;
+    }
+
+    public static void setGroupnameDetails(String groupnameDetails) {
+        MySession.groupnameDetails = groupnameDetails;
+    }
+
+    public static String getGroupExpressionDetails() {
+        return groupExpressionDetails;
+    }
+
+    public static void setGroupExpressionDetails(String groupExpressionDetails) {
+        MySession.groupExpressionDetails = groupExpressionDetails;
+    }
+
+    public static String getStaticTextGroupHeaderDetails() {
+        return staticTextGroupHeaderDetails;
+    }
+
+    public static void setStaticTextGroupHeaderDetails(String staticTextGroupHeaderDetails) {
+        MySession.staticTextGroupHeaderDetails = staticTextGroupHeaderDetails;
+    }
+
+    public static String getTextFieldExpressionHeaderDetails() {
+        return textFieldExpressionHeaderDetails;
+    }
+
+    public static void setTextFieldExpressionHeaderDetails(String textFieldExpressionHeaderDetails) {
+        MySession.textFieldExpressionHeaderDetails = textFieldExpressionHeaderDetails;
+    }
+
+    public static String getStaticTextGroupFooterDetails() {
+        return staticTextGroupFooterDetails;
+    }
+
+    public static void setStaticTextGroupFooterDetails(String staticTextGroupFooterDetails) {
+        MySession.staticTextGroupFooterDetails = staticTextGroupFooterDetails;
+    }
+
+    public static String getTextFieldExpressionFooterDetails() {
+        return textFieldExpressionFooterDetails;
+    }
+
+    public static void setTextFieldExpressionFooterDetails(String textFieldExpressionFooterDetails) {
+        MySession.textFieldExpressionFooterDetails = textFieldExpressionFooterDetails;
+    }
+
+    public static String getVariableGroupDetails() {
+        return variableGroupDetails;
+    }
+
+    public static void setVariableGroupDetails(String variableGroupDetails) {
+        MySession.variableGroupDetails = variableGroupDetails;
+    }
+
+    public static Boolean getTextoyLineaDetails() {
+        return textoyLineaDetails;
+    }
+
+    public static void setTextoyLineaDetails(Boolean textoyLineaDetails) {
+        MySession.textoyLineaDetails = textoyLineaDetails;
+    }
+    
+    
+    
+    
+
+    public static String getVariableGroupAll() {
+        return variableGroupAll;
+    }
+
+    public static void setVariableGroupAll(String variableGroupAll) {
+        MySession.variableGroupAll = variableGroupAll;
+    }
+
+    
+    
+    
+    
+    
+    public static Boolean getTextoyLineaAll() {
+        return textoyLineaAll;
+    }
+
+    public static void setTextoyLineaAll(Boolean textoyLineaAll) {
+        MySession.textoyLineaAll = textoyLineaAll;
+    }
+
+    public static String getTextFieldExpressionHeaderAll() {
+        return textFieldExpressionHeaderAll;
+    }
+
+    public static void setTextFieldExpressionHeaderAll(String textFieldExpressionHeaderAll) {
+        MySession.textFieldExpressionHeaderAll = textFieldExpressionHeaderAll;
+    }
+
+    public static String getTextFieldExpressionFooterAll() {
+        return textFieldExpressionFooterAll;
+    }
+
+    public static void setTextFieldExpressionFooterAll(String textFieldExpressionFooterAll) {
+        MySession.textFieldExpressionFooterAll = textFieldExpressionFooterAll;
+    }
+
+    
+    
+    
+
+    public static String getStaticTextGroupHeaderAll() {
+        return staticTextGroupHeaderAll;
+    }
+
+    public static void setStaticTextGroupHeaderAll(String staticTextGroupHeaderAll) {
+        MySession.staticTextGroupHeaderAll = staticTextGroupHeaderAll;
+    }
+
+    public static String getStaticTextGroupFooterAll() {
+        return staticTextGroupFooterAll;
+    }
+
+    public static void setStaticTextGroupFooterAll(String staticTextGroupFooterAll) {
+        MySession.staticTextGroupFooterAll = staticTextGroupFooterAll;
+    }
+
+    
+    
+   
+   
+    
+    
+    
+
+    public static String getGroupnameAll() {
+        return groupnameAll;
+    }
+
+    public static void setGroupnameAll(String groupnameAll) {
+        MySession.groupnameAll = groupnameAll;
+    }
+
+    public static String getGroupExpressionAll() {
+        return groupExpressionAll;
+    }
+
+    public static void setGroupExpressionAll(String groupExpressionAll) {
+        MySession.groupExpressionAll = groupExpressionAll;
+    }
+
+   
+    
+    
+    
+    
+    
+    
+    
+    
     public static Entidad getEntidad() {
         return entidad;
     }
