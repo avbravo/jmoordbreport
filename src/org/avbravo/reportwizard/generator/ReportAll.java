@@ -576,18 +576,67 @@ public class ReportAll {
     }
 // </editor-fold>
 
+    // <editor-fold defaultstate="collapsed" desc="variable()">
+    private void variable() {
+
+        try {
+            if (!ReportAllSession.getGroupname().equals("") && (ReportAllSession.getWriteTextoReport())) {
+                addTextJasper("       <variable name=\"v_" + ReportAllSession.getVariableGroup() + "\" class=\"java.lang." + ReportAllSession.getVariableTypeGroup() + "\" resetType=\"Group\" resetGroup=\"" + ReportAllSession.getGroupname() + "\" calculation=\"" + ReportAllSession.getCalculation() + "\">");
+                addTextJasper("          <variableExpression><![CDATA[$F{" + ReportAllSession.getVariableGroup() + "}]]></variableExpression>");
+                addTextJasper("       </variable>");
+
+            }
+        } catch (Exception e) {
+            MySession.error("variable() " + e.getLocalizedMessage());
+        }
+    }
+// </editor-fold>
+
     // <editor-fold defaultstate="collapsed" desc="group()">
     private void group() {
 
         try {
-            if (!MySession.getGroupnameAll().equals("")) {
-                addTextJasper("  <group name=\""+MySession.getGroupnameAll() +"\">");
-                addTextJasper("          <groupExpression><![CDATA[$F{" + MySession.getGroupExpressionAll()+"}]]></groupExpression>");
+            if (!ReportAllSession.getGroupname().equals("")) {
+                addTextJasper("  <group name=\"" + ReportAllSession.getGroupname() + "\">");
+                addTextJasper("          <groupExpression><![CDATA[$F{" + ReportAllSession.getGroupExpression() + "}]]></groupExpression>");
                 addTextJasper("          <groupHeader>");
-                addTextJasper("                  <band height=\"50\"/>");
+                addTextJasper("                   <band height=\"38\">");
+                addTextJasper("                        <staticText>");
+                addTextJasper("                                   <reportElement x=\"1\" y=\"10\" width=\"100\" height=\"20\" />");
+                addTextJasper("                                   <textElement>");
+                addTextJasper("                                           <font isBold=\"true\"/>");
+                addTextJasper("                                   </textElement>");
+                addTextJasper("                                   <text><![CDATA[" + ReportAllSession.getStaticTextGroupHeader() + "]]></text>");
+                addTextJasper("                         </staticText>");
+                addTextJasper("                         <textField>");
+                addTextJasper("                                  <reportElement x=\"110\" y=\"10\" width=\"100\" height=\"20\" />");
+                addTextJasper("                                  <textFieldExpression><![CDATA[$F{" + ReportAllSession.getTextFieldExpressionHeader() + "}]]></textFieldExpression>");
+                addTextJasper("                         </textField>");
+                addTextJasper("                   </band>");
                 addTextJasper("          </groupHeader>");
                 addTextJasper("          <groupFooter>");
-                addTextJasper("                  <band height=\"50\"/>");
+                addTextJasper("                  <band height=\"50\">");
+                if (ReportAllSession.getWriteTextoReport()) {
+                    addTextJasper("                          <staticText>");
+                    addTextJasper("                                   <reportElement x=\"6\" y=\"10\" width=\"100\" height=\"20\" />");
+                    addTextJasper("                                   <textElement>");
+                    addTextJasper("                                           <font size=\"12\" isBold=\"true\"/>");
+                    addTextJasper("                                   </textElement>");
+                    addTextJasper("                                   <text><![CDATA[" + ReportAllSession.getStaticTextGroupFooter() + "]]></text>");
+                    addTextJasper("                          </staticText>");
+                    addTextJasper("                          <textField>");
+                    addTextJasper("                                  <reportElement x=\"110\" y=\"12\" width=\"100\" height=\"20\" />");
+                    addTextJasper("                                  <textFieldExpression><![CDATA[$V{v_" + ReportAllSession.getVariableGroup() + "}]]></textFieldExpression>");
+                    addTextJasper("                          </textField>");
+                }
+                if ( ReportAllSession.getWriteLineaReport()) {
+                    addTextJasper("                          <line>");
+                    addTextJasper("                                  <reportElement x=\"5\" y=\"38\" width=\"542\" height=\"1\" />");
+                    addTextJasper("                          </line>");
+
+                }
+
+                addTextJasper("                  </band>");
                 addTextJasper("          </groupFooter>");
                 addTextJasper("  </group>");
             }
@@ -597,22 +646,5 @@ public class ReportAll {
         }
     }
 // </editor-fold>
-    
-     // <editor-fold defaultstate="collapsed" desc="variable()">
-    private void variable() {
-
-        try {
-            if (!MySession.getGroupnameAll().equals("") &&  MySession.getTextoyLineaAll()) {
-                addTextJasper("       <variable name=\"v_"+MySession.getVariableGroupAll() +"\" class=\"java.lang."+MySession.getVariableTypeGroupAll()+"\" resetType=\"Group\" resetGroup=\""+MySession.getGroupnameAll() +"\" calculation=\""+MySession.getCalculationAll() +"\">");
-                addTextJasper("          <variableExpression><![CDATA[$F{"+MySession.getVariableGroupAll() +"}]]></variableExpression>");
-                addTextJasper("       </variable>");
-             
-            }
-        } catch (Exception e) {
-            MySession.error("variable() " + e.getLocalizedMessage());
-        }
-    }
-// </editor-fold>
-
 
 }
