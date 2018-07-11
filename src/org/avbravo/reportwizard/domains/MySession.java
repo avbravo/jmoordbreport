@@ -69,70 +69,71 @@ public class MySession {
     static String patternDateTime = "HH:mm dd/MM/yyyy";
     static Entidad entidad;
 
-    
-    
     /*
     Group All
-    */
-    static String variableGroupAll="";
-    static String groupnameAll="";
-    static String groupExpressionAll="";
-    
-    static String staticTextGroupHeaderAll="";
-    static String textFieldExpressionHeaderAll="";
- 
-    
-     static String staticTextGroupFooterAll="";
-     static String textFieldExpressionFooterAll="";
-     static String operationAll="";
-     
-          
-    
-    static Boolean textoyLineaAll=false;
-    
-    
+     */
+    static String variableGroupAll = "";
+    static String variableTypeGroupAll = "";
+    static String groupnameAll = "";
+    static String groupExpressionAll = "";
+    static String staticTextGroupHeaderAll = "";
+    static String textFieldExpressionHeaderAll = "";
+    static String staticTextGroupFooterAll = "";
+    static String textFieldExpressionFooterAll = "";
+    static String calculationAll = "";
+
+    static Boolean textoyLineaAll = false;
+
     /**
      * Details
-     * 
-     * @return 
      */
-     static String groupnameDetails="";
-    static String groupExpressionDetails="";
-    
-    static String staticTextGroupHeaderDetails="";
-    static String textFieldExpressionHeaderDetails="";
- 
-    
-     static String staticTextGroupFooterDetails="";
-     static String textFieldExpressionFooterDetails="";
-     static String variableGroupDetails="";
-     static String operationDetails="";
-          
-    
-    static Boolean textoyLineaDetails=false;
+    static String groupnameDetails = "";
+    static String groupExpressionDetails = "";
 
-    public static String getOperationAll() {
-        return operationAll;
+    static String staticTextGroupHeaderDetails = "";
+    static String textFieldExpressionHeaderDetails = "";
+
+    static String staticTextGroupFooterDetails = "";
+    static String textFieldExpressionFooterDetails = "";
+    static String variableTypeGroupDetails = "";
+    static String variableGroupDetails = "";
+    static String calculationDetails = "";
+
+    static Boolean textoyLineaDetails = false;
+
+    public static String getVariableTypeGroupAll() {
+        return variableTypeGroupAll;
     }
 
-    public static void setOperationAll(String operationAll) {
-        MySession.operationAll = operationAll;
+    public static void setVariableTypeGroupAll(String variableTypeGroupAll) {
+        MySession.variableTypeGroupAll = variableTypeGroupAll;
     }
 
-    public static String getOperationDetails() {
-        return operationDetails;
+    public static String getVariableTypeGroupDetails() {
+        return variableTypeGroupDetails;
     }
 
-    public static void setOperationDetails(String operationDetails) {
-        MySession.operationDetails = operationDetails;
+    public static void setVariableTypeGroupDetails(String variableTypeGroupDetails) {
+        MySession.variableTypeGroupDetails = variableTypeGroupDetails;
     }
-    
-    
-    
-    
-    
-    
-    
+
+    public static String getCalculationAll() {
+        return calculationAll;
+    }
+
+    public static void setCalculationAll(String calculationAll) {
+        MySession.calculationAll = calculationAll;
+    }
+
+    public static String getCalculationDetails() {
+        return calculationDetails;
+    }
+
+    public static void setCalculationDetails(String calculationDetails) {
+        MySession.calculationDetails = calculationDetails;
+    }
+
+  
 
     public static String getGroupnameDetails() {
         return groupnameDetails;
@@ -197,10 +198,6 @@ public class MySession {
     public static void setTextoyLineaDetails(Boolean textoyLineaDetails) {
         MySession.textoyLineaDetails = textoyLineaDetails;
     }
-    
-    
-    
-    
 
     public static String getVariableGroupAll() {
         return variableGroupAll;
@@ -210,11 +207,6 @@ public class MySession {
         MySession.variableGroupAll = variableGroupAll;
     }
 
-    
-    
-    
-    
-    
     public static Boolean getTextoyLineaAll() {
         return textoyLineaAll;
     }
@@ -239,10 +231,6 @@ public class MySession {
         MySession.textFieldExpressionFooterAll = textFieldExpressionFooterAll;
     }
 
-    
-    
-    
-
     public static String getStaticTextGroupHeaderAll() {
         return staticTextGroupHeaderAll;
     }
@@ -258,14 +246,6 @@ public class MySession {
     public static void setStaticTextGroupFooterAll(String staticTextGroupFooterAll) {
         MySession.staticTextGroupFooterAll = staticTextGroupFooterAll;
     }
-
-    
-    
-   
-   
-    
-    
-    
 
     public static String getGroupnameAll() {
         return groupnameAll;
@@ -283,15 +263,6 @@ public class MySession {
         MySession.groupExpressionAll = groupExpressionAll;
     }
 
-   
-    
-    
-    
-    
-    
-    
-    
-    
     public static Entidad getEntidad() {
         return entidad;
     }
@@ -299,11 +270,6 @@ public class MySession {
     public static void setEntidad(Entidad entidad) {
         MySession.entidad = entidad;
     }
-
-   
-    
-    
-    
 
     public static String getTitleBand() {
         return titleBand;

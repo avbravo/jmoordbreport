@@ -39,6 +39,8 @@ public class ReportAll {
             this.titulo = titulo;
             header();
             defineField();
+            variable();
+            group();
             addTextJasper("");
             background();
             addTextJasper("");
@@ -459,7 +461,7 @@ public class ReportAll {
 //                    createJasper(ruta, pathJasper);
 //                }
 
-            } 
+            }
 //            else {
 //                if (compileJasper) {
 //                    Path pathJas = Paths.get(pathJasper);
@@ -574,6 +576,43 @@ public class ReportAll {
     }
 // </editor-fold>
 
-   
+    // <editor-fold defaultstate="collapsed" desc="group()">
+    private void group() {
+
+        try {
+            if (!MySession.getGroupnameAll().equals("")) {
+                addTextJasper("  <group name=\""+MySession.getGroupnameAll() +"\">");
+                addTextJasper("          <groupExpression><![CDATA[$F{" + MySession.getGroupExpressionAll()+"}]]></groupExpression>");
+                addTextJasper("          <groupHeader>");
+                addTextJasper("                  <band height=\"50\"/>");
+                addTextJasper("          </groupHeader>");
+                addTextJasper("          <groupFooter>");
+                addTextJasper("                  <band height=\"50\"/>");
+                addTextJasper("          </groupFooter>");
+                addTextJasper("  </group>");
+            }
+
+        } catch (Exception e) {
+            MySession.error("group() " + e.getLocalizedMessage());
+        }
+    }
+// </editor-fold>
     
+     // <editor-fold defaultstate="collapsed" desc="variable()">
+    private void variable() {
+
+        try {
+            if (!MySession.getGroupnameAll().equals("") &&  MySession.getTextoyLineaAll()) {
+                addTextJasper("       <variable name=\"v_"+MySession.getVariableGroupAll() +"\" class=\"java.lang."+MySession.getVariableTypeGroupAll()+"\" resetType=\"Group\" resetGroup=\""+MySession.getGroupnameAll() +"\" calculation=\""+MySession.getCalculationAll() +"\">");
+                addTextJasper("          <variableExpression><![CDATA[$F{"+MySession.getVariableGroupAll() +"}]]></variableExpression>");
+                addTextJasper("       </variable>");
+             
+            }
+        } catch (Exception e) {
+            MySession.error("variable() " + e.getLocalizedMessage());
+        }
+    }
+// </editor-fold>
+
+
 }
