@@ -68,12 +68,26 @@ public class MySession {
     static String patternDate = "dd/MM/yyyy";
     static String patternDateTime = "HH:mm dd/MM/yyyy";
     static Entidad entidad;
+    static String sizeOfPageAll="A4";
+    static String sizeOfPageDetails="A4";
 
-    /*
-    Group All
-     */
+    public static String getSizeOfPageAll() {
+        return sizeOfPageAll;
+    }
+
+    public static void setSizeOfPageAll(String sizeOfPageAll) {
+        MySession.sizeOfPageAll = sizeOfPageAll;
+    }
+
+    public static String getSizeOfPageDetails() {
+        return sizeOfPageDetails;
+    }
+
+    public static void setSizeOfPageDetails(String sizeOfPageDetails) {
+        MySession.sizeOfPageDetails = sizeOfPageDetails;
+    }
+
     
-
   
     
     
