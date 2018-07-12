@@ -40,6 +40,7 @@ public class ReportAllGenerator {
             header();
             defineField();
             variable();
+            variableSummary();
             group();
             addTextJasper("");
             background();
@@ -353,7 +354,7 @@ public class ReportAllGenerator {
     }
     // </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="columnFooter()">
+    // <editor-fold defaultstate="collapsed" desc="summary()">
     private void summary() {
         try {
 
@@ -594,6 +595,20 @@ public class ReportAllGenerator {
         }
     }
 // </editor-fold>
+    // <editor-fold defaultstate="collapsed" desc="variableSummary()">
+    private void variableSummary() {
+        try {
+            if (!ReportAllSession.getSummaryName().equals("")) {
+                addTextJasper("       <variable name=\"v_summary_" + ReportAllSession.getVariableSummary() + "\" class=\"java.lang." + ReportAllSession.getVariableTypeSummary() + "\" resetType=\"Group\" resetGroup=\"" + ReportAllSession.getSummaryName()  + "\" calculation=\"" + ReportAllSession.getCalculationSummary()+ "\">");
+                addTextJasper("          <variableExpression><![CDATA[$F{" + ReportAllSession.getVariableSummary() + "}]]></variableExpression>");
+                addTextJasper("       </variable>");
+
+            }
+        } catch (Exception e) {
+            MySession.error("variableSummary() " + e.getLocalizedMessage());
+        }
+    }
+// </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="group()">
     private void group() {
@@ -648,6 +663,10 @@ public class ReportAllGenerator {
             MySession.error("group() " + e.getLocalizedMessage());
         }
     }
+// </editor-fold>
+    
+    // <editor-fold defaultstate="collapsed" desc="metodo()">
+    
 // </editor-fold>
 
 }

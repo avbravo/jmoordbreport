@@ -40,6 +40,7 @@ public class ReportDetailsGenerator {
             header();
             defineField();
              variable();
+             variableSummary();
               group();
             addTextJasper("");
             background();
@@ -353,7 +354,7 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
     }
     // </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="columnFooter()">
+    // <editor-fold defaultstate="collapsed" desc="summary()">
     private void summary() {
         try {
 
@@ -367,6 +368,8 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
     }
 
     // </editor-fold>
+    
+    
     // <editor-fold defaultstate="collapsed" desc="close()">
     private void close() {
         try {
@@ -598,6 +601,21 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
     }
 // </editor-fold>
     
+     // <editor-fold defaultstate="collapsed" desc="variableSummary()">
+    private void variableSummary() {
+        try {
+            if (!ReportDetailsSession.getSummaryName().equals("")) {
+                addTextJasper("       <variable name=\"v_summary_" + ReportDetailsSession.getVariableSummary() + "\" class=\"java.lang." + ReportDetailsSession.getVariableTypeSummary() + "\" resetType=\"Group\" resetGroup=\"" + ReportDetailsSession.getSummaryName()  + "\" calculation=\"" + ReportDetailsSession.getCalculationSummary()+ "\">");
+                addTextJasper("          <variableExpression><![CDATA[$F{" + ReportDetailsSession.getVariableSummary() + "}]]></variableExpression>");
+                addTextJasper("       </variable>");
+
+            }
+        } catch (Exception e) {
+            MySession.error("variableSummary() " + e.getLocalizedMessage());
+        }
+    }
+// </editor-fold>
+    
      // <editor-fold defaultstate="collapsed" desc="group()">
     private void group() {
 
@@ -652,4 +670,6 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
         }
     }
 // </editor-fold>
+    
+    
 }

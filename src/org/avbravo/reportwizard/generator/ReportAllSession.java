@@ -22,7 +22,13 @@ public class ReportAllSession {
     static String calculation = "";
 
     static Boolean writeTextoReport = false;
-        static Boolean writeLineaReport = false;
+    static Boolean writeLineaReport = false;
+
+//     summary
+    static String variableSummary;
+    static String variableTypeSummary;
+    static String summaryName;
+    static String calculationSummary;
 
     public static void inicializar() {
         variableGroup = "";
@@ -34,11 +40,51 @@ public class ReportAllSession {
         staticTextGroupFooter = "";
         textFieldExpressionFooter = "";
         calculation = "";
-        writeTextoReport = false;        
-       writeLineaReport = false;
+        writeTextoReport = false;
+        writeLineaReport = false;
+        // summary
+        variableSummary = "";
+        variableTypeSummary = "";
+        summaryName = "";
+        calculationSummary = "";
     }
 
-public static String getVariableGroup() {
+    public static String getVariableSummary() {
+        return variableSummary;
+    }
+
+    public static void setVariableSummary(String variableSummary) {
+        ReportAllSession.variableSummary = variableSummary;
+    }
+
+    public static String getVariableTypeSummary() {
+        return variableTypeSummary;
+    }
+
+    public static void setVariableTypeSummary(String variableTypeSummary) {
+        ReportAllSession.variableTypeSummary = variableTypeSummary;
+    }
+
+    public static String getSummaryName() {
+        return summaryName;
+    }
+
+    public static void setSummaryName(String summaryName) {
+        ReportAllSession.summaryName = summaryName;
+    }
+
+    public static String getCalculationSummary() {
+        return calculationSummary;
+    }
+
+    public static void setCalculationSummary(String calculationSummary) {
+        ReportAllSession.calculationSummary = calculationSummary;
+    }
+
+    
+    
+    
+    public static String getVariableGroup() {
         return variableGroup;
     }
 
@@ -126,9 +172,4 @@ public static String getVariableGroup() {
         ReportAllSession.writeLineaReport = writeLineaReport;
     }
 
-   
-    
-
-   
-    
 }

@@ -5,6 +5,8 @@
  */
 package org.avbravo.reportwizard.generator;
 
+import static org.avbravo.reportwizard.generator.ReportAllSession.variableSummary;
+
 /**
  *
  * @author avbravo
@@ -16,37 +18,74 @@ public class ReportDetailsSession {
      */
     static String groupname = "";
     static String groupExpression = "";
-
     static String staticTextGroupHeader = "";
     static String textFieldExpressionHeader = "";
-
     static String staticTextGroupFooter = "";
     static String textFieldExpressionFooter = "";
     static String variableTypeGroup = "";
     static String variableGroup = "";
     static String calculation = "";
-
     static Boolean writeTextoReport = false;
     static Boolean writeLineaReport = false;
+    //     summary
+    static String variableSummary;
+    static String variableTypeSummary;
+    static String summaryName;
+    static String calculationSummary;
 
     public static void inicializar() {
         groupname = "";
         groupExpression = "";
-
         staticTextGroupHeader = "";
         textFieldExpressionHeader = "";
-
         staticTextGroupFooter = "";
         textFieldExpressionFooter = "";
         variableTypeGroup = "";
         variableGroup = "";
         calculation = "";
-
         writeTextoReport = false;
-
         writeLineaReport = false;
+          // summary
+        variableSummary = "";
+        variableTypeSummary = "";
+        summaryName = "";
+        calculationSummary = "";
     }
 
+    public static String getVariableSummary() {
+        return variableSummary;
+    }
+
+    public static void setVariableSummary(String variableSummary) {
+        ReportDetailsSession.variableSummary = variableSummary;
+    }
+
+    public static String getVariableTypeSummary() {
+        return variableTypeSummary;
+    }
+
+    public static void setVariableTypeSummary(String variableTypeSummary) {
+        ReportDetailsSession.variableTypeSummary = variableTypeSummary;
+    }
+
+    public static String getSummaryName() {
+        return summaryName;
+    }
+
+    public static void setSummaryName(String summaryName) {
+        ReportDetailsSession.summaryName = summaryName;
+    }
+
+    public static String getCalculationSummary() {
+        return calculationSummary;
+    }
+
+    public static void setCalculationSummary(String calculationSummary) {
+        ReportDetailsSession.calculationSummary = calculationSummary;
+    }
+
+    
+    
     public static String getGroupname() {
         return groupname;
     }
@@ -134,7 +173,5 @@ public class ReportDetailsSession {
     public static void setWriteLineaReport(Boolean writeLineaReport) {
         ReportDetailsSession.writeLineaReport = writeLineaReport;
     }
-
-    
 
 }

@@ -140,6 +140,18 @@ public final class ReportWizardTopComponent extends TopComponent {
         jCheckBoxTextoReportDetails = new javax.swing.JCheckBox();
         jCheckBoxLineaReportDetails = new javax.swing.JCheckBox();
         jLabelLineaDetails = new javax.swing.JLabel();
+        jDialogSummaryAll = new javax.swing.JDialog();
+        jPanel16 = new javax.swing.JPanel();
+        jPanel19 = new javax.swing.JPanel();
+        jLabelStaticTextGroupFooterAll1 = new javax.swing.JLabel();
+        jTextFieldStaticTextGroupSummaryAll = new javax.swing.JTextField();
+        jLabelFieldSummaryAll = new javax.swing.JLabel();
+        jComboBoxFieldSummaryAll = new javax.swing.JComboBox<>();
+        jLabelOperationSummaryAll = new javax.swing.JLabel();
+        jComboBoxOperationReportSummaryAll = new javax.swing.JComboBox<>();
+        jButtonSaveSummaryAll = new javax.swing.JButton();
+        jButtonSummaryClose = new javax.swing.JButton();
+        jCheckBoxMostrarFieldSummary = new javax.swing.JCheckBox();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanelProyecto = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -173,6 +185,7 @@ public final class ReportWizardTopComponent extends TopComponent {
         jButtonRefreshReportAll = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         jComboBoxSizeOfPageAll = new javax.swing.JComboBox<>();
+        jButtonSummaryAll = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jTextFieldNameOfReportDetails = new javax.swing.JTextField();
@@ -647,6 +660,127 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap())
         );
 
+        jDialogSummaryAll.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogSummaryAll.title")); // NOI18N
+        jDialogSummaryAll.setAlwaysOnTop(true);
+
+        jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel19.border.title"))); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelStaticTextGroupFooterAll1, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelStaticTextGroupFooterAll1.text")); // NOI18N
+
+        jTextFieldStaticTextGroupSummaryAll.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldStaticTextGroupSummaryAll.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelFieldSummaryAll, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelFieldSummaryAll.text")); // NOI18N
+
+        jComboBoxFieldSummaryAll.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxFieldSummaryAllActionPerformed(evt);
+            }
+        });
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelOperationSummaryAll, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelOperationSummaryAll.text")); // NOI18N
+
+        jButtonSaveSummaryAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/save.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSaveSummaryAll, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSaveSummaryAll.text")); // NOI18N
+        jButtonSaveSummaryAll.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSaveSummaryAll.toolTipText")); // NOI18N
+        jButtonSaveSummaryAll.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSaveSummaryAllActionPerformed(evt);
+            }
+        });
+
+        jButtonSummaryClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/close24x24.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSummaryClose, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSummaryClose.text")); // NOI18N
+        jButtonSummaryClose.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSummaryClose.toolTipText")); // NOI18N
+        jButtonSummaryClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSummaryCloseActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxMostrarFieldSummary.setSelected(true);
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxMostrarFieldSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxMostrarFieldSummary.text")); // NOI18N
+        jCheckBoxMostrarFieldSummary.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMostrarFieldSummaryActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
+        jPanel19.setLayout(jPanel19Layout);
+        jPanel19Layout.setHorizontalGroup(
+            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel19Layout.createSequentialGroup()
+                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabelStaticTextGroupFooterAll1)
+                        .addComponent(jLabelFieldSummaryAll)
+                        .addComponent(jLabelOperationSummaryAll, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(jCheckBoxMostrarFieldSummary))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel19Layout.createSequentialGroup()
+                        .addComponent(jTextFieldStaticTextGroupSummaryAll, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonSaveSummaryAll)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonSummaryClose))
+                    .addGroup(jPanel19Layout.createSequentialGroup()
+                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBoxOperationReportSummaryAll, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBoxFieldSummaryAll, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())))
+        );
+        jPanel19Layout.setVerticalGroup(
+            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel19Layout.createSequentialGroup()
+                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabelStaticTextGroupFooterAll1)
+                        .addComponent(jTextFieldStaticTextGroupSummaryAll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonSaveSummaryAll)
+                    .addComponent(jButtonSummaryClose))
+                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel19Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelFieldSummaryAll)
+                            .addComponent(jComboBoxFieldSummaryAll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(jPanel19Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jCheckBoxMostrarFieldSummary)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBoxOperationReportSummaryAll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelOperationSummaryAll)))
+        );
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jDialogSummaryAllLayout = new javax.swing.GroupLayout(jDialogSummaryAll.getContentPane());
+        jDialogSummaryAll.getContentPane().setLayout(jDialogSummaryAllLayout);
+        jDialogSummaryAllLayout.setHorizontalGroup(
+            jDialogSummaryAllLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jDialogSummaryAllLayout.setVerticalGroup(
+            jDialogSummaryAllLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel6.border.title"))); // NOI18N
 
         jTextFieldNameOfProject.setEditable(false);
@@ -872,6 +1006,15 @@ public final class ReportWizardTopComponent extends TopComponent {
             }
         });
 
+        jButtonSummaryAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/summary.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSummaryAll, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSummaryAll.text")); // NOI18N
+        jButtonSummaryAll.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSummaryAll.toolTipText")); // NOI18N
+        jButtonSummaryAll.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSummaryAllActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
@@ -879,22 +1022,24 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                    .addGroup(jPanel14Layout.createSequentialGroup()
                         .addComponent(jButtonRefreshReportAll, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonShowDialogAll)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonSummaryAll)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonGenerarJrxmlAll)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonCompileReport)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonBackPage1)
-                        .addGap(48, 48, 48))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addComponent(jLabel17)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jComboBoxSizeOfPageAll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jButtonBackPage1)
+                .addGap(48, 48, 48))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -912,7 +1057,8 @@ public final class ReportWizardTopComponent extends TopComponent {
                             .addComponent(jButtonCompileReport, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButtonGenerarJrxmlAll, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButtonShowDialogAll, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonRefreshReportAll, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jButtonRefreshReportAll, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonSummaryAll, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap())
         );
 
@@ -1423,6 +1569,36 @@ public final class ReportWizardTopComponent extends TopComponent {
         }
     }//GEN-LAST:event_jComboBoxSizeOfPageDetailsItemStateChanged
 
+    private void jButtonSummaryCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSummaryCloseActionPerformed
+jDialogSummaryAll.dispose();
+    }//GEN-LAST:event_jButtonSummaryCloseActionPerformed
+
+    private void jButtonSaveSummaryAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveSummaryAllActionPerformed
+ if (saveSummaryAll()) {
+            drawJasperAll();
+            jDialogGroupAll.dispose();
+        }
+    }//GEN-LAST:event_jButtonSaveSummaryAllActionPerformed
+
+    private void jComboBoxFieldSummaryAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxFieldSummaryAllActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxFieldSummaryAllActionPerformed
+
+    private void jButtonSummaryAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSummaryAllActionPerformed
+ jDialogSummaryAll.setSize(550, 550);
+        jDialogSummaryAll.setLocationRelativeTo(null);
+        jDialogSummaryAll.setAlwaysOnTop(true);
+        jDialogSummaryAll.setVisible(true);
+
+    }//GEN-LAST:event_jButtonSummaryAllActionPerformed
+
+    private void jCheckBoxMostrarFieldSummaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMostrarFieldSummaryActionPerformed
+jComboBoxFieldSummaryAll.setVisible(jCheckBoxMostrarFieldSummary.isSelected());
+jLabelFieldSummaryAll.setVisible(jCheckBoxMostrarFieldSummary.isSelected());
+jComboBoxOperationReportSummaryAll.setVisible(jCheckBoxMostrarFieldSummary.isSelected());
+jLabelOperationSummaryAll.setVisible(jCheckBoxMostrarFieldSummary.isSelected());
+    }//GEN-LAST:event_jCheckBoxMostrarFieldSummaryActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
@@ -1441,21 +1617,28 @@ public final class ReportWizardTopComponent extends TopComponent {
     private javax.swing.JButton jButtonRefreshReportDetails;
     private javax.swing.JButton jButtonSaveGroupAll;
     private javax.swing.JButton jButtonSaveGroupDetails;
+    private javax.swing.JButton jButtonSaveSummaryAll;
     private javax.swing.JButton jButtonShowDialogAll;
+    private javax.swing.JButton jButtonSummaryAll;
+    private javax.swing.JButton jButtonSummaryClose;
     private javax.swing.JCheckBox jCheckBoxLineaReportAll;
     private javax.swing.JCheckBox jCheckBoxLineaReportDetails;
+    private javax.swing.JCheckBox jCheckBoxMostrarFieldSummary;
     private javax.swing.JCheckBox jCheckBoxTextoReportAll;
     private javax.swing.JCheckBox jCheckBoxTextoReportDetails;
     private javax.swing.JComboBox<String> jComboBoxFieldGroupByReportAll;
     private javax.swing.JComboBox<String> jComboBoxFieldGroupByReportDetails;
     private javax.swing.JComboBox<String> jComboBoxFieldGroupFooterAll;
     private javax.swing.JComboBox<String> jComboBoxFieldGroupFooterDetails;
+    private javax.swing.JComboBox<String> jComboBoxFieldSummaryAll;
     private javax.swing.JComboBox<String> jComboBoxOperationReportAll;
     private javax.swing.JComboBox<String> jComboBoxOperationReportDetails;
+    private javax.swing.JComboBox<String> jComboBoxOperationReportSummaryAll;
     private javax.swing.JComboBox<String> jComboBoxSizeOfPageAll;
     private javax.swing.JComboBox<String> jComboBoxSizeOfPageDetails;
     private javax.swing.JDialog jDialogGroupAll;
     private javax.swing.JDialog jDialogGroupDetails;
+    private javax.swing.JDialog jDialogSummaryAll;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1476,11 +1659,14 @@ public final class ReportWizardTopComponent extends TopComponent {
     private javax.swing.JLabel jLabelEntity;
     private javax.swing.JLabel jLabelFieldGroupFooterAll;
     private javax.swing.JLabel jLabelFieldGroupFooterDetails;
+    private javax.swing.JLabel jLabelFieldSummaryAll;
     private javax.swing.JLabel jLabelLinea;
     private javax.swing.JLabel jLabelLineaDetails;
     private javax.swing.JLabel jLabelOperationReportAll;
     private javax.swing.JLabel jLabelOperationReportDetails;
+    private javax.swing.JLabel jLabelOperationSummaryAll;
     private javax.swing.JLabel jLabelStaticTextGroupFooterAll;
+    private javax.swing.JLabel jLabelStaticTextGroupFooterAll1;
     private javax.swing.JLabel jLabelStaticTextGroupFooterDetails;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
@@ -1489,6 +1675,8 @@ public final class ReportWizardTopComponent extends TopComponent {
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1515,6 +1703,7 @@ public final class ReportWizardTopComponent extends TopComponent {
     private javax.swing.JTextField jTextFieldStaticTextGroupFooterDetails;
     private javax.swing.JTextField jTextFieldStaticTextGroupHeaderReportAll;
     private javax.swing.JTextField jTextFieldStaticTextGroupHeaderReportDetails;
+    private javax.swing.JTextField jTextFieldStaticTextGroupSummaryAll;
     private javax.swing.JTextField jTextFieldTituloOfReportAll;
     private javax.swing.JTextField jTextFieldTituloOfReportDetails;
     private javax.swing.JTextPane jTextPaneJasperAll;
@@ -1861,7 +2050,82 @@ public final class ReportWizardTopComponent extends TopComponent {
     }
 
     // </editor-fold> 
-    // <editor-fold defaultstate="collapsed" desc="saveGroupAll()">                          
+    // <editor-fold defaultstate="collapsed" desc="saveSummaryAll()">                          
+    private Boolean saveSummaryAll() {
+        try {
+        
+
+            /*
+           Summary
+             */
+              if (jTextFieldStaticTextGroupSummaryAll.getText().equals("")) {
+                MySession.advertencia("Indique el static Text de la seccion Symmary");
+                return false;
+            }
+              
+         
+            if (jComboBoxFieldSummaryAll.getSelectedItem()
+                    .toString().equals("")) {
+                MySession.advertencia("Seleccione el campo a agrupar");
+                return false;
+            }
+
+          
+
+            ReportAllSession.setGroupname(jTextFieldNameOfGroupReportAll.getText());
+            ReportAllSession.setGroupExpression(jComboBoxFieldGroupByReportAll.getSelectedItem().toString());
+            ReportAllSession.setTextFieldExpressionHeader(jComboBoxFieldGroupByReportAll.getSelectedItem().toString());
+            ReportAllSession.setStaticTextGroupHeader(jTextFieldStaticTextGroupHeaderReportAll.getText());
+
+            ReportAllSession.setWriteTextoReport(jCheckBoxTextoReportAll.isSelected());
+
+            ReportAllSession.setWriteLineaReport(jCheckBoxLineaReportAll.isSelected());
+
+            /**
+             * Footer
+             */
+            if (jCheckBoxTextoReportAll.isSelected()) {
+
+                if (jTextFieldStaticTextGroupFooterAll.getText().equals("")) {
+                    MySession.advertencia("Indique el static Text de la seccion Group Footer");
+                    return false;
+                }
+
+                if (jComboBoxFieldGroupFooterAll.getSelectedItem().toString().equals("")) {
+                    MySession.advertencia("Seleccione el campo a agrupar");
+                    return false;
+                }
+                if (jComboBoxOperationReportAll.getSelectedItem().toString().equals("")) {
+                    MySession.advertencia("Seleccione la operacion");
+                    return false;
+                }
+
+                ReportAllSession.setStaticTextGroupFooter(jTextFieldStaticTextGroupFooterAll.getText());
+                ReportAllSession.setVariableGroup(jComboBoxFieldGroupFooterAll.getSelectedItem().toString());
+                ReportAllSession.setCalculation(jComboBoxOperationReportAll.getSelectedItem().toString());
+                for (Entidad e : MySession.getEntidadList()) {
+
+                    for (Atributos a : e.getAtributosList()) {
+                        if (a.getNombre().equals(ReportAllSession.getVariableGroup())) {
+                            ReportAllSession.setVariableTypeGroup(a.getTipo());
+                            break;
+                        }
+
+                    }
+
+                }
+            }
+//            
+
+            return true;
+        } catch (Exception e) {
+            MySession.error("saveGroupAll() " + e.getLocalizedMessage());
+        }
+        return false;
+    }
+
+    // </editor-fold> 
+    // <editor-fold defaultstate="collapsed" desc="saveGroupDetails()">                          
     private Boolean saveGroupDetails() {
         try {
             inicializarGroupReportDetails();
