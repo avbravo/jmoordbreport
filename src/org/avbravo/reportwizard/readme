@@ -1,63 +1,30 @@
- /*
+/*
             Header
              */
-            if (jTextFieldNameOfGroupReportDetails.getText().equals("")) {
-                MySession.advertencia("Debe ingresar el nombre del grupo");
-                return false;
-            }
+            jTextFieldDetailsGroupNameOfGroup.setText("");
+            jTextFieldDetailsGroupStaticTextGroupHeader.setText("");
+            jComboBoxFieldDetailsGroupBy.setSelectedItem("");
+            jTextFieldDetailsGroupStaticTextGroupHeader.setText("");
+            jTextFieldDetailsGroupStaticTextGroupHeader.setText("");
+            jCheckBoxDetailsTexto.setSelected(false);
+            jCheckBoxDetailsLinea.setSelected(false);
+            ReportDetailsSession.setGroupname(jTextFieldDetailsGroupNameOfGroup.getText());
+            ReportDetailsSession.setGroupExpression(jComboBoxFieldDetailsGroupBy.getSelectedItem().toString());
+            ReportDetailsSession.setTextFieldExpressionHeader(jComboBoxFieldDetailsGroupBy.getSelectedItem().toString());
+            ReportDetailsSession.setStaticTextGroupHeader(jTextFieldDetailsGroupStaticTextGroupHeader.getText());
 
-            if (jComboBoxFieldGroupByReportDetails.getSelectedItem()
-                    .toString().equals("")) {
-                MySession.advertencia("Seleccione el campo a agrupar");
-                return false;
-            }
+            ReportDetailsSession.setWriteTextoReport(jCheckBoxDetailsTexto.isSelected());
 
-            if (jTextFieldStaticTextGroupHeaderReportDetails.getText()
-                    .equals("")) {
-                MySession.advertencia("Indique el static Text de la seccion Group Header");
-                return false;
-            }
+            ReportDetailsSession.setWriteLineaReport(jCheckBoxDetailsLinea.isSelected());
 
-            ReportDetailsSession.setGroupname(jTextFieldNameOfGroupReportDetails.getText());
-            ReportDetailsSession.setGroupExpression(jComboBoxFieldGroupByReportDetails.getSelectedItem().toString());
-            ReportDetailsSession.setTextFieldExpressionHeader(jComboBoxFieldGroupByReportDetails.getSelectedItem().toString());
-            ReportDetailsSession.setStaticTextGroupHeader(jTextFieldStaticTextGroupHeaderReportDetails.getText());
+            jTextFieldDetailsStaticTextGroupFooter.setText("");
 
-            ReportDetailsSession.setWriteTextoReport(jCheckBoxTextoReportDetails.isSelected());
+            jComboBoxDetailsFieldGroupFooter.setSelectedItem("");
+            jComboBoxDetailsOperation.setSelectedItem("");
 
-            ReportDetailsSession.setWriteLineaReport(jCheckBoxLineaReportDetails.isSelected());
+            ReportDetailsSession.setStaticTextGroupFooter(jTextFieldDetailsStaticTextGroupFooter.getText());
+            ReportDetailsSession.setVariableGroup(jComboBoxDetailsFieldGroupFooter.getSelectedItem().toString());
+            ReportDetailsSession.setCalculation(jComboBoxDetailsOperation.getSelectedItem().toString());
 
-            /**
-             * Footer
-             */
-            if (jCheckBoxTextoReportDetails.isSelected()) {
-
-                if (jTextFieldStaticTextGroupFooterDetails.getText().equals("")) {
-                    MySession.advertencia("Indique el static Text de la seccion Group Footer");
-                    return false;
-                }
-
-                if (jComboBoxFieldGroupFooterDetails.getSelectedItem().toString().equals("")) {
-                    MySession.advertencia("Seleccione el campo a agrupar");
-                    return false;
-                }
-                if (jComboBoxOperationReportDetails.getSelectedItem().toString().equals("")) {
-                    MySession.advertencia("Seleccione la operacion");
-                    return false;
-                }
-
-                ReportDetailsSession.setStaticTextGroupFooter(jTextFieldStaticTextGroupFooterDetails.getText());
-                ReportDetailsSession.setVariableGroup(jComboBoxFieldGroupFooterDetails.getSelectedItem().toString());
-                ReportDetailsSession.setCalculation(jComboBoxOperationReportDetails.getSelectedItem().toString());
-                for (Entidad e : MySession.getEntidadList()) {
-
-                    for (Atributos a : e.getAtributosList()) {
-                        if (a.getNombre().equals(ReportDetailsSession.getVariableGroup())) {
-                            ReportDetailsSession.setVariableTypeGroup(a.getTipo());
-                            break;
-                        }
-
-                    }
-
-                }
-            }
+            ReportDetailsSession.setVariableTypeGroup("");
+    

@@ -62,7 +62,7 @@
                       <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <EmptySpace pref="23" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -89,36 +89,43 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="jComboBoxFieldGroupByReportAll" min="-2" pref="311" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jTextFieldNameOfGroupReportAll" min="-2" pref="280" max="-2" attributes="0"/>
-                                  <EmptySpace pref="50" max="32767" attributes="0"/>
-                                  <Component id="jButtonSaveGroupAll" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jComboBoxFieldAllGroupBy" min="-2" pref="311" max="-2" attributes="0"/>
+                              <Component id="jTextFieldAllGroupNameOfGroup" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace pref="19" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="jButtonAllGroupSave" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jButtonAllGroupClose" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jButtonAllGroupDelete" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBoxFieldGroupByReportAll" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxFieldAllGroupBy" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextFieldNameOfGroupReportAll" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonSaveGroupAll" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldAllGroupNameOfGroup" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace min="9" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jButtonAllGroupSave" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonAllGroupClose" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jButtonAllGroupDelete" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -131,15 +138,15 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBoxFieldGroupByReportAll">
+                <Component class="javax.swing.JComboBox" name="jComboBoxFieldAllGroupBy">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jComboBoxFieldGroupByReportAllItemStateChanged"/>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxFieldGroupByReportAllActionPerformed"/>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jComboBoxFieldAllGroupByItemStateChanged"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxFieldAllGroupByActionPerformed"/>
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -152,44 +159,60 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton3">
+                <Component class="javax.swing.JButton" name="jButtonAllGroupClose">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/org/avbravo/reportwizard/resources/close24x24.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButton3.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonAllGroupClose.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButton3.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonAllGroupClose.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAllGroupCloseActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextFieldNameOfGroupReportAll">
+                <Component class="javax.swing.JTextField" name="jTextFieldAllGroupNameOfGroup">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldNameOfGroupReportAll.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldAllGroupNameOfGroup.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                     <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButtonSaveGroupAll">
+                <Component class="javax.swing.JButton" name="jButtonAllGroupSave">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/org/avbravo/reportwizard/resources/save.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonSaveGroupAll.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonAllGroupSave.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonSaveGroupAll.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonAllGroupSave.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSaveGroupAllActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAllGroupSaveActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButtonAllGroupDelete">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/org/avbravo/reportwizard/resources/delete.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonAllGroupDelete.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonAllGroupDelete.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAllGroupDeleteActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -212,7 +235,7 @@
                           <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                           <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jTextFieldStaticTextGroupHeaderReportAll" min="-2" pref="351" max="-2" attributes="0"/>
+                          <Component id="jTextFieldAllGroupStaticTextGroupHeader" min="-2" pref="351" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -222,7 +245,7 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextFieldStaticTextGroupHeaderReportAll" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldAllGroupStaticTextGroupHeader" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -238,14 +261,14 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextFieldStaticTextGroupHeaderReportAll">
+                <Component class="javax.swing.JTextField" name="jTextFieldAllGroupStaticTextGroupHeader">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldStaticTextGroupHeaderReportAll.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldAllGroupStaticTextGroupHeader.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldStaticTextGroupHeaderReportAllActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldAllGroupStaticTextGroupHeaderActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -266,22 +289,22 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabelLinea" max="32767" attributes="0"/>
+                              <Component id="jLabelAllLinea" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabelStaticTextGroupFooterAll" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabelFieldGroupFooterAll" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabelOperationReportAll" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jCheckBoxTextoReportAll" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCheckBoxAllTexto" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jComboBoxOperationReportAll" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jComboBoxFieldGroupFooterAll" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="jComboBoxAllOperation" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jComboBoxAllFieldGroupFooter" alignment="1" max="32767" attributes="0"/>
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jCheckBoxLineaReportAll" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextFieldStaticTextGroupFooterAll" alignment="0" min="-2" pref="408" max="-2" attributes="0"/>
+                                              <Component id="jCheckBoxAllLinea" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldAllStaticTextGroupFooter" alignment="0" min="-2" pref="408" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
@@ -296,26 +319,26 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jCheckBoxTextoReportAll" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBoxLineaReportAll" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxAllTexto" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxAllLinea" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabelStaticTextGroupFooterAll" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextFieldStaticTextGroupFooterAll" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldAllStaticTextGroupFooter" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabelFieldGroupFooterAll" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBoxFieldGroupFooterAll" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxAllFieldGroupFooter" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabelOperationReportAll" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBoxOperationReportAll" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxAllOperation" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabelLinea" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelAllLinea" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -329,10 +352,10 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextFieldStaticTextGroupFooterAll">
+                <Component class="javax.swing.JTextField" name="jTextFieldAllStaticTextGroupFooter">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldStaticTextGroupFooterAll.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldAllStaticTextGroupFooter.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -343,14 +366,14 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBoxFieldGroupFooterAll">
+                <Component class="javax.swing.JComboBox" name="jComboBoxAllFieldGroupFooter">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxFieldGroupFooterAllActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxAllFieldGroupFooterActionPerformed"/>
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -363,7 +386,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBoxOperationReportAll">
+                <Component class="javax.swing.JComboBox" name="jComboBoxAllOperation">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>
@@ -373,32 +396,32 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBoxTextoReportAll">
+                <Component class="javax.swing.JCheckBox" name="jCheckBoxAllTexto">
                   <Properties>
                     <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jCheckBoxTextoReportAll.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jCheckBoxAllTexto.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxTextoReportAllActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxAllTextoActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBoxLineaReportAll">
+                <Component class="javax.swing.JCheckBox" name="jCheckBoxAllLinea">
                   <Properties>
                     <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jCheckBoxLineaReportAll.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jCheckBoxAllLinea.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxLineaReportAllActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxAllLineaActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabelLinea">
+                <Component class="javax.swing.JLabel" name="jLabelAllLinea">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jLabelLinea.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jLabelAllLinea.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -455,7 +478,7 @@
                       <Component id="jPanel12" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel13" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <EmptySpace pref="14" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -482,36 +505,47 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jComboBoxFieldGroupByReportDetails" min="-2" pref="311" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jTextFieldNameOfGroupReportDetails" min="-2" pref="280" max="-2" attributes="0"/>
-                                  <EmptySpace pref="50" max="32767" attributes="0"/>
-                                  <Component id="jButtonSaveGroupDetails" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jComboBoxDetailsFieldGroupBy" alignment="0" min="-2" pref="311" max="-2" attributes="0"/>
+                              <Component id="jTextFieldDetailsNameOfGroup" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButtonCloseGroupDetails" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="jButtonSaveGroupDetails" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jButtonCloseGroupDetails" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jButtonDetailsGroupDelete" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="65" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBoxFieldGroupByReportDetails" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextFieldNameOfGroupReportDetails" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonSaveGroupDetails" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonCloseGroupDetails" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxDetailsFieldGroupBy" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonSaveGroupDetails" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jButtonCloseGroupDetails" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldDetailsNameOfGroup" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButtonDetailsGroupDelete" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -524,15 +558,15 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBoxFieldGroupByReportDetails">
+                <Component class="javax.swing.JComboBox" name="jComboBoxDetailsFieldGroupBy">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jComboBoxFieldGroupByReportDetailsItemStateChanged"/>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxFieldGroupByReportDetailsActionPerformed"/>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jComboBoxDetailsFieldGroupByItemStateChanged"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxDetailsFieldGroupByActionPerformed"/>
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -561,10 +595,10 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCloseGroupDetailsActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextFieldNameOfGroupReportDetails">
+                <Component class="javax.swing.JTextField" name="jTextFieldDetailsNameOfGroup">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldNameOfGroupReportDetails.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldDetailsNameOfGroup.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                     <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
@@ -583,6 +617,22 @@
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSaveGroupDetailsActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButtonDetailsGroupDelete">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/org/avbravo/reportwizard/resources/delete.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonDetailsGroupDelete.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonDetailsGroupDelete.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonDetailsGroupDeleteActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -605,7 +655,7 @@
                           <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                           <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jTextFieldStaticTextGroupHeaderReportDetails" min="-2" pref="351" max="-2" attributes="0"/>
+                          <Component id="jTextFieldDetailsGroupHeaderStaticText" min="-2" pref="351" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -615,7 +665,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextFieldStaticTextGroupHeaderReportDetails" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldDetailsGroupHeaderStaticText" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -631,14 +681,14 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextFieldStaticTextGroupHeaderReportDetails">
+                <Component class="javax.swing.JTextField" name="jTextFieldDetailsGroupHeaderStaticText">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldStaticTextGroupHeaderReportDetails.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldDetailsGroupHeaderStaticText.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldStaticTextGroupHeaderReportDetailsActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldDetailsGroupHeaderStaticTextActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -665,20 +715,18 @@
                                       <Component id="jLabelStaticTextGroupFooterDetails" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabelFieldGroupFooterDetails" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabelOperationReportDetails" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jCheckBoxTextoReportDetails" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCheckBoxDetailsTexto" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jComboBoxOperationReportDetails" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jComboBoxFieldGroupFooterDetails" alignment="1" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jCheckBoxLineaReportDetails" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextFieldStaticTextGroupFooterDetails" alignment="0" min="-2" pref="408" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBoxDetailsLinea" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxDetailsOperation" min="-2" pref="418" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jComboBoxDetailsFieldGroupFooter" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jTextFieldDetailsStaticTextGroupFooter" alignment="0" pref="408" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -689,23 +737,23 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jCheckBoxTextoReportDetails" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBoxLineaReportDetails" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxDetailsTexto" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxDetailsLinea" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabelStaticTextGroupFooterDetails" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextFieldStaticTextGroupFooterDetails" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldDetailsStaticTextGroupFooter" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabelFieldGroupFooterDetails" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBoxFieldGroupFooterDetails" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxDetailsFieldGroupFooter" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabelOperationReportDetails" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBoxOperationReportDetails" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxDetailsOperation" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabelLineaDetails" min="-2" max="-2" attributes="0"/>
@@ -722,10 +770,10 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextFieldStaticTextGroupFooterDetails">
+                <Component class="javax.swing.JTextField" name="jTextFieldDetailsStaticTextGroupFooter">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldStaticTextGroupFooterDetails.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldDetailsStaticTextGroupFooter.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -736,14 +784,14 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBoxFieldGroupFooterDetails">
+                <Component class="javax.swing.JComboBox" name="jComboBoxDetailsFieldGroupFooter">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxFieldGroupFooterDetailsActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxDetailsFieldGroupFooterActionPerformed"/>
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -756,7 +804,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBoxOperationReportDetails">
+                <Component class="javax.swing.JComboBox" name="jComboBoxDetailsOperation">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>
@@ -766,26 +814,26 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBoxTextoReportDetails">
+                <Component class="javax.swing.JCheckBox" name="jCheckBoxDetailsTexto">
                   <Properties>
                     <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jCheckBoxTextoReportDetails.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jCheckBoxDetailsTexto.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxTextoReportDetailsActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxDetailsTextoActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBoxLineaReportDetails">
+                <Component class="javax.swing.JCheckBox" name="jCheckBoxDetailsLinea">
                   <Properties>
                     <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jCheckBoxLineaReportDetails.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jCheckBoxDetailsLinea.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxLineaReportDetailsActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxDetailsLineaActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabelLineaDetails">
@@ -859,63 +907,67 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelStaticTextGroupFooterAll1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelFieldSummaryAll" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelOperationSummaryAll" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jCheckBoxMostrarFieldSummary" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="jTextFieldStaticTextGroupSummaryAll" min="-2" pref="408" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jButtonSaveSummaryAll" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jButtonSummaryClose" min="-2" max="-2" attributes="0"/>
-                              </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jComboBoxOperationReportSummaryAll" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jComboBoxFieldSummaryAll" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="jLabelStaticTextGroupFooterAll1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelFieldSummaryAll" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelOperationSummaryAll" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
+                                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jCheckBoxMostrarFieldSummary" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jComboBoxSummaryAllField" pref="331" max="32767" attributes="0"/>
+                              <Component id="jTextFieldSummaryAllStaticText" max="32767" attributes="0"/>
+                              <Component id="jComboBoxSummaryAllOperation" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jButtonSaveSummaryAll" max="32767" attributes="0"/>
+                              <Component id="jButtonSummaryAllDelete" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jButtonSummaryClose1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelStaticTextGroupFooterAll1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldStaticTextGroupSummaryAll" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jButtonSaveSummaryAll" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonSummaryClose" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace pref="29" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabelFieldSummaryAll" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jComboBoxFieldSummaryAll" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelStaticTextGroupFooterAll1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldSummaryAllStaticText" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jCheckBoxMostrarFieldSummary" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabelFieldSummaryAll" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxSummaryAllField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jComboBoxSummaryAllOperation" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelOperationSummaryAll" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jButtonSaveSummaryAll" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonSummaryClose1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jCheckBoxMostrarFieldSummary" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jButtonSummaryAllDelete" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jComboBoxOperationReportSummaryAll" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabelOperationSummaryAll" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -928,10 +980,10 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextFieldStaticTextGroupSummaryAll">
+                <Component class="javax.swing.JTextField" name="jTextFieldSummaryAllStaticText">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldStaticTextGroupSummaryAll.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldSummaryAllStaticText.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -942,14 +994,14 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBoxFieldSummaryAll">
+                <Component class="javax.swing.JComboBox" name="jComboBoxSummaryAllField">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxFieldSummaryAllActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxSummaryAllFieldActionPerformed"/>
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -962,7 +1014,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBoxOperationReportSummaryAll">
+                <Component class="javax.swing.JComboBox" name="jComboBoxSummaryAllOperation">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>
@@ -988,20 +1040,20 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSaveSummaryAllActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButtonSummaryClose">
+                <Component class="javax.swing.JButton" name="jButtonSummaryAllDelete">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/org/avbravo/reportwizard/resources/close24x24.png"/>
+                      <Image iconType="3" name="/org/avbravo/reportwizard/resources/delete.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonSummaryClose.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonSummaryAllDelete.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonSummaryClose.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonSummaryAllDelete.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSummaryCloseActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSummaryAllDeleteActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBoxMostrarFieldSummary">
@@ -1013,6 +1065,262 @@
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxMostrarFieldSummaryActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButtonSummaryClose1">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/org/avbravo/reportwizard/resources/back24x24.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonSummaryClose1.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonSummaryClose1.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSummaryClose1ActionPerformed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="jDialogSummaryDetails">
+      <Properties>
+        <Property name="title" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jDialogSummaryDetails.title" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+        </Property>
+        <Property name="alwaysOnTop" type="boolean" value="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jPanel17" alignment="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jPanel17" alignment="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel17">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jPanel20" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jPanel20" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel20">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title=" Summary Report Details">
+                      <ResourceString PropertyName="titleX" bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jPanel20.border.title" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </TitledBorder>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabelStaticTextGroupFooterAll2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelFieldSummaryAll1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelOperationSummaryAll1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jCheckBoxMostrarFieldSummaryDetails" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jComboBoxSummaryDetailsField" alignment="1" pref="331" max="32767" attributes="0"/>
+                              <Component id="jTextFieldStaticSummaryDetailsText" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jComboBoxSummaryDetailsOperation" alignment="1" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jButtonSaveSummaryDetails" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jButtonSummaryDetailsDelete" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jButtonSummaryCloseDetails" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabelStaticTextGroupFooterAll2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldStaticSummaryDetailsText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jCheckBoxMostrarFieldSummaryDetails" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabelFieldSummaryAll1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxSummaryDetailsField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jComboBoxSummaryDetailsOperation" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelOperationSummaryAll1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jButtonSaveSummaryDetails" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonSummaryCloseDetails" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButtonSummaryDetailsDelete" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabelStaticTextGroupFooterAll2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jLabelStaticTextGroupFooterAll2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextFieldStaticSummaryDetailsText">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jTextFieldStaticSummaryDetailsText.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelFieldSummaryAll1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jLabelFieldSummaryAll1.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxSummaryDetailsField">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxSummaryDetailsFieldActionPerformed"/>
+                  </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelOperationSummaryAll1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jLabelOperationSummaryAll1.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxSummaryDetailsOperation">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButtonSaveSummaryDetails">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/org/avbravo/reportwizard/resources/save.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonSaveSummaryDetails.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonSaveSummaryDetails.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSaveSummaryDetailsActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButtonSummaryDetailsDelete">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/org/avbravo/reportwizard/resources/delete.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonSummaryDetailsDelete.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonSummaryDetailsDelete.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSummaryDetailsDeleteActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBoxMostrarFieldSummaryDetails">
+                  <Properties>
+                    <Property name="selected" type="boolean" value="true"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jCheckBoxMostrarFieldSummaryDetails.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxMostrarFieldSummaryDetailsActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButtonSummaryCloseDetails">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/org/avbravo/reportwizard/resources/back24x24.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonSummaryCloseDetails.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonSummaryCloseDetails.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSummaryCloseDetailsActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -1067,10 +1375,10 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="498" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="584" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="jPanel7" max="32767" attributes="0"/>
+                      <Component id="jPanelEntity" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1081,7 +1389,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
+                      <Component id="jPanelEntity" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="75" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -1114,7 +1422,7 @@
                               <Group type="102" attributes="0">
                                   <Component id="jTextFieldNameOfProject" pref="271" max="32767" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonSelectProject" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -1131,7 +1439,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonSelectProject" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
@@ -1162,17 +1470,17 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton2">
+                <Component class="javax.swing.JButton" name="jButtonSelectProject">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/org/avbravo/reportwizard/resources/project.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButton2.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonSelectProject.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSelectProjectActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel3">
@@ -1216,12 +1524,12 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="jPanel7">
+            <Container class="javax.swing.JPanel" name="jPanelEntity">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                     <TitledBorder title="Entity">
-                      <ResourceString PropertyName="titleX" bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jPanel7.border.title" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                      <ResourceString PropertyName="titleX" bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jPanelEntity.border.title" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                     </TitledBorder>
                   </Border>
                 </Property>
@@ -1232,13 +1540,13 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane4" min="-2" pref="545" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="jScrollPane4" min="-2" pref="637" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                               <Component id="jButtonGoPage2" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="310" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1380,7 +1688,7 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                       <Component id="jPanel14" min="-2" pref="279" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="288" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="374" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -1685,7 +1993,7 @@
                                               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jTextFieldNameOfReportDetails" min="-2" pref="301" max="-2" attributes="0"/>
-                                              <EmptySpace pref="16" max="32767" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
                                               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
@@ -1791,13 +2099,15 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="jButtonRefreshReportDetails" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jButtonGroupDetails" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButtonDeatilsSummary" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jButtonCodeDetails" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jButtonCompilarJasperDetails" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace pref="18" max="32767" attributes="0"/>
                                   <Component id="jButtonBackPagina1FromDetails" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
@@ -1818,13 +2128,16 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jButtonBackPagina1FromDetails" alignment="1" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                          <Component id="jButtonRefreshReportDetails" min="-2" pref="36" max="-2" attributes="0"/>
-                                      </Group>
                                       <Component id="jButtonGroupDetails" alignment="1" max="32767" attributes="0"/>
                                       <Component id="jButtonCodeDetails" alignment="1" max="32767" attributes="0"/>
                                       <Component id="jButtonCompilarJasperDetails" alignment="1" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jButtonRefreshReportDetails" alignment="1" min="-2" pref="36" max="-2" attributes="0"/>
+                                              <Component id="jButtonDeatilsSummary" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
                               </Group>
                           </Group>
@@ -1934,6 +2247,22 @@
                           <AuxValues>
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="jButtonDeatilsSummary">
+                          <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/org/avbravo/reportwizard/resources/summary.png"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                              <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonDeatilsSummary.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                            </Property>
+                            <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                              <ResourceString bundle="org/avbravo/reportwizard/Bundle.properties" key="ReportWizardTopComponent.jButtonDeatilsSummary.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                            </Property>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonDeatilsSummaryActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>

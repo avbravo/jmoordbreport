@@ -20,8 +20,8 @@ public class PageSize {
    private Integer rightMargin;
    private Integer topMargin;
    private Integer bottomMargin;
-   private String descripcion;
-   private String size;
+   private String  descripcion;
+   private String  size;
 
     public Integer getPageWidth() {
         return pageWidth;
@@ -135,6 +135,7 @@ public class PageSize {
             leftMargin = 20;
             rightMargin = 20;
             topMargin = 20;
+            bottomMargin = 20;
             size="A4";
             descripcion="8.264 x 11.694";
         } catch (Exception e) {
@@ -145,8 +146,7 @@ public class PageSize {
     // <editor-fold defaultstate="collapsed" desc="letter()">                          
 
     public  void letter() {
-        try {
-         
+        try {       
             pageWidth = 612;
             pageHeight = 792;
             columnWidth = 572;

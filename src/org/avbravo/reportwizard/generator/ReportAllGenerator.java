@@ -62,11 +62,11 @@ public class ReportAllGenerator {
     // <editor-fold defaultstate="collapsed" desc="header()">                          
     private void header() {
         try {
-            PageSize pageSize =  new PageSize(MySession.getSizeOfPageAll());
-           
+            PageSize pageSize = new PageSize(MySession.getSizeOfPageAll());
+
             addTextJasper("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
-           // addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasperreports\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd\" name=\"report name\" pageWidth=\"595\" pageHeight=\"842\" columnWidth=\"535\" leftMargin=\"20\" rightMargin=\"20\" topMargin=\"20\" bottomMargin=\"20\" >");
-            addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasperreports\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd\" name=\"report name\" pageWidth=\""+pageSize.getPageWidth() +"\" pageHeight=\""+pageSize.getPageHeight()+"\" columnWidth=\""+pageSize.getColumnWidth()+"\" leftMargin=\""+pageSize.getLeftMargin()+"\" rightMargin=\""+pageSize.getRightMargin()+"\" topMargin=\""+pageSize.getTopMargin()+"\" bottomMargin=\""+pageSize.getBottomMargin()+"\" >");
+            // addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasperreports\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd\" name=\"report name\" pageWidth=\"595\" pageHeight=\"842\" columnWidth=\"535\" leftMargin=\"20\" rightMargin=\"20\" topMargin=\"20\" bottomMargin=\"20\" >");
+            addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasperreports\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd\" name=\"report name\" pageWidth=\"" + pageSize.getPageWidth() + "\" pageHeight=\"" + pageSize.getPageHeight() + "\" columnWidth=\"" + pageSize.getColumnWidth() + "\" leftMargin=\"" + pageSize.getLeftMargin() + "\" rightMargin=\"" + pageSize.getRightMargin() + "\" topMargin=\"" + pageSize.getTopMargin() + "\" bottomMargin=\"" + pageSize.getBottomMargin() + "\" >");
             addTextJasper("	<property name=\"ireport.zoom\" value=\"1.0\"/>");
             addTextJasper("	<property name=\"ireport.x\" value=\"0\"/>");
             addTextJasper("	<property name=\"ireport.y\" value=\"0\"/>");
@@ -357,9 +357,24 @@ public class ReportAllGenerator {
     // <editor-fold defaultstate="collapsed" desc="summary()">
     private void summary() {
         try {
+           
+				
+				
+			
+             addTextJasper(" <summary>");
+            addTextJasper("	       <band height=\"42\" splitType=\"Stretch\">");
+            if (!ReportAllSession.getSummaryStaticText().equals("")) {
+                addTextJasper("	               <staticText> ");
+                addTextJasper("	                    <reportElement x = \"322\" y = \"16\" width = \"68\" height = \"20\" /> ");
+                addTextJasper("	                                 <text> <![CDATA[" + ReportAllSession.getSummaryStaticText() + "]]></text>");
+                addTextJasper("	               </staticText> ");
+                addTextJasper("	               <textField> ");
+                addTextJasper("	                          <reportElement x=\"398\" y=\"16\" width=\"100\" height=\"20\" />");
+                addTextJasper("	                          <textFieldExpression><![CDATA[$V{"+ ReportAllSession.getSummaryTextFieldExpression()+"}]]></textFieldExpression>");
+                addTextJasper("	               </textField> ");
+            }
 
-            addTextJasper(" <summary>");
-            addTextJasper("	       <band height=\"42\" splitType=\"Stretch\"/>");
+            addTextJasper("	       </band>");
             addTextJasper(" </summary>");
 
         } catch (Exception e) {
@@ -596,11 +611,12 @@ public class ReportAllGenerator {
     }
 // </editor-fold>
     // <editor-fold defaultstate="collapsed" desc="variableSummary()">
+
     private void variableSummary() {
         try {
-            if (!ReportAllSession.getSummaryName().equals("")) {
-                addTextJasper("       <variable name=\"v_summary_" + ReportAllSession.getVariableSummary() + "\" class=\"java.lang." + ReportAllSession.getVariableTypeSummary() + "\" resetType=\"Group\" resetGroup=\"" + ReportAllSession.getSummaryName()  + "\" calculation=\"" + ReportAllSession.getCalculationSummary()+ "\">");
-                addTextJasper("          <variableExpression><![CDATA[$F{" + ReportAllSession.getVariableSummary() + "}]]></variableExpression>");
+            if (!ReportAllSession.getSummaryVariableName().equals("")) {
+                addTextJasper("       <variable name=\"" + ReportAllSession.getSummaryVariableName() + "\" class=\"java.lang." + ReportAllSession.getSummaryVariableType() + "\"  calculation=\"" + ReportAllSession.getSummaryCalculation() + "\">");
+                addTextJasper("          <variableExpression><![CDATA[$F{" + ReportAllSession.getSummaryVariableExpression() + "}]]></variableExpression>");
                 addTextJasper("       </variable>");
 
             }
@@ -647,7 +663,7 @@ public class ReportAllGenerator {
                     addTextJasper("                                  <textFieldExpression><![CDATA[$V{v_" + ReportAllSession.getVariableGroup() + "}]]></textFieldExpression>");
                     addTextJasper("                          </textField>");
                 }
-                if ( ReportAllSession.getWriteLineaReport()) {
+                if (ReportAllSession.getWriteLineaReport()) {
                     addTextJasper("                          <line>");
                     addTextJasper("                                  <reportElement x=\"5\" y=\"38\" width=\"542\" height=\"1\" />");
                     addTextJasper("                          </line>");
@@ -663,10 +679,6 @@ public class ReportAllGenerator {
             MySession.error("group() " + e.getLocalizedMessage());
         }
     }
-// </editor-fold>
-    
-    // <editor-fold defaultstate="collapsed" desc="metodo()">
-    
 // </editor-fold>
 
 }

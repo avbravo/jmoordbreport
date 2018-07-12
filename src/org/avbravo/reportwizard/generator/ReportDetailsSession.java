@@ -5,7 +5,7 @@
  */
 package org.avbravo.reportwizard.generator;
 
-import static org.avbravo.reportwizard.generator.ReportAllSession.variableSummary;
+import static org.avbravo.reportwizard.generator.ReportAllSession.summaryShowField;
 
 /**
  *
@@ -27,11 +27,20 @@ public class ReportDetailsSession {
     static String calculation = "";
     static Boolean writeTextoReport = false;
     static Boolean writeLineaReport = false;
+    /*
+    --------------------------------------
     //     summary
-    static String variableSummary;
-    static String variableTypeSummary;
-    static String summaryName;
-    static String calculationSummary;
+    --------------------------------------
+     */
+    static Boolean summaryShowField = false;
+    //Variable
+    static String summaryVariableName = "";
+    static String summaryVariableType = "";
+    static String summaryVariableExpression = "";
+    static String summaryCalculation = "";
+    //Summary band
+    static String summaryStaticText = "";
+    static String summaryTextFieldExpression = "";
 
     public static void inicializar() {
         groupname = "";
@@ -45,47 +54,31 @@ public class ReportDetailsSession {
         calculation = "";
         writeTextoReport = false;
         writeLineaReport = false;
-          // summary
-        variableSummary = "";
-        variableTypeSummary = "";
-        summaryName = "";
-        calculationSummary = "";
+        // summary
+        summaryShowField = false;
+
+        summaryVariableName = "";
+        summaryVariableType = "";
+        summaryVariableExpression = "";
+        summaryCalculation = "";
+
+        summaryStaticText = "";
+        summaryTextFieldExpression = "";
+    }
+    public static void inicializarSummary() {
+       
+        // summary
+        summaryShowField = false;
+
+        summaryVariableName = "";
+        summaryVariableType = "";
+        summaryVariableExpression = "";
+        summaryCalculation = "";
+
+        summaryStaticText = "";
+        summaryTextFieldExpression = "";
     }
 
-    public static String getVariableSummary() {
-        return variableSummary;
-    }
-
-    public static void setVariableSummary(String variableSummary) {
-        ReportDetailsSession.variableSummary = variableSummary;
-    }
-
-    public static String getVariableTypeSummary() {
-        return variableTypeSummary;
-    }
-
-    public static void setVariableTypeSummary(String variableTypeSummary) {
-        ReportDetailsSession.variableTypeSummary = variableTypeSummary;
-    }
-
-    public static String getSummaryName() {
-        return summaryName;
-    }
-
-    public static void setSummaryName(String summaryName) {
-        ReportDetailsSession.summaryName = summaryName;
-    }
-
-    public static String getCalculationSummary() {
-        return calculationSummary;
-    }
-
-    public static void setCalculationSummary(String calculationSummary) {
-        ReportDetailsSession.calculationSummary = calculationSummary;
-    }
-
-    
-    
     public static String getGroupname() {
         return groupname;
     }
@@ -174,4 +167,61 @@ public class ReportDetailsSession {
         ReportDetailsSession.writeLineaReport = writeLineaReport;
     }
 
+    public static Boolean getSummaryShowField() {
+        return summaryShowField;
+    }
+
+    public static void setSummaryShowField(Boolean summaryShowField) {
+        ReportDetailsSession.summaryShowField = summaryShowField;
+    }
+
+    public static String getSummaryVariableName() {
+        return summaryVariableName;
+    }
+
+    public static void setSummaryVariableName(String summaryVariableName) {
+        ReportDetailsSession.summaryVariableName = summaryVariableName;
+    }
+
+    public static String getSummaryVariableType() {
+        return summaryVariableType;
+    }
+
+    public static void setSummaryVariableType(String summaryVariableType) {
+        ReportDetailsSession.summaryVariableType = summaryVariableType;
+    }
+
+    public static String getSummaryVariableExpression() {
+        return summaryVariableExpression;
+    }
+
+    public static void setSummaryVariableExpression(String summaryVariableExpression) {
+        ReportDetailsSession.summaryVariableExpression = summaryVariableExpression;
+    }
+
+    public static String getSummaryCalculation() {
+        return summaryCalculation;
+    }
+
+    public static void setSummaryCalculation(String summaryCalculation) {
+        ReportDetailsSession.summaryCalculation = summaryCalculation;
+    }
+
+    public static String getSummaryStaticText() {
+        return summaryStaticText;
+    }
+
+    public static void setSummaryStaticText(String summaryStaticText) {
+        ReportDetailsSession.summaryStaticText = summaryStaticText;
+    }
+
+    public static String getSummaryTextFieldExpression() {
+        return summaryTextFieldExpression;
+    }
+
+    public static void setSummaryTextFieldExpression(String summaryTextFieldExpression) {
+        ReportDetailsSession.summaryTextFieldExpression = summaryTextFieldExpression;
+    }
+
+  
 }

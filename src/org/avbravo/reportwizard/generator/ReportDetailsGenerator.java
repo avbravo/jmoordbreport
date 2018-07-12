@@ -357,9 +357,24 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
     // <editor-fold defaultstate="collapsed" desc="summary()">
     private void summary() {
         try {
+           
+				
+				
+			
+             addTextJasper(" <summary>");
+            addTextJasper("	       <band height=\"42\" splitType=\"Stretch\">");
+            if (!ReportDetailsSession.getSummaryStaticText().equals("")) {
+                addTextJasper("	               <staticText> ");
+                addTextJasper("	                    <reportElement x = \"322\" y = \"16\" width = \"68\" height = \"20\" /> ");
+                addTextJasper("	                                 <text> <![CDATA[" + ReportDetailsSession.getSummaryStaticText() + "]]></text>");
+                addTextJasper("	               </staticText> ");
+                addTextJasper("	               <textField> ");
+                addTextJasper("	                          <reportElement x=\"398\" y=\"16\" width=\"100\" height=\"20\" />");
+                addTextJasper("	                          <textFieldExpression><![CDATA[$V{"+ ReportDetailsSession.getSummaryTextFieldExpression()+"}]]></textFieldExpression>");
+                addTextJasper("	               </textField> ");
+            }
 
-            addTextJasper(" <summary>");
-            addTextJasper("	       <band height=\"42\" splitType=\"Stretch\"/>");
+            addTextJasper("	       </band>");
             addTextJasper(" </summary>");
 
         } catch (Exception e) {
@@ -367,6 +382,7 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
         }
     }
 
+    // </editor-fold>
     // </editor-fold>
     
     
@@ -601,12 +617,12 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
     }
 // </editor-fold>
     
-     // <editor-fold defaultstate="collapsed" desc="variableSummary()">
+      // <editor-fold defaultstate="collapsed" desc="variableSummary()">
     private void variableSummary() {
         try {
-            if (!ReportDetailsSession.getSummaryName().equals("")) {
-                addTextJasper("       <variable name=\"v_summary_" + ReportDetailsSession.getVariableSummary() + "\" class=\"java.lang." + ReportDetailsSession.getVariableTypeSummary() + "\" resetType=\"Group\" resetGroup=\"" + ReportDetailsSession.getSummaryName()  + "\" calculation=\"" + ReportDetailsSession.getCalculationSummary()+ "\">");
-                addTextJasper("          <variableExpression><![CDATA[$F{" + ReportDetailsSession.getVariableSummary() + "}]]></variableExpression>");
+            if (!ReportDetailsSession.getSummaryVariableName().equals("")) {
+                addTextJasper("       <variable name=\"" + ReportDetailsSession.getSummaryVariableName()+ "\" class=\"java.lang." + ReportDetailsSession.getSummaryVariableType() + "\"  calculation=\"" + ReportDetailsSession.getSummaryCalculation()+ "\">");
+                addTextJasper("          <variableExpression><![CDATA[$F{" + ReportDetailsSession.getSummaryVariableExpression()+ "}]]></variableExpression>");
                 addTextJasper("       </variable>");
 
             }

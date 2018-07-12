@@ -23,12 +23,20 @@ public class ReportAllSession {
 
     static Boolean writeTextoReport = false;
     static Boolean writeLineaReport = false;
-
-//     summary
-    static String variableSummary;
-    static String variableTypeSummary;
-    static String summaryName;
-    static String calculationSummary;
+    /*
+    --------------------------------------
+    //     summary
+    --------------------------------------
+     */
+    static Boolean summaryShowField = false;
+    //Variable
+    static String summaryVariableName = "";
+    static String summaryVariableType = "";
+    static String summaryVariableExpression = "";
+    static String summaryCalculation = "";
+    //Summary band
+    static String summaryStaticText = "";
+    static String summaryTextFieldExpression = "";
 
     public static void inicializar() {
         variableGroup = "";
@@ -42,48 +50,22 @@ public class ReportAllSession {
         calculation = "";
         writeTextoReport = false;
         writeLineaReport = false;
+      
+    }
+    public static void inicializarSummary() {
+      
         // summary
-        variableSummary = "";
-        variableTypeSummary = "";
-        summaryName = "";
-        calculationSummary = "";
+        summaryShowField = false;
+
+        summaryVariableName = "";
+        summaryVariableType = "";
+        summaryVariableExpression = "";
+        summaryCalculation = "";
+
+        summaryStaticText = "";
+        summaryTextFieldExpression = "";
     }
 
-    public static String getVariableSummary() {
-        return variableSummary;
-    }
-
-    public static void setVariableSummary(String variableSummary) {
-        ReportAllSession.variableSummary = variableSummary;
-    }
-
-    public static String getVariableTypeSummary() {
-        return variableTypeSummary;
-    }
-
-    public static void setVariableTypeSummary(String variableTypeSummary) {
-        ReportAllSession.variableTypeSummary = variableTypeSummary;
-    }
-
-    public static String getSummaryName() {
-        return summaryName;
-    }
-
-    public static void setSummaryName(String summaryName) {
-        ReportAllSession.summaryName = summaryName;
-    }
-
-    public static String getCalculationSummary() {
-        return calculationSummary;
-    }
-
-    public static void setCalculationSummary(String calculationSummary) {
-        ReportAllSession.calculationSummary = calculationSummary;
-    }
-
-    
-    
-    
     public static String getVariableGroup() {
         return variableGroup;
     }
@@ -171,5 +153,63 @@ public class ReportAllSession {
     public static void setWriteLineaReport(Boolean writeLineaReport) {
         ReportAllSession.writeLineaReport = writeLineaReport;
     }
+
+    public static Boolean getSummaryShowField() {
+        return summaryShowField;
+    }
+
+    public static void setSummaryShowField(Boolean summaryShowField) {
+        ReportAllSession.summaryShowField = summaryShowField;
+    }
+
+    public static String getSummaryVariableName() {
+        return summaryVariableName;
+    }
+
+    public static void setSummaryVariableName(String summaryVariableName) {
+        ReportAllSession.summaryVariableName = summaryVariableName;
+    }
+
+    public static String getSummaryVariableType() {
+        return summaryVariableType;
+    }
+
+    public static void setSummaryVariableType(String summaryVariableType) {
+        ReportAllSession.summaryVariableType = summaryVariableType;
+    }
+
+    public static String getSummaryVariableExpression() {
+        return summaryVariableExpression;
+    }
+
+    public static void setSummaryVariableExpression(String summaryVariableExpression) {
+        ReportAllSession.summaryVariableExpression = summaryVariableExpression;
+    }
+
+    public static String getSummaryCalculation() {
+        return summaryCalculation;
+    }
+
+    public static void setSummaryCalculation(String summaryCalculation) {
+        ReportAllSession.summaryCalculation = summaryCalculation;
+    }
+
+    public static String getSummaryStaticText() {
+        return summaryStaticText;
+    }
+
+    public static void setSummaryStaticText(String summaryStaticText) {
+        ReportAllSession.summaryStaticText = summaryStaticText;
+    }
+
+    public static String getSummaryTextFieldExpression() {
+        return summaryTextFieldExpression;
+    }
+
+    public static void setSummaryTextFieldExpression(String summaryTextFieldExpression) {
+        ReportAllSession.summaryTextFieldExpression = summaryTextFieldExpression;
+    }
+
+   
 
 }
