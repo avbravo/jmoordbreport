@@ -26,9 +26,9 @@ import java.util.StringTokenizer;
 import java.util.UUID;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
-import org.avbravo.reportwizard.beans.Atributos;
-import org.avbravo.reportwizard.beans.Entidad;
-import static org.avbravo.reportwizard.domains.EntityReader.DEFAULT_CHARSET;
+import org.avbravo.reportwizard.entity.Atributos;
+import org.avbravo.reportwizard.entity.Entidad;
+import static org.avbravo.reportwizard.entity.EntityReader.DEFAULT_CHARSET;
 import org.avbravo.reportwizard.rules.EntidadPatron;
 
 /**

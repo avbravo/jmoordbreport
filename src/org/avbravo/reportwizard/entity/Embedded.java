@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.avbravo.reportwizard.beans;
+package org.avbravo.reportwizard.entity;
 
 /**
  *
  * @author avbravo
  */
-public class Referenced {
- private  String type ;
+public class Embedded {
+  private  String type ;
  private String field ;
  private Boolean esList;
+
     public String getType() {
         return type;
     }
@@ -37,12 +38,7 @@ public class Referenced {
         this.esList = esList;
     }
 
-
-    public Referenced() {
+    public Embedded() {
     }
-
- 
- 
- 
- 
+  
 }

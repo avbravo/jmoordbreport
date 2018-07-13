@@ -18,8 +18,8 @@ import javax.swing.text.StyleConstants;
 import javax.swing.text.StyleContext;
 import javax.swing.text.StyledDocument;
 import net.sf.jasperreports.engine.JasperCompileManager;
-import org.avbravo.reportwizard.beans.Atributos;
-import org.avbravo.reportwizard.beans.Entidad;
+import org.avbravo.reportwizard.entity.Atributos;
+import org.avbravo.reportwizard.entity.Entidad;
 import org.avbravo.reportwizard.domains.MySession;
 import org.avbravo.reportwizard.domains.Utilidades;
 import org.openide.DialogDisplayer;
@@ -182,7 +182,7 @@ public class ReportDetailsGenerator {
                     name = a.getNombre();
                     if (count < 27) {
                         
-                         if (a.getEsListEmbedded() || a.getEsListReferenced()) {
+                         if (a.getEsList() || a.getEsListEmbedded() || a.getEsListReferenced()) {
                             addTextJasper("	<field name=\"" + name + "\" class=\"java.util.List\"/>");
                         } else {
                                   switch (a.getTipo()) {

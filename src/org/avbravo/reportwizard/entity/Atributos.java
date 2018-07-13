@@ -3,24 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.avbravo.reportwizard.beans;
+package org.avbravo.reportwizard.entity;
 
 /**
  *
  * @author avbravoserver
  */
 public class Atributos {
+
     private String tipo;
     private String nombre;
     private Boolean esPrimaryKey;
-private Boolean esEmbedded;
-private Boolean esReferenced;
-private Boolean esListEmbedded;
-private Boolean esListReferenced;
+    private Boolean esEmbedded;
+    private Boolean esReferenced;
+    private Boolean esListEmbedded;
+    private Boolean esListReferenced;
+    private Boolean esList;
+
     public Atributos() {
     }
 
-    public Atributos(String tipo, String nombre, Boolean esPrimaryKey, Boolean esEmbedded, Boolean esReferenced, Boolean esListEmbedded, Boolean esListReferenced) {
+    public Atributos(String tipo, String nombre, Boolean esPrimaryKey, Boolean esEmbedded, Boolean esReferenced, Boolean esListEmbedded, Boolean esListReferenced, Boolean esList) {
         this.tipo = tipo;
         this.nombre = nombre;
         this.esPrimaryKey = esPrimaryKey;
@@ -28,6 +31,15 @@ private Boolean esListReferenced;
         this.esReferenced = esReferenced;
         this.esListEmbedded = esListEmbedded;
         this.esListReferenced = esListReferenced;
+        this.esList=esList;
+    }
+
+    public Boolean getEsList() {
+        return esList;
+    }
+
+    public void setEsList(Boolean esList) {
+        this.esList = esList;
     }
 
     
@@ -88,7 +100,4 @@ private Boolean esListReferenced;
         this.esListReferenced = esListReferenced;
     }
 
-   
-    
-    
 }

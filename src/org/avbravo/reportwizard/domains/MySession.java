@@ -4,11 +4,12 @@
  */
 package org.avbravo.reportwizard.domains;
 
+import org.avbravo.reportwizard.entity.Fields;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.html.parser.Entity;
-import org.avbravo.reportwizard.beans.Entidad;
+import org.avbravo.reportwizard.entity.Entidad;
 import org.avbravo.reportwizard.rules.EntidadPatron;
 import org.openide.DialogDisplayer;
 import org.openide.NotifyDescriptor;

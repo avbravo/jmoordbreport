@@ -3,42 +3,40 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.avbravo.reportwizard.domains;
+package org.avbravo.reportwizard.entity;
 // <editor-fold defaultstate="collapsed" desc="import">
-
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import org.avbravo.reportwizard.beans.Atributos;
-import org.avbravo.reportwizard.beans.Embedded;
-import org.avbravo.reportwizard.beans.Entidad;
-import org.avbravo.reportwizard.beans.Referenced;
+import org.avbravo.reportwizard.domains.MySession;
+import org.avbravo.reportwizard.domains.Utilidades;
+import org.avbravo.reportwizard.entity.Atributos;
+import org.avbravo.reportwizard.entity.Embedded;
+import org.avbravo.reportwizard.entity.Entidad;
+import org.avbravo.reportwizard.entity.Referenced;
 
 // </editor-fold>
-
 /**
  *
  * @author avbravoserver
  */
-
 public class EntityReader implements Serializable {
 // <editor-fold defaultstate="collapsed" desc="atributos">
 
     private static final long serialVersionUID = 1L;
     public static final String DEFAULT_CHARSET = "UTF-8";
-   
-
+    
     Entidad entidad = new Entidad();
     List<Atributos> atributosList = new ArrayList<>();
     List<Referenced> referencedList = new ArrayList<>();
     List<Embedded> embeddedList = new ArrayList<>();
     private Boolean terminaReferenced = true;
-
+    
     Boolean startReferenced = false;
     Boolean endReferenced = false;
     Boolean endEmbedded = false;
-
+    
     private String campoId = "";
     Integer fila = 0;
     Integer rowId = 0;
@@ -55,8 +53,7 @@ public class EntityReader implements Serializable {
 
     public Boolean readEntity(String name, String texto) {
         try {
-           
-           
+
             /**
              *
              */
@@ -65,7 +62,7 @@ public class EntityReader implements Serializable {
             atributosList = new ArrayList<>();
             referencedList = new ArrayList<>();
             embeddedList = new ArrayList<>();
-
+            
             fila = 0;
             rowId = 0;
             campoId = "";
@@ -74,20 +71,19 @@ public class EntityReader implements Serializable {
                 MySession.setAllTablesWithPrimaryKey(false);
                 MySession.getMensajesInformacion().add(name + " No tiene Primary Key");
                 
-            }else {
-                 MySession.setAllTablesWithPrimaryKey(true);
+            } else {
+                MySession.setAllTablesWithPrimaryKey(true);
             }
             // procesar los atributos
             startReferenced = false;
             endReferenced = false;
-             for (String line : texto.split("\\n")){
-                   linea(line);
-             }
-           
+            for (String line : texto.split("\\n")) {
+                linea(line);
+            }
 
             //Referenciado
-              for (String line : texto.split("\\n")){
-
+            for (String line : texto.split("\\n")) {
+                
                 if (line.contains("@Referenced") && line.contains(")")) {
                     startReferenced = true;
                     endReferenced = true;
@@ -98,7 +94,7 @@ public class EntityReader implements Serializable {
                     } else {
                         if (startReferenced && !endReferenced && line.contains(")")) {
                             endReferenced = true;
-
+                            
                         } else {
                             if (endReferenced) {
                                 lineReferenced(line);
@@ -107,13 +103,13 @@ public class EntityReader implements Serializable {
                             }
                         }
                     }
-
+                    
                 }
-
+                
             }
-
+            
             endEmbedded = false;
-           for (String line : texto.split("\\n")){
+            for (String line : texto.split("\\n")) {
                 if (line.contains("@Embedded")) {
                     endEmbedded = true;
                 } else {
@@ -122,7 +118,7 @@ public class EntityReader implements Serializable {
                         endEmbedded = false;
                     }
                 }
-
+                
             }
             Boolean esEmbebido;
             Boolean esList = false;
@@ -131,26 +127,25 @@ public class EntityReader implements Serializable {
             /**
              * Se indica si el atributo es Embebido o referenciado
              */
-
+            
             for (Atributos a : atributosList) {
                 atributosList.get(contador).setEsReferenced(false);
-
+                
                 if (!embeddedList.isEmpty()) {
- 
+                    
                     esEmbebido = false;
                     esList = false;
-
+                    
                     for (Embedded e : embeddedList) {
                         if (a.getNombre().toLowerCase().equals(e.getField().toLowerCase())) {
                             esEmbebido = true;
                             esList = e.getEsList();
-                            break; 
+                            break;                            
                         }
                     }
                     atributosList.get(contador).setEsEmbedded(esEmbebido);
                     atributosList.get(contador).setEsListEmbedded(esList);
                     
-
                 } else {
                     atributosList.get(contador).setEsEmbedded(false);
                     atributosList.get(contador).setEsListEmbedded(false);
@@ -178,11 +173,11 @@ public class EntityReader implements Serializable {
                 } else {
                     atributosList.get(contador).setEsReferenced(false);
                     atributosList.get(contador).setEsListReferenced(false);
-
+                    
                 }
                 contador++;
             }
-
+            
             entidad.setAtributosList(atributosList);
             entidad.setEmbeddedList(embeddedList);
             entidad.setReferencedList(referencedList);
@@ -190,10 +185,10 @@ public class EntityReader implements Serializable {
             MySession.setEntidad(entidad);
         } catch (Exception e) {
             MySession.error("readEntity() " + e.getLocalizedMessage());
-
+            
         }
         return true;
-
+        
     }// </editor-fold> 
 
     // <editor-fold defaultstate="collapsed" desc="linea">
@@ -203,6 +198,7 @@ public class EntityReader implements Serializable {
     private void linea(String s) {
         try {
             Atributos atributos = new Atributos();
+            atributos.setEsList(false);
             if (s.indexOf("private static final long serialVersionUID = 1L;") != -1 || s.indexOf("private Collection") != -1) {
                 //no se toma en cuenta
             } else if (s.indexOf("@Id") != -1) {
@@ -213,13 +209,16 @@ public class EntityReader implements Serializable {
                 s = s.trim();
                 String[] splited = s.split("\\s");
 //                atributos.setTipo(splited[0]);
+                if (splited[0].contains("List<")) {
+                    atributos.setEsList(true);
+                }
                 atributos.setTipo(Utilidades.mysqlToJava(splited[0]));
-
+                
                 atributos.setNombre(splited[1]);
                 atributos.setEsPrimaryKey(atributos.getNombre().equals(campoId));
-
+                
                 atributosList.add(atributos);
-
+                
             } else {
                 if (s.indexOf("@Referenced") != -1) {
                     //  terminaReferenced=true;
@@ -234,19 +233,19 @@ public class EntityReader implements Serializable {
         } catch (Exception e) {
             MySession.error("EntidadGenerador.linea() " + e.getLocalizedMessage());
         }
-
+        
     }
-
+    
     private Boolean searchId(String texto) {
         try {
-
-            for (String line : texto.split("\\n")){
+            
+            for (String line : texto.split("\\n")) {
                 fila++;
                 if (line.indexOf("@Id") != -1) {
                     rowId = fila;
                 }
             }
-
+            
             if (rowId != 0) {
                 if (!searchNameFieldId(texto)) {
                     MySession.advertencia("No se encontre el campo llave del entity");
@@ -257,7 +256,7 @@ public class EntityReader implements Serializable {
         } catch (Exception e) {
             MySession.error("searchId() " + e.getLocalizedMessage());
         }
-
+        
         return false;
     }// </editor-fold> 
 // <editor-fold defaultstate="collapsed" desc="searchNameFieldId">
@@ -267,8 +266,8 @@ public class EntityReader implements Serializable {
             contador = 0;
             detener = false;
             campoId = "";
-             for (String line : texto.split("\\n")){
-                  contador++;
+            for (String line : texto.split("\\n")) {
+                contador++;
                 if (!detener) {
                     if (contador >= rowId + 1) {
                         if (line.indexOf("private") != -1) {
@@ -281,9 +280,9 @@ public class EntityReader implements Serializable {
                         }
                     }
                 }
-
+                
             }
-
+            
             if (!campoId.equals("")) {
                 return true;
             }
@@ -312,35 +311,35 @@ public class EntityReader implements Serializable {
                 if (s.contains(">")) {
                     s = s.replace(">", "");
                 }
-
+                
             } else {
                 referenced.setEsList(false);
                 if (s.contains("private")) {
                     s = s.replace("private", "");
                 }
-
+                
             }
             if (s.contains(";")) {
                 s = s.replace(";", "");
             }
-
+            
             s = s.trim();
             String[] splited = s.split("\\s");
             referenced.setType(splited[0]);
             referenced.setField(splited[1]);
             referencedList.add(referenced);
-
+            
         } catch (Exception e) {
             MySession.error("lineReferenced() " + e.getLocalizedMessage());
-
+            
         }
-
+        
     }// </editor-fold> 
 // <editor-fold defaultstate="collapsed" desc="lineEmbedded">
 
     private void lineEmbedded(String s) {
         try {
-
+            
             Embedded embedded = new Embedded();
             if (s.contains("List")) {
                 embedded.setEsList(true);
@@ -360,21 +359,21 @@ public class EntityReader implements Serializable {
                     s = s.replace("private", "");
                 }
             }
-
+            
             if (s.contains(";")) {
                 s = s.replace(";", "");
             }
-
+            
             s = s.trim();
-
+            
             String[] splited = s.split("\\s");
             embedded.setType(splited[0]);
             embedded.setField(splited[1]);
             embeddedList.add(embedded);
-
+            
         } catch (Exception e) {
             MySession.error("lineEmbedded() " + e.getLocalizedMessage());
         }
-
+        
     }// </editor-fold> 
 }

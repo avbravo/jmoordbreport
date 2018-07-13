@@ -5,7 +5,7 @@
  */
 package org.avbravo.reportwizard.rules;
 
-import org.avbravo.reportwizard.beans.Entidad;
+import org.avbravo.reportwizard.entity.Entidad;
 
 
 /**

@@ -7,7 +7,7 @@ package org.avbravo.reportwizard.rules;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.avbravo.reportwizard.beans.Entidad;
+import org.avbravo.reportwizard.entity.Entidad;
 
 /**
  *

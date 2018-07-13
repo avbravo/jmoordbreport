@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.avbravo.reportwizard.beans;
+package org.avbravo.reportwizard.entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.List;
  * @author avbravoserver
  */
 public class Entidad {
-    private String tabla;
+   private String tabla;
    List<Atributos> atributosList = new ArrayList<>();
    List<Referenced> referencedList = new ArrayList<>();
    List<Embedded> embeddedList = new ArrayList<>();
