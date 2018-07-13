@@ -12,16 +12,29 @@ import org.avbravo.reportwizard.domains.MySession;
  * @author avbravo
  */
 public class LenguajeGenerator {
-    public String template(){
+
+    public String template() {
         try {
-            
-            String texto="@Page(size=\"A4\", report=\"all/details\")\n"
-                    +"@Group(field=\"\", operation=\"Sum\", header=\"Grupo:\", footer=\"Total:\",  report=\"all/details\")\n"
-                    +"@Summary(field=\"\", operation=\"Sum\", label=\"Summary:\",  report=\"all/details\")";
-          
-return texto;
+
+            String texto = "Page {\n"
+                    + "       size:\"A4\",\n"
+                    + "      }\n"
+                    + "Group {\n"
+                    + "       field:\"\",\n"                   
+                    + "       staticTextHeader:\"\",\n" 
+                    + "       staticTexFooter:\"\",\n"
+                    + "       fieldFooter:\"\",\n"
+                    + "       operation:\"Sum\"\n"                    
+                    + "       }\n"
+                    + "Summary{\n"
+                    + "        staticText:\"Summary:\",\n"
+                    + "        field:\"\",\n"
+                    + "        operation:\"Sum\"\n"
+                    + "        }\n";
+
+            return texto;
         } catch (Exception e) {
-            MySession.error("template() "+e.getLocalizedMessage());
+            MySession.error("template() " + e.getLocalizedMessage());
         }
         return "";
     }

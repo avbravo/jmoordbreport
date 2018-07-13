@@ -11,6 +11,9 @@ package org.avbravo.reportwizard.generator;
  */
 public class ReportAllSession {
 
+    static String pageSize = "A4";
+
+    //---------------------------------------
     static String variableGroup = "";
     static String variableTypeGroup = "";
     static String groupname = "";
@@ -38,6 +41,14 @@ public class ReportAllSession {
     static String summaryStaticText = "";
     static String summaryTextFieldExpression = "";
 
+    public static String getPageSize() {
+        return pageSize;
+    }
+
+    public static void setPageSize(String pageSize) {
+        ReportAllSession.pageSize = pageSize;
+    }
+
     public static void inicializar() {
         variableGroup = "";
         variableTypeGroup = "";
@@ -50,10 +61,11 @@ public class ReportAllSession {
         calculation = "";
         writeTextoReport = false;
         writeLineaReport = false;
-      
+
     }
+
     public static void inicializarSummary() {
-      
+
         // summary
         summaryShowField = false;
 
@@ -209,7 +221,5 @@ public class ReportAllSession {
     public static void setSummaryTextFieldExpression(String summaryTextFieldExpression) {
         ReportAllSession.summaryTextFieldExpression = summaryTextFieldExpression;
     }
-
-   
 
 }

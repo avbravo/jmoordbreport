@@ -12,7 +12,8 @@ import static org.avbravo.reportwizard.generator.ReportAllSession.summaryShowFie
  * @author avbravo
  */
 public class ReportDetailsSession {
-
+static String pageSize="A4";
+    
     /**
      * Details
      */
@@ -79,6 +80,17 @@ public class ReportDetailsSession {
         summaryTextFieldExpression = "";
     }
 
+    public static String getPageSize() {
+        return pageSize;
+    }
+
+    public static void setPageSize(String pageSize) {
+        ReportDetailsSession.pageSize = pageSize;
+    }
+
+    
+    
+    
     public static String getGroupname() {
         return groupname;
     }

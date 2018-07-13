@@ -62,7 +62,7 @@ public class ReportAllGenerator {
     // <editor-fold defaultstate="collapsed" desc="header()">                          
     private void header() {
         try {
-            PageSize pageSize = new PageSize(MySession.getSizeOfPageAll());
+            PageSize pageSize = new PageSize(ReportAllSession.getPageSize());
 
             addTextJasper("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
             // addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasperreports\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd\" name=\"report name\" pageWidth=\"595\" pageHeight=\"842\" columnWidth=\"535\" leftMargin=\"20\" rightMargin=\"20\" topMargin=\"20\" bottomMargin=\"20\" >");

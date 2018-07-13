@@ -8,8 +8,8 @@ import org.avbravo.reportwizard.entity.Fields;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.text.html.parser.Entity;
 import org.avbravo.reportwizard.entity.Entidad;
+import org.avbravo.reportwizard.lenguaje.Label;
 import org.avbravo.reportwizard.rules.EntidadPatron;
 import org.openide.DialogDisplayer;
 import org.openide.NotifyDescriptor;
@@ -49,6 +49,7 @@ public class MySession {
     static List<Parameters> parametersList = new ArrayList<>();
     static List<String> mensajesInformacion = new ArrayList<>();
     static List<EntidadPatron> entidadPatronList = new ArrayList<>();
+    static List<Label> labelList = new ArrayList<>();
 
     public static String compilarReporteaJasper = "";
 
@@ -69,23 +70,20 @@ public class MySession {
     static String patternDate = "dd/MM/yyyy";
     static String patternDateTime = "HH:mm dd/MM/yyyy";
     static Entidad entidad;
-    static String sizeOfPageAll="A4";
-    static String sizeOfPageDetails="A4";
 
-    public static String getSizeOfPageAll() {
-        return sizeOfPageAll;
+  
+   
+
+   
+  
+
+  
+    public static List<Label> getLabelList() {
+        return labelList;
     }
 
-    public static void setSizeOfPageAll(String sizeOfPageAll) {
-        MySession.sizeOfPageAll = sizeOfPageAll;
-    }
-
-    public static String getSizeOfPageDetails() {
-        return sizeOfPageDetails;
-    }
-
-    public static void setSizeOfPageDetails(String sizeOfPageDetails) {
-        MySession.sizeOfPageDetails = sizeOfPageDetails;
+    public static void setLabelList(List<Label> labelList) {
+        MySession.labelList = labelList;
     }
 
     
@@ -504,4 +502,14 @@ public class MySession {
             DialogDisplayer.getDefault().notify(nd);
         }
     }
+    
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    public static void inicializarLabelList(){
+        try {
+            labelList = new ArrayList<>();
+        } catch (Exception e) {
+            error("inicializarLabelList() "+e.getLocalizedMessage());
+        }
+    }
+    // </editor-fold> 
 }
