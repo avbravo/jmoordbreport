@@ -39,9 +39,9 @@ public class ReportDetailsGenerator {
             this.titulo = titulo;
             header();
             defineField();
-             variable();
-             variableSummary();
-              group();
+            variable();
+            variableSummary();
+            group();
             addTextJasper("");
             background();
             addTextJasper("");
@@ -62,10 +62,10 @@ public class ReportDetailsGenerator {
     // <editor-fold defaultstate="collapsed" desc="header()">                          
     private void header() {
         try {
-             PageSize pageSize =  new PageSize(MySession.getSizeOfPageDetails());
+            PageSize pageSize = new PageSize(MySession.getSizeOfPageDetails());
             addTextJasper("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
 //            addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasperreports\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd\" name=\"report name\" pageWidth=\"595\" pageHeight=\"842\" columnWidth=\"535\" leftMargin=\"20\" rightMargin=\"20\" topMargin=\"20\" bottomMargin=\"20\" >");
-addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasperreports\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd\" name=\"report name\" pageWidth=\""+pageSize.getPageWidth() +"\" pageHeight=\""+pageSize.getPageHeight()+"\" columnWidth=\""+pageSize.getColumnWidth()+"\" leftMargin=\""+pageSize.getLeftMargin()+"\" rightMargin=\""+pageSize.getRightMargin()+"\" topMargin=\""+pageSize.getTopMargin()+"\" bottomMargin=\""+pageSize.getBottomMargin()+"\" >");
+            addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasperreports\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd\" name=\"report name\" pageWidth=\"" + pageSize.getPageWidth() + "\" pageHeight=\"" + pageSize.getPageHeight() + "\" columnWidth=\"" + pageSize.getColumnWidth() + "\" leftMargin=\"" + pageSize.getLeftMargin() + "\" rightMargin=\"" + pageSize.getRightMargin() + "\" topMargin=\"" + pageSize.getTopMargin() + "\" bottomMargin=\"" + pageSize.getBottomMargin() + "\" >");
             addTextJasper("	<property name=\"ireport.zoom\" value=\"1.0\"/>");
             addTextJasper("	<property name=\"ireport.x\" value=\"0\"/>");
             addTextJasper("	<property name=\"ireport.y\" value=\"0\"/>");
@@ -157,7 +157,8 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
         }
     }
 // </editor-fold>
-    // <editor-fold defaultstate="collapsed" desc="title()">
+    // <editor-fold defaultstate="collapsed" desc="columnHeader()">
+
     private void columnHeader() {
         try {
             addTextJasper("  <columnHeader>");
@@ -256,29 +257,27 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
     }
     // </editor-fold>
 
-
 // <editor-fold defaultstate="collapsed" desc="detail()">
-
     private void detail() {
         try {
-            Integer numberOfAtributes=0;
-              for (Entidad e : MySession.getEntidadList()) {
+            Integer numberOfAtributes = 0;
+            for (Entidad e : MySession.getEntidadList()) {
                 Integer count = 0;
-                numberOfAtributes =e.getAtributosList().size();              
-              }
+                numberOfAtributes = e.getAtributosList().size();
+            }
 //            Integer[] x = {10, 117, 235, 347, 456};
-            Integer[] xLabel= {2,272,2,272,2,272,2,272,2,272,2,272,2,272,2,272,2,272,2,272,2,272,2,272,2,272};            
-            Integer[] xText= {86,370,86,370,86,370,86,370,86,370,86,370,86,370,86,370,86,370,86,370,86,370,86,370,86,370};
-            Integer[] y= {1,1,22,22,43,43,64,64,85,85,106,106,127,127,148,148,169,169,190,190,211,211,232,232,253,253};
-            Integer[] heigth= {24,24,46,46,68,68,90,90,112,112,134,134,156,156,178,178,200,200,222,222,244,244,266,266,288,288};
+            Integer[] xLabel = {2, 272, 2, 272, 2, 272, 2, 272, 2, 272, 2, 272, 2, 272, 2, 272, 2, 272, 2, 272, 2, 272, 2, 272, 2, 272};
+            Integer[] xText = {86, 370, 86, 370, 86, 370, 86, 370, 86, 370, 86, 370, 86, 370, 86, 370, 86, 370, 86, 370, 86, 370, 86, 370, 86, 370};
+            Integer[] y = {1, 1, 22, 22, 43, 43, 64, 64, 85, 85, 106, 106, 127, 127, 148, 148, 169, 169, 190, 190, 211, 211, 232, 232, 253, 253};
+            Integer[] heigth = {24, 24, 46, 46, 68, 68, 90, 90, 112, 112, 134, 134, 156, 156, 178, 178, 200, 200, 222, 222, 244, 244, 266, 266, 288, 288};
             addTextJasper(" <detail>");
-            addTextJasper("	    <band height=\""+heigth[numberOfAtributes]+"\" splitType=\"Stretch\">");
+            addTextJasper("	    <band height=\"" + heigth[numberOfAtributes] + "\" splitType=\"Stretch\">");
             for (Entidad e : MySession.getEntidadList()) {
                 Integer count = 0;
                 for (Atributos a : e.getAtributosList()) {
-                    
+
                     if (count < 27) {
-                          addTextJasper("        <staticText>");
+                        addTextJasper("        <staticText>");
                         addTextJasper("	               <reportElement y=\"" + y[count] + "\" x=\"" + xLabel[count] + "\" width=\"100\" height=\"20\" />");
                         addTextJasper("	               <textElement>");
                         addTextJasper("		               <font isBold=\"true\"/>");
@@ -286,7 +285,7 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
                         addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
                         addTextJasper("           </staticText>");
                     }
-                    
+
                     if (count < 27) {
                         switch (a.getTipo().toLowerCase().trim()) {
                             case "double":
@@ -300,7 +299,13 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
                         }
 
                         addTextJasper("                   <reportElement y=\"" + y[count] + "\" x=\"" + xText[count] + "\" width=\"100\" height=\"20\" />");
-                        addTextJasper("	                  <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}]]></textFieldExpression>");
+                        if (a.getTipo().toLowerCase().trim().equals("object")) {
+
+                            addTextJasper("	                  <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}.toString()]]></textFieldExpression>");
+                        } else {
+                            addTextJasper("	                  <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}]]></textFieldExpression>");
+                        }
+
                         addTextJasper("              </textField>");
 
                         count++;
@@ -321,7 +326,7 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
     // <editor-fold defaultstate="collapsed" desc="columnFooter()">
     private void columnFooter() {
         try {
-             addTextJasper(" <columnFooter>");
+            addTextJasper(" <columnFooter>");
             addTextJasper("	       <band height=\"45\" splitType=\"Stretch\"/>");
             addTextJasper(" </columnFooter>");
 
@@ -357,11 +362,8 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
     // <editor-fold defaultstate="collapsed" desc="summary()">
     private void summary() {
         try {
-           
-				
-				
-			
-             addTextJasper(" <summary>");
+
+            addTextJasper(" <summary>");
             addTextJasper("	       <band height=\"42\" splitType=\"Stretch\">");
             if (!ReportDetailsSession.getSummaryStaticText().equals("")) {
                 addTextJasper("	               <staticText> ");
@@ -370,7 +372,7 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
                 addTextJasper("	               </staticText> ");
                 addTextJasper("	               <textField> ");
                 addTextJasper("	                          <reportElement x=\"398\" y=\"16\" width=\"100\" height=\"20\" />");
-                addTextJasper("	                          <textFieldExpression><![CDATA[$V{"+ ReportDetailsSession.getSummaryTextFieldExpression()+"}]]></textFieldExpression>");
+                addTextJasper("	                          <textFieldExpression><![CDATA[$V{" + ReportDetailsSession.getSummaryTextFieldExpression() + "}]]></textFieldExpression>");
                 addTextJasper("	               </textField> ");
             }
 
@@ -384,8 +386,6 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
 
     // </editor-fold>
     // </editor-fold>
-    
-    
     // <editor-fold defaultstate="collapsed" desc="close()">
     private void close() {
         try {
@@ -597,32 +597,29 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
         return false;
     }
 // </editor-fold>
-    
 
-    
-    
-      // <editor-fold defaultstate="collapsed" desc="variable()">
+    // <editor-fold defaultstate="collapsed" desc="variable()">
     private void variable() {
 
         try {
-            if (!ReportDetailsSession.getGroupname().equals("") &&  (ReportDetailsSession.getWriteTextoReport())  ) {
-                addTextJasper("        <variable name=\"v_"+ReportDetailsSession.getVariableGroup()+"\" class=\"java.lang."+ReportDetailsSession.getVariableTypeGroup()+"\" resetType=\"Group\" resetGroup=\""+ReportDetailsSession.getGroupname() +"\" calculation=\""+ReportDetailsSession.getCalculation()+"\">");
-                addTextJasper("          <variableExpression><![CDATA[$F{"+ReportDetailsSession.getVariableGroup() +"}]]></variableExpression>");
+            if (!ReportDetailsSession.getGroupname().equals("") && (ReportDetailsSession.getWriteTextoReport())) {
+                addTextJasper("        <variable name=\"v_" + ReportDetailsSession.getVariableGroup() + "\" class=\"java.lang." + ReportDetailsSession.getVariableTypeGroup() + "\" resetType=\"Group\" resetGroup=\"" + ReportDetailsSession.getGroupname() + "\" calculation=\"" + ReportDetailsSession.getCalculation() + "\">");
+                addTextJasper("          <variableExpression><![CDATA[$F{" + ReportDetailsSession.getVariableGroup() + "}]]></variableExpression>");
                 addTextJasper("        </variable>");
-             
+
             }
         } catch (Exception e) {
             MySession.error("variable() " + e.getLocalizedMessage());
         }
     }
 // </editor-fold>
-    
-      // <editor-fold defaultstate="collapsed" desc="variableSummary()">
+
+    // <editor-fold defaultstate="collapsed" desc="variableSummary()">
     private void variableSummary() {
         try {
             if (!ReportDetailsSession.getSummaryVariableName().equals("")) {
-                addTextJasper("       <variable name=\"" + ReportDetailsSession.getSummaryVariableName()+ "\" class=\"java.lang." + ReportDetailsSession.getSummaryVariableType() + "\"  calculation=\"" + ReportDetailsSession.getSummaryCalculation()+ "\">");
-                addTextJasper("          <variableExpression><![CDATA[$F{" + ReportDetailsSession.getSummaryVariableExpression()+ "}]]></variableExpression>");
+                addTextJasper("       <variable name=\"" + ReportDetailsSession.getSummaryVariableName() + "\" class=\"java.lang." + ReportDetailsSession.getSummaryVariableType() + "\"  calculation=\"" + ReportDetailsSession.getSummaryCalculation() + "\">");
+                addTextJasper("          <variableExpression><![CDATA[$F{" + ReportDetailsSession.getSummaryVariableExpression() + "}]]></variableExpression>");
                 addTextJasper("       </variable>");
 
             }
@@ -631,8 +628,8 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
         }
     }
 // </editor-fold>
-    
-     // <editor-fold defaultstate="collapsed" desc="group()">
+
+    // <editor-fold defaultstate="collapsed" desc="group()">
     private void group() {
 
         try {
@@ -656,7 +653,7 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
                 addTextJasper("          </groupHeader>");
                 addTextJasper("          <groupFooter>");
                 addTextJasper("                  <band height=\"50\">");
-                if (ReportDetailsSession.getWriteTextoReport() ) {
+                if (ReportDetailsSession.getWriteTextoReport()) {
                     addTextJasper("                          <staticText>");
                     addTextJasper("                                   <reportElement x=\"6\" y=\"10\" width=\"100\" height=\"20\" />");
                     addTextJasper("                                   <textElement>");
@@ -669,7 +666,7 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
                     addTextJasper("                                  <textFieldExpression><![CDATA[$V{v_" + ReportDetailsSession.getVariableGroup() + "}]]></textFieldExpression>");
                     addTextJasper("                          </textField>");
                 }
-                if ( ReportDetailsSession.getWriteLineaReport()) {
+                if (ReportDetailsSession.getWriteLineaReport()) {
                     addTextJasper("                          <line>");
                     addTextJasper("                                  <reportElement x=\"5\" y=\"38\" width=\"542\" height=\"1\" />");
                     addTextJasper("                          </line>");
@@ -686,6 +683,5 @@ addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasper
         }
     }
 // </editor-fold>
-    
-    
+
 }

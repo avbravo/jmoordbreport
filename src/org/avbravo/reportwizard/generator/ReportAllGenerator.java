@@ -299,7 +299,13 @@ public class ReportAllGenerator {
                         }
 
                         addTextJasper("             <reportElement x=\"" + x[count] + "\" y=\"2\" width=\"100\" height=\"20\" />");
-                        addTextJasper("	            <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}]]></textFieldExpression>");
+                         if (a.getTipo().toLowerCase().trim().equals("object")) {
+
+                            addTextJasper("	                  <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}.toString()]]></textFieldExpression>");
+                        } else {
+                            addTextJasper("	                  <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}]]></textFieldExpression>");
+                        }
+//                        addTextJasper("	            <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}]]></textFieldExpression>");
                         addTextJasper("      </textField>");
 
                         count++;

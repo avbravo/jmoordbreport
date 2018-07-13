@@ -1571,7 +1571,7 @@ public class Utilidades {
                     tipojava ="Date";
                     break;
                     default:
-                        tipojava = "String";
+                        tipojava = "Object";
                     break;
             }
 
