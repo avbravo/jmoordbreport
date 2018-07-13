@@ -1733,8 +1733,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 805, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 805, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 24, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3100,6 +3100,7 @@ public final class ReportWizardTopComponent extends TopComponent {
         try {
             MySession.inicializarLabelList();
             jTextAreaAllProperties.setText(lenguajeGenerator.template());
+            jTextAreaDetailsProperties.setText(lenguajeGenerator.template());
             jTextAreaEntity.setText("public class");
             jTextAreaLabel.setText("");
         } catch (Exception e) {
