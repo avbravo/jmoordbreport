@@ -169,70 +169,74 @@ public class ReportAllGenerator {
                     count++;
                     name = a.getNombre();
                     if (count < 5) {
-                        switch (a.getTipo()) {
+                        if (a.getEsListEmbedded() || a.getEsListReferenced()) {
+                            addTextJasper("	<field name=\"" + name + "\" class=\"java.util.List\"/>");
+                        } else {
+                            switch (a.getTipo()) {
 
-                            case "Integer":
-                            case "int":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Integer\"/>");
-                                break;
-                            case "Double":
-                            case "double":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Double\"/>");
-                                break;
-                            case "String":
-                            case "Character":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.String\"/>");
-                                break;
+                                case "Integer":
+                                case "int":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Integer\"/>");
+                                    break;
+                                case "Double":
+                                case "double":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Double\"/>");
+                                    break;
+                                case "String":
+                                case "Character":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.String\"/>");
+                                    break;
 
-                            case "Date":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.util.Date\"/>");
-                                break;
-                            case "Timestamp":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.sql.Timestamp\"/>");
-                                break;
-                            case "Time":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.sql.Time\"/>");
-                                break;
-                            case "Boolean":
-                                addTextJasper("	 <field name=\"" + name + "\" class=\"java.lang.Boolean\"/>");
-                                break;
-                            case "BigInteger":
-                            case "Long":
-                            case "long":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Long\"/>");
-                                break;
-                            case "byte[]":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Byte\"/>");
-                                break;
-                            case "Float":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Float\"/>");
-                                break;
+                                case "Date":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.util.Date\"/>");
+                                    break;
+                                case "Timestamp":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.sql.Timestamp\"/>");
+                                    break;
+                                case "Time":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.sql.Time\"/>");
+                                    break;
+                                case "Boolean":
+                                    addTextJasper("	 <field name=\"" + name + "\" class=\"java.lang.Boolean\"/>");
+                                    break;
+                                case "BigInteger":
+                                case "Long":
+                                case "long":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Long\"/>");
+                                    break;
+                                case "byte[]":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Byte\"/>");
+                                    break;
+                                case "Float":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Float\"/>");
+                                    break;
 
-                            case "Short":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Short\"/>");
-                                break;
-                            case "InputStream":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.io.InputStream\"/>");
-                                break;
-                            case "Collection":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.util.Collection\"/>");
-                                break;
-                            case "List":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.util.List\"/>");
-                                break;
-
-                            case "Object":
-
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Object\"/>");
-                                break;
-                            default:
-                                if (Utilidades.esTipoList(a.getTipo())) {
-                                    //Es una lista
+                                case "Short":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Short\"/>");
+                                    break;
+                                case "InputStream":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.io.InputStream\"/>");
+                                    break;
+                                case "Collection":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.util.Collection\"/>");
+                                    break;
+                                case "List":
                                     addTextJasper("	<field name=\"" + name + "\" class=\"java.util.List\"/>");
-                                } else {
-                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Object\"/>");
-                                }
+                                    break;
 
+                                case "Object":
+
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Object\"/>");
+                                    break;
+                                default:
+                                    if (Utilidades.esTipoList(a.getTipo())) {
+                                        //Es una lista
+                                        addTextJasper("	<field name=\"" + name + "\" class=\"java.util.List\"/>");
+                                    } else {
+                                        addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Object\"/>");
+                                    }
+
+                            }
                         }
 
                     }
@@ -299,7 +303,7 @@ public class ReportAllGenerator {
                         }
 
                         addTextJasper("             <reportElement x=\"" + x[count] + "\" y=\"2\" width=\"100\" height=\"20\" />");
-                         if (a.getTipo().toLowerCase().trim().equals("object")) {
+                        if (a.getTipo().toLowerCase().trim().equals("object")) {
 
                             addTextJasper("	                  <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}.toString()]]></textFieldExpression>");
                         } else {
@@ -363,11 +367,8 @@ public class ReportAllGenerator {
     // <editor-fold defaultstate="collapsed" desc="summary()">
     private void summary() {
         try {
-           
-				
-				
-			
-             addTextJasper(" <summary>");
+
+            addTextJasper(" <summary>");
             addTextJasper("	       <band height=\"42\" splitType=\"Stretch\">");
             if (!ReportAllSession.getSummaryStaticText().equals("")) {
                 addTextJasper("	               <staticText> ");
@@ -376,7 +377,7 @@ public class ReportAllGenerator {
                 addTextJasper("	               </staticText> ");
                 addTextJasper("	               <textField> ");
                 addTextJasper("	                          <reportElement x=\"398\" y=\"16\" width=\"100\" height=\"20\" />");
-                addTextJasper("	                          <textFieldExpression><![CDATA[$V{"+ ReportAllSession.getSummaryTextFieldExpression()+"}]]></textFieldExpression>");
+                addTextJasper("	                          <textFieldExpression><![CDATA[$V{" + ReportAllSession.getSummaryTextFieldExpression() + "}]]></textFieldExpression>");
                 addTextJasper("	               </textField> ");
             }
 

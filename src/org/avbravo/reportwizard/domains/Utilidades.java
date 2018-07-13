@@ -129,6 +129,8 @@ public class Utilidades {
         return texto;
     }// </editor-fold> 
 
+    // <editor-fold defaultstate="collapsed" desc="letterToLower(String texto) ">
+
     /**
      * ConvertirLetraMinuscula
      *
@@ -153,6 +155,8 @@ public class Utilidades {
         }
         return texto;
     }// </editor-fold> 
+
+    // <editor-fold defaultstate="collapsed" desc="addBeforeEnd(String rutaArchivo, String search, String textoInsertar) ">
 
     /**
      * inserta texto antes de la } que cierra el archivo
@@ -222,6 +226,8 @@ public class Utilidades {
         return false;
     }// </editor-fold> 
 
+    // <editor-fold defaultstate="collapsed" desc="update(String rutaArchivo, String search, String reemplazo)">
+
     /*
      * Actualiza el archivo una cadena con la que le especifiquemos ejemplo
      * ActualizarTextoArchivo("/home/avbravo/Documentos/etiquetas.properties",
@@ -257,6 +263,8 @@ public class Utilidades {
         return false;
     }// </editor-fold> 
 
+    // <editor-fold defaultstate="collapsed" desc="search(String rutaArchivo, String search)">
+
     /*
     busca texto en un archivo
      */
@@ -278,6 +286,8 @@ public class Utilidades {
         }
         return false;
     }// </editor-fold> 
+
+    // <editor-fold defaultstate="collapsed" desc="buscaryAgregarSiNoExiste_Old(String rutaArchivo, String textoInsertar, String textoBaseUbicar, Boolean antes)">
 
     public static boolean buscaryAgregarSiNoExiste_Old(String rutaArchivo, String textoInsertar, String textoBaseUbicar, Boolean antes) {
         try {

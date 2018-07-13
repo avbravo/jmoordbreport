@@ -180,8 +180,12 @@ public class ReportDetailsGenerator {
                 for (Atributos a : e.getAtributosList()) {
                     count++;
                     name = a.getNombre();
-                    if (count < 5) {
-                        switch (a.getTipo()) {
+                    if (count < 27) {
+                        
+                         if (a.getEsListEmbedded() || a.getEsListReferenced()) {
+                            addTextJasper("	<field name=\"" + name + "\" class=\"java.util.List\"/>");
+                        } else {
+                                  switch (a.getTipo()) {
 
                             case "Integer":
                             case "int":
@@ -246,6 +250,8 @@ public class ReportDetailsGenerator {
                                 }
 
                         }
+                         }
+                   
 
                     }
                 }
