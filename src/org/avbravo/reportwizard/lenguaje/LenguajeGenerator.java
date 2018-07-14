@@ -27,7 +27,7 @@ public class LenguajeGenerator {
                     + "       operation:\"Sum\"\n"                    
                     + "       }\n"
                     + "Summary{\n"
-                    + "        staticText:\"Summary:\",\n"
+                    + "        staticText:\"\",\n"
                     + "        field:\"\",\n"
                     + "        operation:\"Sum\"\n"
                     + "        }\n";
