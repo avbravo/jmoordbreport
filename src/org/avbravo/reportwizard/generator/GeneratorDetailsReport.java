@@ -29,7 +29,7 @@ import org.openide.NotifyDescriptor;
  *
  * @author avbravo
  */
-public class ReportDetailsGenerator {
+public class GeneratorDetailsReport {
 
     private String titulo;
 
@@ -288,7 +288,13 @@ public class ReportDetailsGenerator {
                         addTextJasper("	               <textElement>");
                         addTextJasper("		               <font isBold=\"true\"/>");
                         addTextJasper("	               </textElement>");
-                        addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
+//                        addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
+if(a.getLabel().equals("")){
+     addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
+}else{
+     addTextJasper("	               <text><![CDATA[" + a.getLabel()+ "]]></text>");
+}
+   
                         addTextJasper("           </staticText>");
                     }
 
@@ -404,7 +410,7 @@ public class ReportDetailsGenerator {
     }
 
     // </editor-fold>
-    // <editor-fold defaultstate="collapsed" desc="generar">  
+    // <editor-fold defaultstate="collapsed" desc="generarJRXML(String nameOfReport, Boolean compileJasper)">  
     public Boolean generarJRXML(String nameOfReport, Boolean compileJasper) {
         try {
             //Verificar si existe el directorio
@@ -438,7 +444,7 @@ public class ReportDetailsGenerator {
         }
         return false;
     }// </editor-fold>  
-    // <editor-fold defaultstate="collapsed" desc="generar">  
+    // <editor-fold defaultstate="collapsed" desc="compileJRXML(String nameOfReport, Boolean compileJasper)">  
 
     public Boolean compileJRXML(String nameOfReport, Boolean compileJasper) {
         try {
@@ -663,9 +669,9 @@ public class ReportDetailsGenerator {
                     addTextJasper("                          <staticText>");
                     addTextJasper("                                   <reportElement x=\"6\" y=\"10\" width=\"100\" height=\"20\" />");
                     addTextJasper("                                   <textElement>");
-                    addTextJasper("                                           <font size=\"12\" isBold=\"true\"/>");
+                    addTextJasper("                                           <font isBold=\"true\"/>");
                     addTextJasper("                                   </textElement>");
-                    addTextJasper("                                   <text><![CDATA[" + ReportDetailsSession.getStaticTextGroupFooter() + "]]></text>");
+                    addTextJasper("                                   <text><![CDATA[" + ReportDetailsSession.getStaticTextGroupFooter().trim() + "]]></text>");
                     addTextJasper("                          </staticText>");
                     addTextJasper("                          <textField>");
                     addTextJasper("                                  <reportElement x=\"110\" y=\"12\" width=\"100\" height=\"20\" />");

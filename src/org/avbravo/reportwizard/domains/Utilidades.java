@@ -5,8 +5,6 @@
  */
 package org.avbravo.reportwizard.domains;
 
-
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -26,9 +24,11 @@ import java.util.StringTokenizer;
 import java.util.UUID;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import static org.avbravo.reportwizard.domains.MySession.error;
 import org.avbravo.reportwizard.entity.Atributos;
 import org.avbravo.reportwizard.entity.Entidad;
 import static org.avbravo.reportwizard.entity.EntityReader.DEFAULT_CHARSET;
+import org.avbravo.reportwizard.lenguaje.Label;
 import org.avbravo.reportwizard.rules.EntidadPatron;
 
 /**
@@ -130,7 +130,6 @@ public class Utilidades {
     }// </editor-fold> 
 
     // <editor-fold defaultstate="collapsed" desc="letterToLower(String texto) ">
-
     /**
      * ConvertirLetraMinuscula
      *
@@ -157,7 +156,6 @@ public class Utilidades {
     }// </editor-fold> 
 
     // <editor-fold defaultstate="collapsed" desc="addBeforeEnd(String rutaArchivo, String search, String textoInsertar) ">
-
     /**
      * inserta texto antes de la } que cierra el archivo
      *
@@ -288,7 +286,6 @@ public class Utilidades {
     }// </editor-fold> 
 
     // <editor-fold defaultstate="collapsed" desc="buscaryAgregarSiNoExiste_Old(String rutaArchivo, String textoInsertar, String textoBaseUbicar, Boolean antes)">
-
     public static boolean buscaryAgregarSiNoExiste_Old(String rutaArchivo, String textoInsertar, String textoBaseUbicar, Boolean antes) {
         try {
 
@@ -1573,15 +1570,15 @@ public class Utilidades {
                     tipojava = "Object";
                     break;
                 case "String":
-                case    "string":
+                case "string":
                     tipojava = "String";
                     break;
                 case "Date":
                 case "date":
-                    tipojava ="Date";
+                    tipojava = "Date";
                     break;
-                    default:
-                        tipojava = "Object";
+                default:
+                    tipojava = "Object";
                     break;
             }
 
@@ -1611,7 +1608,6 @@ public class Utilidades {
 //        }
 //        return contador;
 //    }// </editor-fold> 
-
 // <editor-fold defaultstate="collapsed" desc="tieneNietos"> 
     /**
      * verifica los nietos(padre-hijo-nietos)
@@ -1637,7 +1633,6 @@ public class Utilidades {
 //        }
 //        return found;
 //    }// </editor-fold> 
-
 // <editor-fold defaultstate="collapsed" desc="showTree"> 
     /**
      * muestra el tree
@@ -1670,7 +1665,6 @@ public class Utilidades {
 //        }
 //        return "";
 //    }// </editor-fold> 
-
 // <editor-fold defaultstate="collapsed" desc="componerMenuFromTreeNode"> 
     /**
      * compone un menu con la estructura { Registros:[Paises]}{
@@ -1704,7 +1698,6 @@ public class Utilidades {
 //        }
 //        return menu;
 //    }// </editor-fold> 
-
     /**
      *
      * @param menu
@@ -1745,7 +1738,6 @@ public class Utilidades {
 //        return listMymenu;
 //    }// </editor-fold> 
 // <editor-fold defaultstate="collapsed" desc="generateUniqueID">   
-
     public static String generateUniqueID() {
         String strValue = "";
         UUID idUnique = UUID.randomUUID();
@@ -1995,15 +1987,57 @@ public class Utilidades {
             macAddress = sb.toString();
 
         } catch (UnknownHostException e) {
-MySession.error("getMacAddress() " + e.getLocalizedMessage());
+            MySession.error("getMacAddress() " + e.getLocalizedMessage());
             e.printStackTrace();
 
         } catch (SocketException e) {
-MySession.error("getMacAddress() " + e.getLocalizedMessage());
+            MySession.error("getMacAddress() " + e.getLocalizedMessage());
             e.printStackTrace();
 
         }
         return macAddress;
+    }
+// </editor-fold>
+
+    // <editor-fold defaultstate="collapsed" desc="descomponerLabel(()">
+    public static Label descomponerLabel(String line) {
+        Label label = new Label("", "");
+        String text = "";
+        String textField = "";
+        String lineField = line;
+        try {
+
+            if (line.contains("{field:")) {
+                Integer pos = line.indexOf(",");
+                Integer posField = line.indexOf(",");
+                if (pos > 0) {
+                    text = line.replace("}", "");
+                    text = text.substring(pos, text.length());
+                    Integer posdot = line.indexOf(":");
+                    if (posdot > 0) {
+                        text = text.substring(posdot, text.length());
+                        text = text.replace("\"", "");
+                        text = text.replace(":", "");
+                        label.setLabel(text);
+                    }
+                }
+                if (posField > 0) {
+
+                    textField = lineField.replace("}", "");
+                    textField = textField.substring(0, posField);
+
+                    textField = textField.replace("{field:\"", "");
+                    textField = textField.replace("\"", "");
+                    textField = textField.replace("\n", "");
+
+                    label.setField(textField.trim());
+                }
+            }
+
+        } catch (Exception e) {
+            error("descomponerLabel() " + e.getLocalizedMessage());
+        }
+        return label;
     }
 // </editor-fold>
 }

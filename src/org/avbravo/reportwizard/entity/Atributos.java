@@ -19,11 +19,12 @@ public class Atributos {
     private Boolean esListEmbedded;
     private Boolean esListReferenced;
     private Boolean esList;
+    private String  label;
 
     public Atributos() {
     }
 
-    public Atributos(String tipo, String nombre, Boolean esPrimaryKey, Boolean esEmbedded, Boolean esReferenced, Boolean esListEmbedded, Boolean esListReferenced, Boolean esList) {
+    public Atributos(String tipo, String nombre, Boolean esPrimaryKey, Boolean esEmbedded, Boolean esReferenced, Boolean esListEmbedded, Boolean esListReferenced, Boolean esList, String label) {
         this.tipo = tipo;
         this.nombre = nombre;
         this.esPrimaryKey = esPrimaryKey;
@@ -31,8 +32,19 @@ public class Atributos {
         this.esReferenced = esReferenced;
         this.esListEmbedded = esListEmbedded;
         this.esListReferenced = esListReferenced;
-        this.esList=esList;
+        this.esList = esList;
+        this.label = label;
     }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+  
 
     public Boolean getEsList() {
         return esList;

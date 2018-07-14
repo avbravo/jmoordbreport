@@ -29,7 +29,7 @@ import org.openide.NotifyDescriptor;
  *
  * @author avbravo
  */
-public class ReportAllGenerator {
+public class GeneratorAllReport {
 
     private String titulo;
 
@@ -264,7 +264,13 @@ public class ReportAllGenerator {
                         addTextJasper("	               <textElement>");
                         addTextJasper("		               <font isBold=\"true\"/>");
                         addTextJasper("	               </textElement>");
-                        addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
+//                        addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
+                        if (a.getLabel().equals("")) {
+                            addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
+                        } else {
+                            addTextJasper("	               <text><![CDATA[" + a.getLabel() + "]]></text>");
+                        }
+
                         addTextJasper("        </staticText>");
                         count++;
                     }
@@ -661,13 +667,13 @@ public class ReportAllGenerator {
                     addTextJasper("                          <staticText>");
                     addTextJasper("                                   <reportElement x=\"6\" y=\"10\" width=\"100\" height=\"20\" />");
                     addTextJasper("                                   <textElement>");
-                    addTextJasper("                                           <font size=\"12\" isBold=\"true\"/>");
+                    addTextJasper("                                           <font isBold=\"true\"/>");
                     addTextJasper("                                   </textElement>");
                     addTextJasper("                                   <text><![CDATA[" + ReportAllSession.getStaticTextGroupFooter() + "]]></text>");
                     addTextJasper("                          </staticText>");
                     addTextJasper("                          <textField>");
                     addTextJasper("                                  <reportElement x=\"110\" y=\"12\" width=\"100\" height=\"20\" />");
-                    addTextJasper("                                  <textFieldExpression><![CDATA[$V{v_" + ReportAllSession.getVariableGroup() + "}]]></textFieldExpression>");
+                    addTextJasper("                                  <textFieldExpression><![CDATA[$V{v_" + ReportAllSession.getVariableGroup().trim() + "}]]></textFieldExpression>");
                     addTextJasper("                          </textField>");
                 }
                 if (ReportAllSession.getWriteLineaReport()) {

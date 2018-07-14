@@ -215,6 +215,7 @@ public class EntityReader implements Serializable {
                 atributos.setTipo(Utilidades.mysqlToJava(splited[0]));
                 
                 atributos.setNombre(splited[1]);
+                atributos.setLabel(splited[1]);
                 atributos.setEsPrimaryKey(atributos.getNombre().equals(campoId));
                 
                 atributosList.add(atributos);

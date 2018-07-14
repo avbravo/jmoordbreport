@@ -503,7 +503,7 @@ public class MySession {
         }
     }
     
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    // <editor-fold defaultstate="collapsed" desc="inicializarLabelList(">                          
     public static void inicializarLabelList(){
         try {
             labelList = new ArrayList<>();
@@ -512,4 +512,6 @@ public class MySession {
         }
     }
     // </editor-fold> 
+    
+    
 }
