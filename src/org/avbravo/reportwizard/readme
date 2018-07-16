@@ -1,0 +1,45 @@
+ MySession.inicializarLabelList();
+            if (jTextAreaLabel.getText().equals("")) {
+                return;
+            }
+
+            int lines = jTextAreaLabel.getLineCount();
+            String sb = "";
+            String section = "";
+            for (int i = 0; i < lines; i++) {
+                int start = jTextAreaLabel.getLineStartOffset(i);
+                int end = jTextAreaLabel.getLineEndOffset(i);
+                // Implement method processLine
+                String line = jTextAreaLabel.getText(start, end - start);
+                Label label = Utilidades.descomponerLabel(line);
+                if (MySession.getLabelList().isEmpty()) {
+                    MySession.getLabelList().add(label);
+
+                } else {
+                    Boolean found = false;
+                    for (Label l : MySession.getLabelList()) {
+                        if (l.getField().equals(label.getField())) {
+                            found = true;
+                        }
+                    }
+                    if (!found) {
+                        MySession.getLabelList().add(label);
+                    }
+                }
+            }
+            for (Label l : MySession.getLabelList()) {
+                for (int j = 0; j < MySession.getEntidadList().size(); j++) {
+//                for(Entidad e:MySession.getEntidadList()){
+                    //  for(Atributos a:e.getAtributosList()){
+                    Entidad e = MySession.getEntidadList().get(j);
+                    for (int i = 0; i < e.getAtributosList().size(); i++) {
+                        Atributos a = e.getAtributosList().get(i);
+                        if (a.getNombre().equals(l.getField())) {
+                            e.getAtributosList().get(i).setLabel(l.getLabel());
+
+                            MySession.getEntidadList().get(j).setAtributosList(e.getAtributosList());
+
+                        }
+                    }
+                }
+            }
