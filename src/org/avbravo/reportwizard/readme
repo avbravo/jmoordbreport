@@ -1,45 +1,25 @@
- MySession.inicializarLabelList();
-            if (jTextAreaLabel.getText().equals("")) {
-                return;
-            }
+ // <editor-fold defaultstate="collapsed" desc="deleteSummaryMaster()">                          
+    private Boolean deleteSummaryMaster() {
+        try {
 
-            int lines = jTextAreaLabel.getLineCount();
-            String sb = "";
-            String section = "";
-            for (int i = 0; i < lines; i++) {
-                int start = jTextAreaLabel.getLineStartOffset(i);
-                int end = jTextAreaLabel.getLineEndOffset(i);
-                // Implement method processLine
-                String line = jTextAreaLabel.getText(start, end - start);
-                Label label = Utilidades.descomponerLabel(line);
-                if (MySession.getLabelList().isEmpty()) {
-                    MySession.getLabelList().add(label);
+            jTextFieldMaster_SummaryStaticText.setText("");
+            jComboBoxMaster_Summar_Field.setSelectedItem("");
+            jComboBoxMaster_Summary_Operation.setSelectedItem("");
 
-                } else {
-                    Boolean found = false;
-                    for (Label l : MySession.getLabelList()) {
-                        if (l.getField().equals(label.getField())) {
-                            found = true;
-                        }
-                    }
-                    if (!found) {
-                        MySession.getLabelList().add(label);
-                    }
-                }
-            }
-            for (Label l : MySession.getLabelList()) {
-                for (int j = 0; j < MySession.getEntidadList().size(); j++) {
-//                for(Entidad e:MySession.getEntidadList()){
-                    //  for(Atributos a:e.getAtributosList()){
-                    Entidad e = MySession.getEntidadList().get(j);
-                    for (int i = 0; i < e.getAtributosList().size(); i++) {
-                        Atributos a = e.getAtributosList().get(i);
-                        if (a.getNombre().equals(l.getField())) {
-                            e.getAtributosList().get(i).setLabel(l.getLabel());
+            ReportMasterSession.setSummaryStaticText(jTextFieldMaster_SummaryStaticText.getText());
+            ReportMasterSession.setSummaryShowField(jCheckBoxMaster_MostrarFieldSummary.isSelected());
 
-                            MySession.getEntidadList().get(j).setAtributosList(e.getAtributosList());
+            ReportMasterSession.setSummaryVariableName("");
+            ReportMasterSession.setSummaryVariableExpression("");
+            ReportMasterSession.setSummaryCalculation("");
+            ReportMasterSession.setSummaryTextFieldExpression("");
+            ReportMasterSession.setSummaryVariableType("");
 
-                        }
-                    }
-                }
-            }
+            return true;
+        } catch (Exception e) {
+            MySession.error("deleteSummaryMaster() " + e.getLocalizedMessage());
+        }
+        return false;
+    }
+
+    // </editor-fold> 

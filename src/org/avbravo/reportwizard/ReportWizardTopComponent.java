@@ -24,7 +24,9 @@ import org.avbravo.reportwizard.generator.ReportAllSession;
 import org.avbravo.reportwizard.generator.GeneratorDetailsReport;
 import org.avbravo.reportwizard.generator.ReportDetailsSession;
 import org.avbravo.reportwizard.domains.MySubreportSession;
+import org.avbravo.reportwizard.generator.GeneratorMasterReport;
 import org.avbravo.reportwizard.generator.GeneratorSubReport;
+import org.avbravo.reportwizard.generator.ReportMasterSession;
 import org.avbravo.reportwizard.generator.ReportSubReportSession;
 import org.avbravo.reportwizard.lenguaje.Label;
 import org.avbravo.reportwizard.lenguaje.LenguajeGenerator;
@@ -107,6 +109,20 @@ public final class ReportWizardTopComponent extends TopComponent {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jDialogAyuda = new javax.swing.JDialog();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel7 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jPanel18 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
         jDialogAll_Group = new javax.swing.JDialog();
         jPanel2 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -143,7 +159,14 @@ public final class ReportWizardTopComponent extends TopComponent {
         jButtonAll_SummaryDelete = new javax.swing.JButton();
         jCheckBoxAll_MostrarFieldSummary = new javax.swing.JCheckBox();
         jButtonAll_SummaryClose = new javax.swing.JButton();
-        jDialogProperties = new javax.swing.JDialog();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        jDialogAllDetails_Label = new javax.swing.JDialog();
+        jPanel22 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextAreaAllDetails_Label = new javax.swing.JTextArea();
+        jLabel23 = new javax.swing.JLabel();
+        jButtonDialogLabelClose = new javax.swing.JButton();
+        jDialogAllDetails_Properties = new javax.swing.JDialog();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel23 = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
@@ -152,7 +175,6 @@ public final class ReportWizardTopComponent extends TopComponent {
         jPanelDetails_PropertiesReport = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         jTextAreaDetails_Properties = new javax.swing.JTextArea();
-        buttonGroup1 = new javax.swing.ButtonGroup();
         jDialogDetails_Group = new javax.swing.JDialog();
         jPanel10 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
@@ -189,37 +211,6 @@ public final class ReportWizardTopComponent extends TopComponent {
         jButtonSummaryDetailsDelete = new javax.swing.JButton();
         jCheckBoxMostrarFieldSummaryDetails = new javax.swing.JCheckBox();
         jButtonSummaryCloseDetails = new javax.swing.JButton();
-        jDialogAyuda = new javax.swing.JDialog();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
-        jPanel7 = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jPanel18 = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jDialogLabel = new javax.swing.JDialog();
-        jPanel22 = new javax.swing.JPanel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jTextAreaLabel = new javax.swing.JTextArea();
-        jLabel23 = new javax.swing.JLabel();
-        jButtonDialogLabelClose = new javax.swing.JButton();
-        jDialogSubReport_Label = new javax.swing.JDialog();
-        jPanel25 = new javax.swing.JPanel();
-        jScrollPane10 = new javax.swing.JScrollPane();
-        jTextAreaSubReport_Label = new javax.swing.JTextArea();
-        jLabel27 = new javax.swing.JLabel();
-        jButtonSubrerpor_DialogLabelClose = new javax.swing.JButton();
-        jDialogSubReport_Properties = new javax.swing.JDialog();
-        jPanel26 = new javax.swing.JPanel();
-        jScrollPane11 = new javax.swing.JScrollPane();
-        jTextAreaSubReport_Properties = new javax.swing.JTextArea();
-        jButtonDialogPropertiesSubReportClose = new javax.swing.JButton();
         jDialogSubReport_Group = new javax.swing.JDialog();
         jPanel28 = new javax.swing.JPanel();
         jPanel29 = new javax.swing.JPanel();
@@ -243,6 +234,22 @@ public final class ReportWizardTopComponent extends TopComponent {
         jCheckBoxSubReport_TextoGroupFooter = new javax.swing.JCheckBox();
         jCheckBoxSubReport_LineaGroupFooter = new javax.swing.JCheckBox();
         jLabelSubReport_Linea = new javax.swing.JLabel();
+        jDialogSubReport_Label = new javax.swing.JDialog();
+        jPanel25 = new javax.swing.JPanel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        jTextAreaSubReport_Label = new javax.swing.JTextArea();
+        jLabel27 = new javax.swing.JLabel();
+        jButtonSubrerpor_DialogLabelClose = new javax.swing.JButton();
+        jDialogMasterSubReport_Properties = new javax.swing.JDialog();
+        jPanel26 = new javax.swing.JPanel();
+        jTabbedPane4 = new javax.swing.JTabbedPane();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        jTextAreaMaster_Properties = new javax.swing.JTextArea();
+        jPanel4 = new javax.swing.JPanel();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        jTextAreaSubReport_Properties = new javax.swing.JTextArea();
+        jButtonDialogPropertiesSubReportClose = new javax.swing.JButton();
         jDialogSubReport_Summary = new javax.swing.JDialog();
         jPanel35 = new javax.swing.JPanel();
         jPanel36 = new javax.swing.JPanel();
@@ -256,20 +263,62 @@ public final class ReportWizardTopComponent extends TopComponent {
         jButtonSubReport_SummaryAllDelete = new javax.swing.JButton();
         jCheckBoxSubReport_MostrarFieldSummary = new javax.swing.JCheckBox();
         jButtonSubReport_SummaryClose = new javax.swing.JButton();
+        jDialogMaster_Group = new javax.swing.JDialog();
+        jPanel39 = new javax.swing.JPanel();
+        jPanel40 = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jComboBoxMaster_Group_FieldGroupBy = new javax.swing.JComboBox<>();
+        jLabel40 = new javax.swing.JLabel();
+        jButtonMaster_GroupClose = new javax.swing.JButton();
+        jTextFieldMaster_Group_NameOfGroup = new javax.swing.JTextField();
+        jButtonMaster_GroupSave = new javax.swing.JButton();
+        jButtonMaster_Delete = new javax.swing.JButton();
+        jPanel41 = new javax.swing.JPanel();
+        jLabel41 = new javax.swing.JLabel();
+        jTextFieldMaster_Group_StaticTextHeader = new javax.swing.JTextField();
+        jPanel42 = new javax.swing.JPanel();
+        jLabeMaster_StaticTextGroupFooter = new javax.swing.JLabel();
+        jTextFieldMaster_Group_StaticTextFooter = new javax.swing.JTextField();
+        jLabelMaster_FieldGroupFooter = new javax.swing.JLabel();
+        jComboBoxMaster_Group_FieldFooter = new javax.swing.JComboBox<>();
+        jLabelMaster_OperationReport = new javax.swing.JLabel();
+        jComboBoxMaster_Group_OperationFooter = new javax.swing.JComboBox<>();
+        jCheckBoxMaster_TextoGroupFooter = new javax.swing.JCheckBox();
+        jCheckBoxMaster_LineaGroupFooter = new javax.swing.JCheckBox();
+        jLabelMaster_LineaGroupFooter = new javax.swing.JLabel();
+        jDialogMaster_Label = new javax.swing.JDialog();
+        jPanel43 = new javax.swing.JPanel();
+        jScrollPane15 = new javax.swing.JScrollPane();
+        jTextAreaMaster_Label = new javax.swing.JTextArea();
+        jLabel42 = new javax.swing.JLabel();
+        jButtonMaster_DialogLabelClose = new javax.swing.JButton();
+        jDialogMaster_Summary = new javax.swing.JDialog();
+        jPanel44 = new javax.swing.JPanel();
+        jPanel45 = new javax.swing.JPanel();
+        jLabelStaticTextGroupFooterAll5 = new javax.swing.JLabel();
+        jTextFieldMaster_SummaryStaticText = new javax.swing.JTextField();
+        jLabelMaster_FieldSummary = new javax.swing.JLabel();
+        jComboBoxMaster_Summar_Field = new javax.swing.JComboBox<>();
+        jLabelMaster_OperationSummary = new javax.swing.JLabel();
+        jComboBoxMaster_Summary_Operation = new javax.swing.JComboBox<>();
+        jButtonMaster_SaveSummary1 = new javax.swing.JButton();
+        jButtonMaster_SummaryAllDelete1 = new javax.swing.JButton();
+        jCheckBoxMaster_MostrarFieldSummary = new javax.swing.JCheckBox();
+        jButtonMaster_SummaryClose1 = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanelProyecto = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
-        jTextFieldNameOfProject = new javax.swing.JTextField();
+        jTextFieldProject_NameOfProject = new javax.swing.JTextField();
         jButtonSelectProject = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextFieldNameOfPackage = new javax.swing.JTextField();
+        jTextFieldProject_NameOfPackage = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jLabelEntity = new javax.swing.JLabel();
+        jLabelProject_NameOfEntity = new javax.swing.JLabel();
         jTabbedPaneEntity = new javax.swing.JTabbedPane();
         jPanelEntity = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextAreaEntity = new javax.swing.JTextArea();
+        jTextAreaAllDetails_Entity = new javax.swing.JTextArea();
         jButtonClear = new javax.swing.JButton();
         jButtonGoPage2 = new javax.swing.JButton();
         jButtonHelp = new javax.swing.JButton();
@@ -278,7 +327,7 @@ public final class ReportWizardTopComponent extends TopComponent {
         jPanel27 = new javax.swing.JPanel();
         jPanel21 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
-        jTextFieldSubreport_Name = new javax.swing.JTextField();
+        jTextFieldSubreport_NameOfEntity = new javax.swing.JTextField();
         jLabel26 = new javax.swing.JLabel();
         jScrollPane9 = new javax.swing.JScrollPane();
         jTextAreaSubReport_Entity = new javax.swing.JTextArea();
@@ -287,7 +336,7 @@ public final class ReportWizardTopComponent extends TopComponent {
         jButtonSubRepot_Clear = new javax.swing.JButton();
         jPanelReporte = new javax.swing.JPanel();
         jTabbedPaneReporte = new javax.swing.JTabbedPane();
-        jPanel3 = new javax.swing.JPanel();
+        jPanelAll = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPaneAll_Jasper = new javax.swing.JTextPane();
         jLabel2 = new javax.swing.JLabel();
@@ -304,7 +353,7 @@ public final class ReportWizardTopComponent extends TopComponent {
         jLabel17 = new javax.swing.JLabel();
         jComboBoxAll_SizeOfPage = new javax.swing.JComboBox<>();
         jButtonAll_Summary = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
+        jPanelDetails = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jTextFieldDetails_NameOfReport = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -321,8 +370,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         jLabel9 = new javax.swing.JLabel();
         jComboBoxSizeOfPageDetails = new javax.swing.JComboBox<>();
         jButtonDeatilsSummary = new javax.swing.JButton();
-        jPanel32 = new javax.swing.JPanel();
-        jPanel33 = new javax.swing.JPanel();
+        jPanelSubReport = new javax.swing.JPanel();
+        jPanelSubReportinterno = new javax.swing.JPanel();
         jScrollPane12 = new javax.swing.JScrollPane();
         jTextPaneSubReport_Jasper = new javax.swing.JTextPane();
         jLabel31 = new javax.swing.JLabel();
@@ -339,6 +388,23 @@ public final class ReportWizardTopComponent extends TopComponent {
         jLabel34 = new javax.swing.JLabel();
         jComboBoxSubReport_SizeOfPage = new javax.swing.JComboBox<>();
         jButtonSubReport_Summary = new javax.swing.JButton();
+        jPanelMaster = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jTextFieldMaster_TituloOfReport = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        jTextFieldMaster_NameOfReport = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        jPanel37 = new javax.swing.JPanel();
+        jButtonMaster_BackPage = new javax.swing.JButton();
+        jButtonMaster_CompileReport = new javax.swing.JButton();
+        jButtonMaster_GenerarJrxml = new javax.swing.JButton();
+        jButtonMaster_ShowDialog = new javax.swing.JButton();
+        jButtonMaster_RefreshReport = new javax.swing.JButton();
+        jLabel38 = new javax.swing.JLabel();
+        jComboBoxMaster_SizeOfPage = new javax.swing.JComboBox<>();
+        jButtonMaster_Summary = new javax.swing.JButton();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        jTextPaneMaster_Jasper = new javax.swing.JTextPane();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -349,6 +415,108 @@ public final class ReportWizardTopComponent extends TopComponent {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        jDialogAyuda.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogAyuda.title")); // NOI18N
+        jDialogAyuda.setAlwaysOnTop(true);
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextArea1.text")); // NOI18N
+        jTextArea1.setDisabledTextColor(new java.awt.Color(197, 203, 212));
+        jScrollPane3.setViewportView(jTextArea1);
+
+        jPanel18.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel19, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel19.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel22, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel22.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel20, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel20.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel21, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel21.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel18, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel18.text")); // NOI18N
+
+        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
+        jPanel18.setLayout(jPanel18Layout);
+        jPanel18Layout.setHorizontalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel19)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel20)
+                    .addComponent(jLabel21)
+                    .addComponent(jLabel18))
+                .addContainerGap(132, Short.MAX_VALUE))
+        );
+        jPanel18Layout.setVerticalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addComponent(jLabel18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel21))
+        );
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel24, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel24.text")); // NOI18N
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jTextArea2.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextArea2.text")); // NOI18N
+        jScrollPane8.setViewportView(jTextArea2);
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel24)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel24)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+
+        jTabbedPane2.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel7.TabConstraints.tabTitle"), jPanel7); // NOI18N
+
+        javax.swing.GroupLayout jDialogAyudaLayout = new javax.swing.GroupLayout(jDialogAyuda.getContentPane());
+        jDialogAyuda.getContentPane().setLayout(jDialogAyudaLayout);
+        jDialogAyudaLayout.setHorizontalGroup(
+            jDialogAyudaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane2)
+        );
+        jDialogAyudaLayout.setVerticalGroup(
+            jDialogAyudaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane2)
         );
 
         jDialogAll_Group.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogAll_Group.title")); // NOI18N
@@ -722,7 +890,64 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jDialogProperties.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogProperties.title")); // NOI18N
+        jDialogAllDetails_Label.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogAllDetails_Label.title")); // NOI18N
+
+        jPanel22.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel22.border.title"))); // NOI18N
+
+        jTextAreaAllDetails_Label.setColumns(20);
+        jTextAreaAllDetails_Label.setRows(5);
+        jScrollPane5.setViewportView(jTextAreaAllDetails_Label);
+
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/label.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel23, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel23.text")); // NOI18N
+
+        jButtonDialogLabelClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/close24x24.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonDialogLabelClose, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonDialogLabelClose.text")); // NOI18N
+        jButtonDialogLabelClose.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonDialogLabelClose.toolTipText")); // NOI18N
+        jButtonDialogLabelClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDialogLabelCloseActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
+        jPanel22.setLayout(jPanel22Layout);
+        jPanel22Layout.setHorizontalGroup(
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel22Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel23)
+                    .addComponent(jButtonDialogLabelClose))
+                .addGap(123, 123, 123))
+        );
+        jPanel22Layout.setVerticalGroup(
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel22Layout.createSequentialGroup()
+                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel22Layout.createSequentialGroup()
+                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButtonDialogLabelClose)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jDialogAllDetails_LabelLayout = new javax.swing.GroupLayout(jDialogAllDetails_Label.getContentPane());
+        jDialogAllDetails_Label.getContentPane().setLayout(jDialogAllDetails_LabelLayout);
+        jDialogAllDetails_LabelLayout.setHorizontalGroup(
+            jDialogAllDetails_LabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jDialogAllDetails_LabelLayout.setVerticalGroup(
+            jDialogAllDetails_LabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        jDialogAllDetails_Properties.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogAllDetails_Properties.title")); // NOI18N
 
         jPanel23.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -744,10 +969,10 @@ public final class ReportWizardTopComponent extends TopComponent {
         jPanel23Layout.setHorizontalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel23Layout.createSequentialGroup()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonDialogPropertiesClose)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         jPanel23Layout.setVerticalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -782,16 +1007,16 @@ public final class ReportWizardTopComponent extends TopComponent {
 
         jTabbedPane3.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelDetails_PropertiesReport.TabConstraints.tabTitle"), jPanelDetails_PropertiesReport); // NOI18N
 
-        javax.swing.GroupLayout jDialogPropertiesLayout = new javax.swing.GroupLayout(jDialogProperties.getContentPane());
-        jDialogProperties.getContentPane().setLayout(jDialogPropertiesLayout);
-        jDialogPropertiesLayout.setHorizontalGroup(
-            jDialogPropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialogPropertiesLayout.createSequentialGroup()
+        javax.swing.GroupLayout jDialogAllDetails_PropertiesLayout = new javax.swing.GroupLayout(jDialogAllDetails_Properties.getContentPane());
+        jDialogAllDetails_Properties.getContentPane().setLayout(jDialogAllDetails_PropertiesLayout);
+        jDialogAllDetails_PropertiesLayout.setHorizontalGroup(
+            jDialogAllDetails_PropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogAllDetails_PropertiesLayout.createSequentialGroup()
                 .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 488, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        jDialogPropertiesLayout.setVerticalGroup(
-            jDialogPropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jDialogAllDetails_PropertiesLayout.setVerticalGroup(
+            jDialogAllDetails_PropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane3)
         );
 
@@ -1168,276 +1393,6 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jDialogAyuda.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogAyuda.title")); // NOI18N
-        jDialogAyuda.setAlwaysOnTop(true);
-
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextArea1.text")); // NOI18N
-        jTextArea1.setDisabledTextColor(new java.awt.Color(197, 203, 212));
-        jScrollPane3.setViewportView(jTextArea1);
-
-        jPanel18.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel19, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel19.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel22, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel22.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel20, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel20.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel21, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel21.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel18, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel18.text")); // NOI18N
-
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel19)
-                    .addComponent(jLabel22)
-                    .addComponent(jLabel20)
-                    .addComponent(jLabel21)
-                    .addComponent(jLabel18))
-                .addContainerGap(132, Short.MAX_VALUE))
-        );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
-                .addComponent(jLabel18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel19)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel20)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel22)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel21))
-        );
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel24, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel24.text")); // NOI18N
-
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jTextArea2.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextArea2.text")); // NOI18N
-        jScrollPane8.setViewportView(jTextArea2);
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel24)
-                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel24)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-
-        jTabbedPane2.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel7.TabConstraints.tabTitle"), jPanel7); // NOI18N
-
-        javax.swing.GroupLayout jDialogAyudaLayout = new javax.swing.GroupLayout(jDialogAyuda.getContentPane());
-        jDialogAyuda.getContentPane().setLayout(jDialogAyudaLayout);
-        jDialogAyudaLayout.setHorizontalGroup(
-            jDialogAyudaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane2)
-        );
-        jDialogAyudaLayout.setVerticalGroup(
-            jDialogAyudaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane2)
-        );
-
-        jDialogLabel.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogLabel.title")); // NOI18N
-
-        jPanel22.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel22.border.title"))); // NOI18N
-
-        jTextAreaLabel.setColumns(20);
-        jTextAreaLabel.setRows(5);
-        jScrollPane5.setViewportView(jTextAreaLabel);
-
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/label.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel23, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel23.text")); // NOI18N
-
-        jButtonDialogLabelClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/close24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonDialogLabelClose, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonDialogLabelClose.text")); // NOI18N
-        jButtonDialogLabelClose.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonDialogLabelClose.toolTipText")); // NOI18N
-        jButtonDialogLabelClose.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonDialogLabelCloseActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
-        jPanel22.setLayout(jPanel22Layout);
-        jPanel22Layout.setHorizontalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel22Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel23)
-                    .addComponent(jButtonDialogLabelClose))
-                .addGap(123, 123, 123))
-        );
-        jPanel22Layout.setVerticalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel22Layout.createSequentialGroup()
-                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel22Layout.createSequentialGroup()
-                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButtonDialogLabelClose)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout jDialogLabelLayout = new javax.swing.GroupLayout(jDialogLabel.getContentPane());
-        jDialogLabel.getContentPane().setLayout(jDialogLabelLayout);
-        jDialogLabelLayout.setHorizontalGroup(
-            jDialogLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        jDialogLabelLayout.setVerticalGroup(
-            jDialogLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-
-        jDialogSubReport_Label.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogSubReport_Label.title")); // NOI18N
-
-        jPanel25.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel25.border.title"))); // NOI18N
-
-        jTextAreaSubReport_Label.setColumns(20);
-        jTextAreaSubReport_Label.setRows(5);
-        jScrollPane10.setViewportView(jTextAreaSubReport_Label);
-
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/label.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel27, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel27.text")); // NOI18N
-
-        jButtonSubrerpor_DialogLabelClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/close24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubrerpor_DialogLabelClose, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubrerpor_DialogLabelClose.text")); // NOI18N
-        jButtonSubrerpor_DialogLabelClose.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubrerpor_DialogLabelClose.toolTipText")); // NOI18N
-        jButtonSubrerpor_DialogLabelClose.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSubrerpor_DialogLabelCloseActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
-        jPanel25.setLayout(jPanel25Layout);
-        jPanel25Layout.setHorizontalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel27)
-                    .addComponent(jButtonSubrerpor_DialogLabelClose))
-                .addGap(123, 123, 123))
-        );
-        jPanel25Layout.setVerticalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel25Layout.createSequentialGroup()
-                .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(jPanel25Layout.createSequentialGroup()
-                .addComponent(jButtonSubrerpor_DialogLabelClose)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
-        );
-
-        javax.swing.GroupLayout jDialogSubReport_LabelLayout = new javax.swing.GroupLayout(jDialogSubReport_Label.getContentPane());
-        jDialogSubReport_Label.getContentPane().setLayout(jDialogSubReport_LabelLayout);
-        jDialogSubReport_LabelLayout.setHorizontalGroup(
-            jDialogSubReport_LabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        jDialogSubReport_LabelLayout.setVerticalGroup(
-            jDialogSubReport_LabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-
-        jDialogSubReport_Properties.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogSubReport_Properties.title")); // NOI18N
-
-        jPanel26.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel26.border.border.title")), org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel26.border.title"))); // NOI18N
-
-        jTextAreaSubReport_Properties.setColumns(20);
-        jTextAreaSubReport_Properties.setRows(5);
-        jScrollPane11.setViewportView(jTextAreaSubReport_Properties);
-
-        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
-        jPanel26.setLayout(jPanel26Layout);
-        jPanel26Layout.setHorizontalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel26Layout.createSequentialGroup()
-                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 21, Short.MAX_VALUE))
-        );
-        jPanel26Layout.setVerticalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel26Layout.createSequentialGroup()
-                .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jButtonDialogPropertiesSubReportClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/close24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonDialogPropertiesSubReportClose, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonDialogPropertiesSubReportClose.text")); // NOI18N
-        jButtonDialogPropertiesSubReportClose.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonDialogPropertiesSubReportClose.toolTipText")); // NOI18N
-        jButtonDialogPropertiesSubReportClose.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonDialogPropertiesSubReportCloseActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jDialogSubReport_PropertiesLayout = new javax.swing.GroupLayout(jDialogSubReport_Properties.getContentPane());
-        jDialogSubReport_Properties.getContentPane().setLayout(jDialogSubReport_PropertiesLayout);
-        jDialogSubReport_PropertiesLayout.setHorizontalGroup(
-            jDialogSubReport_PropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialogSubReport_PropertiesLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButtonDialogPropertiesSubReportClose)
-                .addGap(6, 6, 6))
-        );
-        jDialogSubReport_PropertiesLayout.setVerticalGroup(
-            jDialogSubReport_PropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialogSubReport_PropertiesLayout.createSequentialGroup()
-                .addGroup(jDialogSubReport_PropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jDialogSubReport_PropertiesLayout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(jButtonDialogPropertiesSubReportClose)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-
         jDialogSubReport_Group.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogSubReport_Group.title")); // NOI18N
         jDialogSubReport_Group.setAlwaysOnTop(true);
 
@@ -1675,6 +1630,148 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap())
         );
 
+        jDialogSubReport_Label.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogSubReport_Label.title")); // NOI18N
+
+        jPanel25.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel25.border.title"))); // NOI18N
+
+        jTextAreaSubReport_Label.setColumns(20);
+        jTextAreaSubReport_Label.setRows(5);
+        jScrollPane10.setViewportView(jTextAreaSubReport_Label);
+
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/label.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel27, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel27.text")); // NOI18N
+
+        jButtonSubrerpor_DialogLabelClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/close24x24.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubrerpor_DialogLabelClose, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubrerpor_DialogLabelClose.text")); // NOI18N
+        jButtonSubrerpor_DialogLabelClose.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubrerpor_DialogLabelClose.toolTipText")); // NOI18N
+        jButtonSubrerpor_DialogLabelClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSubrerpor_DialogLabelCloseActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
+        jPanel25.setLayout(jPanel25Layout);
+        jPanel25Layout.setHorizontalGroup(
+            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel27)
+                    .addComponent(jButtonSubrerpor_DialogLabelClose))
+                .addGap(123, 123, 123))
+        );
+        jPanel25Layout.setVerticalGroup(
+            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel25Layout.createSequentialGroup()
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel25Layout.createSequentialGroup()
+                .addComponent(jButtonSubrerpor_DialogLabelClose)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
+        );
+
+        javax.swing.GroupLayout jDialogSubReport_LabelLayout = new javax.swing.GroupLayout(jDialogSubReport_Label.getContentPane());
+        jDialogSubReport_Label.getContentPane().setLayout(jDialogSubReport_LabelLayout);
+        jDialogSubReport_LabelLayout.setHorizontalGroup(
+            jDialogSubReport_LabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jDialogSubReport_LabelLayout.setVerticalGroup(
+            jDialogSubReport_LabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        jDialogMasterSubReport_Properties.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogMasterSubReport_Properties.title")); // NOI18N
+
+        jPanel26.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel26.border.border.title")), org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel26.border.title"))); // NOI18N
+
+        jTextAreaMaster_Properties.setColumns(20);
+        jTextAreaMaster_Properties.setRows(5);
+        jScrollPane14.setViewportView(jTextAreaMaster_Properties);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jScrollPane14, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jTabbedPane4.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel3.TabConstraints.tabTitle"), jPanel3); // NOI18N
+
+        jTextAreaSubReport_Properties.setColumns(20);
+        jTextAreaSubReport_Properties.setRows(5);
+        jScrollPane11.setViewportView(jTextAreaSubReport_Properties);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 24, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+        );
+
+        jTabbedPane4.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel4.TabConstraints.tabTitle"), jPanel4); // NOI18N
+
+        jButtonDialogPropertiesSubReportClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/close24x24.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonDialogPropertiesSubReportClose, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonDialogPropertiesSubReportClose.text")); // NOI18N
+        jButtonDialogPropertiesSubReportClose.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonDialogPropertiesSubReportClose.toolTipText")); // NOI18N
+        jButtonDialogPropertiesSubReportClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDialogPropertiesSubReportCloseActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
+        jPanel26.setLayout(jPanel26Layout);
+        jPanel26Layout.setHorizontalGroup(
+            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel26Layout.createSequentialGroup()
+                .addComponent(jTabbedPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonDialogPropertiesSubReportClose)
+                .addGap(0, 12, Short.MAX_VALUE))
+        );
+        jPanel26Layout.setVerticalGroup(
+            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel26Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jButtonDialogPropertiesSubReportClose)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel26Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane4)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jDialogMasterSubReport_PropertiesLayout = new javax.swing.GroupLayout(jDialogMasterSubReport_Properties.getContentPane());
+        jDialogMasterSubReport_Properties.getContentPane().setLayout(jDialogMasterSubReport_PropertiesLayout);
+        jDialogMasterSubReport_PropertiesLayout.setHorizontalGroup(
+            jDialogMasterSubReport_PropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jDialogMasterSubReport_PropertiesLayout.setVerticalGroup(
+            jDialogMasterSubReport_PropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         jDialogSubReport_Summary.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogSubReport_Summary.title")); // NOI18N
         jDialogSubReport_Summary.setAlwaysOnTop(true);
 
@@ -1809,10 +1906,437 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jDialogMaster_Group.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogMaster_Group.title")); // NOI18N
+        jDialogMaster_Group.setAlwaysOnTop(true);
+
+        jPanel40.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel40.border.title"))); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel39, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel39.text")); // NOI18N
+
+        jComboBoxMaster_Group_FieldGroupBy.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxMaster_Group_FieldGroupByItemStateChanged(evt);
+            }
+        });
+        jComboBoxMaster_Group_FieldGroupBy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxMaster_Group_FieldGroupByActionPerformed(evt);
+            }
+        });
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel40, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel40.text")); // NOI18N
+
+        jButtonMaster_GroupClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/close24x24.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_GroupClose, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_GroupClose.text")); // NOI18N
+        jButtonMaster_GroupClose.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_GroupClose.toolTipText")); // NOI18N
+        jButtonMaster_GroupClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMaster_GroupCloseActionPerformed(evt);
+            }
+        });
+
+        jTextFieldMaster_Group_NameOfGroup.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldMaster_Group_NameOfGroup.text")); // NOI18N
+        jTextFieldMaster_Group_NameOfGroup.setEnabled(false);
+
+        jButtonMaster_GroupSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/save.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_GroupSave, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_GroupSave.text")); // NOI18N
+        jButtonMaster_GroupSave.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_GroupSave.toolTipText")); // NOI18N
+        jButtonMaster_GroupSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMaster_GroupSaveActionPerformed(evt);
+            }
+        });
+
+        jButtonMaster_Delete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/delete.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_Delete, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_Delete.text")); // NOI18N
+        jButtonMaster_Delete.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_Delete.toolTipText")); // NOI18N
+        jButtonMaster_Delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMaster_DeleteActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
+        jPanel40.setLayout(jPanel40Layout);
+        jPanel40Layout.setHorizontalGroup(
+            jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel40Layout.createSequentialGroup()
+                .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel39)
+                    .addComponent(jLabel40))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBoxMaster_Group_FieldGroupBy, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldMaster_Group_NameOfGroup, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel40Layout.createSequentialGroup()
+                        .addComponent(jButtonMaster_GroupSave)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButtonMaster_GroupClose))
+                    .addComponent(jButtonMaster_Delete))
+                .addGap(48, 48, 48))
+        );
+        jPanel40Layout.setVerticalGroup(
+            jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel40Layout.createSequentialGroup()
+                .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel40)
+                    .addComponent(jComboBoxMaster_Group_FieldGroupBy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel39)
+                    .addComponent(jTextFieldMaster_Group_NameOfGroup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel40Layout.createSequentialGroup()
+                .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonMaster_GroupSave)
+                    .addComponent(jButtonMaster_GroupClose))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonMaster_Delete))
+        );
+
+        jPanel41.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel41.border.title"))); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel41, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel41.text")); // NOI18N
+
+        jTextFieldMaster_Group_StaticTextHeader.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldMaster_Group_StaticTextHeader.text")); // NOI18N
+        jTextFieldMaster_Group_StaticTextHeader.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldMaster_Group_StaticTextHeaderActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
+        jPanel41.setLayout(jPanel41Layout);
+        jPanel41Layout.setHorizontalGroup(
+            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel41Layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(jLabel41)
+                .addGap(18, 18, 18)
+                .addComponent(jTextFieldMaster_Group_StaticTextHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel41Layout.setVerticalGroup(
+            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel41Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldMaster_Group_StaticTextHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel41))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel42.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel42.border.title"))); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabeMaster_StaticTextGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabeMaster_StaticTextGroupFooter.text")); // NOI18N
+
+        jTextFieldMaster_Group_StaticTextFooter.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldMaster_Group_StaticTextFooter.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelMaster_FieldGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelMaster_FieldGroupFooter.text")); // NOI18N
+
+        jComboBoxMaster_Group_FieldFooter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxMaster_Group_FieldFooterActionPerformed(evt);
+            }
+        });
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelMaster_OperationReport, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelMaster_OperationReport.text")); // NOI18N
+
+        jCheckBoxMaster_TextoGroupFooter.setSelected(true);
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxMaster_TextoGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxMaster_TextoGroupFooter.text")); // NOI18N
+        jCheckBoxMaster_TextoGroupFooter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMaster_TextoGroupFooterActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxMaster_LineaGroupFooter.setSelected(true);
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxMaster_LineaGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxMaster_LineaGroupFooter.text")); // NOI18N
+        jCheckBoxMaster_LineaGroupFooter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMaster_LineaGroupFooterActionPerformed(evt);
+            }
+        });
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelMaster_LineaGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelMaster_LineaGroupFooter.text")); // NOI18N
+
+        javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
+        jPanel42.setLayout(jPanel42Layout);
+        jPanel42Layout.setHorizontalGroup(
+            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel42Layout.createSequentialGroup()
+                .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelMaster_LineaGroupFooter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel42Layout.createSequentialGroup()
+                        .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabeMaster_StaticTextGroupFooter)
+                            .addComponent(jLabelMaster_FieldGroupFooter)
+                            .addComponent(jLabelMaster_OperationReport)
+                            .addComponent(jCheckBoxMaster_TextoGroupFooter))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBoxMaster_Group_OperationFooter, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBoxMaster_Group_FieldFooter, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel42Layout.createSequentialGroup()
+                                .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCheckBoxMaster_LineaGroupFooter)
+                                    .addComponent(jTextFieldMaster_Group_StaticTextFooter, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap())
+        );
+        jPanel42Layout.setVerticalGroup(
+            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel42Layout.createSequentialGroup()
+                .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBoxMaster_TextoGroupFooter)
+                    .addComponent(jCheckBoxMaster_LineaGroupFooter))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabeMaster_StaticTextGroupFooter)
+                    .addComponent(jTextFieldMaster_Group_StaticTextFooter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelMaster_FieldGroupFooter)
+                    .addComponent(jComboBoxMaster_Group_FieldFooter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelMaster_OperationReport)
+                    .addComponent(jComboBoxMaster_Group_OperationFooter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelMaster_LineaGroupFooter)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
+        jPanel39.setLayout(jPanel39Layout);
+        jPanel39Layout.setHorizontalGroup(
+            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel41, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel39Layout.createSequentialGroup()
+                .addComponent(jPanel42, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel39Layout.setVerticalGroup(
+            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel39Layout.createSequentialGroup()
+                .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jDialogMaster_GroupLayout = new javax.swing.GroupLayout(jDialogMaster_Group.getContentPane());
+        jDialogMaster_Group.getContentPane().setLayout(jDialogMaster_GroupLayout);
+        jDialogMaster_GroupLayout.setHorizontalGroup(
+            jDialogMaster_GroupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jDialogMaster_GroupLayout.setVerticalGroup(
+            jDialogMaster_GroupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogMaster_GroupLayout.createSequentialGroup()
+                .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jDialogMaster_Label.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogMaster_Label.title")); // NOI18N
+
+        jPanel43.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel43.border.title"))); // NOI18N
+
+        jTextAreaMaster_Label.setColumns(20);
+        jTextAreaMaster_Label.setRows(5);
+        jScrollPane15.setViewportView(jTextAreaMaster_Label);
+
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/label.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel42, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel42.text")); // NOI18N
+
+        jButtonMaster_DialogLabelClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/close24x24.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_DialogLabelClose, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_DialogLabelClose.text")); // NOI18N
+        jButtonMaster_DialogLabelClose.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_DialogLabelClose.toolTipText")); // NOI18N
+        jButtonMaster_DialogLabelClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMaster_DialogLabelCloseActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel43Layout = new javax.swing.GroupLayout(jPanel43);
+        jPanel43.setLayout(jPanel43Layout);
+        jPanel43Layout.setHorizontalGroup(
+            jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel43Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel42)
+                    .addComponent(jButtonMaster_DialogLabelClose))
+                .addGap(123, 123, 123))
+        );
+        jPanel43Layout.setVerticalGroup(
+            jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel43Layout.createSequentialGroup()
+                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel43Layout.createSequentialGroup()
+                .addComponent(jButtonMaster_DialogLabelClose)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
+        );
+
+        javax.swing.GroupLayout jDialogMaster_LabelLayout = new javax.swing.GroupLayout(jDialogMaster_Label.getContentPane());
+        jDialogMaster_Label.getContentPane().setLayout(jDialogMaster_LabelLayout);
+        jDialogMaster_LabelLayout.setHorizontalGroup(
+            jDialogMaster_LabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jDialogMaster_LabelLayout.setVerticalGroup(
+            jDialogMaster_LabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        jDialogMaster_Summary.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogMaster_Summary.title")); // NOI18N
+        jDialogMaster_Summary.setAlwaysOnTop(true);
+
+        jPanel45.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel45.border.title"))); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelStaticTextGroupFooterAll5, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelStaticTextGroupFooterAll5.text")); // NOI18N
+
+        jTextFieldMaster_SummaryStaticText.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldMaster_SummaryStaticText.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelMaster_FieldSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelMaster_FieldSummary.text")); // NOI18N
+
+        jComboBoxMaster_Summar_Field.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxMaster_Summar_FieldActionPerformed(evt);
+            }
+        });
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelMaster_OperationSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelMaster_OperationSummary.text")); // NOI18N
+
+        jButtonMaster_SaveSummary1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/save.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_SaveSummary1, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_SaveSummary1.text")); // NOI18N
+        jButtonMaster_SaveSummary1.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_SaveSummary1.toolTipText")); // NOI18N
+        jButtonMaster_SaveSummary1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMaster_SaveSummary1ActionPerformed(evt);
+            }
+        });
+
+        jButtonMaster_SummaryAllDelete1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/delete.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_SummaryAllDelete1, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_SummaryAllDelete1.text")); // NOI18N
+        jButtonMaster_SummaryAllDelete1.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_SummaryAllDelete1.toolTipText")); // NOI18N
+        jButtonMaster_SummaryAllDelete1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMaster_SummaryAllDelete1ActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxMaster_MostrarFieldSummary.setSelected(true);
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxMaster_MostrarFieldSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxMaster_MostrarFieldSummary.text")); // NOI18N
+        jCheckBoxMaster_MostrarFieldSummary.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMaster_MostrarFieldSummaryActionPerformed(evt);
+            }
+        });
+
+        jButtonMaster_SummaryClose1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/close24x24.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_SummaryClose1, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_SummaryClose1.text")); // NOI18N
+        jButtonMaster_SummaryClose1.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_SummaryClose1.toolTipText")); // NOI18N
+        jButtonMaster_SummaryClose1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMaster_SummaryClose1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
+        jPanel45.setLayout(jPanel45Layout);
+        jPanel45Layout.setHorizontalGroup(
+            jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel45Layout.createSequentialGroup()
+                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel45Layout.createSequentialGroup()
+                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelStaticTextGroupFooterAll5)
+                            .addComponent(jLabelMaster_FieldSummary)
+                            .addComponent(jLabelMaster_OperationSummary))
+                        .addGap(49, 49, 49))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel45Layout.createSequentialGroup()
+                        .addComponent(jCheckBoxMaster_MostrarFieldSummary)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jComboBoxMaster_Summar_Field, 0, 331, Short.MAX_VALUE)
+                    .addComponent(jTextFieldMaster_SummaryStaticText)
+                    .addComponent(jComboBoxMaster_Summary_Operation, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonMaster_SaveSummary1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonMaster_SummaryAllDelete1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonMaster_SummaryClose1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel45Layout.setVerticalGroup(
+            jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel45Layout.createSequentialGroup()
+                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel45Layout.createSequentialGroup()
+                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelStaticTextGroupFooterAll5)
+                            .addComponent(jTextFieldMaster_SummaryStaticText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jCheckBoxMaster_MostrarFieldSummary)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelMaster_FieldSummary)
+                            .addComponent(jComboBoxMaster_Summar_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBoxMaster_Summary_Operation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelMaster_OperationSummary)))
+                    .addGroup(jPanel45Layout.createSequentialGroup()
+                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonMaster_SaveSummary1)
+                            .addComponent(jButtonMaster_SummaryClose1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonMaster_SummaryAllDelete1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel44Layout = new javax.swing.GroupLayout(jPanel44);
+        jPanel44.setLayout(jPanel44Layout);
+        jPanel44Layout.setHorizontalGroup(
+            jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel44Layout.createSequentialGroup()
+                .addComponent(jPanel45, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel44Layout.setVerticalGroup(
+            jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel44Layout.createSequentialGroup()
+                .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jDialogMaster_SummaryLayout = new javax.swing.GroupLayout(jDialogMaster_Summary.getContentPane());
+        jDialogMaster_Summary.getContentPane().setLayout(jDialogMaster_SummaryLayout);
+        jDialogMaster_SummaryLayout.setHorizontalGroup(
+            jDialogMaster_SummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jDialogMaster_SummaryLayout.setVerticalGroup(
+            jDialogMaster_SummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel6.border.title"))); // NOI18N
 
-        jTextFieldNameOfProject.setEditable(false);
-        jTextFieldNameOfProject.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldNameOfProject.text")); // NOI18N
+        jTextFieldProject_NameOfProject.setEditable(false);
+        jTextFieldProject_NameOfProject.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldProject_NameOfProject.text")); // NOI18N
 
         jButtonSelectProject.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/project.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(jButtonSelectProject, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSelectProject.text")); // NOI18N
@@ -1826,19 +2350,19 @@ public final class ReportWizardTopComponent extends TopComponent {
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel5, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel5.text")); // NOI18N
 
-        jTextFieldNameOfPackage.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldNameOfPackage.text")); // NOI18N
-        jTextFieldNameOfPackage.addKeyListener(new java.awt.event.KeyAdapter() {
+        jTextFieldProject_NameOfPackage.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldProject_NameOfPackage.text")); // NOI18N
+        jTextFieldProject_NameOfPackage.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldNameOfPackageKeyTyped(evt);
+                jTextFieldProject_NameOfPackageKeyTyped(evt);
             }
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextFieldNameOfPackageKeyPressed(evt);
+                jTextFieldProject_NameOfPackageKeyPressed(evt);
             }
         });
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel7, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel7.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelEntity, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelEntity.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelProject_NameOfEntity, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelProject_NameOfEntity.text")); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -1852,15 +2376,15 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jTextFieldNameOfProject, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldProject_NameOfProject, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButtonSelectProject))
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jTextFieldNameOfPackage, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldProject_NameOfPackage, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabelEntity, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabelProject_NameOfEntity, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -1869,30 +2393,30 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonSelectProject, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextFieldNameOfProject, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldProject_NameOfProject, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel3)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextFieldNameOfPackage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldProject_NameOfPackage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
-                    .addComponent(jLabelEntity))
+                    .addComponent(jLabelProject_NameOfEntity))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanelEntity.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelEntity.border.title"))); // NOI18N
 
-        jTextAreaEntity.setColumns(20);
-        jTextAreaEntity.setRows(5);
-        jTextAreaEntity.addKeyListener(new java.awt.event.KeyAdapter() {
+        jTextAreaAllDetails_Entity.setColumns(20);
+        jTextAreaAllDetails_Entity.setRows(5);
+        jTextAreaAllDetails_Entity.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextAreaEntityKeyPressed(evt);
+                jTextAreaAllDetails_EntityKeyPressed(evt);
             }
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                jTextAreaEntityKeyReleased(evt);
+                jTextAreaAllDetails_EntityKeyReleased(evt);
             }
         });
-        jScrollPane4.setViewportView(jTextAreaEntity);
+        jScrollPane4.setViewportView(jTextAreaAllDetails_Entity);
 
         jButtonClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/clear24x24.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(jButtonClear, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonClear.text")); // NOI18N
@@ -1945,16 +2469,14 @@ public final class ReportWizardTopComponent extends TopComponent {
             jPanelEntityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelEntityLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 637, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelEntityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanelEntityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jButtonGoPage2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonPropertiesAll, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanelEntityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jButtonHelp, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonClear, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 625, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanelEntityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                    .addComponent(jButtonGoPage2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonPropertiesAll, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonHelp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonClear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
         jPanelEntityLayout.setVerticalGroup(
@@ -1981,7 +2503,7 @@ public final class ReportWizardTopComponent extends TopComponent {
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel25, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel25.text")); // NOI18N
 
-        jTextFieldSubreport_Name.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldSubreport_Name.text")); // NOI18N
+        jTextFieldSubreport_NameOfEntity.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldSubreport_NameOfEntity.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel26, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel26.text")); // NOI18N
 
@@ -2034,7 +2556,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                     .addComponent(jLabel26))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldSubreport_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldSubreport_NameOfEntity, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel21Layout.createSequentialGroup()
                         .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -2049,7 +2571,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel25)
-                    .addComponent(jTextFieldSubreport_Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldSubreport_NameOfEntity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel21Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2232,25 +2754,25 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelAllLayout = new javax.swing.GroupLayout(jPanelAll);
+        jPanelAll.setLayout(jPanelAllLayout);
+        jPanelAllLayout.setHorizontalGroup(
+            jPanelAllLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAllLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanelAllLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelAllLayout.createSequentialGroup()
                         .addComponent(jScrollPane2)
                         .addContainerGap())
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(jPanelAllLayout.createSequentialGroup()
+                        .addGroup(jPanelAllLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelAllLayout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextFieldAll_NameOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel11))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addGroup(jPanelAllLayout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextFieldAll_TituloOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -2258,21 +2780,21 @@ public final class ReportWizardTopComponent extends TopComponent {
                         .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 136, Short.MAX_VALUE))))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+        jPanelAllLayout.setVerticalGroup(
+            jPanelAllLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAllLayout.createSequentialGroup()
+                .addGroup(jPanelAllLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelAllLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanelAllLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(jTextFieldAll_TituloOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanelAllLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
                             .addComponent(jTextFieldAll_NameOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel11)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(jPanelAllLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -2280,7 +2802,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel3.TabConstraints.tabTitle"), jPanel3); // NOI18N
+        jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelAll.TabConstraints.tabTitle"), jPanelAll); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel8, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel8.text")); // NOI18N
 
@@ -2401,25 +2923,25 @@ public final class ReportWizardTopComponent extends TopComponent {
                             .addComponent(jButtonDeatilsSummary, javax.swing.GroupLayout.Alignment.TRAILING)))))
         );
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelDetailsLayout = new javax.swing.GroupLayout(jPanelDetails);
+        jPanelDetails.setLayout(jPanelDetailsLayout);
+        jPanelDetailsLayout.setHorizontalGroup(
+            jPanelDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelDetailsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanelDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelDetailsLayout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 768, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGroup(jPanelDetailsLayout.createSequentialGroup()
+                        .addGroup(jPanelDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelDetailsLayout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextFieldDetails_NameOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel10))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addGroup(jPanelDetailsLayout.createSequentialGroup()
                                 .addComponent(jLabel8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextFieldDetails_TituloOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -2427,16 +2949,16 @@ public final class ReportWizardTopComponent extends TopComponent {
                         .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(298, 298, 298))))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        jPanelDetailsLayout.setVerticalGroup(
+            jPanelDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelDetailsLayout.createSequentialGroup()
+                .addGroup(jPanelDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelDetailsLayout.createSequentialGroup()
+                        .addGroup(jPanelDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
                             .addComponent(jTextFieldDetails_TituloOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanelDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
                             .addComponent(jTextFieldDetails_NameOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel10)))
@@ -2446,7 +2968,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap(38, Short.MAX_VALUE))
         );
 
-        jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel4.TabConstraints.tabTitle"), jPanel4); // NOI18N
+        jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelDetails.TabConstraints.tabTitle"), jPanelDetails); // NOI18N
 
         jScrollPane12.setViewportView(jTextPaneSubReport_Jasper);
 
@@ -2578,25 +3100,25 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
-        jPanel33.setLayout(jPanel33Layout);
-        jPanel33Layout.setHorizontalGroup(
-            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel33Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelSubReportinternoLayout = new javax.swing.GroupLayout(jPanelSubReportinterno);
+        jPanelSubReportinterno.setLayout(jPanelSubReportinternoLayout);
+        jPanelSubReportinternoLayout.setHorizontalGroup(
+            jPanelSubReportinternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSubReportinternoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel33Layout.createSequentialGroup()
+                .addGroup(jPanelSubReportinternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelSubReportinternoLayout.createSequentialGroup()
                         .addComponent(jScrollPane12)
                         .addContainerGap())
-                    .addGroup(jPanel33Layout.createSequentialGroup()
-                        .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel33Layout.createSequentialGroup()
+                    .addGroup(jPanelSubReportinternoLayout.createSequentialGroup()
+                        .addGroup(jPanelSubReportinternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelSubReportinternoLayout.createSequentialGroup()
                                 .addComponent(jLabel32)
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextFieldSubReport_NameOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel33))
-                            .addGroup(jPanel33Layout.createSequentialGroup()
+                            .addGroup(jPanelSubReportinternoLayout.createSequentialGroup()
                                 .addComponent(jLabel31)
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextFieldSubReport_TituloOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -2604,22 +3126,22 @@ public final class ReportWizardTopComponent extends TopComponent {
                         .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 120, Short.MAX_VALUE))))
         );
-        jPanel33Layout.setVerticalGroup(
-            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel33Layout.createSequentialGroup()
-                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel33Layout.createSequentialGroup()
+        jPanelSubReportinternoLayout.setVerticalGroup(
+            jPanelSubReportinternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSubReportinternoLayout.createSequentialGroup()
+                .addGroup(jPanelSubReportinternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelSubReportinternoLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanelSubReportinternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel31)
                             .addComponent(jTextFieldSubReport_TituloOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanelSubReportinternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel32)
                             .addComponent(jTextFieldSubReport_NameOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel33))
                         .addGap(29, 29, 29))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel33Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSubReportinternoLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)))
@@ -2627,22 +3149,203 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
-        jPanel32.setLayout(jPanel32Layout);
-        jPanel32Layout.setHorizontalGroup(
-            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel32Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelSubReportLayout = new javax.swing.GroupLayout(jPanelSubReport);
+        jPanelSubReport.setLayout(jPanelSubReportLayout);
+        jPanelSubReportLayout.setHorizontalGroup(
+            jPanelSubReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSubReportLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanelSubReportinterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-        jPanel32Layout.setVerticalGroup(
-            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel32Layout.createSequentialGroup()
-                .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jPanelSubReportLayout.setVerticalGroup(
+            jPanelSubReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSubReportLayout.createSequentialGroup()
+                .addComponent(jPanelSubReportinterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 15, Short.MAX_VALUE))
         );
 
-        jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel32.TabConstraints.tabTitle"), jPanel32); // NOI18N
+        jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelSubReport.TabConstraints.tabTitle"), jPanelSubReport); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel35, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel35.text")); // NOI18N
+
+        jTextFieldMaster_TituloOfReport.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldMaster_TituloOfReport.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel36, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel36.text")); // NOI18N
+
+        jTextFieldMaster_NameOfReport.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldMaster_NameOfReport.text")); // NOI18N
+
+        jLabel37.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel37, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel37.text")); // NOI18N
+
+        jPanel37.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jButtonMaster_BackPage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/back24x24.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_BackPage, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_BackPage.text")); // NOI18N
+        jButtonMaster_BackPage.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_BackPage.toolTipText")); // NOI18N
+        jButtonMaster_BackPage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMaster_BackPageActionPerformed(evt);
+            }
+        });
+
+        jButtonMaster_CompileReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/code24x24.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_CompileReport, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_CompileReport.text")); // NOI18N
+        jButtonMaster_CompileReport.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_CompileReport.toolTipText")); // NOI18N
+        jButtonMaster_CompileReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMaster_CompileReportActionPerformed(evt);
+            }
+        });
+
+        jButtonMaster_GenerarJrxml.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/save.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_GenerarJrxml, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_GenerarJrxml.text")); // NOI18N
+        jButtonMaster_GenerarJrxml.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_GenerarJrxml.toolTipText")); // NOI18N
+        jButtonMaster_GenerarJrxml.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMaster_GenerarJrxmlActionPerformed(evt);
+            }
+        });
+
+        jButtonMaster_ShowDialog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/group.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_ShowDialog, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_ShowDialog.text")); // NOI18N
+        jButtonMaster_ShowDialog.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_ShowDialog.toolTipText")); // NOI18N
+        jButtonMaster_ShowDialog.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMaster_ShowDialogActionPerformed(evt);
+            }
+        });
+
+        jButtonMaster_RefreshReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/refresh.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_RefreshReport, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_RefreshReport.text")); // NOI18N
+        jButtonMaster_RefreshReport.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_RefreshReport.toolTipText")); // NOI18N
+        jButtonMaster_RefreshReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMaster_RefreshReportActionPerformed(evt);
+            }
+        });
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel38, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel38.text")); // NOI18N
+
+        jComboBoxMaster_SizeOfPage.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A4", "LETTER", "LEGAL" }));
+        jComboBoxMaster_SizeOfPage.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxMaster_SizeOfPageItemStateChanged(evt);
+            }
+        });
+        jComboBoxMaster_SizeOfPage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxMaster_SizeOfPageActionPerformed(evt);
+            }
+        });
+
+        jButtonMaster_Summary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/summary.png"))); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_Summary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_Summary.text")); // NOI18N
+        jButtonMaster_Summary.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_Summary.toolTipText")); // NOI18N
+        jButtonMaster_Summary.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMaster_SummaryActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
+        jPanel37.setLayout(jPanel37Layout);
+        jPanel37Layout.setHorizontalGroup(
+            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel37Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel37Layout.createSequentialGroup()
+                        .addComponent(jButtonMaster_RefreshReport, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonMaster_ShowDialog)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonMaster_Summary)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonMaster_GenerarJrxml)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonMaster_CompileReport)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel37Layout.createSequentialGroup()
+                        .addComponent(jLabel38)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBoxMaster_SizeOfPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jButtonMaster_BackPage)
+                .addGap(48, 48, 48))
+        );
+        jPanel37Layout.setVerticalGroup(
+            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel37Layout.createSequentialGroup()
+                .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel37Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButtonMaster_BackPage, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel37Layout.createSequentialGroup()
+                        .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel38)
+                            .addComponent(jComboBoxMaster_SizeOfPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                        .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButtonMaster_CompileReport, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonMaster_GenerarJrxml, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonMaster_ShowDialog, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonMaster_RefreshReport, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonMaster_Summary, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addContainerGap())
+        );
+
+        jScrollPane13.setViewportView(jTextPaneMaster_Jasper);
+
+        javax.swing.GroupLayout jPanelMasterLayout = new javax.swing.GroupLayout(jPanelMaster);
+        jPanelMaster.setLayout(jPanelMasterLayout);
+        jPanelMasterLayout.setHorizontalGroup(
+            jPanelMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelMasterLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelMasterLayout.createSequentialGroup()
+                        .addComponent(jScrollPane13)
+                        .addContainerGap())
+                    .addGroup(jPanelMasterLayout.createSequentialGroup()
+                        .addGroup(jPanelMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelMasterLayout.createSequentialGroup()
+                                .addComponent(jLabel36)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextFieldMaster_NameOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel37))
+                            .addGroup(jPanelMasterLayout.createSequentialGroup()
+                                .addComponent(jLabel35)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextFieldMaster_TituloOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 120, Short.MAX_VALUE))))
+        );
+        jPanelMasterLayout.setVerticalGroup(
+            jPanelMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelMasterLayout.createSequentialGroup()
+                .addGroup(jPanelMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelMasterLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel35)
+                            .addComponent(jTextFieldMaster_TituloOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel36)
+                            .addComponent(jTextFieldMaster_NameOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel37))
+                        .addGap(29, 29, 29))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMasterLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
+                .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelMaster.TabConstraints.tabTitle_1"), jPanelMaster); // NOI18N
 
         javax.swing.GroupLayout jPanelReporteLayout = new javax.swing.GroupLayout(jPanelReporte);
         jPanelReporte.setLayout(jPanelReporteLayout);
@@ -2683,7 +3386,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             File projectToBeOpenedFile = projectChooser.getSelectedFile();
             if (projectToBeOpenedFile == null) {
                 MySession.advertencia("Seleccione un proyecto web");
-                jTextFieldNameOfProject.setText("");
+                jTextFieldProject_NameOfProject.setText("");
                 return;
             }
             FileObject projectToBeOpened = FileUtil.toFileObject(projectToBeOpenedFile);
@@ -2691,7 +3394,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             Project project = ProjectManager.getDefault().findProject(projectToBeOpened);
             if (project == null) {
                 MySession.advertencia("Seleccione un proyecto Web");
-                jTextFieldNameOfProject.setText("");
+                jTextFieldProject_NameOfProject.setText("");
                 return;
 
             }
@@ -2703,7 +3406,7 @@ public final class ReportWizardTopComponent extends TopComponent {
              */
             String lnombre_proyecto = project.getProjectDirectory().getName();
 
-            jTextFieldNameOfProject.setText(lnombre_proyecto);
+            jTextFieldProject_NameOfProject.setText(lnombre_proyecto);
             clear();
             //  project.getProjectDirectory();
 
@@ -2712,7 +3415,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                 if (!MySession.isEsProyectoWeb()) {
                     nd = new NotifyDescriptor.Message("Seleccione un proyecto Web");
                     DialogDisplayer.getDefault().notify(nd);
-                    jTextFieldNameOfProject.setText("");
+                    jTextFieldProject_NameOfProject.setText("");
                     return;
                 }
                 drawAreaEntity();
@@ -2726,13 +3429,13 @@ public final class ReportWizardTopComponent extends TopComponent {
         }
     }//GEN-LAST:event_jButtonSelectProjectActionPerformed
 
-    private void jTextFieldNameOfPackageKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldNameOfPackageKeyTyped
+    private void jTextFieldProject_NameOfPackageKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldProject_NameOfPackageKeyTyped
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNameOfPackageKeyTyped
+    }//GEN-LAST:event_jTextFieldProject_NameOfPackageKeyTyped
 
-    private void jTextFieldNameOfPackageKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldNameOfPackageKeyPressed
+    private void jTextFieldProject_NameOfPackageKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldProject_NameOfPackageKeyPressed
         generateNameReport();
-    }//GEN-LAST:event_jTextFieldNameOfPackageKeyPressed
+    }//GEN-LAST:event_jTextFieldProject_NameOfPackageKeyPressed
 
     private void jButtonGoPage2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGoPage2ActionPerformed
 
@@ -2741,29 +3444,41 @@ public final class ReportWizardTopComponent extends TopComponent {
 
     }//GEN-LAST:event_jButtonGoPage2ActionPerformed
 
-    private void jTextAreaEntityKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextAreaEntityKeyPressed
+    private void jTextAreaAllDetails_EntityKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextAreaAllDetails_EntityKeyPressed
         readkeyClass();
-    }//GEN-LAST:event_jTextAreaEntityKeyPressed
+    }//GEN-LAST:event_jTextAreaAllDetails_EntityKeyPressed
 
     private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClearActionPerformed
-        jTextAreaEntity.setText("");
-        jTextAreaLabel.setText("");
-        jTextFieldNameOfPackage.setText("");
-        jLabelEntity.setText("");
-        jTextAreaEntity.setText("");
-        jTextFieldAll_TituloOfReport.setText("");
-        jTextFieldSubReport_TituloOfReport.setText("");
-        jTextPaneAll_Jasper.setText("");
-        jTextFieldDetails_NameOfReport.setText("");
-        jTextPaneDetails_Jasper.setText("");
+//jTextArea
+        jTextAreaAllDetails_Entity.setText("");
+        jTextAreaAllDetails_Label.setText("");
+        jTextAreaSubReport_Entity.setText("");
+        jTextAreaSubReport_Label.setText("");
+
+        //jTextField
+        jTextFieldProject_NameOfPackage.setText("");
+        //nameOfReport
         jTextFieldAll_NameOfReport.setText("");
         jTextFieldDetails_NameOfReport.setText("");
-        jLabelEntity.setText("");
-        //
-        jTextFieldSubreport_Name.setText("");
-        jTextAreaSubReport_Label.setText("");
-        jTextAreaSubReport_Entity.setText("");
+        jTextFieldSubReport_NameOfReport.setText("");
+        jTextFieldMaster_NameOfReport.setText("");
+
+        //titulo
+        jTextFieldAll_TituloOfReport.setText("");
+        jTextFieldDetails_TituloOfReport.setText("");
+        jTextFieldSubReport_TituloOfReport.setText("");
+        jTextFieldMaster_TituloOfReport.setText("");
+        
+        //name of Entity
+        jTextFieldSubreport_NameOfEntity.setText("");
+        jLabelProject_NameOfEntity.setText("");
+
+        //Panel
+        jTextPaneAll_Jasper.setText("");
+        jTextPaneDetails_Jasper.setText("");
         jTextPaneSubReport_Jasper.setText("");
+        jTextPaneMaster_Jasper.setText("");
+
         drawAreaEntity();
         drawAreaSubreportEntity();
 
@@ -3058,30 +3773,30 @@ public final class ReportWizardTopComponent extends TopComponent {
 
     }//GEN-LAST:event_jButtonHelpActionPerformed
 
-    private void jTextAreaEntityKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextAreaEntityKeyReleased
+    private void jTextAreaAllDetails_EntityKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextAreaAllDetails_EntityKeyReleased
         generateAnotationLabel();
-    }//GEN-LAST:event_jTextAreaEntityKeyReleased
+    }//GEN-LAST:event_jTextAreaAllDetails_EntityKeyReleased
 
     private void jButtonDialogPropertiesCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDialogPropertiesCloseActionPerformed
-        jDialogProperties.dispose();
+        jDialogAllDetails_Properties.dispose();
     }//GEN-LAST:event_jButtonDialogPropertiesCloseActionPerformed
 
     private void jButtonPropertiesAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPropertiesAllActionPerformed
-        jDialogProperties.setSize(550, 400);
-        jDialogProperties.setLocationRelativeTo(null);
-        jDialogProperties.setAlwaysOnTop(true);
-        jDialogProperties.setVisible(true);
+        jDialogAllDetails_Properties.setSize(550, 400);
+        jDialogAllDetails_Properties.setLocationRelativeTo(null);
+        jDialogAllDetails_Properties.setAlwaysOnTop(true);
+        jDialogAllDetails_Properties.setVisible(true);
     }//GEN-LAST:event_jButtonPropertiesAllActionPerformed
 
     private void jButtonDialogLabelCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDialogLabelCloseActionPerformed
-        jDialogLabel.dispose();
+        jDialogAllDetails_Label.dispose();
     }//GEN-LAST:event_jButtonDialogLabelCloseActionPerformed
 
     private void jButtonLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLabelActionPerformed
-        jDialogLabel.setSize(550, 350);
-        jDialogLabel.setLocationRelativeTo(null);
-        jDialogLabel.setAlwaysOnTop(true);
-        jDialogLabel.setVisible(true);
+        jDialogAllDetails_Label.setSize(550, 350);
+        jDialogAllDetails_Label.setLocationRelativeTo(null);
+        jDialogAllDetails_Label.setAlwaysOnTop(true);
+        jDialogAllDetails_Label.setVisible(true);
     }//GEN-LAST:event_jButtonLabelActionPerformed
 
     private void jTextAreaSubReport_EntityKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextAreaSubReport_EntityKeyPressed
@@ -3097,15 +3812,15 @@ public final class ReportWizardTopComponent extends TopComponent {
     }//GEN-LAST:event_jTextAreaSubReport_EntityKeyReleased
 
     private void jButtonDialogPropertiesSubReportCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDialogPropertiesSubReportCloseActionPerformed
-        jDialogSubReport_Properties.dispose();
+        jDialogMasterSubReport_Properties.dispose();
     }//GEN-LAST:event_jButtonDialogPropertiesSubReportCloseActionPerformed
 
     private void jButtonSubReport_PropertiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubReport_PropertiesActionPerformed
 
-        jDialogSubReport_Properties.setSize(550, 350);
-        jDialogSubReport_Properties.setLocationRelativeTo(null);
-        jDialogSubReport_Properties.setAlwaysOnTop(true);
-        jDialogSubReport_Properties.setVisible(true);
+        jDialogMasterSubReport_Properties.setSize(550, 350);
+        jDialogMasterSubReport_Properties.setLocationRelativeTo(null);
+        jDialogMasterSubReport_Properties.setAlwaysOnTop(true);
+        jDialogMasterSubReport_Properties.setVisible(true);
     }//GEN-LAST:event_jButtonSubReport_PropertiesActionPerformed
 
     private void jButtonSubReportLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubReportLabelActionPerformed
@@ -3162,11 +3877,20 @@ public final class ReportWizardTopComponent extends TopComponent {
     }//GEN-LAST:event_jButtonSubReport_BackPageActionPerformed
 
     private void jButtonSubReport_CompileReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubReport_CompileReportActionPerformed
-        // TODO add your handling code here:
+        try {
+            GeneratorSubReport generatorSubReport = new GeneratorSubReport();
+            if (generatorSubReport.compileJRXML(jTextFieldSubReport_NameOfReport.getText(), false)) {
+                MySession.informacion("Se compilo el reporte " + jTextFieldSubReport_NameOfReport.getText() + ".jasper");
+            }
+
+        } catch (Exception e) {
+            MySession.error("jButtonCompileReportDetails() " + e.getLocalizedMessage());
+        }
     }//GEN-LAST:event_jButtonSubReport_CompileReportActionPerformed
 
     private void jButtonSubRert_GenerarJrxmlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubRert_GenerarJrxmlActionPerformed
         try {
+            MySession.setNameOfSubReport(jTextFieldSubReport_NameOfReport.getText());
             MySubreportSession.setTextJasperSubReport(jTextPaneSubReport_Jasper.getText());
             GeneratorSubReport reportSubReport = new GeneratorSubReport();
             if (reportSubReport.generarJRXML(jTextFieldSubReport_NameOfReport.getText(), false)) {
@@ -3234,21 +3958,158 @@ public final class ReportWizardTopComponent extends TopComponent {
     }//GEN-LAST:event_jButtonSubReport_SummaryCloseActionPerformed
 
     private void jButtonSubRepot_ClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubRepot_ClearActionPerformed
- jTextAreaSubReport_Entity.setText("");
- jTextAreaSubReport_Label.setText("");
-      
-        
+        jTextAreaSubReport_Entity.setText("");
+        jTextAreaSubReport_Label.setText("");
+
         jTextPaneSubReport_Jasper.setText("");
         jTextFieldSubReport_NameOfReport.setText("");
-    
+
         //
-        jTextFieldSubreport_Name.setText("");
+        jTextFieldSubreport_NameOfEntity.setText("");
         jTextAreaSubReport_Label.setText("");
         jTextAreaSubReport_Entity.setText("");
-       
+
         drawAreaSubreportEntity();
 
     }//GEN-LAST:event_jButtonSubRepot_ClearActionPerformed
+
+    private void jButtonMaster_BackPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMaster_BackPageActionPerformed
+goPage1();
+    }//GEN-LAST:event_jButtonMaster_BackPageActionPerformed
+
+    private void jButtonMaster_CompileReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMaster_CompileReportActionPerformed
+  try {
+            GeneratorMasterReport generatorMasterReport = new GeneratorMasterReport();
+            if (generatorMasterReport.compileJRXML(jTextFieldMaster_NameOfReport.getText(), false)) {
+                MySession.informacion("Se compilo el reporte " + jTextFieldMaster_NameOfReport.getText() + ".jasper");
+            }
+
+        } catch (Exception e) {
+            MySession.error("jButtonMaster_CompileReport() " + e.getLocalizedMessage());
+        }
+    }//GEN-LAST:event_jButtonMaster_CompileReportActionPerformed
+
+    private void jButtonMaster_GenerarJrxmlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMaster_GenerarJrxmlActionPerformed
+ try {
+            MySession.setTextJasperMaster(jTextPaneMaster_Jasper.getText());
+            GeneratorMasterReport generatorMasterReport = new GeneratorMasterReport();
+            if (generatorMasterReport.generarJRXML(jTextFieldMaster_NameOfReport.getText(), false)) {
+                MySession.informacion("Se creo  el reporte: " + jTextFieldMaster_NameOfReport.getText() + ".jrxml");
+            }
+
+        } catch (Exception e) {
+            MySession.error("jButtonMaster_GenerarJrxml() " + e.getLocalizedMessage());
+        }
+    }//GEN-LAST:event_jButtonMaster_GenerarJrxmlActionPerformed
+
+    private void jButtonMaster_ShowDialogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMaster_ShowDialogActionPerformed
+  jDialogMaster_Group.setSize(550, 550);
+        jDialogMaster_Group.setLocationRelativeTo(null);
+        jDialogMaster_Group.setAlwaysOnTop(true);
+        jDialogMaster_Group.setVisible(true);
+    }//GEN-LAST:event_jButtonMaster_ShowDialogActionPerformed
+
+    private void jButtonMaster_RefreshReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMaster_RefreshReportActionPerformed
+  drawJasperMaster();
+    }//GEN-LAST:event_jButtonMaster_RefreshReportActionPerformed
+
+    private void jComboBoxMaster_SizeOfPageItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxMaster_SizeOfPageItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxMaster_SizeOfPageItemStateChanged
+
+    private void jComboBoxMaster_SizeOfPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxMaster_SizeOfPageActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxMaster_SizeOfPageActionPerformed
+
+    private void jButtonMaster_SummaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMaster_SummaryActionPerformed
+ jDialogMaster_Summary.setSize(545, 200);
+        jDialogMaster_Summary.setLocationRelativeTo(null);
+        jDialogMaster_Summary.setAlwaysOnTop(true);
+        jDialogMaster_Summary.setVisible(true);
+    }//GEN-LAST:event_jButtonMaster_SummaryActionPerformed
+
+    private void jComboBoxMaster_Group_FieldGroupByItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxMaster_Group_FieldGroupByItemStateChanged
+  try {
+            if (!jComboBoxMaster_Group_FieldGroupBy.getSelectedItem().toString().equals("")) {
+                jTextFieldMaster_Group_NameOfGroup.setText("group_" + jComboBoxMaster_Group_FieldGroupBy.getSelectedItem().toString());
+            }
+
+        } catch (Exception e) {
+            MySession.error("jComboBoxMaster_Group_FieldGroupByItemStateChanged() " + e.getLocalizedMessage());
+        }
+
+    }//GEN-LAST:event_jComboBoxMaster_Group_FieldGroupByItemStateChanged
+
+    private void jComboBoxMaster_Group_FieldGroupByActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxMaster_Group_FieldGroupByActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxMaster_Group_FieldGroupByActionPerformed
+
+    private void jButtonMaster_GroupCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMaster_GroupCloseActionPerformed
+jDialogMaster_Group.dispose();
+    }//GEN-LAST:event_jButtonMaster_GroupCloseActionPerformed
+
+    private void jButtonMaster_GroupSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMaster_GroupSaveActionPerformed
+  if (saveGroupMaster()) {
+            drawJasperMaster();
+            jDialogMaster_Group.dispose();
+        }
+    }//GEN-LAST:event_jButtonMaster_GroupSaveActionPerformed
+
+    private void jButtonMaster_DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMaster_DeleteActionPerformed
+  if (deleteGroupMaster()) {
+            drawJasperMaster();
+            jDialogMaster_Group.dispose();
+        }
+    }//GEN-LAST:event_jButtonMaster_DeleteActionPerformed
+
+    private void jTextFieldMaster_Group_StaticTextHeaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMaster_Group_StaticTextHeaderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldMaster_Group_StaticTextHeaderActionPerformed
+
+    private void jComboBoxMaster_Group_FieldFooterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxMaster_Group_FieldFooterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxMaster_Group_FieldFooterActionPerformed
+
+    private void jCheckBoxMaster_TextoGroupFooterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMaster_TextoGroupFooterActionPerformed
+visibleGroupMaster();
+    }//GEN-LAST:event_jCheckBoxMaster_TextoGroupFooterActionPerformed
+
+    private void jCheckBoxMaster_LineaGroupFooterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMaster_LineaGroupFooterActionPerformed
+visibleGroupMaster();
+    }//GEN-LAST:event_jCheckBoxMaster_LineaGroupFooterActionPerformed
+
+    private void jButtonMaster_DialogLabelCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMaster_DialogLabelCloseActionPerformed
+jDialogMaster_Label.dispose();
+    }//GEN-LAST:event_jButtonMaster_DialogLabelCloseActionPerformed
+
+    private void jComboBoxMaster_Summar_FieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxMaster_Summar_FieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxMaster_Summar_FieldActionPerformed
+
+    private void jButtonMaster_SaveSummary1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMaster_SaveSummary1ActionPerformed
+ if (saveSummaryMaster()) {
+            drawJasperMaster();
+            jDialogMaster_Summary.dispose();
+        }
+    }//GEN-LAST:event_jButtonMaster_SaveSummary1ActionPerformed
+
+    private void jButtonMaster_SummaryAllDelete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMaster_SummaryAllDelete1ActionPerformed
+  if (deleteSummaryMaster()) {
+            drawJasperMaster();
+            jDialogMaster_Summary.dispose();
+        }
+    }//GEN-LAST:event_jButtonMaster_SummaryAllDelete1ActionPerformed
+
+    private void jCheckBoxMaster_MostrarFieldSummaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMaster_MostrarFieldSummaryActionPerformed
+ jComboBoxMaster_Summar_Field.setVisible(jCheckBoxMaster_MostrarFieldSummary.isSelected());
+        jLabelMaster_FieldSummary.setVisible(jCheckBoxMaster_MostrarFieldSummary.isSelected());
+        jComboBoxMaster_Summary_Operation.setVisible(jCheckBoxMaster_MostrarFieldSummary.isSelected());
+        jLabelMaster_OperationSummary.setVisible(jCheckBoxMaster_MostrarFieldSummary.isSelected());
+    }//GEN-LAST:event_jCheckBoxMaster_MostrarFieldSummaryActionPerformed
+
+    private void jButtonMaster_SummaryClose1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMaster_SummaryClose1ActionPerformed
+        jDialogMaster_Summary.dispose();
+    }//GEN-LAST:event_jButtonMaster_SummaryClose1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
@@ -3278,6 +4139,19 @@ public final class ReportWizardTopComponent extends TopComponent {
     private javax.swing.JButton jButtonGroupDetails;
     private javax.swing.JButton jButtonHelp;
     private javax.swing.JButton jButtonLabel;
+    private javax.swing.JButton jButtonMaster_BackPage;
+    private javax.swing.JButton jButtonMaster_CompileReport;
+    private javax.swing.JButton jButtonMaster_Delete;
+    private javax.swing.JButton jButtonMaster_DialogLabelClose;
+    private javax.swing.JButton jButtonMaster_GenerarJrxml;
+    private javax.swing.JButton jButtonMaster_GroupClose;
+    private javax.swing.JButton jButtonMaster_GroupSave;
+    private javax.swing.JButton jButtonMaster_RefreshReport;
+    private javax.swing.JButton jButtonMaster_SaveSummary1;
+    private javax.swing.JButton jButtonMaster_ShowDialog;
+    private javax.swing.JButton jButtonMaster_Summary;
+    private javax.swing.JButton jButtonMaster_SummaryAllDelete1;
+    private javax.swing.JButton jButtonMaster_SummaryClose1;
     private javax.swing.JButton jButtonPropertiesAll;
     private javax.swing.JButton jButtonRefreshReportDetails;
     private javax.swing.JButton jButtonSaveGroupDetails;
@@ -3306,6 +4180,9 @@ public final class ReportWizardTopComponent extends TopComponent {
     private javax.swing.JCheckBox jCheckBoxAll_TextoGroupFooter;
     private javax.swing.JCheckBox jCheckBoxDetails_LineaGroupFooter;
     private javax.swing.JCheckBox jCheckBoxDetails_TextoGroupFooter;
+    private javax.swing.JCheckBox jCheckBoxMaster_LineaGroupFooter;
+    private javax.swing.JCheckBox jCheckBoxMaster_MostrarFieldSummary;
+    private javax.swing.JCheckBox jCheckBoxMaster_TextoGroupFooter;
     private javax.swing.JCheckBox jCheckBoxMostrarFieldSummaryDetails;
     private javax.swing.JCheckBox jCheckBoxSubReport_LineaGroupFooter;
     private javax.swing.JCheckBox jCheckBoxSubReport_MostrarFieldSummary;
@@ -3321,6 +4198,12 @@ public final class ReportWizardTopComponent extends TopComponent {
     private javax.swing.JComboBox<String> jComboBoxDetails_Group_OperationFooter;
     private javax.swing.JComboBox<String> jComboBoxDetails_Summary_Field;
     private javax.swing.JComboBox<String> jComboBoxDetails_Summary_Operation;
+    private javax.swing.JComboBox<String> jComboBoxMaster_Group_FieldFooter;
+    private javax.swing.JComboBox<String> jComboBoxMaster_Group_FieldGroupBy;
+    private javax.swing.JComboBox<String> jComboBoxMaster_Group_OperationFooter;
+    private javax.swing.JComboBox<String> jComboBoxMaster_SizeOfPage;
+    private javax.swing.JComboBox<String> jComboBoxMaster_Summar_Field;
+    private javax.swing.JComboBox<String> jComboBoxMaster_Summary_Operation;
     private javax.swing.JComboBox<String> jComboBoxSizeOfPageDetails;
     private javax.swing.JComboBox<String> jComboBoxSubReport_Group_FieldFooter;
     private javax.swing.JComboBox<String> jComboBoxSubReport_Group_FieldGroupBy;
@@ -3328,17 +4211,21 @@ public final class ReportWizardTopComponent extends TopComponent {
     private javax.swing.JComboBox<String> jComboBoxSubReport_SizeOfPage;
     private javax.swing.JComboBox<String> jComboBoxSubReport_Summar_Field;
     private javax.swing.JComboBox<String> jComboBoxSubReport_Summary_Operation;
+    private javax.swing.JDialog jDialogAllDetails_Label;
+    private javax.swing.JDialog jDialogAllDetails_Properties;
     private javax.swing.JDialog jDialogAll_Group;
     private javax.swing.JDialog jDialogAll_Summary;
     private javax.swing.JDialog jDialogAyuda;
     private javax.swing.JDialog jDialogDetails_Group;
     private javax.swing.JDialog jDialogDetails_Summary;
-    private javax.swing.JDialog jDialogLabel;
-    private javax.swing.JDialog jDialogProperties;
+    private javax.swing.JDialog jDialogMasterSubReport_Properties;
+    private javax.swing.JDialog jDialogMaster_Group;
+    private javax.swing.JDialog jDialogMaster_Label;
+    private javax.swing.JDialog jDialogMaster_Summary;
     private javax.swing.JDialog jDialogSubReport_Group;
     private javax.swing.JDialog jDialogSubReport_Label;
-    private javax.swing.JDialog jDialogSubReport_Properties;
     private javax.swing.JDialog jDialogSubReport_Summary;
+    private javax.swing.JLabel jLabeMaster_StaticTextGroupFooter;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -3367,7 +4254,15 @@ public final class ReportWizardTopComponent extends TopComponent {
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -3378,16 +4273,22 @@ public final class ReportWizardTopComponent extends TopComponent {
     private javax.swing.JLabel jLabelAll_OperationReport;
     private javax.swing.JLabel jLabelAll_OperationSummary;
     private javax.swing.JLabel jLabelAll_StaticTextGroupFooter;
-    private javax.swing.JLabel jLabelEntity;
     private javax.swing.JLabel jLabelFieldGroupFooterAll;
     private javax.swing.JLabel jLabelFieldGroupFooterDetails;
     private javax.swing.JLabel jLabelFieldSummaryAll1;
     private javax.swing.JLabel jLabelLineaDetails;
+    private javax.swing.JLabel jLabelMaster_FieldGroupFooter;
+    private javax.swing.JLabel jLabelMaster_FieldSummary;
+    private javax.swing.JLabel jLabelMaster_LineaGroupFooter;
+    private javax.swing.JLabel jLabelMaster_OperationReport;
+    private javax.swing.JLabel jLabelMaster_OperationSummary;
     private javax.swing.JLabel jLabelOperationReportDetails;
     private javax.swing.JLabel jLabelOperationSummaryAll1;
+    private javax.swing.JLabel jLabelProject_NameOfEntity;
     private javax.swing.JLabel jLabelStaticTextGroupFooterAll;
     private javax.swing.JLabel jLabelStaticTextGroupFooterAll2;
     private javax.swing.JLabel jLabelStaticTextGroupFooterAll4;
+    private javax.swing.JLabel jLabelStaticTextGroupFooterAll5;
     private javax.swing.JLabel jLabelStaticTextGroupFooterDetails;
     private javax.swing.JLabel jLabelSubReport_FieldGroupFooter;
     private javax.swing.JLabel jLabelSubReport_FieldSummary;
@@ -3419,25 +4320,39 @@ public final class ReportWizardTopComponent extends TopComponent {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel31;
-    private javax.swing.JPanel jPanel32;
-    private javax.swing.JPanel jPanel33;
     private javax.swing.JPanel jPanel34;
     private javax.swing.JPanel jPanel35;
     private javax.swing.JPanel jPanel36;
+    private javax.swing.JPanel jPanel37;
+    private javax.swing.JPanel jPanel39;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel40;
+    private javax.swing.JPanel jPanel41;
+    private javax.swing.JPanel jPanel42;
+    private javax.swing.JPanel jPanel43;
+    private javax.swing.JPanel jPanel44;
+    private javax.swing.JPanel jPanel45;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JPanel jPanelAll;
+    private javax.swing.JPanel jPanelDetails;
     private javax.swing.JPanel jPanelDetails_PropertiesReport;
     private javax.swing.JPanel jPanelEntity;
+    private javax.swing.JPanel jPanelMaster;
     private javax.swing.JPanel jPanelProyecto;
     private javax.swing.JPanel jPanelReporte;
+    private javax.swing.JPanel jPanelSubReport;
+    private javax.swing.JPanel jPanelSubReportinterno;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -3449,14 +4364,17 @@ public final class ReportWizardTopComponent extends TopComponent {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTabbedPane jTabbedPaneEntity;
     private javax.swing.JTabbedPane jTabbedPaneReporte;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextAreaAllDetails_Entity;
+    private javax.swing.JTextArea jTextAreaAllDetails_Label;
     private javax.swing.JTextArea jTextAreaAll_Properties;
     private javax.swing.JTextArea jTextAreaDetails_Properties;
-    private javax.swing.JTextArea jTextAreaEntity;
-    private javax.swing.JTextArea jTextAreaLabel;
+    private javax.swing.JTextArea jTextAreaMaster_Label;
+    private javax.swing.JTextArea jTextAreaMaster_Properties;
     private javax.swing.JTextArea jTextAreaSubReport_Entity;
     private javax.swing.JTextArea jTextAreaSubReport_Label;
     private javax.swing.JTextArea jTextAreaSubReport_Properties;
@@ -3472,17 +4390,24 @@ public final class ReportWizardTopComponent extends TopComponent {
     private javax.swing.JTextField jTextFieldDetails_NameOfReport;
     private javax.swing.JTextField jTextFieldDetails_SummaryStaticText;
     private javax.swing.JTextField jTextFieldDetails_TituloOfReport;
-    private javax.swing.JTextField jTextFieldNameOfPackage;
-    private javax.swing.JTextField jTextFieldNameOfProject;
+    private javax.swing.JTextField jTextFieldMaster_Group_NameOfGroup;
+    private javax.swing.JTextField jTextFieldMaster_Group_StaticTextFooter;
+    private javax.swing.JTextField jTextFieldMaster_Group_StaticTextHeader;
+    private javax.swing.JTextField jTextFieldMaster_NameOfReport;
+    private javax.swing.JTextField jTextFieldMaster_SummaryStaticText;
+    private javax.swing.JTextField jTextFieldMaster_TituloOfReport;
+    private javax.swing.JTextField jTextFieldProject_NameOfPackage;
+    private javax.swing.JTextField jTextFieldProject_NameOfProject;
     private javax.swing.JTextField jTextFieldSubReport_Group_NameOfGroup;
     private javax.swing.JTextField jTextFieldSubReport_Group_StaticTextFooter;
     private javax.swing.JTextField jTextFieldSubReport_Group_StaticTextHeader;
     private javax.swing.JTextField jTextFieldSubReport_NameOfReport;
     private javax.swing.JTextField jTextFieldSubReport_SummaryStaticText;
     private javax.swing.JTextField jTextFieldSubReport_TituloOfReport;
-    private javax.swing.JTextField jTextFieldSubreport_Name;
+    private javax.swing.JTextField jTextFieldSubreport_NameOfEntity;
     private javax.swing.JTextPane jTextPaneAll_Jasper;
     private javax.swing.JTextPane jTextPaneDetails_Jasper;
+    private javax.swing.JTextPane jTextPaneMaster_Jasper;
     private javax.swing.JTextPane jTextPaneSubReport_Jasper;
     // End of variables declaration//GEN-END:variables
     @Override
@@ -3510,7 +4435,7 @@ public final class ReportWizardTopComponent extends TopComponent {
     private void generateNameReport() {
         try {
 
-            MySession.setNameOfPackage(jTextFieldNameOfPackage.getText());
+            MySession.setNameOfPackage(jTextFieldProject_NameOfPackage.getText());
         } catch (Exception e) {
             MySession.error("generateNameReport()" + e.getLocalizedMessage());
         }
@@ -3520,7 +4445,7 @@ public final class ReportWizardTopComponent extends TopComponent {
     private void generateNameSubReport() {
         try {
 
-            MySubreportSession.setNameOfSubreport(jTextFieldSubreport_Name.getText());
+            MySubreportSession.setNameOfSubreport(jTextFieldSubreport_NameOfEntity.getText());
         } catch (Exception e) {
             MySession.error("generateNameReport()" + e.getLocalizedMessage());
         }
@@ -3530,28 +4455,28 @@ public final class ReportWizardTopComponent extends TopComponent {
     private void readkeyClass() {
         try {
 
-            int lines = jTextAreaEntity.getLineCount();
+            int lines = jTextAreaAllDetails_Entity.getLineCount();
             for (int i = 0; i < lines; i++) {
-                int start = jTextAreaEntity.getLineStartOffset(i);
-                int end = jTextAreaEntity.getLineEndOffset(i);
+                int start = jTextAreaAllDetails_Entity.getLineStartOffset(i);
+                int end = jTextAreaAllDetails_Entity.getLineEndOffset(i);
                 // Implement method processLine
-                String line = jTextAreaEntity.getText(start, end - start);
+                String line = jTextAreaAllDetails_Entity.getText(start, end - start);
 
                 if (line.equals("pub")) {
-                    jTextAreaEntity.setText(jTextAreaEntity.getText() + "lic class ");
+                    jTextAreaAllDetails_Entity.setText(jTextAreaAllDetails_Entity.getText() + "lic class ");
                 } else {
                     if (line.contains("public class")) {
                         String x = line.replace("public class", "");
                         String name = x.replace("{", "").trim();
                         x = x.replace("{", "").toLowerCase().trim();
 
-                        if (!jTextAreaEntity.getText().contains("{")) {
-                            jTextFieldNameOfPackage.setText(x);
-                            jLabelEntity.setText(name);
+                        if (!jTextAreaAllDetails_Entity.getText().contains("{")) {
+                            jTextFieldProject_NameOfPackage.setText(x);
+                            jLabelProject_NameOfEntity.setText(name);
                         }
 
-                        if (!jTextAreaEntity.getText().contains("@Id") && jTextAreaEntity.getText().contains("{")) {
-                            jTextAreaEntity.setText(jTextAreaEntity.getText() + "\n@Id");
+                        if (!jTextAreaAllDetails_Entity.getText().contains("@Id") && jTextAreaAllDetails_Entity.getText().contains("{")) {
+                            jTextAreaAllDetails_Entity.setText(jTextAreaAllDetails_Entity.getText() + "\n@Id");
                         }
                     } else {
                         line = line.trim();
@@ -3560,23 +4485,23 @@ public final class ReportWizardTopComponent extends TopComponent {
                         }
 
                         if (line.equals("pub")) {
-                            jTextAreaEntity.setText(jTextAreaEntity.getText() + "lic class ");
+                            jTextAreaAllDetails_Entity.setText(jTextAreaAllDetails_Entity.getText() + "lic class ");
                         }
                         if (line.equals("pr")) {
-                            jTextAreaEntity.setText(jTextAreaEntity.getText() + "ivate ");
+                            jTextAreaAllDetails_Entity.setText(jTextAreaAllDetails_Entity.getText() + "ivate ");
                         }
                         if (line.equals("private St") || line.equals("private st")) {
-                            jTextAreaEntity.setText(jTextAreaEntity.getText() + "ring ");
+                            jTextAreaAllDetails_Entity.setText(jTextAreaAllDetails_Entity.getText() + "ring ");
                         }
 
                         if (line.equals("private In") || line.equals("private in")) {
-                            jTextAreaEntity.setText(jTextAreaEntity.getText() + "teger ");
+                            jTextAreaAllDetails_Entity.setText(jTextAreaAllDetails_Entity.getText() + "teger ");
                         }
                         if (line.equals("private Do") || line.equals("private do")) {
-                            jTextAreaEntity.setText(jTextAreaEntity.getText() + "uble ");
+                            jTextAreaAllDetails_Entity.setText(jTextAreaAllDetails_Entity.getText() + "uble ");
                         }
                         if (line.equals("private Da") || line.equals("private da")) {
-                            jTextAreaEntity.setText(jTextAreaEntity.getText() + "te ");
+                            jTextAreaAllDetails_Entity.setText(jTextAreaAllDetails_Entity.getText() + "te ");
                         }
                     }
                 }
@@ -3612,7 +4537,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                         x = x.replace("{", "").toLowerCase().trim();
 
                         if (!jTextAreaSubReport_Entity.getText().contains("{")) {
-                            jTextFieldSubreport_Name.setText(name.toLowerCase().trim());
+                            jTextFieldSubreport_NameOfEntity.setText(name.toLowerCase().trim());
                         }
 
                         if (!jTextAreaSubReport_Entity.getText().contains("@Id") && jTextAreaSubReport_Entity.getText().contains("{")) {
@@ -3660,17 +4585,17 @@ public final class ReportWizardTopComponent extends TopComponent {
     // <editor-fold defaultstate="collapsed" desc="generateAnotationLabel()">                          
     private void generateAnotationLabel() {
         try {
-            if (!jTextAreaEntity.getText().contains("}")) {
+            if (!jTextAreaAllDetails_Entity.getText().contains("}")) {
                 return;
             }
 
-            int lines = jTextAreaEntity.getLineCount();
+            int lines = jTextAreaAllDetails_Entity.getLineCount();
             String sb = "";
             for (int i = 0; i < lines; i++) {
-                int start = jTextAreaEntity.getLineStartOffset(i);
-                int end = jTextAreaEntity.getLineEndOffset(i);
+                int start = jTextAreaAllDetails_Entity.getLineStartOffset(i);
+                int end = jTextAreaAllDetails_Entity.getLineEndOffset(i);
                 // Implement method processLine
-                String line = jTextAreaEntity.getText(start, end - start);
+                String line = jTextAreaAllDetails_Entity.getText(start, end - start);
                 String linet = line;
                 if (line.contains("private")) {
                     linet = linet.replace("private", "").trim();
@@ -3680,9 +4605,9 @@ public final class ReportWizardTopComponent extends TopComponent {
                     if (splited[1].contains(";")) {
                         name = name.replace(";", "");
                     }
-                    if (!jTextAreaLabel.getText().contains(name)) {
+                    if (!jTextAreaAllDetails_Label.getText().contains(name)) {
                         sb += "{field:\"" + name + "\",label:\"" + name + "\"}\n";
-                        jTextAreaLabel.setText(sb);
+                        jTextAreaAllDetails_Label.setText(sb);
                     }
 
                 }
@@ -3742,32 +4667,32 @@ public final class ReportWizardTopComponent extends TopComponent {
             ReportDetailsSession.setPageSize("A4");
             ReportSubReportSession.setPageSize("A4");
 
-            if (jTextAreaEntity.getText().equals("")) {
+            if (jTextAreaAllDetails_Entity.getText().equals("")) {
                 MySession.error("Debe codificar el Entity primero.");
                 return;
             }
-            if (jLabelEntity.getText().equals("")) {
+            if (jLabelProject_NameOfEntity.getText().equals("")) {
                 generarNombreClase();
 
             }
-            if (jLabelEntity.getText().equals("")) {
+            if (jLabelProject_NameOfEntity.getText().equals("")) {
                 generarNombreClase();
                 MySession.error("Debe codificar el Entity primero.");
                 return;
             }
 
-            if (jTextFieldNameOfProject.getText().equals("")) {
+            if (jTextFieldProject_NameOfProject.getText().equals("")) {
                 MySession.error("Seleccione el proyecto web");
                 return;
             }
 
-            if (jTextFieldNameOfPackage.getText().equals("")) {
+            if (jTextFieldProject_NameOfPackage.getText().equals("")) {
                 MySession.error("Indique el nombre del paquete");
                 return;
             }
-            if (jTextAreaEntity.getText().equals("")) {
+            if (jTextAreaAllDetails_Entity.getText().equals("")) {
                 MySession.error("Ingrese la clase a procesar");
-                jTextAreaEntity.requestFocus();
+                jTextAreaAllDetails_Entity.requestFocus();
                 return;
             }
 
@@ -3777,7 +4702,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             MySession.setAllTablesWithPrimaryKey(false);
 
             EntityReader entityReader = new EntityReader();
-            entityReader.readEntity(jLabelEntity.getText(), jTextAreaEntity.getText());
+            entityReader.readEntity(jLabelProject_NameOfEntity.getText(), jTextAreaAllDetails_Entity.getText());
             if (MySession.getEntidad().getAtributosList().isEmpty()) {
                 entityValid = false;
             }
@@ -3799,7 +4724,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             MySubreportSession.setAllTablesWithPrimaryKey(false);
             if (!jTextAreaSubReport_Entity.getText().equals("")) {
                 EntityReaderSubReport entityReaderSubReport = new EntityReaderSubReport();
-                entityReaderSubReport.readEntity(jTextFieldSubreport_Name.getText(), jTextAreaSubReport_Entity.getText());
+                entityReaderSubReport.readEntity(jTextFieldSubreport_NameOfEntity.getText(), jTextAreaSubReport_Entity.getText());
                 if (MySubreportSession.getEntidad().getAtributosList().isEmpty()) {
                     entitySubreportValid = false;
                 }
@@ -3813,19 +4738,25 @@ public final class ReportWizardTopComponent extends TopComponent {
                 }
             }
 
-            jTextFieldAll_TituloOfReport.setText(jLabelEntity.getText());
+            jTextFieldAll_TituloOfReport.setText(jLabelProject_NameOfEntity.getText());
             jTextFieldAll_NameOfReport.setText("all");
-            
-jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
+
+            //details
+            jTextFieldDetails_TituloOfReport.setText(jLabelProject_NameOfEntity.getText());
             jTextFieldDetails_NameOfReport.setText("details");
-            
-            jTextFieldSubReport_TituloOfReport.setText(jTextFieldSubreport_Name.getText());
-            jTextFieldSubReport_NameOfReport.setText("subreport");
+ //master
+            jTextFieldMaster_TituloOfReport.setText(jLabelProject_NameOfEntity.getText());
+            jTextFieldMaster_NameOfReport.setText(jLabelProject_NameOfEntity.getText().toLowerCase()+"_master");
+ 
+            //subreport
+            jTextFieldSubReport_TituloOfReport.setText(jTextFieldSubreport_NameOfEntity.getText());
+            jTextFieldSubReport_NameOfReport.setText(jTextFieldSubreport_NameOfEntity.getText() + "_subreport");
             //Cramos una variable tipo StyledDocument que manejara los estilos.
 
             //Limpiar los grupos
             inicializarGroupReportAll();
             inicializarGroupReportDetails();
+            inicializarGroupReportMaster();
             inicializarGroupReportSubReport();
 
             // dibuja el reporte
@@ -3834,11 +4765,16 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
             //   aqui
             readPropertiesAll();
             readPropertiesDetails();
-            readPropertiesSubReport();
-            readLabel();
+            readPropertiesMaster();            
+            readPropertiesSubReport();            
+            //
+            readLabelAllDetails();
+            readLabelMaster();
             readLabelSubReport();
+            
             drawJasperAll();
             drawJasperDetails();
+            drawJasperMaster();
             drawJasperSubReport();
 
             jTabbedPane1.add(jPanelReporte, "Reporte");
@@ -3874,6 +4810,22 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
             jTextPaneAll_Jasper.setCaretPosition(0);
         } catch (Exception e) {
             MySession.error("drawEmptyJasper()" + e.getLocalizedMessage());
+        }
+    }
+// </editor-fold> 
+    // <editor-fold defaultstate="collapsed" desc="drawJasperMaster()">                          
+    private void drawJasperMaster() {
+        try {
+
+            jTextPaneMaster_Jasper.setText("");
+            MySession.setTextJasperMaster("");
+
+            GeneratorMasterReport generatorMasterReport = new GeneratorMasterReport();
+            generatorMasterReport.generarTexto(jTextFieldMaster_TituloOfReport.getText());
+            jTextPaneMaster_Jasper.setText(MySession.getTextJasperMaster());
+            jTextPaneMaster_Jasper.setCaretPosition(0);
+        } catch (Exception e) {
+            MySession.error("drawJasperMaster()" + e.getLocalizedMessage());
         }
     }
 // </editor-fold> 
@@ -3926,6 +4878,12 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
             jComboBoxSubReport_Group_FieldGroupBy.addItem("");
             jComboBoxSubReport_Group_FieldFooter.addItem("");
             jComboBoxSubReport_Group_OperationFooter.removeAllItems();
+            
+              jComboBoxMaster_Group_FieldGroupBy.removeAllItems();
+            jComboBoxMaster_Group_FieldFooter.removeAllItems();
+            jComboBoxMaster_Group_FieldGroupBy.addItem("");
+            jComboBoxMaster_Group_FieldFooter.addItem("");
+            jComboBoxMaster_Group_OperationFooter.removeAllItems();
 
             jComboBoxDetails_Group_FieldGroupBy.removeAllItems();
             jComboBoxDetails_Group_FieldFooter.removeAllItems();
@@ -3943,6 +4901,11 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
             jComboBoxDetails_Summary_Field.removeAllItems();
             jComboBoxDetails_Summary_Field.addItem("");
             jComboBoxDetails_Summary_Operation.removeAllItems();
+            
+             //All
+            jComboBoxMaster_Summar_Field.removeAllItems();
+            jComboBoxMaster_Summar_Field.addItem("");
+            jComboBoxMaster_Summary_Operation.removeAllItems();
 
             //SubReport
             jComboBoxSubReport_Summar_Field.removeAllItems();
@@ -3957,10 +4920,16 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
 //details
                 jComboBoxDetails_Group_OperationFooter.addItem(s);
                 jComboBoxDetails_Summary_Operation.addItem(s);
-               //subreport
-                jComboBoxSubReport_Group_OperationFooter.addItem(s);
-                jComboBoxSubReport_Summary_Operation.addItem(s);  
                 
+                 //master
+                jComboBoxMaster_Group_OperationFooter.addItem(s);
+                jComboBoxMaster_Summary_Operation.addItem(s);
+                
+                
+                //subreport
+                jComboBoxSubReport_Group_OperationFooter.addItem(s);
+                jComboBoxSubReport_Summary_Operation.addItem(s);
+
             }
 
             for (Entidad e : MySession.getEntidadList()) {
@@ -3973,9 +4942,18 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
                     return a;
                 }).map((a) -> {
                     jComboBoxAll_Summar_Field.addItem(a.getNombre());
-                    return a;                    
-                                                   
-              
+                    return a;
+
+                 }).map((a) -> {
+                    jComboBoxMaster_Group_FieldGroupBy.addItem(a.getNombre());
+                    return a;   
+                 }).map((a) -> {
+                    jComboBoxMaster_Group_FieldFooter.addItem(a.getNombre());
+                    return a;   
+                 }).map((a) -> {
+                    jComboBoxMaster_Summar_Field.addItem(a.getNombre());
+                    return a;   
+                    
                 }).map((a) -> {
                     jComboBoxDetails_Summary_Field.addItem(a.getNombre());
                     return a;
@@ -3987,22 +4965,23 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
                 });
 
             }
+            //Subreport
             for (Entidad e : MySubreportSession.getEntidadList()) {
 
                 e.getAtributosList().stream().map((a) -> {
                     jComboBoxSubReport_Group_FieldGroupBy.addItem(a.getNombre());
                     return a;
-              
+
                 }).map((a) -> {
                     jComboBoxSubReport_Summar_Field.addItem(a.getNombre());
-                    return a;                    
+                    return a;
 
                 }).forEachOrdered((a) -> {
                     jComboBoxSubReport_Group_FieldFooter.addItem(a.getNombre());
                 });
 
             }
-            
+
         } catch (Exception e) {
             MySession.error("loadCombos() " + e.getLocalizedMessage());
         }
@@ -4082,6 +5061,84 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
             return true;
         } catch (Exception e) {
             MySession.error("saveGroupAll() " + e.getLocalizedMessage());
+        }
+        return false;
+    }
+
+    // </editor-fold> 
+    // <editor-fold defaultstate="collapsed" desc="saveGroupMaster()">                          
+    private Boolean saveGroupMaster() {
+        try {
+            // inicializarGroupReportMaster();
+
+            /*
+            Header
+             */
+            if (jTextFieldMaster_Group_NameOfGroup.getText().equals("")) {
+                MySession.advertencia("Debe ingresar el nombre del grupo");
+                return false;
+            }
+
+            if (jComboBoxMaster_Group_FieldGroupBy.getSelectedItem()
+                    .toString().equals("")) {
+                MySession.advertencia("Seleccione el campo a agrupar");
+                return false;
+            }
+
+            if (jTextFieldMaster_Group_StaticTextHeader.getText()
+                    .equals("")) {
+                MySession.advertencia("Indique el static Text de la seccion Group Header");
+                return false;
+            }
+
+            ReportMasterSession.setGroupname(jTextFieldMaster_Group_NameOfGroup.getText());
+            ReportMasterSession.setGroupExpression(jComboBoxMaster_Group_FieldGroupBy.getSelectedItem().toString());
+            ReportMasterSession.setTextFieldExpressionHeader(jComboBoxMaster_Group_FieldGroupBy.getSelectedItem().toString());
+            ReportMasterSession.setStaticTextGroupHeader(jTextFieldMaster_Group_StaticTextHeader.getText());
+
+            ReportMasterSession.setWriteTextoReport(jCheckBoxMaster_TextoGroupFooter.isSelected());
+
+            ReportMasterSession.setWriteLineaReport(jCheckBoxMaster_LineaGroupFooter.isSelected());
+
+            /**
+             * Footer
+             */
+            if (jCheckBoxMaster_TextoGroupFooter.isSelected()) {
+
+                if (jTextFieldMaster_Group_StaticTextFooter.getText().equals("")) {
+                    MySession.advertencia("Indique el static Text de la seccion Group Footer");
+                    return false;
+                }
+
+                if (jComboBoxMaster_Group_FieldFooter.getSelectedItem().toString().equals("")) {
+                    MySession.advertencia("Seleccione el campo a agrupar");
+                    return false;
+                }
+                if (jComboBoxMaster_Group_OperationFooter.getSelectedItem().toString().equals("")) {
+                    MySession.advertencia("Seleccione la operacion");
+                    return false;
+                }
+
+                ReportMasterSession.setStaticTextGroupFooter(jTextFieldMaster_Group_StaticTextFooter.getText());
+                ReportMasterSession.setVariableGroup(jComboBoxMaster_Group_FieldFooter.getSelectedItem().toString());
+                ReportMasterSession.setCalculation(jComboBoxMaster_Group_OperationFooter.getSelectedItem().toString());
+                for (Entidad e : MySession.getEntidadList()) {
+
+                    for (Atributos a : e.getAtributosList()) {
+                        if (a.getNombre().equals(ReportMasterSession.getVariableGroup())) {
+                            ReportMasterSession.setVariableTypeGroup(a.getTipo());
+                            break;
+                        }
+
+                    }
+
+                }
+            }
+//            
+
+            return true;
+        } catch (Exception e) {
+            MySession.error("saveGroupMaster() " + e.getLocalizedMessage());
         }
         return false;
     }
@@ -4203,6 +5260,50 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
             return true;
         } catch (Exception e) {
             MySession.error("deleteGroupAll() " + e.getLocalizedMessage());
+        }
+
+        return false;
+    }
+
+    // </editor-fold> 
+       // <editor-fold defaultstate="collapsed" desc="deleteGroupMaster()">                          
+    private Boolean deleteGroupMaster() {
+        try {
+            // inicializarGroupReportMaster();
+
+            /*
+            Header
+             */
+            jTextFieldMaster_Group_NameOfGroup.setText("");
+            jTextFieldMaster_Group_StaticTextHeader.setText("");
+            jComboBoxMaster_Group_FieldGroupBy.setSelectedItem("");
+            jTextFieldMaster_Group_StaticTextHeader.setText("");
+            jTextFieldMaster_Group_StaticTextHeader.setText("");
+            jCheckBoxMaster_TextoGroupFooter.setSelected(true);
+            jCheckBoxMaster_LineaGroupFooter.setSelected(true);
+            ReportMasterSession.setGroupname(jTextFieldMaster_Group_NameOfGroup.getText());
+            ReportMasterSession.setGroupExpression(jComboBoxMaster_Group_FieldGroupBy.getSelectedItem().toString());
+            ReportMasterSession.setTextFieldExpressionHeader(jComboBoxMaster_Group_FieldGroupBy.getSelectedItem().toString());
+            ReportMasterSession.setStaticTextGroupHeader(jTextFieldMaster_Group_StaticTextHeader.getText());
+
+            ReportMasterSession.setWriteTextoReport(jCheckBoxMaster_TextoGroupFooter.isSelected());
+
+            ReportMasterSession.setWriteLineaReport(jCheckBoxMaster_LineaGroupFooter.isSelected());
+
+            jTextFieldMaster_Group_StaticTextFooter.setText("");
+
+            jComboBoxMaster_Group_FieldFooter.setSelectedItem("");
+            jComboBoxMaster_Group_OperationFooter.setSelectedItem("");
+
+            ReportMasterSession.setStaticTextGroupFooter(jTextFieldMaster_Group_StaticTextFooter.getText());
+            ReportMasterSession.setVariableGroup(jComboBoxMaster_Group_FieldFooter.getSelectedItem().toString());
+            ReportMasterSession.setCalculation(jComboBoxMaster_Group_OperationFooter.getSelectedItem().toString());
+
+            ReportMasterSession.setVariableTypeGroup("");
+
+            return true;
+        } catch (Exception e) {
+            MySession.error("deleteGroupMaster() " + e.getLocalizedMessage());
         }
 
         return false;
@@ -4352,6 +5453,62 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
     }
 
     // </editor-fold> 
+    
+    // <editor-fold defaultstate="collapsed" desc="saveSummaryMaster()">                          
+    private Boolean saveSummaryMaster() {
+        try {
+
+
+            /*
+           Summary
+             */
+            if (jTextFieldMaster_SummaryStaticText.getText().equals("")) {
+                MySession.advertencia("Indique el static Text de la seccion Symmary");
+                return false;
+            }
+
+            ReportMasterSession.setSummaryStaticText(jTextFieldMaster_SummaryStaticText.getText());
+            ReportMasterSession.setSummaryShowField(jCheckBoxMaster_MostrarFieldSummary.isSelected());
+            /**
+             * Footer
+             */
+            if (jCheckBoxMaster_MostrarFieldSummary.isSelected()) {
+
+                if (jComboBoxMaster_Summar_Field.getSelectedItem().toString().equals("")) {
+                    MySession.advertencia("Seleccione el campo del summary ");
+                    return false;
+                }
+                if (jComboBoxMaster_Summary_Operation.getSelectedItem().toString().equals("")) {
+                    MySession.advertencia("Seleccione la operacion");
+                    return false;
+                }
+
+                ReportMasterSession.setSummaryVariableName("v_summary_" + jComboBoxMaster_Summar_Field.getSelectedItem().toString());
+                ReportMasterSession.setSummaryVariableExpression(jComboBoxMaster_Summar_Field.getSelectedItem().toString());
+                ReportMasterSession.setSummaryCalculation(jComboBoxMaster_Summary_Operation.getSelectedItem().toString());
+                ReportMasterSession.setSummaryTextFieldExpression(ReportMasterSession.getSummaryVariableName());
+                for (Entidad e : MySession.getEntidadList()) {
+
+                    for (Atributos a : e.getAtributosList()) {
+                        if (a.getNombre().equals(ReportMasterSession.getSummaryVariableExpression())) {
+                            ReportMasterSession.setSummaryVariableType(a.getTipo());
+                            break;
+                        }
+
+                    }
+
+                }
+            }
+//            
+
+            return true;
+        } catch (Exception e) {
+            MySession.error("saveSummaryMaster() " + e.getLocalizedMessage());
+        }
+        return false;
+    }
+
+    // </editor-fold> 
     // <editor-fold defaultstate="collapsed" desc="saveSummarySubReport()">                          
     private Boolean saveSummarySubReport() {
         try {
@@ -4482,6 +5639,31 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
             return true;
         } catch (Exception e) {
             MySession.error("deleteSummaryAll() " + e.getLocalizedMessage());
+        }
+        return false;
+    }
+
+    // </editor-fold> 
+     // <editor-fold defaultstate="collapsed" desc="deleteSummaryMaster()">                          
+    private Boolean deleteSummaryMaster() {
+        try {
+
+            jTextFieldMaster_SummaryStaticText.setText("");
+            jComboBoxMaster_Summar_Field.setSelectedItem("");
+            jComboBoxMaster_Summary_Operation.setSelectedItem("");
+
+            ReportMasterSession.setSummaryStaticText(jTextFieldMaster_SummaryStaticText.getText());
+            ReportMasterSession.setSummaryShowField(jCheckBoxMaster_MostrarFieldSummary.isSelected());
+
+            ReportMasterSession.setSummaryVariableName("");
+            ReportMasterSession.setSummaryVariableExpression("");
+            ReportMasterSession.setSummaryCalculation("");
+            ReportMasterSession.setSummaryTextFieldExpression("");
+            ReportMasterSession.setSummaryVariableType("");
+
+            return true;
+        } catch (Exception e) {
+            MySession.error("deleteSummaryMaster() " + e.getLocalizedMessage());
         }
         return false;
     }
@@ -4626,6 +5808,17 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
         }
     }
 // </editor-fold>
+    // <editor-fold defaultstate="collapsed" desc="inicializarGroupReportMaster()">
+    private void inicializarGroupReportMaster() {
+        try {
+            ReportMasterSession.inicializar();
+            ReportMasterSession.inicializarSummary();
+
+        } catch (Exception e) {
+            MySession.error("inicializarGroupReportMaster()  " + e.getLocalizedMessage());
+        }
+    }
+// </editor-fold>
     // <editor-fold defaultstate="collapsed" desc="inicializarGroupReportSubReport()">
 
     private void inicializarGroupReportSubReport() {
@@ -4666,6 +5859,22 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
     }
 
     // </editor-fold> 
+     // <editor-fold defaultstate="collapsed" desc="visibleGroupMaster()"> 
+    public void visibleGroupMaster() {
+        try {
+            jLabelMaster_LineaGroupFooter.setVisible(jCheckBoxMaster_LineaGroupFooter.isSelected());
+            jTextFieldMaster_Group_StaticTextFooter.setVisible(jCheckBoxMaster_TextoGroupFooter.isSelected());
+            jComboBoxMaster_Group_FieldFooter.setVisible(jCheckBoxMaster_TextoGroupFooter.isSelected());
+            jComboBoxMaster_Group_OperationFooter.setVisible(jCheckBoxMaster_TextoGroupFooter.isSelected());
+            jLabeMaster_StaticTextGroupFooter.setVisible(jCheckBoxMaster_TextoGroupFooter.isSelected());
+            jLabelMaster_FieldGroupFooter.setVisible(jCheckBoxMaster_TextoGroupFooter.isSelected());
+            jLabelMaster_OperationReport.setVisible(jCheckBoxMaster_TextoGroupFooter.isSelected());
+        } catch (Exception e) {
+            MySession.error("visibleGroupMaster() " + e.getLocalizedMessage());
+        }
+    }
+
+    // </editor-fold> 
     // <editor-fold defaultstate="collapsed" desc="visibleGroupSubReport()"> 
     public void visibleGroupSubReport() {
         try {
@@ -4701,21 +5910,21 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
     // <editor-fold defaultstate="collapsed" desc="generarNombreClase()">                          
     private String generarNombreClase() {
         try {
-            int lines = jTextAreaEntity.getLineCount();
+            int lines = jTextAreaAllDetails_Entity.getLineCount();
             for (int i = 0; i < lines; i++) {
-                int start = jTextAreaEntity.getLineStartOffset(i);
-                int end = jTextAreaEntity.getLineEndOffset(i);
+                int start = jTextAreaAllDetails_Entity.getLineStartOffset(i);
+                int end = jTextAreaAllDetails_Entity.getLineEndOffset(i);
                 // Implement method processLine
-                String line = jTextAreaEntity.getText(start, end - start);
+                String line = jTextAreaAllDetails_Entity.getText(start, end - start);
 
                 if (line.contains("public class")) {
                     String x = line.replace("public class", "");
                     String name = x.replace("{", "").trim();
                     x = x.replace("{", "").toLowerCase().trim();
 
-                    if (!jTextAreaEntity.getText().contains("{")) {
-                        jTextFieldNameOfPackage.setText(x);
-                        jLabelEntity.setText(name);
+                    if (!jTextAreaAllDetails_Entity.getText().contains("{")) {
+                        jTextFieldProject_NameOfPackage.setText(x);
+                        jLabelProject_NameOfEntity.setText(name);
                     }
 
                 }
@@ -4731,11 +5940,11 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
     // <editor-fold defaultstate="collapsed" desc="drawAreaEntity()">                          
     private void drawAreaEntity() {
         try {
-            MySession.inicializarLabelList();
+            MySession.inicializarLabelListAllDetails();
             jTextAreaAll_Properties.setText(lenguajeGenerator.template());
             jTextAreaDetails_Properties.setText(lenguajeGenerator.template());
-            jTextAreaEntity.setText("public class");
-            jTextAreaLabel.setText("");
+            jTextAreaAllDetails_Entity.setText("public class");
+            jTextAreaAllDetails_Label.setText("");
         } catch (Exception e) {
             MySession.error("drawAreaEntity() " + e.getLocalizedMessage());
         }
@@ -4747,10 +5956,13 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
     private void drawAreaSubreportEntity() {
         try {
             MySubreportSession.inicializarLabelList();
+            MySession.inicializarLabelListMaster();
             jTextAreaSubReport_Properties.setText(lenguajeGenerator.template());
+            jTextAreaMaster_Properties.setText(lenguajeGenerator.template());
             jTextAreaSubReport_Entity.setText("");
             jTextAreaSubReport_Label.setText("");
-            jTextFieldSubreport_Name.setText("");
+            jTextFieldSubreport_NameOfEntity.setText("");
+            
         } catch (Exception e) {
             MySession.error("drawAreaSubreportEntity() " + e.getLocalizedMessage());
         }
@@ -4910,6 +6122,151 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
 
         } catch (Exception e) {
             MySession.error("readPropertiesAll() " + e.getLocalizedMessage());
+        }
+    }
+// </editor-fold> 
+    
+    // <editor-fold defaultstate="collapsed" desc="readPropertiesMaster()">                          
+    private void readPropertiesMaster() {
+        try {
+            if (jTextAreaMaster_Properties.getText().equals("")) {
+                return;
+            }
+
+            //Clear summary
+            jCheckBoxMaster_MostrarFieldSummary.setSelected(false);
+            jCheckBoxMaster_TextoGroupFooter.setSelected(false);
+            jCheckBoxMaster_LineaGroupFooter.setSelected(false);
+
+            int lines = jTextAreaMaster_Properties.getLineCount();
+            String sb = "";
+            String section = "";
+            for (int i = 0; i < lines; i++) {
+                int start = jTextAreaMaster_Properties.getLineStartOffset(i);
+                int end = jTextAreaMaster_Properties.getLineEndOffset(i);
+                // Implement method processLine
+                String line = jTextAreaMaster_Properties.getText(start, end - start);
+                String text = line;
+                if (line.contains("Page")) {
+                    section = "Page";
+                } else {
+                    if (line.contains("Group")) {
+                        section = "Group";
+                    } else {
+                        if (line.contains("Summary")) {
+                            section = "Summary";
+                        }
+                    }
+                    if (section.equals("")) {
+
+                    } else {
+                        switch (section) {
+                            case "Page":
+                                if (line.contains("size:")) {
+                                    text = line.replace("size:", "");
+                                    text = text.replace("\"", "");
+                                    text = text.replace(",", "");
+                                    text = text.trim();
+                                    ReportMasterSession.setPageSize(text.toUpperCase().trim());
+                                    ReportDetailsSession.setPageSize(text.toUpperCase().trim());
+                                    jComboBoxMaster_SizeOfPage.setSelectedItem(text.toUpperCase().trim());
+                                    jComboBoxSizeOfPageDetails.setSelectedItem(text.toUpperCase().trim());
+                                }
+                                break;
+                            case "Group":
+                                if (line.contains("field:")) {
+                                    text = line.replace("field:", "");
+                                    text = text.replace("\"", "");
+                                    text = text.replace(",", "");
+                                    text = text.trim();
+
+                                    jComboBoxMaster_Group_FieldGroupBy.setSelectedItem(text);
+                                    if (!jComboBoxMaster_Group_FieldGroupBy.getSelectedItem().toString().equals("")) {
+                                        jTextFieldMaster_Group_NameOfGroup.setText("group_" + jComboBoxMaster_Group_FieldGroupBy.getSelectedItem().toString());
+                                    }
+                                    jCheckBoxMaster_MostrarFieldSummary.setSelected(true);
+                                    jCheckBoxMaster_TextoGroupFooter.setSelected(true);
+                                    jCheckBoxMaster_LineaGroupFooter.setSelected(true);
+                                }
+                                if (line.contains("staticTextHeader:")) {
+                                    text = line.replace("staticTextHeader:", "");
+                                    text = text.replace("\"", "");
+                                    text = text.replace(",", "");
+                                    text = text.trim();
+                                    jTextFieldMaster_Group_StaticTextHeader.setText(text);
+                                }
+                                if (line.contains("staticTexFooter:")) {
+                                    text = line.replace("staticTexFooter:", "");
+                                    text = text.replace("\"", "");
+                                    text = text.replace(",", "");
+                                    text = text.trim();
+                                    jTextFieldMaster_Group_StaticTextFooter.setText(text);
+                                }
+
+                                if (line.contains("fieldFooter:")) {
+                                    text = line.replace("fieldFooter:", "");
+                                    text = text.replace("\"", "");
+                                    text = text.replace(",", "");
+                                    text = text.trim();
+
+                                    jComboBoxMaster_Group_FieldFooter.setSelectedItem(text);
+
+                                }
+                                if (line.contains("operation:")) {
+                                    text = line.replace("operation:", "");
+                                    text = text.replace("\"", "");
+                                    text = text.replace(",", "");
+                                    text = text.trim();
+                                    jComboBoxMaster_Group_OperationFooter.setSelectedItem(text);
+                                }
+                                break;
+
+                            case "Summary":
+
+                                if (line.contains("field:")) {
+                                    text = line.replace("field:", "");
+                                    text = text.replace("\"", "");
+                                    text = text.replace(",", "");
+                                    text = text.trim();
+
+                                    jComboBoxMaster_Summar_Field.setSelectedItem(text);
+                                }
+                                if (line.contains("staticText:")) {
+                                    text = line.replace("staticText:", "");
+                                    text = text.replace("\"", "");
+                                    text = text.replace(",", "");
+                                    text = text.trim();
+                                    jTextFieldMaster_SummaryStaticText.setText(text);
+                                }
+                                if (line.contains("operation:")) {
+                                    text = line.replace("operation:", "");
+                                    text = text.replace("\"", "");
+                                    text = text.replace(",", "");
+                                    text = text.trim();
+                                    jComboBoxMaster_Summary_Operation.setSelectedItem(text);
+                                }
+                                break;
+                        }
+
+                    }
+
+                }
+
+            }
+
+            if (!jTextFieldMaster_SummaryStaticText.getText().equals("")) {
+                if (saveSummaryMaster()) {
+
+                }
+            }
+            if (!jComboBoxMaster_Group_FieldGroupBy.getSelectedItem().toString().equals("")) {
+                if (saveGroupMaster()) {
+
+                }
+            }
+
+        } catch (Exception e) {
+            MySession.error("readPropertiesMaster() " + e.getLocalizedMessage());
         }
     }
 // </editor-fold> 
@@ -5207,38 +6564,38 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
 // </editor-fold> 
 
     // <editor-fold defaultstate="collapsed" desc="readLabel()">                          
-    private void readLabel() {
+    private void readLabelAllDetails() {
         try {
-            MySession.inicializarLabelList();
-            if (jTextAreaLabel.getText().equals("")) {
+            MySession.inicializarLabelListAllDetails();
+            if (jTextAreaAllDetails_Label.getText().equals("")) {
                 return;
             }
 
-            int lines = jTextAreaLabel.getLineCount();
+            int lines = jTextAreaAllDetails_Label.getLineCount();
             String sb = "";
             String section = "";
             for (int i = 0; i < lines; i++) {
-                int start = jTextAreaLabel.getLineStartOffset(i);
-                int end = jTextAreaLabel.getLineEndOffset(i);
+                int start = jTextAreaAllDetails_Label.getLineStartOffset(i);
+                int end = jTextAreaAllDetails_Label.getLineEndOffset(i);
                 // Implement method processLine
-                String line = jTextAreaLabel.getText(start, end - start);
+                String line = jTextAreaAllDetails_Label.getText(start, end - start);
                 Label label = Utilidades.descomponerLabel(line);
-                if (MySession.getLabelList().isEmpty()) {
-                    MySession.getLabelList().add(label);
+                if (MySession.getLabelListAllDetails().isEmpty()) {
+                    MySession.getLabelListAllDetails().add(label);
 
                 } else {
                     Boolean found = false;
-                    for (Label l : MySession.getLabelList()) {
+                    for (Label l : MySession.getLabelListAllDetails()) {
                         if (l.getField().equals(label.getField())) {
                             found = true;
                         }
                     }
                     if (!found) {
-                        MySession.getLabelList().add(label);
+                        MySession.getLabelListAllDetails().add(label);
                     }
                 }
             }
-            for (Label l : MySession.getLabelList()) {
+            for (Label l : MySession.getLabelListAllDetails()) {
                 for (int j = 0; j < MySession.getEntidadList().size(); j++) {
 //                for(Entidad e:MySession.getEntidadList()){
                     //  for(Atributos a:e.getAtributosList()){
@@ -5256,15 +6613,73 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
             }
 
         } catch (Exception e) {
-            MySession.error("readLabel() " + e.getLocalizedMessage());
+            MySession.error("readLabelAllDetails() " + e.getLocalizedMessage());
+        }
+    }
+// </editor-fold> 
+    
+    
+    
+    // <editor-fold defaultstate="collapsed" desc="readLabelMaster()">                          
+    private void readLabelMaster() {
+        try {
+            MySession.inicializarLabelListMaster();
+            if (jTextAreaMaster_Label.getText().equals("")) {
+                return;
+            }
+
+            int lines = jTextAreaMaster_Label.getLineCount();
+            String sb = "";
+            String section = "";
+            for (int i = 0; i < lines; i++) {
+                int start = jTextAreaMaster_Label.getLineStartOffset(i);
+                int end = jTextAreaMaster_Label.getLineEndOffset(i);
+                // Implement method processLine
+                String line = jTextAreaMaster_Label.getText(start, end - start);
+                Label label = Utilidades.descomponerLabel(line);
+                if (MySession.getLabelListMaster().isEmpty()) {
+                    MySession.getLabelListMaster().add(label);
+
+                } else {
+                    Boolean found = false;
+                    for (Label l : MySession.getLabelListMaster()) {
+                        if (l.getField().equals(label.getField())) {
+                            found = true;
+                        }
+                    }
+                    if (!found) {
+                        MySession.getLabelListMaster().add(label);
+                    }
+                }
+            }
+            for (Label l : MySession.getLabelListMaster()) {
+                for (int j = 0; j < MySession.getEntidadList().size(); j++) {
+//                for(Entidad e:MySession.getEntidadList()){
+                    //  for(Atributos a:e.getAtributosList()){
+                    Entidad e = MySession.getEntidadList().get(j);
+                    for (int i = 0; i < e.getAtributosList().size(); i++) {
+                        Atributos a = e.getAtributosList().get(i);
+                        if (a.getNombre().equals(l.getField())) {
+                            e.getAtributosList().get(i).setLabel(l.getLabel());
+
+                            MySession.getEntidadList().get(j).setAtributosList(e.getAtributosList());
+
+                        }
+                    }
+                }
+            }
+
+        } catch (Exception e) {
+            MySession.error("readLabelMaster() " + e.getLocalizedMessage());
         }
     }
 // </editor-fold> 
     // <editor-fold defaultstate="collapsed" desc="readLabelSubReport()">                          
+
     private void readLabelSubReport() {
         try {
-           
- MySubreportSession.inicializarLabelList();
+
+            MySubreportSession.inicializarLabelList();
             if (jTextAreaSubReport_Label.getText().equals("")) {
                 return;
             }
@@ -5279,7 +6694,7 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
                 String line = jTextAreaSubReport_Label.getText(start, end - start);
                 Label label = Utilidades.descomponerLabel(line);
                 if (MySubreportSession.getLabelList().isEmpty()) {
-                   MySubreportSession.getLabelList().add(label);
+                    MySubreportSession.getLabelList().add(label);
 
                 } else {
                     Boolean found = false;
@@ -5289,7 +6704,7 @@ jTextFieldDetails_TituloOfReport.setText(jLabelEntity.getText());
                         }
                     }
                     if (!found) {
-                       MySubreportSession.getLabelList().add(label);
+                        MySubreportSession.getLabelList().add(label);
                     }
                 }
             }

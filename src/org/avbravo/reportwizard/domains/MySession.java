@@ -49,7 +49,8 @@ public class MySession {
     static List<Parameters> parametersList = new ArrayList<>();
     static List<String> mensajesInformacion = new ArrayList<>();
     static List<EntidadPatron> entidadPatronList = new ArrayList<>();
-    static List<Label> labelList = new ArrayList<>();
+    static List<Label> labelListAllDetails = new ArrayList<>();
+    static List<Label> labelListMaster = new ArrayList<>();
 
     public static String compilarReporteaJasper = "";
 
@@ -62,8 +63,9 @@ public class MySession {
     static String summaryBand = "";
     static String textJasperAll = "";
     static String textJasperDetails = "";
-
-    /**
+    static String textJasperMaster = "";
+    static String nameOfSubReport="";
+   /**
      * Date GMT+2
      */
     static String timeZone = "";
@@ -71,19 +73,47 @@ public class MySession {
     static String patternDateTime = "HH:mm dd/MM/yyyy";
     static Entidad entidad;
 
-  
-   
-
-   
-  
-
-  
-    public static List<Label> getLabelList() {
-        return labelList;
+    
+    
+    public static String getNameOfSubReport() {
+        return nameOfSubReport;
     }
 
-    public static void setLabelList(List<Label> labelList) {
-        MySession.labelList = labelList;
+    public static void setNameOfSubReport(String nameOfSubReport) {
+        MySession.nameOfSubReport = nameOfSubReport;
+    }
+
+ 
+    public static String getTextJasperMaster() {
+        return textJasperMaster;
+    }
+
+    public static void setTextJasperMaster(String textJasperMaster) {
+        MySession.textJasperMaster = textJasperMaster;
+    }
+
+    public static List<Label> getLabelListAllDetails() {
+        return labelListAllDetails;
+    }
+
+    public static void setLabelListAllDetails(List<Label> labelListAllDetails) {
+        MySession.labelListAllDetails = labelListAllDetails;
+    }
+
+  
+   
+
+   
+  
+
+  
+
+    public static List<Label> getLabelListMaster() {
+        return labelListMaster;
+    }
+
+    public static void setLabelListMaster(List<Label> labelListMaster) {
+        MySession.labelListMaster = labelListMaster;
     }
 
     
@@ -503,10 +533,19 @@ public class MySession {
         }
     }
     
-    // <editor-fold defaultstate="collapsed" desc="inicializarLabelList(">                          
-    public static void inicializarLabelList(){
+    // <editor-fold defaultstate="collapsed" desc="inicializarLabelList()">                          
+    public static void inicializarLabelListAllDetails(){
         try {
-            labelList = new ArrayList<>();
+            labelListAllDetails = new ArrayList<>();
+        } catch (Exception e) {
+            error("inicializarLabelListAllDetails() "+e.getLocalizedMessage());
+        }
+    }
+    // </editor-fold> 
+    // <editor-fold defaultstate="collapsed" desc="inicializarLabelListMaster()">                          
+    public static void inicializarLabelListMaster(){
+        try {
+            labelListMaster = new ArrayList<>();
         } catch (Exception e) {
             error("inicializarLabelList() "+e.getLocalizedMessage());
         }

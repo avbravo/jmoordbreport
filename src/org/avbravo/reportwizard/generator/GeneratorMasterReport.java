@@ -5,7 +5,6 @@
  */
 package org.avbravo.reportwizard.generator;
 
-import org.avbravo.reportwizard.domains.MySubreportSession;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -30,7 +29,7 @@ import org.openide.NotifyDescriptor;
  *
  * @author avbravo
  */
-public class GeneratorSubReport {
+public class GeneratorMasterReport {
 
     private String titulo;
 
@@ -39,7 +38,9 @@ public class GeneratorSubReport {
         try {
             this.titulo = titulo;
             header();
+            paramatersForSubReport();
             defineField();
+            
             variable();
             variableSummary();
             group();
@@ -51,7 +52,7 @@ public class GeneratorSubReport {
             columnHeader();
             detail();
             columnFooter();
-//            pageFooter();
+            pageFooter();
             summary();
             close();
 
@@ -63,7 +64,7 @@ public class GeneratorSubReport {
     // <editor-fold defaultstate="collapsed" desc="header()">                          
     private void header() {
         try {
-            PageSize pageSize = new PageSize(ReportAllSession.getPageSize());
+            PageSize pageSize = new PageSize(ReportMasterSession.getPageSize());
 
             addTextJasper("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
             // addTextJasper("<jasperReport xmlns=\"http://jasperreports.sourceforge.net/jasperreports\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd\" name=\"report name\" pageWidth=\"595\" pageHeight=\"842\" columnWidth=\"535\" leftMargin=\"20\" rightMargin=\"20\" topMargin=\"20\" bottomMargin=\"20\" >");
@@ -82,10 +83,10 @@ public class GeneratorSubReport {
     private void addTextJasper(String texto) {
         try {
             // Atributos para la frase, en negrita
-            if (MySubreportSession.getTextJasperSubReport().equals("")) {
-                MySubreportSession.setTextJasperSubReport(texto);
+            if (MySession.getTextJasperMaster().equals("")) {
+                MySession.setTextJasperMaster(texto);
             } else {
-                MySubreportSession.setTextJasperSubReport(MySubreportSession.getTextJasperSubReport() + "\n" + texto);
+                MySession.setTextJasperMaster(MySession.getTextJasperMaster() + "\n" + texto);
             }
 
         } catch (Exception e) {
@@ -109,10 +110,39 @@ public class GeneratorSubReport {
     private void pageHeader() {
         try {
             addTextJasper("<pageHeader>");
-            addTextJasper("	<band height=\"3\" splitType=\"Stretch\"/>");
- 
+            addTextJasper("	<band height=\"79\" splitType=\"Stretch\">");
+            addTextJasper("		<textField>");
+            addTextJasper("			<reportElement x=\"182\" y=\"3\" width=\"218\" height=\"31\" />");
+            addTextJasper("			<textElement>");
+            addTextJasper("				<font size=\"14\" isBold=\"true\"/>");
+            addTextJasper("			</textElement>");
+            addTextJasper("			<textFieldExpression><![CDATA[$P{P_EMPRESA}]]></textFieldExpression>");
+            addTextJasper("		</textField>");
+            addTextJasper("		<staticText>");
+            addTextJasper("			<reportElement x=\"182\" y=\"40\" width=\"197\" height=\"31\" />");
+            addTextJasper("			<textElement>");
+            addTextJasper("				<font size=\"12\" isBold=\"true\"/>");
+            addTextJasper("			</textElement>");
+            addTextJasper("			<text><![CDATA[" + this.titulo + "]]></text>");
+            addTextJasper("		</staticText>");
+            addTextJasper("		<staticText>");
+            addTextJasper("			<reportElement x=\"423\" y=\"31\" width=\"37\" height=\"20\" />");
+            addTextJasper("			<text><![CDATA[Fecha:]]></text>");
+            addTextJasper("		</staticText>");
+            addTextJasper("		<textField pattern=\"dd/MM/yyyy\">");
+            addTextJasper("			<reportElement x=\"473\" y=\"29\" width=\"67\" height=\"20\" />");
+            addTextJasper("			<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>");
+            addTextJasper("		</textField>");
+            addTextJasper("		<staticText>");
+            addTextJasper("			<reportElement x=\"424\" y=\"51\" width=\"46\" height=\"20\" />");
+            addTextJasper("			<text><![CDATA[Hora:]]></text>");
+            addTextJasper("		</staticText>");
+            addTextJasper("		<textField pattern=\"h.mm a\">");
+            addTextJasper("			<reportElement x=\"473\" y=\"51\" width=\"74\" height=\"20\" />");
+            addTextJasper("			<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>");
+            addTextJasper("		</textField>");
+            addTextJasper("	</band>");
             addTextJasper("</pageHeader>");
-
         } catch (Exception e) {
             MySession.error("pageHeader()" + e.getLocalizedMessage());
         }
@@ -122,17 +152,8 @@ public class GeneratorSubReport {
     private void title() {
         try {
             addTextJasper("  <title>");
-            addTextJasper("         <band height=\"24\" splitType=\"Stretch\">");
-            addTextJasper("                 <staticText>");
-            addTextJasper("                         <reportElement x=\"0\" y=\"0\" width=\"100\" height=\"20\" />");
-            addTextJasper("                         <textElement>");
-            addTextJasper("                                 <font isBold=\"true\"/>");
-            addTextJasper("                         </textElement>");
-            addTextJasper("                         <text><![CDATA["+this.titulo +"]]></text>");
-            addTextJasper("                 </staticText>");
-            addTextJasper("         </band>");
-            addTextJasper("  </title>");			
-			
+            addTextJasper("         <band height=\"34\" splitType=\"Stretch\"/>");
+            addTextJasper("  </title>");
         } catch (Exception e) {
             MySession.error("title()" + e.getLocalizedMessage());
         }
@@ -144,7 +165,7 @@ public class GeneratorSubReport {
         try {
             String type = "";
             String name = "";
-            for (Entidad e : MySubreportSession.getEntidadList()) {
+            for (Entidad e : MySession.getEntidadList()) {
                 Integer count = 0;
                 for (Atributos a : e.getAtributosList()) {
                     count++;
@@ -201,9 +222,9 @@ public class GeneratorSubReport {
                                 case "Collection":
                                     addTextJasper("	<field name=\"" + name + "\" class=\"java.util.Collection\"/>");
                                     break;
-                                case "List":
-                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.util.List\"/>");
-                                    break;
+//                                case "List":
+//                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.util.List\"/>");
+//                                    break;
 
                                 case "Object":
 
@@ -236,10 +257,10 @@ public class GeneratorSubReport {
             Integer[] x = {10, 117, 235, 347, 456};
             addTextJasper(" <columnHeader>");
             addTextJasper("	      <band height=\"23\" splitType=\"Stretch\">");
-            for (Entidad e : MySubreportSession.getEntidadList()) {
+            for (Entidad e : MySession.getEntidadList()) {
                 Integer count = 0;
                 for (Atributos a : e.getAtributosList()) {
-                    if (count < 5) {
+                    if (count < 5 && !a.getEsList()) {
                         addTextJasper("        <staticText>");
                         addTextJasper("	               <reportElement x=\"" + x[count] + "\" y=\"2\" width=\"100\" height=\"20\" />");
                         addTextJasper("	               <textElement>");
@@ -273,11 +294,11 @@ public class GeneratorSubReport {
         try {
             Integer[] x = {10, 117, 235, 347, 456};
             addTextJasper(" <detail>");
-            addTextJasper("	    <band height=\"27\" splitType=\"Stretch\">");
-            for (Entidad e : MySubreportSession.getEntidadList()) {
+            addTextJasper("	    <band height=\"132\"  splitType=\"Stretch\">");
+            for (Entidad e : MySession.getEntidadList()) {
                 Integer count = 0;
                 for (Atributos a : e.getAtributosList()) {
-                    if (count < 5) {
+                    if (count < 5 && !a.getEsList()) {
                         switch (a.getTipo().toLowerCase().trim()) {
                             case "double":
                                 addTextJasper("     <textField pattern=\"###0.00\">");
@@ -296,13 +317,27 @@ public class GeneratorSubReport {
                         } else {
                             addTextJasper("	                  <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}]]></textFieldExpression>");
                         }
-//                        addTextJasper("	            <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}]]></textFieldExpression>");
-                        addTextJasper("      </textField>");
 
+                        addTextJasper("      </textField>");
                         count++;
                     }
 
                 }
+                count=0;
+                for (Atributos a : e.getAtributosList()) {
+                    if (a.getEsList()) {
+                        if(count ==0){
+                            addTextJasper("     <subreport>");
+                                addTextJasper("             <reportElement x=\"11\" y=\"23\" width=\"529\" height=\"100\" />");                                
+                                addTextJasper("             <dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{" +a.getNombre() +"})]]></dataSourceExpression>");
+                                addTextJasper("             <subreportExpression><![CDATA[$P{SUBREPORT_DIR} + \""+MySession.getNameOfSubReport() +"_subreport.jasper\"]]></subreportExpression>");
+                                addTextJasper("     </subreport>");
+                                count++;
+                        }                           
+                    }
+
+                }                                
+                                
             }
 
             addTextJasper("	    </band>");
@@ -319,7 +354,7 @@ public class GeneratorSubReport {
         try {
             Integer[] x = {10, 117, 235, 347, 456};
             addTextJasper(" <columnFooter>");
-            addTextJasper("	       <band height=\"5\" splitType=\"Stretch\"/>");
+            addTextJasper("	       <band height=\"45\" splitType=\"Stretch\"/>");
             addTextJasper(" </columnFooter>");
 
         } catch (Exception e) {
@@ -356,11 +391,17 @@ public class GeneratorSubReport {
         try {
 
             addTextJasper(" <summary>");
-            addTextJasper("	       <band height=\"18\" splitType=\"Stretch\">");
-                addTextJasper("	               <line> ");
-                addTextJasper("	                      <reportElement x=\"5\" y=\"7\" width=\"784\" height=\"1\"/> ");
-                addTextJasper("	               </line> ");
-            
+            addTextJasper("	       <band height=\"42\" splitType=\"Stretch\">");
+            if (!ReportMasterSession.getSummaryStaticText().equals("")) {
+                addTextJasper("	               <staticText> ");
+                addTextJasper("	                    <reportElement x = \"322\" y = \"16\" width = \"68\" height = \"20\" /> ");
+                addTextJasper("	                                 <text> <![CDATA[" + ReportMasterSession.getSummaryStaticText() + "]]></text>");
+                addTextJasper("	               </staticText> ");
+                addTextJasper("	               <textField> ");
+                addTextJasper("	                          <reportElement x=\"398\" y=\"16\" width=\"100\" height=\"20\" />");
+                addTextJasper("	                          <textFieldExpression><![CDATA[$V{" + ReportMasterSession.getSummaryTextFieldExpression() + "}]]></textFieldExpression>");
+                addTextJasper("	               </textField> ");
+            }
 
             addTextJasper("	       </band>");
             addTextJasper(" </summary>");
@@ -404,10 +445,10 @@ public class GeneratorSubReport {
             reportPathPackage += MySession.getFileSeparator();
 
             //recorrer el entity para verificar que existan todos los EJB
-            MySubreportSession.getEntidadList().forEach((entidad) -> {
+            MySession.getEntidadList().forEach((entidad) -> {
                 String name = Utilidades.letterToLower(entidad.getTabla());
 
-                String reportPathPackageJrxml = MySession.getReportPath() + MySession.getFileSeparator() + MySession.getNameOfPackage() +MySession.getFileSeparator();
+                String reportPathPackageJrxml = MySession.getReportPath() + MySession.getFileSeparator() + MySession.getNameOfPackage() + MySession.getFileSeparator();
                 procesar(nameOfReport + ".jrxml", reportPathPackageJrxml + nameOfReport + ".jrxml", entidad, reportPathPackageJrxml + nameOfReport + ".jasper", compileJasper);
             });
             return true;
@@ -430,7 +471,7 @@ public class GeneratorSubReport {
                 //No existe el directorio hay que crearlo
                 if (!fileReportes.mkdir()) {
                     MySession.advertencia("No se puede crear la carpeta: " + reportPathPackage);
-                   MySession.setReportPath("");
+                    MySession.setReportPath("");
                     return false;
                 }
 
@@ -439,7 +480,7 @@ public class GeneratorSubReport {
             reportPathPackage += MySession.getFileSeparator();
 
             //recorrer el entity para verificar que existan todos los EJB
-            MySubreportSession.getEntidadList().forEach((entidad) -> {
+            MySession.getEntidadList().forEach((entidad) -> {
                 String name = Utilidades.letterToLower(entidad.getTabla());
 
                 String reportPathPackageJrxml = MySession.getReportPath() + MySession.getFileSeparator() + MySession.getNameOfPackage() + MySession.getFileSeparator();
@@ -488,7 +529,7 @@ public class GeneratorSubReport {
             }
 //            Path pathJas = Paths.get(pathJasper);
 //            if (Files.notExists(pathJas, new LinkOption[]{LinkOption.NOFOLLOW_LINKS})) {
-//                Subreport.advertencia("No se pudo compilar el reporte " + archivo);
+//                MySession.advertencia("No se pudo compilar el reporte " + archivo);
 //                return false;
 //            }
             return true;
@@ -566,7 +607,7 @@ public class GeneratorSubReport {
                 File file2 = new File(ruta);
                 //Creamos un objeto para escribir caracteres en el archivo de prueba
                 try (FileWriter fw = new FileWriter(file)) {
-                    for (String line : MySubreportSession.getTextJasperSubReport().split("\\n")) {
+                    for (String line : MySession.getTextJasperMaster().split("\\n")) {
                         fw.write(line + "\r\n");
                     }
                     fw.close();
@@ -583,13 +624,27 @@ public class GeneratorSubReport {
     }
 // </editor-fold>
 
+    // <editor-fold defaultstate="collapsed" desc="paramatersForSubReport()">
+    private void paramatersForSubReport() {
+               try {
+   
+                addTextJasper("       <parameter name=\"SUBREPORT_DIR\" class=\"java.lang.String\" isForPrompting=\"false\">");
+                addTextJasper("          <defaultValueExpression><![CDATA[\"/home/avbravo/NetBeansProjects/jmoordb/webtestreport/src/main/webapp/resources/reportes/subreporte/\"]]></defaultValueExpression>");
+                addTextJasper("       </parameter>");
+
+        
+        } catch (Exception e) {
+            MySession.error("variable() " + e.getLocalizedMessage());
+        }
+    }
+// </editor-fold>
     // <editor-fold defaultstate="collapsed" desc="variable()">
     private void variable() {
 
         try {
-            if (!ReportAllSession.getGroupname().equals("") && (ReportAllSession.getWriteTextoReport())) {
-                addTextJasper("       <variable name=\"v_" + ReportAllSession.getVariableGroup() + "\" class=\"java.lang." + ReportAllSession.getVariableTypeGroup() + "\" resetType=\"Group\" resetGroup=\"" + ReportAllSession.getGroupname() + "\" calculation=\"" + ReportAllSession.getCalculation() + "\">");
-                addTextJasper("          <variableExpression><![CDATA[$F{" + ReportAllSession.getVariableGroup() + "}]]></variableExpression>");
+            if (!ReportMasterSession.getGroupname().equals("") && (ReportMasterSession.getWriteTextoReport())) {
+                addTextJasper("       <variable name=\"v_" + ReportMasterSession.getVariableGroup() + "\" class=\"java.lang." + ReportMasterSession.getVariableTypeGroup() + "\" resetType=\"Group\" resetGroup=\"" + ReportMasterSession.getGroupname() + "\" calculation=\"" + ReportMasterSession.getCalculation() + "\">");
+                addTextJasper("          <variableExpression><![CDATA[$F{" + ReportMasterSession.getVariableGroup() + "}]]></variableExpression>");
                 addTextJasper("       </variable>");
 
             }
@@ -602,9 +657,9 @@ public class GeneratorSubReport {
 
     private void variableSummary() {
         try {
-            if (!ReportAllSession.getSummaryVariableName().equals("")) {
-                addTextJasper("       <variable name=\"" + ReportAllSession.getSummaryVariableName() + "\" class=\"java.lang." + ReportAllSession.getSummaryVariableType() + "\"  calculation=\"" + ReportAllSession.getSummaryCalculation() + "\">");
-                addTextJasper("          <variableExpression><![CDATA[$F{" + ReportAllSession.getSummaryVariableExpression() + "}]]></variableExpression>");
+            if (!ReportMasterSession.getSummaryVariableName().equals("")) {
+                addTextJasper("       <variable name=\"" + ReportMasterSession.getSummaryVariableName() + "\" class=\"java.lang." + ReportMasterSession.getSummaryVariableType() + "\"  calculation=\"" + ReportMasterSession.getSummaryCalculation() + "\">");
+                addTextJasper("          <variableExpression><![CDATA[$F{" + ReportMasterSession.getSummaryVariableExpression() + "}]]></variableExpression>");
                 addTextJasper("       </variable>");
 
             }
@@ -618,9 +673,9 @@ public class GeneratorSubReport {
     private void group() {
 
         try {
-            if (!ReportAllSession.getGroupname().equals("")) {
-                addTextJasper("  <group name=\"" + ReportAllSession.getGroupname() + "\">");
-                addTextJasper("          <groupExpression><![CDATA[$F{" + ReportAllSession.getGroupExpression() + "}]]></groupExpression>");
+            if (!ReportMasterSession.getGroupname().equals("")) {
+                addTextJasper("  <group name=\"" + ReportMasterSession.getGroupname() + "\">");
+                addTextJasper("          <groupExpression><![CDATA[$F{" + ReportMasterSession.getGroupExpression() + "}]]></groupExpression>");
                 addTextJasper("          <groupHeader>");
                 addTextJasper("                   <band height=\"38\">");
                 addTextJasper("                        <staticText>");
@@ -628,30 +683,30 @@ public class GeneratorSubReport {
                 addTextJasper("                                   <textElement>");
                 addTextJasper("                                           <font isBold=\"true\"/>");
                 addTextJasper("                                   </textElement>");
-                addTextJasper("                                   <text><![CDATA[" + ReportAllSession.getStaticTextGroupHeader() + "]]></text>");
+                addTextJasper("                                   <text><![CDATA[" + ReportMasterSession.getStaticTextGroupHeader() + "]]></text>");
                 addTextJasper("                         </staticText>");
                 addTextJasper("                         <textField>");
                 addTextJasper("                                  <reportElement x=\"110\" y=\"10\" width=\"100\" height=\"20\" />");
-                addTextJasper("                                  <textFieldExpression><![CDATA[$F{" + ReportAllSession.getTextFieldExpressionHeader() + "}]]></textFieldExpression>");
+                addTextJasper("                                  <textFieldExpression><![CDATA[$F{" + ReportMasterSession.getTextFieldExpressionHeader() + "}]]></textFieldExpression>");
                 addTextJasper("                         </textField>");
                 addTextJasper("                   </band>");
                 addTextJasper("          </groupHeader>");
                 addTextJasper("          <groupFooter>");
                 addTextJasper("                  <band height=\"50\">");
-                if (ReportAllSession.getWriteTextoReport()) {
+                if (ReportMasterSession.getWriteTextoReport()) {
                     addTextJasper("                          <staticText>");
                     addTextJasper("                                   <reportElement x=\"6\" y=\"10\" width=\"100\" height=\"20\" />");
                     addTextJasper("                                   <textElement>");
                     addTextJasper("                                           <font isBold=\"true\"/>");
                     addTextJasper("                                   </textElement>");
-                    addTextJasper("                                   <text><![CDATA[" + ReportAllSession.getStaticTextGroupFooter() + "]]></text>");
+                    addTextJasper("                                   <text><![CDATA[" + ReportMasterSession.getStaticTextGroupFooter() + "]]></text>");
                     addTextJasper("                          </staticText>");
                     addTextJasper("                          <textField>");
                     addTextJasper("                                  <reportElement x=\"110\" y=\"12\" width=\"100\" height=\"20\" />");
-                    addTextJasper("                                  <textFieldExpression><![CDATA[$V{v_" + ReportAllSession.getVariableGroup().trim() + "}]]></textFieldExpression>");
+                    addTextJasper("                                  <textFieldExpression><![CDATA[$V{v_" + ReportMasterSession.getVariableGroup().trim() + "}]]></textFieldExpression>");
                     addTextJasper("                          </textField>");
                 }
-                if (ReportAllSession.getWriteLineaReport()) {
+                if (ReportMasterSession.getWriteLineaReport()) {
                     addTextJasper("                          <line>");
                     addTextJasper("                                  <reportElement x=\"5\" y=\"38\" width=\"542\" height=\"1\" />");
                     addTextJasper("                          </line>");
