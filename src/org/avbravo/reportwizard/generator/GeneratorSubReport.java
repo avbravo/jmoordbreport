@@ -82,10 +82,10 @@ public class GeneratorSubReport {
     private void addTextJasper(String texto) {
         try {
             // Atributos para la frase, en negrita
-            if (MySubreportSession.getTextJasperAll().equals("")) {
-                MySubreportSession.setTextJasperAll(texto);
+            if (MySubreportSession.getTextJasperSubReport().equals("")) {
+                MySubreportSession.setTextJasperSubReport(texto);
             } else {
-                MySubreportSession.setTextJasperAll(MySubreportSession.getTextJasperAll() + "\n" + texto);
+                MySubreportSession.setTextJasperSubReport(MySubreportSession.getTextJasperSubReport() + "\n" + texto);
             }
 
         } catch (Exception e) {
@@ -592,7 +592,7 @@ public class GeneratorSubReport {
                 File file2 = new File(ruta);
                 //Creamos un objeto para escribir caracteres en el archivo de prueba
                 try (FileWriter fw = new FileWriter(file)) {
-                    for (String line : MySubreportSession.getTextJasperAll().split("\\n")) {
+                    for (String line : MySubreportSession.getTextJasperSubReport().split("\\n")) {
                         fw.write(line + "\r\n");
                     }
                     fw.close();

@@ -21,15 +21,12 @@ public class MySubreportSession {
  static List<Label> labelList = new ArrayList<>();
  static List<Entidad> entidadList = new ArrayList<>();
  static Entidad entidad = new Entidad();
- static String textJasperSubReport;
+ static String textJasperSubReport= "";
  
  
    static List<String> mensajesInformacion = new ArrayList<>();
    
    
-   
-       static String textJasperAll = "";
-    static String textJasperDetails = "";
 
     public static String getTextJasperSubReport() {
         return textJasperSubReport;
@@ -40,25 +37,6 @@ public class MySubreportSession {
     }
 
     
-    
-    
-    
-    
-    public static String getTextJasperAll() {
-        return textJasperAll;
-    }
-
-    public static void setTextJasperAll(String textJasperAll) {
-        MySubreportSession.textJasperAll = textJasperAll;
-    }
-
-    public static String getTextJasperDetails() {
-        return textJasperDetails;
-    }
-
-    public static void setTextJasperDetails(String textJasperDetails) {
-        MySubreportSession.textJasperDetails = textJasperDetails;
-    }
     
     
 
