@@ -358,7 +358,7 @@ public class GeneratorSubReport {
             addTextJasper(" <summary>");
             addTextJasper("	       <band height=\"18\" splitType=\"Stretch\">");
                 addTextJasper("	               <line> ");
-                addTextJasper("	                      <reportElement x=\"5\" y=\"7\" width=\"784\" height=\"1\"/> ");
+                addTextJasper("	                      <reportElement x=\"5\" y=\"7\" width=\"535\" height=\"1\"/> ");
                 addTextJasper("	               </line> ");
             
 

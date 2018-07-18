@@ -40,7 +40,7 @@ public class GeneratorMasterReport {
             header();
             paramatersForSubReport();
             defineField();
-            
+
             variable();
             variableSummary();
             group();
@@ -323,21 +323,22 @@ public class GeneratorMasterReport {
                     }
 
                 }
-                count=0;
+                count = 0;
                 for (Atributos a : e.getAtributosList()) {
                     if (a.getEsList()) {
-                        if(count ==0){
+                        if (count == 0) {
                             addTextJasper("     <subreport>");
-                                addTextJasper("             <reportElement x=\"11\" y=\"23\" width=\"529\" height=\"100\" />");                                
-                                addTextJasper("             <dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{" +a.getNombre() +"})]]></dataSourceExpression>");
-                                addTextJasper("             <subreportExpression><![CDATA[$P{SUBREPORT_DIR} + \""+MySession.getNameOfSubReport() +"_subreport.jasper\"]]></subreportExpression>");
-                                addTextJasper("     </subreport>");
-                                count++;
-                        }                           
+                            addTextJasper("             <reportElement x=\"11\" y=\"23\" width=\"529\" height=\"100\" />");
+                            addTextJasper("             <dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{" + a.getNombre() + "})]]></dataSourceExpression>");
+                            addTextJasper("             <subreportExpression><![CDATA[$P{P_URL}]]></subreportExpression>");
+//                            addTextJasper("             <subreportExpression><![CDATA[$P{SUBREPORT_DIR} + \"" + MySession.getNameOfSubReport() + "_subreport.jasper\"]]></subreportExpression>");
+                            addTextJasper("     </subreport>");
+                            count++;
+                        }
                     }
 
-                }                                
-                                
+                }
+
             }
 
             addTextJasper("	    </band>");
@@ -424,7 +425,7 @@ public class GeneratorMasterReport {
     }
 
     // </editor-fold>
-    // <editor-fold defaultstate="collapsed" desc="generar">  
+    // <editor-fold defaultstate="collapsed" desc="generarJRXML">  
     public Boolean generarJRXML(String nameOfReport, Boolean compileJasper) {
         try {
             //Verificar si existe el directorio
@@ -458,7 +459,7 @@ public class GeneratorMasterReport {
         }
         return false;
     }// </editor-fold>  
-    // <editor-fold defaultstate="collapsed" desc="generar">  
+    // <editor-fold defaultstate="collapsed" desc="compileJRXML(String nameOfReport, Boolean compileJasper)">  
 
     public Boolean compileJRXML(String nameOfReport, Boolean compileJasper) {
         try {
@@ -626,19 +627,20 @@ public class GeneratorMasterReport {
 
     // <editor-fold defaultstate="collapsed" desc="paramatersForSubReport()">
     private void paramatersForSubReport() {
-               try {
-   
-                addTextJasper("       <parameter name=\"SUBREPORT_DIR\" class=\"java.lang.String\" isForPrompting=\"false\">");
-                addTextJasper("          <defaultValueExpression><![CDATA[\"/home/avbravo/NetBeansProjects/jmoordb/webtestreport/src/main/webapp/resources/reportes/subreporte/\"]]></defaultValueExpression>");
-                addTextJasper("       </parameter>");
+        try {
 
-        
+            addTextJasper("       <parameter name=\"P_URL\" class=\"java.lang.String\"/>");
+
+//                addTextJasper("       <parameter name=\"SUBREPORT_DIR\" class=\"java.lang.String\" isForPrompting=\"false\">");
+//                addTextJasper("          <defaultValueExpression><![CDATA[\"/home/avbravo/NetBeansProjects/jmoordb/webtestreport/src/main/webapp/resources/reportes/subreporte/\"]]></defaultValueExpression>");
+//                addTextJasper("       </parameter>");
         } catch (Exception e) {
             MySession.error("variable() " + e.getLocalizedMessage());
         }
     }
 // </editor-fold>
     // <editor-fold defaultstate="collapsed" desc="variable()">
+
     private void variable() {
 
         try {
