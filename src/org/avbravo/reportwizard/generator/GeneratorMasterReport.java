@@ -330,8 +330,9 @@ public class GeneratorMasterReport {
                             addTextJasper("     <subreport>");
                             addTextJasper("             <reportElement x=\"11\" y=\"23\" width=\"529\" height=\"100\" />");
                             addTextJasper("             <dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{" + a.getNombre() + "})]]></dataSourceExpression>");
-                            addTextJasper("             <subreportExpression><![CDATA[$P{P_URL}]]></subreportExpression>");
-//                            addTextJasper("             <subreportExpression><![CDATA[$P{SUBREPORT_DIR} + \"" + MySession.getNameOfSubReport() + "_subreport.jasper\"]]></subreportExpression>");
+//                            addTextJasper("             <subreportExpression><![CDATA[$P{P_URL}]]></subreportExpression>");
+
+                            addTextJasper("              <subreportExpression><![CDATA[$P{SUBREPORT_DIR} + \""+MySession.getNameOfSubReport()+".jasper\"]]></subreportExpression>");
                             addTextJasper("     </subreport>");
                             count++;
                         }
@@ -629,11 +630,11 @@ public class GeneratorMasterReport {
     private void paramatersForSubReport() {
         try {
 
-            addTextJasper("       <parameter name=\"P_URL\" class=\"java.lang.String\"/>");
+//            addTextJasper("       <parameter name=\"P_URL\" class=\"java.lang.String\"/>");
 
-//                addTextJasper("       <parameter name=\"SUBREPORT_DIR\" class=\"java.lang.String\" isForPrompting=\"false\">");
-//                addTextJasper("          <defaultValueExpression><![CDATA[\"/home/avbravo/NetBeansProjects/jmoordb/webtestreport/src/main/webapp/resources/reportes/subreporte/\"]]></defaultValueExpression>");
-//                addTextJasper("       </parameter>");
+              addTextJasper("       <parameter name=\"SUBREPORT_DIR\" class=\"java.lang.String\" isForPrompting=\"false\">");
+                addTextJasper("              <defaultValueExpression><![CDATA[$P{SUBREPORT_DIR}]]></defaultValueExpression>");
+                addTextJasper("       </parameter>");
         } catch (Exception e) {
             MySession.error("variable() " + e.getLocalizedMessage());
         }
