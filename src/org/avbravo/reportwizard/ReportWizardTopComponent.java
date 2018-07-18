@@ -2398,8 +2398,6 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
-
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel6.border.title"))); // NOI18N
 
         jTextFieldProject_NameOfProject.setEditable(false);
@@ -2702,7 +2700,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTabbedPaneEntity, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelProyecto.TabConstraints.tabTitle"), jPanelProyecto); // NOI18N
@@ -3048,7 +3046,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                     .addComponent(jPanel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelDetails.TabConstraints.tabTitle"), jPanelDetails); // NOI18N
@@ -3244,7 +3242,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             jPanelSubReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelSubReportLayout.createSequentialGroup()
                 .addComponent(jPanelSubReportinterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 44, Short.MAX_VALUE))
+                .addGap(0, 15, Short.MAX_VALUE))
         );
 
         jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelSubReport.TabConstraints.tabTitle"), jPanelSubReport); // NOI18N
@@ -3440,7 +3438,7 @@ public final class ReportWizardTopComponent extends TopComponent {
         );
         jPanelReporteLayout.setVerticalGroup(
             jPanelReporteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPaneReporte)
+            .addComponent(jTabbedPaneReporte, javax.swing.GroupLayout.DEFAULT_SIZE, 492, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelReporte.TabConstraints.tabTitle"), jPanelReporte); // NOI18N
@@ -4824,7 +4822,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             drawJasperMaster();
             drawJasperSubReport();
 
-            if (!gotoPage2) {
+            if (gotoPage2) {
                 jTabbedPane1.add(jPanelReporte, "Reporte");
                 jTabbedPane1.remove(jPanelProyecto);
             }
@@ -6991,7 +6989,10 @@ public final class ReportWizardTopComponent extends TopComponent {
             }else {
                 texto = jTextFieldMaster_NameOfReport.getText() + ".jrxml No se guarado\n";
             }
-
+ jDialogSaveAndCompileProject.setSize(550, 550);
+       jDialogSaveAndCompileProject.setLocationRelativeTo(null);
+      jDialogSaveAndCompileProject.setAlwaysOnTop(true);
+      jDialogSaveAndCompileProject.setVisible(true);
             return true;
         } catch (Exception e) {
             MySession.error("saveAndCompileProject() " + e.getLocalizedMessage());
