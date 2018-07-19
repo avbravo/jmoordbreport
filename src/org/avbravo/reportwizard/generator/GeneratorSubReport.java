@@ -239,6 +239,7 @@ public class GeneratorSubReport {
             for (Entidad e : MySubreportSession.getEntidadList()) {
                 Integer count = 0;
                 for (Atributos a : e.getAtributosList()) {
+                    if(!a.getEsList()){
                     if (count < 5) {
                         addTextJasper("        <staticText>");
                         addTextJasper("	               <reportElement x=\"" + x[count] + "\" y=\"2\" width=\"100\" height=\"20\" />");
@@ -255,8 +256,8 @@ public class GeneratorSubReport {
                         addTextJasper("        </staticText>");
                         count++;
                     }
-
                 }
+                }//for
             }
 
             addTextJasper("	         </band>");
@@ -277,6 +278,7 @@ public class GeneratorSubReport {
             for (Entidad e : MySubreportSession.getEntidadList()) {
                 Integer count = 0;
                 for (Atributos a : e.getAtributosList()) {
+                    if(!a.getEsList()){
                     if (count < 5) {
                         switch (a.getTipo().toLowerCase().trim()) {
                             case "double":
@@ -301,8 +303,8 @@ public class GeneratorSubReport {
 
                         count++;
                     }
-
                 }
+                }//for
             }
 
             addTextJasper("	    </band>");

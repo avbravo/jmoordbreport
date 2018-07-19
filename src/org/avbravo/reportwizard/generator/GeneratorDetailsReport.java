@@ -181,77 +181,76 @@ public class GeneratorDetailsReport {
                     count++;
                     name = a.getNombre();
                     if (count < 27) {
-                        
-                         if (a.getEsList() || a.getEsListEmbedded() || a.getEsListReferenced()) {
+
+                        if (a.getEsList() || a.getEsListEmbedded() || a.getEsListReferenced()) {
                             addTextJasper("	<field name=\"" + name + "\" class=\"java.util.List\"/>");
                         } else {
-                                  switch (a.getTipo()) {
+                            switch (a.getTipo()) {
 
-                            case "Integer":
-                            case "int":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Integer\"/>");
-                                break;
-                            case "Double":
-                            case "double":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Double\"/>");
-                                break;
-                            case "String":
-                            case "Character":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.String\"/>");
-                                break;
+                                case "Integer":
+                                case "int":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Integer\"/>");
+                                    break;
+                                case "Double":
+                                case "double":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Double\"/>");
+                                    break;
+                                case "String":
+                                case "Character":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.String\"/>");
+                                    break;
 
-                            case "Date":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.util.Date\"/>");
-                                break;
-                            case "Timestamp":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.sql.Timestamp\"/>");
-                                break;
-                            case "Time":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.sql.Time\"/>");
-                                break;
-                            case "Boolean":
-                                addTextJasper("	 <field name=\"" + name + "\" class=\"java.lang.Boolean\"/>");
-                                break;
-                            case "BigInteger":
-                            case "Long":
-                            case "long":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Long\"/>");
-                                break;
-                            case "byte[]":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Byte\"/>");
-                                break;
-                            case "Float":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Float\"/>");
-                                break;
+                                case "Date":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.util.Date\"/>");
+                                    break;
+                                case "Timestamp":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.sql.Timestamp\"/>");
+                                    break;
+                                case "Time":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.sql.Time\"/>");
+                                    break;
+                                case "Boolean":
+                                    addTextJasper("	 <field name=\"" + name + "\" class=\"java.lang.Boolean\"/>");
+                                    break;
+                                case "BigInteger":
+                                case "Long":
+                                case "long":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Long\"/>");
+                                    break;
+                                case "byte[]":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Byte\"/>");
+                                    break;
+                                case "Float":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Float\"/>");
+                                    break;
 
-                            case "Short":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Short\"/>");
-                                break;
-                            case "InputStream":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.io.InputStream\"/>");
-                                break;
-                            case "Collection":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.util.Collection\"/>");
-                                break;
-                            case "List":
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.util.List\"/>");
-                                break;
-
-                            case "Object":
-
-                                addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Object\"/>");
-                                break;
-                            default:
-                                if (Utilidades.esTipoList(a.getTipo())) {
-                                    //Es una lista
+                                case "Short":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Short\"/>");
+                                    break;
+                                case "InputStream":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.io.InputStream\"/>");
+                                    break;
+                                case "Collection":
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.util.Collection\"/>");
+                                    break;
+                                case "List":
                                     addTextJasper("	<field name=\"" + name + "\" class=\"java.util.List\"/>");
-                                } else {
-                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Object\"/>");
-                                }
+                                    break;
 
+                                case "Object":
+
+                                    addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Object\"/>");
+                                    break;
+                                default:
+                                    if (Utilidades.esTipoList(a.getTipo())) {
+                                        //Es una lista
+                                        addTextJasper("	<field name=\"" + name + "\" class=\"java.util.List\"/>");
+                                    } else {
+                                        addTextJasper("	<field name=\"" + name + "\" class=\"java.lang.Object\"/>");
+                                    }
+
+                            }
                         }
-                         }
-                   
 
                     }
                 }
@@ -281,49 +280,49 @@ public class GeneratorDetailsReport {
             for (Entidad e : MySession.getEntidadList()) {
                 Integer count = 0;
                 for (Atributos a : e.getAtributosList()) {
-
-                    if (count < 27) {
-                        addTextJasper("        <staticText>");
-                        addTextJasper("	               <reportElement y=\"" + y[count] + "\" x=\"" + xLabel[count] + "\" width=\"100\" height=\"20\" />");
-                        addTextJasper("	               <textElement>");
-                        addTextJasper("		               <font isBold=\"true\"/>");
-                        addTextJasper("	               </textElement>");
+                    if (!a.getEsList()) {
+                        if (count < 27) {
+                            addTextJasper("        <staticText>");
+                            addTextJasper("	               <reportElement y=\"" + y[count] + "\" x=\"" + xLabel[count] + "\" width=\"100\" height=\"20\" />");
+                            addTextJasper("	               <textElement>");
+                            addTextJasper("		               <font isBold=\"true\"/>");
+                            addTextJasper("	               </textElement>");
 //                        addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
-if(a.getLabel().equals("")){
-     addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
-}else{
-     addTextJasper("	               <text><![CDATA[" + a.getLabel()+ "]]></text>");
-}
-   
-                        addTextJasper("           </staticText>");
-                    }
+                            if (a.getLabel().equals("")) {
+                                addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
+                            } else {
+                                addTextJasper("	               <text><![CDATA[" + a.getLabel() + "]]></text>");
+                            }
 
-                    if (count < 27) {
-                        switch (a.getTipo().toLowerCase().trim()) {
-                            case "double":
-                                addTextJasper("     <textField pattern=\"###0.00\">");
-                                break;
-                            case "date":
-                                addTextJasper("     <textField pattern=\"dd/MM/yyyy\">");
-                                break;
-                            default:
-                                addTextJasper("     <textField >");
+                            addTextJasper("           </staticText>");
                         }
 
-                        addTextJasper("                   <reportElement y=\"" + y[count] + "\" x=\"" + xText[count] + "\" width=\"100\" height=\"20\" />");
-                        if (a.getTipo().toLowerCase().trim().equals("object")) {
+                        if (count < 27) {
+                            switch (a.getTipo().toLowerCase().trim()) {
+                                case "double":
+                                    addTextJasper("     <textField pattern=\"###0.00\">");
+                                    break;
+                                case "date":
+                                    addTextJasper("     <textField pattern=\"dd/MM/yyyy\">");
+                                    break;
+                                default:
+                                    addTextJasper("     <textField >");
+                            }
 
-                            addTextJasper("	                  <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}.toString()]]></textFieldExpression>");
-                        } else {
-                            addTextJasper("	                  <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}]]></textFieldExpression>");
+                            addTextJasper("                   <reportElement y=\"" + y[count] + "\" x=\"" + xText[count] + "\" width=\"100\" height=\"20\" />");
+                            if (a.getTipo().toLowerCase().trim().equals("object")) {
+
+                                addTextJasper("	                  <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}.toString()]]></textFieldExpression>");
+                            } else {
+                                addTextJasper("	                  <textFieldExpression><![CDATA[$F{" + a.getNombre() + "}]]></textFieldExpression>");
+                            }
+
+                            addTextJasper("              </textField>");
+
+                            count++;
                         }
-
-                        addTextJasper("              </textField>");
-
-                        count++;
                     }
-
-                }
+                }//for
             }
 
             addTextJasper("	    </band>");

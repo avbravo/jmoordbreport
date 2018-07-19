@@ -258,7 +258,10 @@ public class GeneratorAllReport {
             for (Entidad e : MySession.getEntidadList()) {
                 Integer count = 0;
                 for (Atributos a : e.getAtributosList()) {
-                    if (count < 5) {
+                    if (!a.getEsList()) {
+                        
+                  
+                    if (count < 5) {                       
                         addTextJasper("        <staticText>");
                         addTextJasper("	               <reportElement x=\"" + x[count] + "\" y=\"2\" width=\"100\" height=\"20\" />");
                         addTextJasper("	               <textElement>");
@@ -266,16 +269,16 @@ public class GeneratorAllReport {
                         addTextJasper("	               </textElement>");
 //                        addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
                         if (a.getLabel().equals("")) {
-                            addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
+                            addTextJasper("	               <text><![CDATA[" + a.getNombre().trim() + "]]></text>");
                         } else {
-                            addTextJasper("	               <text><![CDATA[" + a.getLabel() + "]]></text>");
+                            addTextJasper("	               <text><![CDATA[" + a.getLabel().trim() + "]]></text>");
                         }
 
                         addTextJasper("        </staticText>");
                         count++;
                     }
-
-                }
+  }
+                }//for
             }
 
             addTextJasper("	         </band>");
@@ -296,6 +299,7 @@ public class GeneratorAllReport {
             for (Entidad e : MySession.getEntidadList()) {
                 Integer count = 0;
                 for (Atributos a : e.getAtributosList()) {
+                    if(!a.getEsList()){
                     if (count < 5) {
                         switch (a.getTipo().toLowerCase().trim()) {
                             case "double":
@@ -320,8 +324,8 @@ public class GeneratorAllReport {
 
                         count++;
                     }
-
                 }
+                }//for
             }
 
             addTextJasper("	    </band>");

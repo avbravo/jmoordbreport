@@ -2367,13 +2367,13 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap()
                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel24Layout.createSequentialGroup()
+                        .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(79, Short.MAX_VALUE))
+                    .addGroup(jPanel24Layout.createSequentialGroup()
                         .addComponent(jLabel43)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1))
-                    .addGroup(jPanel24Layout.createSequentialGroup()
-                        .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 67, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(jButton1)
+                        .addGap(33, 33, 33))))
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2382,9 +2382,9 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel43)
                     .addComponent(jButton1))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jDialogSaveAndCompileProjectLayout = new javax.swing.GroupLayout(jDialogSaveAndCompileProject.getContentPane());
@@ -2859,7 +2859,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                                 .addComponent(jTextFieldAll_TituloOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(2, 2, 2)
                         .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 136, Short.MAX_VALUE))))
+                        .addGap(0, 338, Short.MAX_VALUE))))
         );
         jPanelAllLayout.setVerticalGroup(
             jPanelAllLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3401,7 +3401,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                                 .addComponent(jTextFieldMaster_TituloOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 120, Short.MAX_VALUE))))
+                        .addGap(0, 322, Short.MAX_VALUE))))
         );
         jPanelMasterLayout.setVerticalGroup(
             jPanelMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4819,12 +4819,19 @@ public final class ReportWizardTopComponent extends TopComponent {
 
             drawJasperAll();
             drawJasperDetails();
-            drawJasperMaster();
-            drawJasperSubReport();
+            if (!MySubreportSession.getEntidad().getAtributosList().isEmpty()) {
+                drawJasperMaster();
+                drawJasperSubReport();
+            }
 
             if (gotoPage2) {
                 jTabbedPane1.add(jPanelReporte, "Reporte");
                 jTabbedPane1.remove(jPanelProyecto);
+                if (MySubreportSession.getEntidad().getAtributosList().isEmpty()) {
+                    jTabbedPaneReporte.remove(jPanelSubReport);
+                    jTabbedPaneReporte.remove(jPanelMaster);
+                }
+
             }
             return true;
         } catch (Exception e) {
@@ -6933,7 +6940,7 @@ public final class ReportWizardTopComponent extends TopComponent {
     }
     // </editor-fold> 
 
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    // <editor-fold defaultstate="collapsed" desc="saveAndCompileProject()">                          
     private Boolean saveAndCompileProject() {
         try {
             jTextAreaResult_SaveAndCompile.setText("");
@@ -6941,58 +6948,62 @@ public final class ReportWizardTopComponent extends TopComponent {
             goPage2(false);
             if (saveAll(false)) {
                 //guardo el all
-                texto = jTextFieldAll_NameOfReport.getText() + ".jrxml guarado\n";
+                texto = jTextFieldAll_NameOfReport.getText() + ".jrxml guardado\n";
                 if (compileAll(false)) {
                     //se compilo ALl
-                    texto += jTextFieldAll_NameOfReport.getText() + ".jasrper creadp\n";
+                    texto += jTextFieldAll_NameOfReport.getText() + ".jasper creado\n";
                 } else {
                     texto += jTextFieldAll_NameOfReport.getText() + ".jrxml no se pudo compilar\n";
                 }
             } else {
-                texto = jTextFieldAll_NameOfReport.getText() + ".jrxml No se guarado\n";
+                texto += jTextFieldAll_NameOfReport.getText() + ".jrxml No se guardado\n";
             }
 
             if (saveDetails(false)) {
                 //guardo el details
-                texto = jTextFieldDetails_NameOfReport.getText() + ".jrxml guarado\n";
+                texto += jTextFieldDetails_NameOfReport.getText() + ".jrxml guardado\n";
                 if (compileDetails(false)) {
                     //compilo details
-                    texto += jTextFieldDetails_NameOfReport.getText() + ".jasrper creadp\n";
+                    texto += jTextFieldDetails_NameOfReport.getText() + ".jasrper creado\n";
                 } else {
                     texto += jTextFieldDetails_NameOfReport.getText() + ".jrxml no se pudo compilar\n";
                 }
             } else {
-                texto = jTextFieldDetails_NameOfReport.getText() + ".jrxml No se guarado\n";
+                texto += jTextFieldDetails_NameOfReport.getText() + ".jrxml No se guardado\n";
             }
 
-            if (saveSubReport(false)) {
-                //guardo el subreport
-                texto = jTextFieldSubReport_NameOfReport.getText() + ".jrxml guarado\n";
-                if (compileSubReport(false)) {
-                    texto += jTextFieldSubReport_NameOfReport.getText() + ".jasrper creadp\n";
+            if (!MySubreportSession.getEntidad().getAtributosList().isEmpty()) {
+                if (saveSubReport(false)) {
+                    //guardo el subreport
+                    texto += jTextFieldSubReport_NameOfReport.getText() + ".jrxml guardado\n";
+                    if (compileSubReport(false)) {
+                        texto += jTextFieldSubReport_NameOfReport.getText() + ".jasrper creado\n";
+                    } else {
+                        texto += jTextFieldSubReport_NameOfReport.getText() + ".jrxml no se pudo compilar\n";
+                    }
+
                 } else {
-                    texto += jTextFieldSubReport_NameOfReport.getText() + ".jrxml no se pudo compilar\n";
+                    texto += jTextFieldSubReport_NameOfReport.getText() + ".jrxml No se guardo\n";
                 }
 
-            }else {
-                texto = jTextFieldSubReport_NameOfReport.getText() + ".jrxml No se guarado\n";
+                if (saveMaster(false)) {
+                    //guardo el master
+                    texto += jTextFieldMaster_NameOfReport.getText() + ".jrxml guardado\n";
+                    if (compileMaster(false)) {
+                        texto += jTextFieldMaster_NameOfReport.getText() + ".jasrper creado\n";
+                    } else {
+                        texto += jTextFieldMaster_NameOfReport.getText() + ".jrxml no se pudo compilar\n";
+                    }
+                } else {
+                    texto += jTextFieldMaster_NameOfReport.getText() + ".jrxml No se guardo\n";
+                }
             }
 
-            if (saveMaster(false)) {
-                //guardo el master
-                texto = jTextFieldMaster_NameOfReport.getText() + ".jrxml guarado\n";
-                if (compileMaster(false)) {
-                    texto += jTextFieldMaster_NameOfReport.getText() + ".jasrper creadp\n";
-                } else {
-                    texto += jTextFieldMaster_NameOfReport.getText() + ".jrxml no se pudo compilar\n";
-                }
-            }else {
-                texto = jTextFieldMaster_NameOfReport.getText() + ".jrxml No se guarado\n";
-            }
- jDialogSaveAndCompileProject.setSize(550, 550);
-       jDialogSaveAndCompileProject.setLocationRelativeTo(null);
-      jDialogSaveAndCompileProject.setAlwaysOnTop(true);
-      jDialogSaveAndCompileProject.setVisible(true);
+            jTextAreaResult_SaveAndCompile.setText(texto);
+            jDialogSaveAndCompileProject.setSize(350, 350);
+            jDialogSaveAndCompileProject.setLocationRelativeTo(null);
+            jDialogSaveAndCompileProject.setAlwaysOnTop(true);
+            jDialogSaveAndCompileProject.setVisible(true);
             return true;
         } catch (Exception e) {
             MySession.error("saveAndCompileProject() " + e.getLocalizedMessage());

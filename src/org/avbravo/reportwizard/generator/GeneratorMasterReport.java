@@ -260,24 +260,25 @@ public class GeneratorMasterReport {
             for (Entidad e : MySession.getEntidadList()) {
                 Integer count = 0;
                 for (Atributos a : e.getAtributosList()) {
-                    if (count < 5 && !a.getEsList()) {
-                        addTextJasper("        <staticText>");
-                        addTextJasper("	               <reportElement x=\"" + x[count] + "\" y=\"2\" width=\"100\" height=\"20\" />");
-                        addTextJasper("	               <textElement>");
-                        addTextJasper("		               <font isBold=\"true\"/>");
-                        addTextJasper("	               </textElement>");
+                    if (!a.getEsList()) {
+                        if (count < 5 && !a.getEsList()) {
+                            addTextJasper("        <staticText>");
+                            addTextJasper("	               <reportElement x=\"" + x[count] + "\" y=\"2\" width=\"100\" height=\"20\" />");
+                            addTextJasper("	               <textElement>");
+                            addTextJasper("		               <font isBold=\"true\"/>");
+                            addTextJasper("	               </textElement>");
 //                        addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
-                        if (a.getLabel().equals("")) {
-                            addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
-                        } else {
-                            addTextJasper("	               <text><![CDATA[" + a.getLabel() + "]]></text>");
+                            if (a.getLabel().equals("")) {
+                                addTextJasper("	               <text><![CDATA[" + a.getNombre() + "]]></text>");
+                            } else {
+                                addTextJasper("	               <text><![CDATA[" + a.getLabel() + "]]></text>");
+                            }
+
+                            addTextJasper("        </staticText>");
+                            count++;
                         }
-
-                        addTextJasper("        </staticText>");
-                        count++;
                     }
-
-                }
+                }//for
             }
 
             addTextJasper("	         </band>");
@@ -332,7 +333,7 @@ public class GeneratorMasterReport {
                             addTextJasper("             <dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{" + a.getNombre() + "})]]></dataSourceExpression>");
 //                            addTextJasper("             <subreportExpression><![CDATA[$P{P_URL}]]></subreportExpression>");
 
-                            addTextJasper("              <subreportExpression><![CDATA[$P{SUBREPORT_DIR} + \""+MySession.getNameOfSubReport()+".jasper\"]]></subreportExpression>");
+                            addTextJasper("              <subreportExpression><![CDATA[$P{SUBREPORT_DIR} + \"" + MySession.getNameOfSubReport() + ".jasper\"]]></subreportExpression>");
                             addTextJasper("     </subreport>");
                             count++;
                         }
@@ -631,10 +632,9 @@ public class GeneratorMasterReport {
         try {
 
 //            addTextJasper("       <parameter name=\"P_URL\" class=\"java.lang.String\"/>");
-
-              addTextJasper("       <parameter name=\"SUBREPORT_DIR\" class=\"java.lang.String\" isForPrompting=\"false\">");
-                addTextJasper("              <defaultValueExpression><![CDATA[$P{SUBREPORT_DIR}]]></defaultValueExpression>");
-                addTextJasper("       </parameter>");
+            addTextJasper("       <parameter name=\"SUBREPORT_DIR\" class=\"java.lang.String\" isForPrompting=\"false\">");
+            addTextJasper("              <defaultValueExpression><![CDATA[$P{SUBREPORT_DIR}]]></defaultValueExpression>");
+            addTextJasper("       </parameter>");
         } catch (Exception e) {
             MySession.error("variable() " + e.getLocalizedMessage());
         }
