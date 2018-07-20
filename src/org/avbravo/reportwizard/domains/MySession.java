@@ -72,7 +72,19 @@ public class MySession {
     static String patternDate = "dd/MM/yyyy";
     static String patternDateTime = "HH:mm dd/MM/yyyy";
     static Entidad entidad;
+    
+    static Boolean mostrarNotificacion=true;
 
+    public static Boolean getMostrarNotificacion() {
+        return mostrarNotificacion;
+    }
+
+    public static void setMostrarNotificacion(Boolean mostrarNotificacion) {
+        MySession.mostrarNotificacion = mostrarNotificacion;
+    }
+
+    
+    
     
     
     public static String getNameOfSubReport() {
@@ -505,6 +517,9 @@ public class MySession {
         try {
             nd = new NotifyDescriptor.Message(msg, NotifyDescriptor.Message.ERROR_MESSAGE);
             DialogDisplayer.getDefault().notify(nd);
+            if (mostrarNotificacion) {
+                    NotifyUtil.info("readkeyClass()",msg);
+                }
         } catch (Exception ex) {
             nd = new NotifyDescriptor.Message("Error() " + ex.getLocalizedMessage(), NotifyDescriptor.Message.ERROR_MESSAGE);
             DialogDisplayer.getDefault().notify(nd);
