@@ -307,7 +307,6 @@ public final class ReportWizardTopComponent extends TopComponent {
         jPanel24 = new javax.swing.JPanel();
         jScrollPane16 = new javax.swing.JScrollPane();
         jTextAreaResult_SaveAndCompile = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanelProyecto = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -2275,15 +2274,6 @@ public final class ReportWizardTopComponent extends TopComponent {
         jTextAreaResult_SaveAndCompile.setRows(5);
         jScrollPane16.setViewportView(jTextAreaResult_SaveAndCompile);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/reportwizard/resources/close24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButton1, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButton1.text")); // NOI18N
-        jButton1.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButton1.toolTipText")); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
         jPanel24.setLayout(jPanel24Layout);
         jPanel24Layout.setHorizontalGroup(
@@ -2291,9 +2281,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addGroup(jPanel24Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addGap(57, 57, 57))
+                .addGap(99, 99, 99))
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2301,9 +2289,6 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap()
                 .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(35, Short.MAX_VALUE))
-            .addGroup(jPanel24Layout.createSequentialGroup()
-                .addComponent(jButton1)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jDialogSaveAndCompileProjectLayout = new javax.swing.GroupLayout(jDialogSaveAndCompileProject.getContentPane());
@@ -2347,6 +2332,7 @@ public final class ReportWizardTopComponent extends TopComponent {
         org.openide.awt.Mnemonics.setLocalizedText(jLabel7, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel7.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabelProject_NameOfEntity, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelProject_NameOfEntity.text")); // NOI18N
+        jLabelProject_NameOfEntity.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jCheckBoxMostrarNotificacion.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxMostrarNotificacion, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxMostrarNotificacion.text")); // NOI18N
@@ -2405,12 +2391,13 @@ public final class ReportWizardTopComponent extends TopComponent {
                     .addComponent(jCheckBoxMostrarNotificacion)
                     .addComponent(jButtonHelp))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextFieldProject_NameOfPackage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabelProject_NameOfEntity))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelProject_NameOfEntity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel5)
+                        .addComponent(jTextFieldProject_NameOfPackage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel7)))
+                .addContainerGap())
         );
 
         jPanelEntity.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelEntity.border.title"))); // NOI18N
@@ -3462,11 +3449,7 @@ if(validation()){
     }//GEN-LAST:event_jTextAreaAllDetails_EntityKeyPressed
 
     private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClearActionPerformed
-//jTextArea
 
-//  if (jCheckBoxMostrarNotificacion.isSelected()) {
-//                    NotifyUtil.info("Advertencia","Limpiando");
-//                }
         jTextAreaAllDetails_Entity.setText("");
         jTextAreaAllDetails_Label.setText("");
         jTextAreaSubReport_Entity.setText("");
@@ -3495,8 +3478,9 @@ if(validation()){
         jTextPaneDetails_Jasper.setText("");
         jTextPaneSubReport_Jasper.setText("");
         jTextPaneMaster_Jasper.setText("");
-
-        drawAreaEntity();
+ drawAreaEntity();
+        clearSubReport();
+       
         drawAreaSubreportEntity();
 
 
@@ -3918,18 +3902,7 @@ if(validation()){
     }//GEN-LAST:event_jButtonSubReport_SummaryCloseActionPerformed
 
     private void jButtonSubRepot_ClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubRepot_ClearActionPerformed
-        jTextAreaSubReport_Entity.setText("");
-        jTextAreaSubReport_Label.setText("");
-
-        jTextPaneSubReport_Jasper.setText("");
-        jTextFieldSubReport_NameOfReport.setText("");
-
-        //
-        jTextFieldSubreport_NameOfEntity.setText("");
-        jTextAreaSubReport_Label.setText("");
-        jTextAreaSubReport_Entity.setText("");
-
-        drawAreaSubreportEntity();
+        clearSubReport();
 
     }//GEN-LAST:event_jButtonSubRepot_ClearActionPerformed
 
@@ -4068,17 +4041,12 @@ if(validation())       {
 
     }//GEN-LAST:event_jButtonEmpaquetarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jDialogSaveAndCompileProject.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jCheckBoxMostrarNotificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMostrarNotificacionActionPerformed
         MySession.setMostrarNotificacion(jCheckBoxMostrarNotificacion.isSelected());
     }//GEN-LAST:event_jCheckBoxMostrarNotificacionActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAll_BackPage;
     private javax.swing.JButton jButtonAll_CompileReport;
     private javax.swing.JButton jButtonAll_GenerarJrxml;
@@ -4437,7 +4405,7 @@ if(validation())       {
 
                         if (!jTextAreaAllDetails_Entity.getText().contains("{")) {
                             jTextFieldProject_NameOfPackage.setText(x);
-                            jLabelProject_NameOfEntity.setText(name);
+                            jLabelProject_NameOfEntity.setText(x);
                         }
 
                     } else {
@@ -4485,8 +4453,8 @@ if(validation())       {
                     if (jTextFieldProject_NameOfPackage.getText().equals("")) {
                         jTextFieldProject_NameOfPackage.setText(x);
                     }
-                    if (jLabelProject_NameOfEntity.getText().equals("")) {
-                        jLabelProject_NameOfEntity.setText(name);
+                    if (jLabelProject_NameOfEntity.getText().equals("") || jLabelProject_NameOfEntity.getText().equals("...")) {
+                        jLabelProject_NameOfEntity.setText(x);
                     }
 
                 } else {
@@ -5996,7 +5964,7 @@ if(validation())       {
 
                     if (!jTextAreaAllDetails_Entity.getText().contains("{")) {
                         jTextFieldProject_NameOfPackage.setText(x);
-                        jLabelProject_NameOfEntity.setText(name);
+                        jLabelProject_NameOfEntity.setText(x);
                     }
 
                 }
@@ -6015,7 +5983,7 @@ if(validation())       {
             MySession.inicializarLabelListAllDetails();
             jTextAreaAll_Properties.setText(lenguajeGenerator.template());
             jTextAreaDetails_Properties.setText(lenguajeGenerator.template());
-            jTextAreaAllDetails_Entity.setText("public class");
+            jTextAreaAllDetails_Entity.setText("");
             jTextAreaAllDetails_Label.setText("");
         } catch (Exception e) {
             MySession.error("drawAreaEntity() " + e.getLocalizedMessage());
@@ -7057,6 +7025,27 @@ if(validation())       {
             MySession.error("validation() "+e.getLocalizedMessage());
         }
         return false;
+    }
+    // </editor-fold> 
+    
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void clearSubReport(){
+        try {
+            jTextAreaSubReport_Entity.setText("");
+        jTextAreaSubReport_Label.setText("");
+
+        jTextPaneSubReport_Jasper.setText("");
+        jTextFieldSubReport_NameOfReport.setText("");
+
+        //
+        jTextFieldSubreport_NameOfEntity.setText("");
+        jTextAreaSubReport_Label.setText("");
+        jTextAreaSubReport_Entity.setText("");
+
+        drawAreaSubreportEntity();
+        } catch (Exception e) {
+            MySession.error("clearSubReport() "+e.getLocalizedMessage());
+        }
     }
     // </editor-fold> 
 }
