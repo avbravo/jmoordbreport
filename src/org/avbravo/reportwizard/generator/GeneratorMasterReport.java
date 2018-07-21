@@ -170,7 +170,7 @@ public class GeneratorMasterReport {
                 for (Atributos a : e.getAtributosList()) {
                     count++;
                     name = a.getNombre();
-                    if (count < 5) {
+//                    if (count < 5) {
                         if (a.getEsList() || a.getEsListEmbedded() || a.getEsListReferenced()) {
                             addTextJasper("	<field name=\"" + name + "\" class=\"java.util.List\"/>");
                         } else {
@@ -241,7 +241,7 @@ public class GeneratorMasterReport {
                             }
                         }
 
-                    }
+//                    }
                 }
             }
 
