@@ -333,7 +333,8 @@ public class GeneratorMasterReport {
                             addTextJasper("             <dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{" + a.getNombre() + "})]]></dataSourceExpression>");
 //                            addTextJasper("             <subreportExpression><![CDATA[$P{P_URL}]]></subreportExpression>");
 
-                            addTextJasper("              <subreportExpression><![CDATA[$P{SUBREPORT_DIR} + \"" + MySession.getNameOfSubReport() + ".jasper\"]]></subreportExpression>");
+//                            addTextJasper("              <subreportExpression><![CDATA[$P{SUBREPORT_DIR} + \"" + MySession.getNameOfSubReport() + ".jasper\"]]></subreportExpression>");
+                            addTextJasper("              <subreportExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportExpression>");
                             addTextJasper("     </subreport>");
                             count++;
                         }
