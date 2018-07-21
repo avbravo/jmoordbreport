@@ -276,12 +276,15 @@ public class GeneratorDetailsReport {
             Integer[] y = {1, 1, 22, 22, 43, 43, 64, 64, 85, 85, 106, 106, 127, 127, 148, 148, 169, 169, 190, 190, 211, 211, 232, 232, 253, 253};
             Integer[] heigth = {24, 24, 46, 46, 68, 68, 90, 90, 112, 112, 134, 134, 156, 156, 178, 178, 200, 200, 222, 222, 244, 244, 266, 266, 288, 288};
             addTextJasper(" <detail>");
+            if (numberOfAtributes>=26){
+                numberOfAtributes=25;
+            }
             addTextJasper("	    <band height=\"" + heigth[numberOfAtributes] + "\" splitType=\"Stretch\">");
             for (Entidad e : MySession.getEntidadList()) {
                 Integer count = 0;
                 for (Atributos a : e.getAtributosList()) {
                     if (!a.getEsList()) {
-                        if (count < 27) {
+                        if (count < 25) {
                             addTextJasper("        <staticText>");
                             addTextJasper("	               <reportElement y=\"" + y[count] + "\" x=\"" + xLabel[count] + "\" width=\"100\" height=\"20\" />");
                             addTextJasper("	               <textElement>");
@@ -297,7 +300,7 @@ public class GeneratorDetailsReport {
                             addTextJasper("           </staticText>");
                         }
 
-                        if (count < 27) {
+                        if (count < 25) {
                             switch (a.getTipo().toLowerCase().trim()) {
                                 case "double":
                                     addTextJasper("     <textField pattern=\"###0.00\">");
