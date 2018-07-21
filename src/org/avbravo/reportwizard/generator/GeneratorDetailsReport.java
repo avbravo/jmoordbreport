@@ -180,7 +180,7 @@ public class GeneratorDetailsReport {
                 for (Atributos a : e.getAtributosList()) {
                     count++;
                     name = a.getNombre();
-                    if (count < 27) {
+//                    if (count < 27) {
 
                         if (a.getEsList() || a.getEsListEmbedded() || a.getEsListReferenced()) {
                             addTextJasper("	<field name=\"" + name + "\" class=\"java.util.List\"/>");
@@ -252,7 +252,7 @@ public class GeneratorDetailsReport {
                             }
                         }
 
-                    }
+//                    }
                 }
             }
 
