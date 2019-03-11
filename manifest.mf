@@ -3,5 +3,5 @@ AutoUpdate-Show-In-Client: true
 OpenIDE-Module: org.avbravo.jmoordbreport
 OpenIDE-Module-Localizing-Bundle: org/avbravo/jmoordbreport/Bundle.properties
 OpenIDE-Module-Requires: org.openide.windows.WindowManager
-OpenIDE-Module-Specification-Version: 1.5.1
+OpenIDE-Module-Specification-Version: 1.0
 

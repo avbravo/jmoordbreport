@@ -53,27 +53,27 @@ import org.openide.util.NbBundle.Messages;
  * Top component which displays something.
  */
 @ConvertAsProperties(
-        dtd = "-//org.avbravo.reportwizard//ReportWizard//EN",
+        dtd = "-//org.avbravo.jmoordbreport//ReportWizard//EN",
         autostore = false
 )
 @TopComponent.Description(
-        preferredID = "ReportWizardTopComponent",
-        iconBase = "org/avbravo/reportwizard/print.png",
+        preferredID = "JmoordbReportTopComponent",
+        iconBase = "org/avbravo/jmoordbreport/print.png",
         persistenceType = TopComponent.PERSISTENCE_ALWAYS
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
-@ActionID(category = "Window", id = "org.avbravo.reportwizard.ReportWizardTopComponent")
+@ActionID(category = "Window", id = "org.avbravo.jmoordbeport.JmoordbReportTopComponent")
 @ActionReference(path = "Menu/Window" /*, position = 333 */)
 @TopComponent.OpenActionRegistration(
-        displayName = "#CTL_ReportWizardAction",
-        preferredID = "ReportWizardTopComponent"
+        displayName = "#CTL_JmoordbReportAction",
+        preferredID = "JmoordbReportTopComponent"
 )
 @Messages({
-    "CTL_ReportWizardAction=ReportWizard",
-    "CTL_ReportWizardTopComponent=ReportWizard Window",
-    "HINT_ReportWizardTopComponent=This is a ReportWizard window"
+    "CTL_JmoordbReportAction=JmoordbReport",
+    "CTL_JmoordbReportTopComponent=JmoordbReport Window",
+    "HINT_JmoordbReportTopComponent=This is a Report window"
 })
-public final class ReportWizardTopComponent extends TopComponent {
+public final class JmoordbReportTopComponent extends TopComponent {
 
     private GridBagConstraints constraints = new GridBagConstraints();
     NotifyDescriptor nd;
@@ -95,10 +95,10 @@ public final class ReportWizardTopComponent extends TopComponent {
 
     LenguajeGenerator lenguajeGenerator = new LenguajeGenerator();
 
-    public ReportWizardTopComponent() {
+    public JmoordbReportTopComponent() {
         initComponents();
-        setName(Bundle.CTL_ReportWizardTopComponent());
-        setToolTipText(Bundle.HINT_ReportWizardTopComponent());
+        setName(Bundle.CTL_JmoordbReportTopComponent());
+        setToolTipText(Bundle.HINT_JmoordbReportTopComponent());
         jTabbedPane1.remove(jPanelReporte);
 
         jTabbedPaneEntity.setVisible(false);
@@ -424,24 +424,24 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        jDialogAyuda.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogAyuda.title")); // NOI18N
+        jDialogAyuda.setTitle(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jDialogAyuda.title")); // NOI18N
         jDialogAyuda.setAlwaysOnTop(true);
 
         jPanel32.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jPanel18.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel19, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel19.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel19, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel19.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel22, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel22.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel22, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel22.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel20, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel20.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel20, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel20.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel21, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel21.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel21, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel21.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel18, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel18.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel18, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel18.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel23, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel23.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel23, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel23.text")); // NOI18N
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
@@ -475,25 +475,25 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap(44, Short.MAX_VALUE))
         );
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel24, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel24.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel24, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel24.text")); // NOI18N
 
         jTextArea2.setEditable(false);
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
-        jTextArea2.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextArea2.text")); // NOI18N
+        jTextArea2.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextArea2.text")); // NOI18N
         jScrollPane8.setViewportView(jTextArea2);
 
         jTextArea3.setEditable(false);
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
-        jTextArea3.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextArea3.text")); // NOI18N
+        jTextArea3.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextArea3.text")); // NOI18N
         jTextArea3.setDisabledTextColor(new java.awt.Color(197, 203, 212));
         jScrollPane17.setViewportView(jTextArea3);
 
         jTextArea4.setEditable(false);
         jTextArea4.setColumns(20);
         jTextArea4.setRows(5);
-        jTextArea4.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextArea4.text")); // NOI18N
+        jTextArea4.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextArea4.text")); // NOI18N
         jTextArea4.setDisabledTextColor(new java.awt.Color(197, 203, 212));
         jScrollPane18.setViewportView(jTextArea4);
 
@@ -550,12 +550,12 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addGap(0, 12, Short.MAX_VALUE))
         );
 
-        jDialogAll_Group.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogAll_Group.title")); // NOI18N
+        jDialogAll_Group.setTitle(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jDialogAll_Group.title")); // NOI18N
         jDialogAll_Group.setAlwaysOnTop(true);
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel5.border.title"))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel5.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel1.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel1.text")); // NOI18N
 
         jComboBoxAll_Group_FieldGroupBy.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -568,23 +568,23 @@ public final class ReportWizardTopComponent extends TopComponent {
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel12, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel12.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel12, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel12.text")); // NOI18N
 
         jButtonAll_GroupClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/close24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_GroupClose, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_GroupClose.text")); // NOI18N
-        jButtonAll_GroupClose.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_GroupClose.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_GroupClose, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_GroupClose.text")); // NOI18N
+        jButtonAll_GroupClose.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_GroupClose.toolTipText")); // NOI18N
         jButtonAll_GroupClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAll_GroupCloseActionPerformed(evt);
             }
         });
 
-        jTextFieldAll_Group_NameOfGroup.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldAll_Group_NameOfGroup.text")); // NOI18N
+        jTextFieldAll_Group_NameOfGroup.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldAll_Group_NameOfGroup.text")); // NOI18N
         jTextFieldAll_Group_NameOfGroup.setEnabled(false);
 
         jButtonAll_GroupSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/save.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_GroupSave, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_GroupSave.text")); // NOI18N
-        jButtonAll_GroupSave.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_GroupSave.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_GroupSave, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_GroupSave.text")); // NOI18N
+        jButtonAll_GroupSave.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_GroupSave.toolTipText")); // NOI18N
         jButtonAll_GroupSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAll_GroupSaveActionPerformed(evt);
@@ -592,8 +592,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonAll_GroupDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/delete.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_GroupDelete, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_GroupDelete.text")); // NOI18N
-        jButtonAll_GroupDelete.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_GroupDelete.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_GroupDelete, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_GroupDelete.text")); // NOI18N
+        jButtonAll_GroupDelete.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_GroupDelete.toolTipText")); // NOI18N
         jButtonAll_GroupDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAll_GroupDeleteActionPerformed(evt);
@@ -640,11 +640,11 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addComponent(jButtonAll_GroupDelete))
         );
 
-        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel8.border.title"))); // NOI18N
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel8.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel14, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel14.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel14, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel14.text")); // NOI18N
 
-        jTextFieldAll_Group_StaticTextHeader.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldAll_Group_StaticTextHeader.text")); // NOI18N
+        jTextFieldAll_Group_StaticTextHeader.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldAll_Group_StaticTextHeader.text")); // NOI18N
         jTextFieldAll_Group_StaticTextHeader.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldAll_Group_StaticTextHeaderActionPerformed(evt);
@@ -672,13 +672,13 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel9.border.title"))); // NOI18N
+        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel9.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelStaticTextGroupFooterAll, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelStaticTextGroupFooterAll.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelStaticTextGroupFooterAll, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelStaticTextGroupFooterAll.text")); // NOI18N
 
-        jTextFieldAll_Group_StaticTextFooter.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldAll_Group_StaticTextFooter.text")); // NOI18N
+        jTextFieldAll_Group_StaticTextFooter.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldAll_Group_StaticTextFooter.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelFieldGroupFooterAll, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelFieldGroupFooterAll.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelFieldGroupFooterAll, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelFieldGroupFooterAll.text")); // NOI18N
 
         jComboBoxAll_Group_FieldFooter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -686,10 +686,10 @@ public final class ReportWizardTopComponent extends TopComponent {
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelAll_OperationReport, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelAll_OperationReport.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelAll_OperationReport, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelAll_OperationReport.text")); // NOI18N
 
         jCheckBoxAll_TextoGroupFooter.setSelected(true);
-        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxAll_TextoGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxAll_TextoGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxAll_TextoGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jCheckBoxAll_TextoGroupFooter.text")); // NOI18N
         jCheckBoxAll_TextoGroupFooter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBoxAll_TextoGroupFooterActionPerformed(evt);
@@ -697,14 +697,14 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jCheckBoxAll_LineaGroupFooter.setSelected(true);
-        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxAll_LineaGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxAll_LineaGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxAll_LineaGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jCheckBoxAll_LineaGroupFooter.text")); // NOI18N
         jCheckBoxAll_LineaGroupFooter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBoxAll_LineaGroupFooterActionPerformed(evt);
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelAll_LineaGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelAll_LineaGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelAll_LineaGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelAll_LineaGroupFooter.text")); // NOI18N
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -787,16 +787,16 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap())
         );
 
-        jDialogAll_Summary.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogAll_Summary.title")); // NOI18N
+        jDialogAll_Summary.setTitle(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jDialogAll_Summary.title")); // NOI18N
         jDialogAll_Summary.setAlwaysOnTop(true);
 
-        jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel19.border.title"))); // NOI18N
+        jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel19.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelAll_StaticTextGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelAll_StaticTextGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelAll_StaticTextGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelAll_StaticTextGroupFooter.text")); // NOI18N
 
-        jTextFieldAll_SummaryStaticText.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldAll_SummaryStaticText.text")); // NOI18N
+        jTextFieldAll_SummaryStaticText.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldAll_SummaryStaticText.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelAll_FieldSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelAll_FieldSummary.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelAll_FieldSummary, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelAll_FieldSummary.text")); // NOI18N
 
         jComboBoxAll_Summar_Field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -804,11 +804,11 @@ public final class ReportWizardTopComponent extends TopComponent {
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelAll_OperationSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelAll_OperationSummary.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelAll_OperationSummary, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelAll_OperationSummary.text")); // NOI18N
 
         jButtonAll_SaveSummary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/save.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_SaveSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_SaveSummary.text")); // NOI18N
-        jButtonAll_SaveSummary.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_SaveSummary.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_SaveSummary, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_SaveSummary.text")); // NOI18N
+        jButtonAll_SaveSummary.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_SaveSummary.toolTipText")); // NOI18N
         jButtonAll_SaveSummary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAll_SaveSummaryActionPerformed(evt);
@@ -816,8 +816,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonAll_SummaryDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/delete.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_SummaryDelete, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_SummaryDelete.text")); // NOI18N
-        jButtonAll_SummaryDelete.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_SummaryDelete.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_SummaryDelete, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_SummaryDelete.text")); // NOI18N
+        jButtonAll_SummaryDelete.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_SummaryDelete.toolTipText")); // NOI18N
         jButtonAll_SummaryDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAll_SummaryDeleteActionPerformed(evt);
@@ -825,7 +825,7 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jCheckBoxAll_MostrarFieldSummary.setSelected(true);
-        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxAll_MostrarFieldSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxAll_MostrarFieldSummary.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxAll_MostrarFieldSummary, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jCheckBoxAll_MostrarFieldSummary.text")); // NOI18N
         jCheckBoxAll_MostrarFieldSummary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBoxAll_MostrarFieldSummaryActionPerformed(evt);
@@ -833,8 +833,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonAll_SummaryClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/close24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_SummaryClose, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_SummaryClose.text")); // NOI18N
-        jButtonAll_SummaryClose.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_SummaryClose.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_SummaryClose, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_SummaryClose.text")); // NOI18N
+        jButtonAll_SummaryClose.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_SummaryClose.toolTipText")); // NOI18N
         jButtonAll_SummaryClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAll_SummaryCloseActionPerformed(evt);
@@ -921,7 +921,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jDialogAllDetails_Label.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogAllDetails_Label.title")); // NOI18N
+        jDialogAllDetails_Label.setTitle(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jDialogAllDetails_Label.title")); // NOI18N
 
         jPanel22.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -955,7 +955,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        jDialogAllDetails_Properties.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogAllDetails_Properties.title")); // NOI18N
+        jDialogAllDetails_Properties.setTitle(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jDialogAllDetails_Properties.title")); // NOI18N
 
         jPanel23.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -978,7 +978,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap())
         );
 
-        jTabbedPane3.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel23.TabConstraints.tabTitle_1"), jPanel23); // NOI18N
+        jTabbedPane3.addTab(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel23.TabConstraints.tabTitle_1"), jPanel23); // NOI18N
 
         jTextAreaDetails_Properties.setColumns(20);
         jTextAreaDetails_Properties.setRows(5);
@@ -999,7 +999,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap())
         );
 
-        jTabbedPane3.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelDetails_PropertiesReport.TabConstraints.tabTitle"), jPanelDetails_PropertiesReport); // NOI18N
+        jTabbedPane3.addTab(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanelDetails_PropertiesReport.TabConstraints.tabTitle"), jPanelDetails_PropertiesReport); // NOI18N
 
         javax.swing.GroupLayout jDialogAllDetails_PropertiesLayout = new javax.swing.GroupLayout(jDialogAllDetails_Properties.getContentPane());
         jDialogAllDetails_Properties.getContentPane().setLayout(jDialogAllDetails_PropertiesLayout);
@@ -1014,12 +1014,12 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jTabbedPane3)
         );
 
-        jDialogDetails_Group.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogDetails_Group.title")); // NOI18N
+        jDialogDetails_Group.setTitle(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jDialogDetails_Group.title")); // NOI18N
         jDialogDetails_Group.setAlwaysOnTop(true);
 
-        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel11.border.title"))); // NOI18N
+        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel11.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel13, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel13.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel13, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel13.text")); // NOI18N
 
         jComboBoxDetails_Group_FieldGroupBy.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -1032,23 +1032,23 @@ public final class ReportWizardTopComponent extends TopComponent {
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel15, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel15.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel15, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel15.text")); // NOI18N
 
         jButtonCloseGroupDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/close24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonCloseGroupDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonCloseGroupDetails.text")); // NOI18N
-        jButtonCloseGroupDetails.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonCloseGroupDetails.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonCloseGroupDetails, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonCloseGroupDetails.text")); // NOI18N
+        jButtonCloseGroupDetails.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonCloseGroupDetails.toolTipText")); // NOI18N
         jButtonCloseGroupDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCloseGroupDetailsActionPerformed(evt);
             }
         });
 
-        jTextFieldDetails_Group_NameOfGroup.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldDetails_Group_NameOfGroup.text")); // NOI18N
+        jTextFieldDetails_Group_NameOfGroup.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldDetails_Group_NameOfGroup.text")); // NOI18N
         jTextFieldDetails_Group_NameOfGroup.setEnabled(false);
 
         jButtonSaveGroupDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/save.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSaveGroupDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSaveGroupDetails.text")); // NOI18N
-        jButtonSaveGroupDetails.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSaveGroupDetails.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSaveGroupDetails, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSaveGroupDetails.text")); // NOI18N
+        jButtonSaveGroupDetails.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSaveGroupDetails.toolTipText")); // NOI18N
         jButtonSaveGroupDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSaveGroupDetailsActionPerformed(evt);
@@ -1056,8 +1056,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonDetailsGroupDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/delete.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonDetailsGroupDelete, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonDetailsGroupDelete.text")); // NOI18N
-        jButtonDetailsGroupDelete.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonDetailsGroupDelete.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonDetailsGroupDelete, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonDetailsGroupDelete.text")); // NOI18N
+        jButtonDetailsGroupDelete.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonDetailsGroupDelete.toolTipText")); // NOI18N
         jButtonDetailsGroupDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDetailsGroupDeleteActionPerformed(evt);
@@ -1107,11 +1107,11 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap())
         );
 
-        jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel12.border.title"))); // NOI18N
+        jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel12.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel16, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel16.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel16, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel16.text")); // NOI18N
 
-        jTextFieldDetails_Group_StaticTextHeader.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldDetails_Group_StaticTextHeader.text")); // NOI18N
+        jTextFieldDetails_Group_StaticTextHeader.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldDetails_Group_StaticTextHeader.text")); // NOI18N
         jTextFieldDetails_Group_StaticTextHeader.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldDetails_Group_StaticTextHeaderActionPerformed(evt);
@@ -1139,13 +1139,13 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel13.border.title"))); // NOI18N
+        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel13.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelStaticTextGroupFooterDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelStaticTextGroupFooterDetails.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelStaticTextGroupFooterDetails, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelStaticTextGroupFooterDetails.text")); // NOI18N
 
-        jTextFieldDetails_Group_StaticTextFooter.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldDetails_Group_StaticTextFooter.text")); // NOI18N
+        jTextFieldDetails_Group_StaticTextFooter.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldDetails_Group_StaticTextFooter.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelFieldGroupFooterDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelFieldGroupFooterDetails.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelFieldGroupFooterDetails, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelFieldGroupFooterDetails.text")); // NOI18N
 
         jComboBoxDetails_Group_FieldFooter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1153,10 +1153,10 @@ public final class ReportWizardTopComponent extends TopComponent {
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelOperationReportDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelOperationReportDetails.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelOperationReportDetails, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelOperationReportDetails.text")); // NOI18N
 
         jCheckBoxDetails_TextoGroupFooter.setSelected(true);
-        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxDetails_TextoGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxDetails_TextoGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxDetails_TextoGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jCheckBoxDetails_TextoGroupFooter.text")); // NOI18N
         jCheckBoxDetails_TextoGroupFooter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBoxDetails_TextoGroupFooterActionPerformed(evt);
@@ -1164,14 +1164,14 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jCheckBoxDetails_LineaGroupFooter.setSelected(true);
-        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxDetails_LineaGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxDetails_LineaGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxDetails_LineaGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jCheckBoxDetails_LineaGroupFooter.text")); // NOI18N
         jCheckBoxDetails_LineaGroupFooter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBoxDetails_LineaGroupFooterActionPerformed(evt);
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelLineaDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelLineaDetails.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelLineaDetails, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelLineaDetails.text")); // NOI18N
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -1253,16 +1253,16 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap())
         );
 
-        jDialogDetails_Summary.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogDetails_Summary.title")); // NOI18N
+        jDialogDetails_Summary.setTitle(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jDialogDetails_Summary.title")); // NOI18N
         jDialogDetails_Summary.setAlwaysOnTop(true);
 
-        jPanel20.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel20.border.title"))); // NOI18N
+        jPanel20.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel20.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelStaticTextGroupFooterAll2, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelStaticTextGroupFooterAll2.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelStaticTextGroupFooterAll2, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelStaticTextGroupFooterAll2.text")); // NOI18N
 
-        jTextFieldDetails_SummaryStaticText.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldDetails_SummaryStaticText.text")); // NOI18N
+        jTextFieldDetails_SummaryStaticText.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldDetails_SummaryStaticText.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelFieldSummaryAll1, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelFieldSummaryAll1.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelFieldSummaryAll1, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelFieldSummaryAll1.text")); // NOI18N
 
         jComboBoxDetails_Summary_Field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1270,11 +1270,11 @@ public final class ReportWizardTopComponent extends TopComponent {
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelOperationSummaryAll1, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelOperationSummaryAll1.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelOperationSummaryAll1, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelOperationSummaryAll1.text")); // NOI18N
 
         jButtonSaveSummaryDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/save.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSaveSummaryDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSaveSummaryDetails.text")); // NOI18N
-        jButtonSaveSummaryDetails.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSaveSummaryDetails.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSaveSummaryDetails, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSaveSummaryDetails.text")); // NOI18N
+        jButtonSaveSummaryDetails.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSaveSummaryDetails.toolTipText")); // NOI18N
         jButtonSaveSummaryDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSaveSummaryDetailsActionPerformed(evt);
@@ -1282,8 +1282,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonSummaryDetailsDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/delete.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSummaryDetailsDelete, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSummaryDetailsDelete.text")); // NOI18N
-        jButtonSummaryDetailsDelete.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSummaryDetailsDelete.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSummaryDetailsDelete, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSummaryDetailsDelete.text")); // NOI18N
+        jButtonSummaryDetailsDelete.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSummaryDetailsDelete.toolTipText")); // NOI18N
         jButtonSummaryDetailsDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSummaryDetailsDeleteActionPerformed(evt);
@@ -1291,7 +1291,7 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jCheckBoxMostrarFieldSummaryDetails.setSelected(true);
-        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxMostrarFieldSummaryDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxMostrarFieldSummaryDetails.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxMostrarFieldSummaryDetails, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jCheckBoxMostrarFieldSummaryDetails.text")); // NOI18N
         jCheckBoxMostrarFieldSummaryDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBoxMostrarFieldSummaryDetailsActionPerformed(evt);
@@ -1299,8 +1299,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonSummaryCloseDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/close24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSummaryCloseDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSummaryCloseDetails.text")); // NOI18N
-        jButtonSummaryCloseDetails.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSummaryCloseDetails.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSummaryCloseDetails, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSummaryCloseDetails.text")); // NOI18N
+        jButtonSummaryCloseDetails.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSummaryCloseDetails.toolTipText")); // NOI18N
         jButtonSummaryCloseDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSummaryCloseDetailsActionPerformed(evt);
@@ -1387,12 +1387,12 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jDialogSubReport_Group.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogSubReport_Group.title")); // NOI18N
+        jDialogSubReport_Group.setTitle(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jDialogSubReport_Group.title")); // NOI18N
         jDialogSubReport_Group.setAlwaysOnTop(true);
 
-        jPanel29.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel29.border.title"))); // NOI18N
+        jPanel29.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel29.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel28, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel28.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel28, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel28.text")); // NOI18N
 
         jComboBoxSubReport_Group_FieldGroupBy.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -1405,23 +1405,23 @@ public final class ReportWizardTopComponent extends TopComponent {
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel29, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel29.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel29, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel29.text")); // NOI18N
 
         jButtonSubReport_GroupClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/close24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_GroupClose, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_GroupClose.text")); // NOI18N
-        jButtonSubReport_GroupClose.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_GroupClose.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_GroupClose, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_GroupClose.text")); // NOI18N
+        jButtonSubReport_GroupClose.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_GroupClose.toolTipText")); // NOI18N
         jButtonSubReport_GroupClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubReport_GroupCloseActionPerformed(evt);
             }
         });
 
-        jTextFieldSubReport_Group_NameOfGroup.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldSubReport_Group_NameOfGroup.text")); // NOI18N
+        jTextFieldSubReport_Group_NameOfGroup.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldSubReport_Group_NameOfGroup.text")); // NOI18N
         jTextFieldSubReport_Group_NameOfGroup.setEnabled(false);
 
         jButtonSubReport_GroupSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/save.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_GroupSave, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_GroupSave.text")); // NOI18N
-        jButtonSubReport_GroupSave.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_GroupSave.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_GroupSave, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_GroupSave.text")); // NOI18N
+        jButtonSubReport_GroupSave.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_GroupSave.toolTipText")); // NOI18N
         jButtonSubReport_GroupSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubReport_GroupSaveActionPerformed(evt);
@@ -1429,8 +1429,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonSubReport_Delete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/delete.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_Delete, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_Delete.text")); // NOI18N
-        jButtonSubReport_Delete.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_Delete.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_Delete, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_Delete.text")); // NOI18N
+        jButtonSubReport_Delete.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_Delete.toolTipText")); // NOI18N
         jButtonSubReport_Delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubReport_DeleteActionPerformed(evt);
@@ -1477,11 +1477,11 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addComponent(jButtonSubReport_Delete))
         );
 
-        jPanel30.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel30.border.title"))); // NOI18N
+        jPanel30.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel30.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel30, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel30.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel30, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel30.text")); // NOI18N
 
-        jTextFieldSubReport_Group_StaticTextHeader.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldSubReport_Group_StaticTextHeader.text")); // NOI18N
+        jTextFieldSubReport_Group_StaticTextHeader.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldSubReport_Group_StaticTextHeader.text")); // NOI18N
         jTextFieldSubReport_Group_StaticTextHeader.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldSubReport_Group_StaticTextHeaderActionPerformed(evt);
@@ -1509,13 +1509,13 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel31.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel31.border.title"))); // NOI18N
+        jPanel31.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel31.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelSubReport_StaticTextGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelSubReport_StaticTextGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelSubReport_StaticTextGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelSubReport_StaticTextGroupFooter.text")); // NOI18N
 
-        jTextFieldSubReport_Group_StaticTextFooter.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldSubReport_Group_StaticTextFooter.text")); // NOI18N
+        jTextFieldSubReport_Group_StaticTextFooter.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldSubReport_Group_StaticTextFooter.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelSubReport_FieldGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelSubReport_FieldGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelSubReport_FieldGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelSubReport_FieldGroupFooter.text")); // NOI18N
 
         jComboBoxSubReport_Group_FieldFooter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1523,10 +1523,10 @@ public final class ReportWizardTopComponent extends TopComponent {
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelSubReport_OperationReportGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelSubReport_OperationReportGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelSubReport_OperationReportGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelSubReport_OperationReportGroupFooter.text")); // NOI18N
 
         jCheckBoxSubReport_TextoGroupFooter.setSelected(true);
-        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxSubReport_TextoGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxSubReport_TextoGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxSubReport_TextoGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jCheckBoxSubReport_TextoGroupFooter.text")); // NOI18N
         jCheckBoxSubReport_TextoGroupFooter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBoxSubReport_TextoGroupFooterActionPerformed(evt);
@@ -1534,14 +1534,14 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jCheckBoxSubReport_LineaGroupFooter.setSelected(true);
-        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxSubReport_LineaGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxSubReport_LineaGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxSubReport_LineaGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jCheckBoxSubReport_LineaGroupFooter.text")); // NOI18N
         jCheckBoxSubReport_LineaGroupFooter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBoxSubReport_LineaGroupFooterActionPerformed(evt);
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelSubReport_Linea, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelSubReport_Linea.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelSubReport_Linea, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelSubReport_Linea.text")); // NOI18N
 
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
@@ -1624,7 +1624,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap())
         );
 
-        jDialogSubReport_Label.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogSubReport_Label.title")); // NOI18N
+        jDialogSubReport_Label.setTitle(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jDialogSubReport_Label.title")); // NOI18N
 
         jPanel25.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -1656,7 +1656,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        jDialogMasterSubReport_Properties.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogMasterSubReport_Properties.title")); // NOI18N
+        jDialogMasterSubReport_Properties.setTitle(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jDialogMasterSubReport_Properties.title")); // NOI18N
 
         jPanel26.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -1675,7 +1675,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jScrollPane14, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
         );
 
-        jTabbedPane4.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel3.TabConstraints.tabTitle"), jPanel3); // NOI18N
+        jTabbedPane4.addTab(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel3.TabConstraints.tabTitle"), jPanel3); // NOI18N
 
         jTextAreaSubReport_Properties.setColumns(20);
         jTextAreaSubReport_Properties.setRows(5);
@@ -1692,7 +1692,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
         );
 
-        jTabbedPane4.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel4.TabConstraints.tabTitle"), jPanel4); // NOI18N
+        jTabbedPane4.addTab(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel4.TabConstraints.tabTitle"), jPanel4); // NOI18N
 
         javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
         jPanel26.setLayout(jPanel26Layout);
@@ -1718,16 +1718,16 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jPanel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jDialogSubReport_Summary.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogSubReport_Summary.title")); // NOI18N
+        jDialogSubReport_Summary.setTitle(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jDialogSubReport_Summary.title")); // NOI18N
         jDialogSubReport_Summary.setAlwaysOnTop(true);
 
-        jPanel36.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel36.border.title"))); // NOI18N
+        jPanel36.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel36.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelStaticTextGroupFooterAll4, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelStaticTextGroupFooterAll4.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelStaticTextGroupFooterAll4, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelStaticTextGroupFooterAll4.text")); // NOI18N
 
-        jTextFieldSubReport_SummaryStaticText.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldSubReport_SummaryStaticText.text")); // NOI18N
+        jTextFieldSubReport_SummaryStaticText.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldSubReport_SummaryStaticText.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelSubReport_FieldSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelSubReport_FieldSummary.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelSubReport_FieldSummary, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelSubReport_FieldSummary.text")); // NOI18N
 
         jComboBoxSubReport_Summar_Field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1735,11 +1735,11 @@ public final class ReportWizardTopComponent extends TopComponent {
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelSubReport_OperationSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelSubReport_OperationSummary.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelSubReport_OperationSummary, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelSubReport_OperationSummary.text")); // NOI18N
 
         jButtonSubReport_SaveSummary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/save.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_SaveSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_SaveSummary.text")); // NOI18N
-        jButtonSubReport_SaveSummary.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_SaveSummary.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_SaveSummary, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_SaveSummary.text")); // NOI18N
+        jButtonSubReport_SaveSummary.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_SaveSummary.toolTipText")); // NOI18N
         jButtonSubReport_SaveSummary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubReport_SaveSummaryActionPerformed(evt);
@@ -1747,8 +1747,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonSubReport_SummaryAllDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/delete.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_SummaryAllDelete, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_SummaryAllDelete.text")); // NOI18N
-        jButtonSubReport_SummaryAllDelete.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_SummaryAllDelete.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_SummaryAllDelete, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_SummaryAllDelete.text")); // NOI18N
+        jButtonSubReport_SummaryAllDelete.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_SummaryAllDelete.toolTipText")); // NOI18N
         jButtonSubReport_SummaryAllDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubReport_SummaryAllDeleteActionPerformed(evt);
@@ -1756,7 +1756,7 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jCheckBoxSubReport_MostrarFieldSummary.setSelected(true);
-        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxSubReport_MostrarFieldSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxSubReport_MostrarFieldSummary.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxSubReport_MostrarFieldSummary, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jCheckBoxSubReport_MostrarFieldSummary.text")); // NOI18N
         jCheckBoxSubReport_MostrarFieldSummary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBoxSubReport_MostrarFieldSummaryActionPerformed(evt);
@@ -1764,8 +1764,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonSubReport_SummaryClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/close24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_SummaryClose, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_SummaryClose.text")); // NOI18N
-        jButtonSubReport_SummaryClose.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_SummaryClose.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_SummaryClose, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_SummaryClose.text")); // NOI18N
+        jButtonSubReport_SummaryClose.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_SummaryClose.toolTipText")); // NOI18N
         jButtonSubReport_SummaryClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubReport_SummaryCloseActionPerformed(evt);
@@ -1852,12 +1852,12 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jDialogMaster_Group.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogMaster_Group.title")); // NOI18N
+        jDialogMaster_Group.setTitle(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jDialogMaster_Group.title")); // NOI18N
         jDialogMaster_Group.setAlwaysOnTop(true);
 
-        jPanel40.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel40.border.title"))); // NOI18N
+        jPanel40.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel40.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel39, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel39.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel39, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel39.text")); // NOI18N
 
         jComboBoxMaster_Group_FieldGroupBy.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -1870,23 +1870,23 @@ public final class ReportWizardTopComponent extends TopComponent {
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel40, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel40.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel40, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel40.text")); // NOI18N
 
         jButtonMaster_GroupClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/close24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_GroupClose, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_GroupClose.text")); // NOI18N
-        jButtonMaster_GroupClose.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_GroupClose.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_GroupClose, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_GroupClose.text")); // NOI18N
+        jButtonMaster_GroupClose.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_GroupClose.toolTipText")); // NOI18N
         jButtonMaster_GroupClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMaster_GroupCloseActionPerformed(evt);
             }
         });
 
-        jTextFieldMaster_Group_NameOfGroup.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldMaster_Group_NameOfGroup.text")); // NOI18N
+        jTextFieldMaster_Group_NameOfGroup.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldMaster_Group_NameOfGroup.text")); // NOI18N
         jTextFieldMaster_Group_NameOfGroup.setEnabled(false);
 
         jButtonMaster_GroupSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/save.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_GroupSave, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_GroupSave.text")); // NOI18N
-        jButtonMaster_GroupSave.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_GroupSave.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_GroupSave, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_GroupSave.text")); // NOI18N
+        jButtonMaster_GroupSave.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_GroupSave.toolTipText")); // NOI18N
         jButtonMaster_GroupSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMaster_GroupSaveActionPerformed(evt);
@@ -1894,8 +1894,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonMaster_Delete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/delete.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_Delete, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_Delete.text")); // NOI18N
-        jButtonMaster_Delete.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_Delete.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_Delete, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_Delete.text")); // NOI18N
+        jButtonMaster_Delete.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_Delete.toolTipText")); // NOI18N
         jButtonMaster_Delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMaster_DeleteActionPerformed(evt);
@@ -1942,11 +1942,11 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addComponent(jButtonMaster_Delete))
         );
 
-        jPanel41.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel41.border.title"))); // NOI18N
+        jPanel41.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel41.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel41, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel41.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel41, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel41.text")); // NOI18N
 
-        jTextFieldMaster_Group_StaticTextHeader.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldMaster_Group_StaticTextHeader.text")); // NOI18N
+        jTextFieldMaster_Group_StaticTextHeader.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldMaster_Group_StaticTextHeader.text")); // NOI18N
         jTextFieldMaster_Group_StaticTextHeader.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldMaster_Group_StaticTextHeaderActionPerformed(evt);
@@ -1974,13 +1974,13 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel42.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel42.border.title"))); // NOI18N
+        jPanel42.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel42.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabeMaster_StaticTextGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabeMaster_StaticTextGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabeMaster_StaticTextGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabeMaster_StaticTextGroupFooter.text")); // NOI18N
 
-        jTextFieldMaster_Group_StaticTextFooter.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldMaster_Group_StaticTextFooter.text")); // NOI18N
+        jTextFieldMaster_Group_StaticTextFooter.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldMaster_Group_StaticTextFooter.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelMaster_FieldGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelMaster_FieldGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelMaster_FieldGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelMaster_FieldGroupFooter.text")); // NOI18N
 
         jComboBoxMaster_Group_FieldFooter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1988,10 +1988,10 @@ public final class ReportWizardTopComponent extends TopComponent {
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelMaster_OperationReport, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelMaster_OperationReport.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelMaster_OperationReport, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelMaster_OperationReport.text")); // NOI18N
 
         jCheckBoxMaster_TextoGroupFooter.setSelected(true);
-        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxMaster_TextoGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxMaster_TextoGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxMaster_TextoGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jCheckBoxMaster_TextoGroupFooter.text")); // NOI18N
         jCheckBoxMaster_TextoGroupFooter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBoxMaster_TextoGroupFooterActionPerformed(evt);
@@ -1999,14 +1999,14 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jCheckBoxMaster_LineaGroupFooter.setSelected(true);
-        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxMaster_LineaGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxMaster_LineaGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxMaster_LineaGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jCheckBoxMaster_LineaGroupFooter.text")); // NOI18N
         jCheckBoxMaster_LineaGroupFooter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBoxMaster_LineaGroupFooterActionPerformed(evt);
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelMaster_LineaGroupFooter, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelMaster_LineaGroupFooter.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelMaster_LineaGroupFooter, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelMaster_LineaGroupFooter.text")); // NOI18N
 
         javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
         jPanel42.setLayout(jPanel42Layout);
@@ -2089,20 +2089,20 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap())
         );
 
-        jDialogMaster_Label.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogMaster_Label.title")); // NOI18N
+        jDialogMaster_Label.setTitle(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jDialogMaster_Label.title")); // NOI18N
 
-        jPanel43.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel43.border.title"))); // NOI18N
+        jPanel43.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel43.border.title"))); // NOI18N
 
         jTextAreaMaster_Label.setColumns(20);
         jTextAreaMaster_Label.setRows(5);
         jScrollPane15.setViewportView(jTextAreaMaster_Label);
 
         jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/label.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel42, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel42.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel42, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel42.text")); // NOI18N
 
         jButtonMaster_DialogLabelClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/close24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_DialogLabelClose, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_DialogLabelClose.text")); // NOI18N
-        jButtonMaster_DialogLabelClose.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_DialogLabelClose.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_DialogLabelClose, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_DialogLabelClose.text")); // NOI18N
+        jButtonMaster_DialogLabelClose.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_DialogLabelClose.toolTipText")); // NOI18N
         jButtonMaster_DialogLabelClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMaster_DialogLabelCloseActionPerformed(evt);
@@ -2145,16 +2145,16 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        jDialogMaster_Summary.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogMaster_Summary.title")); // NOI18N
+        jDialogMaster_Summary.setTitle(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jDialogMaster_Summary.title")); // NOI18N
         jDialogMaster_Summary.setAlwaysOnTop(true);
 
-        jPanel45.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel45.border.title"))); // NOI18N
+        jPanel45.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel45.border.title"))); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelStaticTextGroupFooterAll5, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelStaticTextGroupFooterAll5.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelStaticTextGroupFooterAll5, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelStaticTextGroupFooterAll5.text")); // NOI18N
 
-        jTextFieldMaster_SummaryStaticText.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldMaster_SummaryStaticText.text")); // NOI18N
+        jTextFieldMaster_SummaryStaticText.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldMaster_SummaryStaticText.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelMaster_FieldSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelMaster_FieldSummary.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelMaster_FieldSummary, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelMaster_FieldSummary.text")); // NOI18N
 
         jComboBoxMaster_Summar_Field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2162,11 +2162,11 @@ public final class ReportWizardTopComponent extends TopComponent {
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelMaster_OperationSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelMaster_OperationSummary.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelMaster_OperationSummary, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelMaster_OperationSummary.text")); // NOI18N
 
         jButtonMaster_SaveSummary1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/save.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_SaveSummary1, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_SaveSummary1.text")); // NOI18N
-        jButtonMaster_SaveSummary1.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_SaveSummary1.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_SaveSummary1, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_SaveSummary1.text")); // NOI18N
+        jButtonMaster_SaveSummary1.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_SaveSummary1.toolTipText")); // NOI18N
         jButtonMaster_SaveSummary1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMaster_SaveSummary1ActionPerformed(evt);
@@ -2174,8 +2174,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonMaster_SummaryAllDelete1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/delete.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_SummaryAllDelete1, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_SummaryAllDelete1.text")); // NOI18N
-        jButtonMaster_SummaryAllDelete1.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_SummaryAllDelete1.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_SummaryAllDelete1, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_SummaryAllDelete1.text")); // NOI18N
+        jButtonMaster_SummaryAllDelete1.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_SummaryAllDelete1.toolTipText")); // NOI18N
         jButtonMaster_SummaryAllDelete1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMaster_SummaryAllDelete1ActionPerformed(evt);
@@ -2183,7 +2183,7 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jCheckBoxMaster_MostrarFieldSummary.setSelected(true);
-        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxMaster_MostrarFieldSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxMaster_MostrarFieldSummary.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxMaster_MostrarFieldSummary, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jCheckBoxMaster_MostrarFieldSummary.text")); // NOI18N
         jCheckBoxMaster_MostrarFieldSummary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBoxMaster_MostrarFieldSummaryActionPerformed(evt);
@@ -2191,8 +2191,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonMaster_SummaryClose1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/close24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_SummaryClose1, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_SummaryClose1.text")); // NOI18N
-        jButtonMaster_SummaryClose1.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_SummaryClose1.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_SummaryClose1, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_SummaryClose1.text")); // NOI18N
+        jButtonMaster_SummaryClose1.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_SummaryClose1.toolTipText")); // NOI18N
         jButtonMaster_SummaryClose1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMaster_SummaryClose1ActionPerformed(evt);
@@ -2279,9 +2279,9 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jPanel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jDialogSaveAndCompileProject.setTitle(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jDialogSaveAndCompileProject.title")); // NOI18N
+        jDialogSaveAndCompileProject.setTitle(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jDialogSaveAndCompileProject.title")); // NOI18N
 
-        jPanel24.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel24.border.title"))); // NOI18N
+        jPanel24.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel24.border.title"))); // NOI18N
 
         jTextAreaResult_SaveAndCompile.setColumns(20);
         jTextAreaResult_SaveAndCompile.setRows(5);
@@ -2315,24 +2315,24 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel6.border.title"))); // NOI18N
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel6.border.title"))); // NOI18N
 
         jTextFieldProject_NameOfProject.setEditable(false);
-        jTextFieldProject_NameOfProject.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldProject_NameOfProject.text")); // NOI18N
+        jTextFieldProject_NameOfProject.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldProject_NameOfProject.text")); // NOI18N
 
         jButtonSelectProject.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/project.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSelectProject, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSelectProject.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSelectProject, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSelectProject.text")); // NOI18N
         jButtonSelectProject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSelectProjectActionPerformed(evt);
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel3.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel3.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel5, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel5.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel5, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel5.text")); // NOI18N
 
-        jTextFieldProject_NameOfPackage.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldProject_NameOfPackage.text")); // NOI18N
+        jTextFieldProject_NameOfPackage.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldProject_NameOfPackage.text")); // NOI18N
         jTextFieldProject_NameOfPackage.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldProject_NameOfPackageKeyTyped(evt);
@@ -2342,13 +2342,13 @@ public final class ReportWizardTopComponent extends TopComponent {
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel7, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel7.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel7, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel7.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabelProject_NameOfEntity, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabelProject_NameOfEntity.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabelProject_NameOfEntity, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabelProject_NameOfEntity.text")); // NOI18N
         jLabelProject_NameOfEntity.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jCheckBoxMostrarNotificacion.setSelected(true);
-        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxMostrarNotificacion, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jCheckBoxMostrarNotificacion.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxMostrarNotificacion, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jCheckBoxMostrarNotificacion.text")); // NOI18N
         jCheckBoxMostrarNotificacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBoxMostrarNotificacionActionPerformed(evt);
@@ -2356,8 +2356,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonHelp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/help.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonHelp, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonHelp.text")); // NOI18N
-        jButtonHelp.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonHelp.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonHelp, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonHelp.text")); // NOI18N
+        jButtonHelp.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonHelp.toolTipText")); // NOI18N
         jButtonHelp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonHelpActionPerformed(evt);
@@ -2413,7 +2413,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap())
         );
 
-        jPanelEntity.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelEntity.border.title"))); // NOI18N
+        jPanelEntity.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanelEntity.border.title"))); // NOI18N
 
         jTextAreaAllDetails_Entity.setColumns(20);
         jTextAreaAllDetails_Entity.setRows(5);
@@ -2428,8 +2428,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         jScrollPane4.setViewportView(jTextAreaAllDetails_Entity);
 
         jButtonClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/clear24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonClear, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonClear.text")); // NOI18N
-        jButtonClear.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonClear.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonClear, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonClear.text")); // NOI18N
+        jButtonClear.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonClear.toolTipText")); // NOI18N
         jButtonClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonClearActionPerformed(evt);
@@ -2437,8 +2437,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonGoPage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/play.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonGoPage2, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonGoPage2.text")); // NOI18N
-        jButtonGoPage2.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonGoPage2.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonGoPage2, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonGoPage2.text")); // NOI18N
+        jButtonGoPage2.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonGoPage2.toolTipText")); // NOI18N
         jButtonGoPage2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonGoPage2ActionPerformed(evt);
@@ -2446,8 +2446,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonPropertiesAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/properties24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonPropertiesAll, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonPropertiesAll.text")); // NOI18N
-        jButtonPropertiesAll.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonPropertiesAll.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonPropertiesAll, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonPropertiesAll.text")); // NOI18N
+        jButtonPropertiesAll.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonPropertiesAll.toolTipText")); // NOI18N
         jButtonPropertiesAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonPropertiesAllActionPerformed(evt);
@@ -2455,8 +2455,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/label.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonLabel, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonLabel.text")); // NOI18N
-        jButtonLabel.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonLabel.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonLabel, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonLabel.text")); // NOI18N
+        jButtonLabel.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonLabel.toolTipText")); // NOI18N
         jButtonLabel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonLabelActionPerformed(evt);
@@ -2464,8 +2464,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonEmpaquetar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/empaquetar.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonEmpaquetar, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonEmpaquetar.text")); // NOI18N
-        jButtonEmpaquetar.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonEmpaquetar.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonEmpaquetar, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonEmpaquetar.text")); // NOI18N
+        jButtonEmpaquetar.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonEmpaquetar.toolTipText")); // NOI18N
         jButtonEmpaquetar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEmpaquetarActionPerformed(evt);
@@ -2510,13 +2510,13 @@ public final class ReportWizardTopComponent extends TopComponent {
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)))
         );
 
-        jTabbedPaneEntity.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelEntity.TabConstraints.tabTitle"), jPanelEntity); // NOI18N
+        jTabbedPaneEntity.addTab(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanelEntity.TabConstraints.tabTitle"), jPanelEntity); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel25, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel25.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel25, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel25.text")); // NOI18N
 
-        jTextFieldSubreport_NameOfEntity.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldSubreport_NameOfEntity.text")); // NOI18N
+        jTextFieldSubreport_NameOfEntity.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldSubreport_NameOfEntity.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel26, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel26.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel26, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel26.text")); // NOI18N
 
         jTextAreaSubReport_Entity.setColumns(20);
         jTextAreaSubReport_Entity.setRows(5);
@@ -2531,8 +2531,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         jScrollPane9.setViewportView(jTextAreaSubReport_Entity);
 
         jButtonSubReport_Properties.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/properties24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_Properties, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_Properties.text")); // NOI18N
-        jButtonSubReport_Properties.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_Properties.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_Properties, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_Properties.text")); // NOI18N
+        jButtonSubReport_Properties.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_Properties.toolTipText")); // NOI18N
         jButtonSubReport_Properties.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubReport_PropertiesActionPerformed(evt);
@@ -2540,8 +2540,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonSubReportLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/label.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReportLabel, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReportLabel.text")); // NOI18N
-        jButtonSubReportLabel.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReportLabel.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReportLabel, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReportLabel.text")); // NOI18N
+        jButtonSubReportLabel.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReportLabel.toolTipText")); // NOI18N
         jButtonSubReportLabel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubReportLabelActionPerformed(evt);
@@ -2549,8 +2549,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonSubRepot_Clear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/clear24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubRepot_Clear, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubRepot_Clear.text")); // NOI18N
-        jButtonSubRepot_Clear.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubRepot_Clear.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubRepot_Clear, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubRepot_Clear.text")); // NOI18N
+        jButtonSubRepot_Clear.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubRepot_Clear.toolTipText")); // NOI18N
         jButtonSubRepot_Clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubRepot_ClearActionPerformed(evt);
@@ -2612,7 +2612,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTabbedPaneEntity.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanel27.TabConstraints.tabTitle"), jPanel27); // NOI18N
+        jTabbedPaneEntity.addTab(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanel27.TabConstraints.tabTitle"), jPanel27); // NOI18N
 
         javax.swing.GroupLayout jPanelProyectoLayout = new javax.swing.GroupLayout(jPanelProyecto);
         jPanelProyecto.setLayout(jPanelProyectoLayout);
@@ -2635,26 +2635,26 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelProyecto.TabConstraints.tabTitle"), jPanelProyecto); // NOI18N
+        jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanelProyecto.TabConstraints.tabTitle"), jPanelProyecto); // NOI18N
 
         jScrollPane2.setViewportView(jTextPaneAll_Jasper);
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel2.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel2.text")); // NOI18N
 
-        jTextFieldAll_TituloOfReport.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldAll_TituloOfReport.text")); // NOI18N
+        jTextFieldAll_TituloOfReport.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldAll_TituloOfReport.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel4, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel4.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel4, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel4.text")); // NOI18N
 
-        jTextFieldAll_NameOfReport.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldAll_NameOfReport.text")); // NOI18N
+        jTextFieldAll_NameOfReport.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldAll_NameOfReport.text")); // NOI18N
 
         jLabel11.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel11, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel11.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel11, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel11.text")); // NOI18N
 
         jPanel14.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jButtonAll_BackPage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/back24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_BackPage, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_BackPage.text")); // NOI18N
-        jButtonAll_BackPage.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_BackPage.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_BackPage, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_BackPage.text")); // NOI18N
+        jButtonAll_BackPage.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_BackPage.toolTipText")); // NOI18N
         jButtonAll_BackPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAll_BackPageActionPerformed(evt);
@@ -2662,8 +2662,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonAll_CompileReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/code24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_CompileReport, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_CompileReport.text")); // NOI18N
-        jButtonAll_CompileReport.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_CompileReport.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_CompileReport, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_CompileReport.text")); // NOI18N
+        jButtonAll_CompileReport.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_CompileReport.toolTipText")); // NOI18N
         jButtonAll_CompileReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAll_CompileReportActionPerformed(evt);
@@ -2671,8 +2671,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonAll_GenerarJrxml.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/save.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_GenerarJrxml, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_GenerarJrxml.text")); // NOI18N
-        jButtonAll_GenerarJrxml.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_GenerarJrxml.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_GenerarJrxml, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_GenerarJrxml.text")); // NOI18N
+        jButtonAll_GenerarJrxml.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_GenerarJrxml.toolTipText")); // NOI18N
         jButtonAll_GenerarJrxml.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAll_GenerarJrxmlActionPerformed(evt);
@@ -2680,8 +2680,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonAll_ShowDialog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/group.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_ShowDialog, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_ShowDialog.text")); // NOI18N
-        jButtonAll_ShowDialog.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_ShowDialog.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_ShowDialog, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_ShowDialog.text")); // NOI18N
+        jButtonAll_ShowDialog.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_ShowDialog.toolTipText")); // NOI18N
         jButtonAll_ShowDialog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAll_ShowDialogActionPerformed(evt);
@@ -2689,15 +2689,15 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonAll_RefreshReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/refresh.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_RefreshReport, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_RefreshReport.text")); // NOI18N
-        jButtonAll_RefreshReport.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_RefreshReport.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_RefreshReport, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_RefreshReport.text")); // NOI18N
+        jButtonAll_RefreshReport.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_RefreshReport.toolTipText")); // NOI18N
         jButtonAll_RefreshReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAll_RefreshReportActionPerformed(evt);
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel17, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel17.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel17, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel17.text")); // NOI18N
 
         jComboBoxAll_SizeOfPage.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A4", "LETTER", "LEGAL" }));
         jComboBoxAll_SizeOfPage.addItemListener(new java.awt.event.ItemListener() {
@@ -2712,8 +2712,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonAll_Summary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/summary.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_Summary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_Summary.text")); // NOI18N
-        jButtonAll_Summary.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonAll_Summary.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonAll_Summary, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_Summary.text")); // NOI18N
+        jButtonAll_Summary.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonAll_Summary.toolTipText")); // NOI18N
         jButtonAll_Summary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAll_SummaryActionPerformed(evt);
@@ -2790,7 +2790,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextFieldAll_TituloOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(2, 2, 2)
-                        .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 338, Short.MAX_VALUE))))
         );
         jPanelAllLayout.setVerticalGroup(
@@ -2815,26 +2815,26 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelAll.TabConstraints.tabTitle"), jPanelAll); // NOI18N
+        jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanelAll.TabConstraints.tabTitle"), jPanelAll); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel8, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel8.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel8, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel8.text")); // NOI18N
 
-        jTextFieldDetails_NameOfReport.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldDetails_NameOfReport.text")); // NOI18N
+        jTextFieldDetails_NameOfReport.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldDetails_NameOfReport.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel6, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel6.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel6, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel6.text")); // NOI18N
 
-        jTextFieldDetails_TituloOfReport.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldDetails_TituloOfReport.text")); // NOI18N
+        jTextFieldDetails_TituloOfReport.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldDetails_TituloOfReport.text")); // NOI18N
 
         jLabel10.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel10, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel10.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel10, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel10.text")); // NOI18N
 
         jScrollPane1.setViewportView(jTextPaneDetails_Jasper);
 
         jPanel15.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jButtonBackPagina1FromDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/back24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonBackPagina1FromDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonBackPagina1FromDetails.text")); // NOI18N
-        jButtonBackPagina1FromDetails.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonBackPagina1FromDetails.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonBackPagina1FromDetails, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonBackPagina1FromDetails.text")); // NOI18N
+        jButtonBackPagina1FromDetails.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonBackPagina1FromDetails.toolTipText")); // NOI18N
         jButtonBackPagina1FromDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonBackPagina1FromDetailsActionPerformed(evt);
@@ -2842,8 +2842,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonCompilarJasperDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/code24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonCompilarJasperDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonCompilarJasperDetails.text")); // NOI18N
-        jButtonCompilarJasperDetails.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonCompilarJasperDetails.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonCompilarJasperDetails, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonCompilarJasperDetails.text")); // NOI18N
+        jButtonCompilarJasperDetails.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonCompilarJasperDetails.toolTipText")); // NOI18N
         jButtonCompilarJasperDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCompilarJasperDetailsActionPerformed(evt);
@@ -2851,8 +2851,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonCodeDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/save.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonCodeDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonCodeDetails.text")); // NOI18N
-        jButtonCodeDetails.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonCodeDetails.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonCodeDetails, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonCodeDetails.text")); // NOI18N
+        jButtonCodeDetails.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonCodeDetails.toolTipText")); // NOI18N
         jButtonCodeDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCodeDetailsActionPerformed(evt);
@@ -2860,8 +2860,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonGroupDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/group.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonGroupDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonGroupDetails.text")); // NOI18N
-        jButtonGroupDetails.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonGroupDetails.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonGroupDetails, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonGroupDetails.text")); // NOI18N
+        jButtonGroupDetails.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonGroupDetails.toolTipText")); // NOI18N
         jButtonGroupDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonGroupDetailsActionPerformed(evt);
@@ -2869,15 +2869,15 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonRefreshReportDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/refresh.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonRefreshReportDetails, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonRefreshReportDetails.text")); // NOI18N
-        jButtonRefreshReportDetails.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonRefreshReportDetails.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonRefreshReportDetails, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonRefreshReportDetails.text")); // NOI18N
+        jButtonRefreshReportDetails.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonRefreshReportDetails.toolTipText")); // NOI18N
         jButtonRefreshReportDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRefreshReportDetailsActionPerformed(evt);
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel9, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel9.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel9, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel9.text")); // NOI18N
 
         jComboBoxSizeOfPageDetails.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A4", "LETTER", "LEGAL" }));
         jComboBoxSizeOfPageDetails.addItemListener(new java.awt.event.ItemListener() {
@@ -2887,8 +2887,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonDeatilsSummary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/summary.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonDeatilsSummary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonDeatilsSummary.text")); // NOI18N
-        jButtonDeatilsSummary.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonDeatilsSummary.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonDeatilsSummary, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonDeatilsSummary.text")); // NOI18N
+        jButtonDeatilsSummary.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonDeatilsSummary.toolTipText")); // NOI18N
         jButtonDeatilsSummary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDeatilsSummaryActionPerformed(evt);
@@ -2909,7 +2909,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addComponent(jButtonCodeDetails)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonCompilarJasperDetails)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonBackPagina1FromDetails))
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addComponent(jLabel9)
@@ -2981,26 +2981,26 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
-        jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelDetails.TabConstraints.tabTitle"), jPanelDetails); // NOI18N
+        jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanelDetails.TabConstraints.tabTitle"), jPanelDetails); // NOI18N
 
         jScrollPane12.setViewportView(jTextPaneSubReport_Jasper);
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel31, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel31.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel31, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel31.text")); // NOI18N
 
-        jTextFieldSubReport_TituloOfReport.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldSubReport_TituloOfReport.text")); // NOI18N
+        jTextFieldSubReport_TituloOfReport.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldSubReport_TituloOfReport.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel32, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel32.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel32, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel32.text")); // NOI18N
 
-        jTextFieldSubReport_NameOfReport.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldSubReport_NameOfReport.text")); // NOI18N
+        jTextFieldSubReport_NameOfReport.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldSubReport_NameOfReport.text")); // NOI18N
 
         jLabel33.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel33, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel33.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel33, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel33.text")); // NOI18N
 
         jPanel34.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jButtonSubReport_BackPage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/back24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_BackPage, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_BackPage.text")); // NOI18N
-        jButtonSubReport_BackPage.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_BackPage.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_BackPage, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_BackPage.text")); // NOI18N
+        jButtonSubReport_BackPage.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_BackPage.toolTipText")); // NOI18N
         jButtonSubReport_BackPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubReport_BackPageActionPerformed(evt);
@@ -3008,8 +3008,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonSubReport_CompileReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/code24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_CompileReport, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_CompileReport.text")); // NOI18N
-        jButtonSubReport_CompileReport.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_CompileReport.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_CompileReport, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_CompileReport.text")); // NOI18N
+        jButtonSubReport_CompileReport.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_CompileReport.toolTipText")); // NOI18N
         jButtonSubReport_CompileReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubReport_CompileReportActionPerformed(evt);
@@ -3017,8 +3017,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonSubRert_GenerarJrxml.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/save.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubRert_GenerarJrxml, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubRert_GenerarJrxml.text")); // NOI18N
-        jButtonSubRert_GenerarJrxml.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubRert_GenerarJrxml.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubRert_GenerarJrxml, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubRert_GenerarJrxml.text")); // NOI18N
+        jButtonSubRert_GenerarJrxml.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubRert_GenerarJrxml.toolTipText")); // NOI18N
         jButtonSubRert_GenerarJrxml.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubRert_GenerarJrxmlActionPerformed(evt);
@@ -3026,8 +3026,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonSubReport_ShowDialog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/group.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_ShowDialog, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_ShowDialog.text")); // NOI18N
-        jButtonSubReport_ShowDialog.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_ShowDialog.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_ShowDialog, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_ShowDialog.text")); // NOI18N
+        jButtonSubReport_ShowDialog.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_ShowDialog.toolTipText")); // NOI18N
         jButtonSubReport_ShowDialog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubReport_ShowDialogActionPerformed(evt);
@@ -3035,15 +3035,15 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonSubReport_RefreshReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/refresh.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_RefreshReport, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_RefreshReport.text")); // NOI18N
-        jButtonSubReport_RefreshReport.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_RefreshReport.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_RefreshReport, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_RefreshReport.text")); // NOI18N
+        jButtonSubReport_RefreshReport.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_RefreshReport.toolTipText")); // NOI18N
         jButtonSubReport_RefreshReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubReport_RefreshReportActionPerformed(evt);
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel34, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel34.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel34, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel34.text")); // NOI18N
 
         jComboBoxSubReport_SizeOfPage.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A4", "LETTER", "LEGAL" }));
         jComboBoxSubReport_SizeOfPage.addItemListener(new java.awt.event.ItemListener() {
@@ -3058,8 +3058,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonSubReport_Summary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/summary.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_Summary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_Summary.text")); // NOI18N
-        jButtonSubReport_Summary.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonSubReport_Summary.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonSubReport_Summary, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_Summary.text")); // NOI18N
+        jButtonSubReport_Summary.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonSubReport_Summary.toolTipText")); // NOI18N
         jButtonSubReport_Summary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubReport_SummaryActionPerformed(evt);
@@ -3136,7 +3136,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextFieldSubReport_TituloOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 120, Short.MAX_VALUE))))
         );
         jPanelSubReportinternoLayout.setVerticalGroup(
@@ -3177,24 +3177,24 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelSubReport.TabConstraints.tabTitle"), jPanelSubReport); // NOI18N
+        jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanelSubReport.TabConstraints.tabTitle"), jPanelSubReport); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel35, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel35.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel35, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel35.text")); // NOI18N
 
-        jTextFieldMaster_TituloOfReport.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldMaster_TituloOfReport.text")); // NOI18N
+        jTextFieldMaster_TituloOfReport.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldMaster_TituloOfReport.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel36, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel36.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel36, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel36.text")); // NOI18N
 
-        jTextFieldMaster_NameOfReport.setText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jTextFieldMaster_NameOfReport.text")); // NOI18N
+        jTextFieldMaster_NameOfReport.setText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jTextFieldMaster_NameOfReport.text")); // NOI18N
 
         jLabel37.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel37, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel37.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel37, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel37.text")); // NOI18N
 
         jPanel37.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jButtonMaster_BackPage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/back24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_BackPage, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_BackPage.text")); // NOI18N
-        jButtonMaster_BackPage.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_BackPage.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_BackPage, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_BackPage.text")); // NOI18N
+        jButtonMaster_BackPage.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_BackPage.toolTipText")); // NOI18N
         jButtonMaster_BackPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMaster_BackPageActionPerformed(evt);
@@ -3202,8 +3202,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonMaster_CompileReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/code24x24.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_CompileReport, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_CompileReport.text")); // NOI18N
-        jButtonMaster_CompileReport.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_CompileReport.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_CompileReport, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_CompileReport.text")); // NOI18N
+        jButtonMaster_CompileReport.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_CompileReport.toolTipText")); // NOI18N
         jButtonMaster_CompileReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMaster_CompileReportActionPerformed(evt);
@@ -3211,8 +3211,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonMaster_GenerarJrxml.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/save.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_GenerarJrxml, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_GenerarJrxml.text")); // NOI18N
-        jButtonMaster_GenerarJrxml.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_GenerarJrxml.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_GenerarJrxml, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_GenerarJrxml.text")); // NOI18N
+        jButtonMaster_GenerarJrxml.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_GenerarJrxml.toolTipText")); // NOI18N
         jButtonMaster_GenerarJrxml.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMaster_GenerarJrxmlActionPerformed(evt);
@@ -3220,8 +3220,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonMaster_ShowDialog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/group.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_ShowDialog, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_ShowDialog.text")); // NOI18N
-        jButtonMaster_ShowDialog.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_ShowDialog.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_ShowDialog, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_ShowDialog.text")); // NOI18N
+        jButtonMaster_ShowDialog.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_ShowDialog.toolTipText")); // NOI18N
         jButtonMaster_ShowDialog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMaster_ShowDialogActionPerformed(evt);
@@ -3229,15 +3229,15 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonMaster_RefreshReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/refresh.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_RefreshReport, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_RefreshReport.text")); // NOI18N
-        jButtonMaster_RefreshReport.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_RefreshReport.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_RefreshReport, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_RefreshReport.text")); // NOI18N
+        jButtonMaster_RefreshReport.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_RefreshReport.toolTipText")); // NOI18N
         jButtonMaster_RefreshReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMaster_RefreshReportActionPerformed(evt);
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel38, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jLabel38.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel38, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jLabel38.text")); // NOI18N
 
         jComboBoxMaster_SizeOfPage.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A4", "LETTER", "LEGAL" }));
         jComboBoxMaster_SizeOfPage.addItemListener(new java.awt.event.ItemListener() {
@@ -3252,8 +3252,8 @@ public final class ReportWizardTopComponent extends TopComponent {
         });
 
         jButtonMaster_Summary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/avbravo/jmoordbreport/resources/summary.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_Summary, org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_Summary.text")); // NOI18N
-        jButtonMaster_Summary.setToolTipText(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jButtonMaster_Summary.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jButtonMaster_Summary, org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_Summary.text")); // NOI18N
+        jButtonMaster_Summary.setToolTipText(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jButtonMaster_Summary.toolTipText")); // NOI18N
         jButtonMaster_Summary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMaster_SummaryActionPerformed(evt);
@@ -3332,7 +3332,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextFieldMaster_TituloOfReport, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 322, Short.MAX_VALUE))))
         );
         jPanelMasterLayout.setVerticalGroup(
@@ -3358,7 +3358,7 @@ public final class ReportWizardTopComponent extends TopComponent {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelMaster.TabConstraints.tabTitle_1"), jPanelMaster); // NOI18N
+        jTabbedPaneReporte.addTab(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanelMaster.TabConstraints.tabTitle_1"), jPanelMaster); // NOI18N
 
         javax.swing.GroupLayout jPanelReporteLayout = new javax.swing.GroupLayout(jPanelReporte);
         jPanelReporte.setLayout(jPanelReporteLayout);
@@ -3373,7 +3373,7 @@ public final class ReportWizardTopComponent extends TopComponent {
             .addComponent(jTabbedPaneReporte)
         );
 
-        jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(ReportWizardTopComponent.class, "ReportWizardTopComponent.jPanelReporte.TabConstraints.tabTitle"), jPanelReporte); // NOI18N
+        jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(JmoordbReportTopComponent.class, "JmoordbReportTopComponent.jPanelReporte.TabConstraints.tabTitle"), jPanelReporte); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
